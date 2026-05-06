@@ -1,0 +1,122 @@
+{
+  "id": "homepage",
+  "hero": {
+    "headline": {
+      "es": "El viaje como comprensión cultural",
+      "en": "Travel as Cultural Understanding"
+    },
+    "subheadline": {
+      "es": "Experiencias curadas por Colombia y América Latina. Narrativa antes que logística.",
+      "en": "Curated journeys through Colombia and Latin America. Narrative before logistics."
+    },
+    "media": {
+      "type": "image",
+      "src": "/images/hero-home.jpg",
+      "alt": {
+        "es": "La cordillera andina al amanecer, vista desde el Eje Cafetero",
+        "en": "The Andean cordillera at dawn, seen from the Coffee Region"
+      }
+    }
+  },
+  "valueProp": {
+    "headline": {
+      "es": "No turismo. Comprensión.",
+      "en": "Not Tourism. Understanding."
+    },
+    "pillars": [
+      {
+        "title": {
+          "es": "Narrativa, no itinerario",
+          "en": "Narrative, Not Itinerary"
+        },
+        "description": {
+          "es": "Cada viaje está construido alrededor de una idea: una tensión histórica, una identidad cultural, un territorio que exige ser leído en profundidad. Los lugares son consecuencia de la historia, no al revés.",
+          "en": "Every journey is built around an idea—a historical tension, a cultural identity, a territory that demands to be read closely. The places follow the story, not the other way around."
+        }
+      },
+      {
+        "title": {
+          "es": "Especialistas, no guías",
+          "en": "Specialists, Not Guides"
+        },
+        "description": {
+          "es": "Historiadores, chefs, arqueólogos, artistas. Las personas que acompañan los viajes de Meridiana son aquellas para quienes Colombia no es un destino, sino una pregunta que llevan años respondiendo.",
+          "en": "Historians, chefs, archaeologists, artists. The people who accompany Meridiana journeys are those for whom Colombia is not a destination, but a question they have spent years answering."
+        }
+      },
+      {
+        "title": {
+          "es": "Escala íntima",
+          "en": "Intimate Scale"
+        },
+        "description": {
+          "es": "Grupos de dos a ocho personas. Lo suficientemente pequeños para acceder a espacios que los grupos grandes no pueden, y para que las conversaciones importen.",
+          "en": "Groups of two to eight people. Small enough to access spaces larger groups cannot, and for conversations to matter."
+        }
+      }
+    ]
+  },
+  "featuredTours": {
+    "headline": {
+      "es": "Viajes curados",
+      "en": "Curated Journeys"
+    },
+    "tourIds": ["classic-bogota", "classic-colombia-cafetero", "en-busqueda-del-dorado"]
+  },
+  "howItWorks": {
+    "headline": {
+      "es": "Cómo funciona",
+      "en": "How It Works"
+    },
+    "steps": [
+      {
+        "number": 1,
+        "title": {
+          "es": "Explora",
+          "en": "Explore"
+        },
+        "description": {
+          "es": "Navega el catálogo de viajes. Cada uno está documentado con la profundidad que merece: la historia detrás del destino, las experiencias que lo definen, el tipo de viajero para quien fue diseñado.",
+          "en": "Browse the journey catalog. Each one is documented with the depth it deserves: the history behind the destination, the experiences that define it, the kind of traveler it was designed for."
+        }
+      },
+      {
+        "number": 2,
+        "title": {
+          "es": "Conversa",
+          "en": "Connect"
+        },
+        "description": {
+          "es": "Escríbenos. No hay formularios automatizados ni respuestas predefinidas. Una persona de Meridiana responde en menos de 48 horas para entender lo que buscas y cómo podemos construirlo juntos.",
+          "en": "Write to us. No automated forms, no canned responses. A Meridiana person responds within 48 hours to understand what you are looking for and how we can build it together."
+        }
+      },
+      {
+        "number": 3,
+        "title": {
+          "es": "Viaja",
+          "en": "Journey"
+        },
+        "description": {
+          "es": "El día del viaje, todo está listo. Lo que no está en el itinerario es la conversación que tendrás con el ceramista que lleva cuarenta años estudiando los patrones precolombinos, o el silencio exacto de las seis de la mañana en la laguna.",
+          "en": "On the day of travel, everything is ready. What is not in the itinerary is the conversation you will have with the ceramicist who has spent forty years studying pre-Columbian patterns, or the exact silence of six in the morning on the lagoon."
+        }
+      }
+    ]
+  },
+  "cta": {
+    "headline": {
+      "es": "Comienza tu viaje",
+      "en": "Begin Your Journey"
+    },
+    "description": {
+      "es": "Siete itinerarios. Desde tres días en Bogotá hasta tres semanas entre selva, páramo y litoral. Todos construidos alrededor de una idea, no de una lista de atracciones.",
+      "en": "Seven itineraries. From three days in Bogotá to three weeks across jungle, páramo, and coastline. All built around an idea, not a list of attractions."
+    },
+    "buttonText": {
+      "es": "Explorar viajes",
+      "en": "Explore Journeys"
+    },
+    "buttonHref": "/viajes"
+  }
+}

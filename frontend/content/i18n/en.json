@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "journeys": "Journeys",
+    "journal": "Journal",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "scrollIndicator": "Discover more"
+  },
+  "tours": {
+    "pageTitle": "Journeys",
+    "pageSubtitle": "Curated cultural experiences",
+    "filterAll": "All",
+    "filterEntry": "Entry",
+    "filterCore": "Core",
+    "filterPremium": "Premium",
+    "duration": "Duration",
+    "groupSize": "Group size",
+    "from": "From",
+    "perPerson": "per person",
+    "includes": "Includes",
+    "excludes": "Does not include",
+    "itinerary": "Itinerary",
+    "experience": "The experience",
+    "idealFor": "Ideal for",
+    "signatureExperiences": "Signature experiences",
+    "preTrip": "Before your trip",
+    "packing": "What to pack",
+    "reading": "Recommended reading",
+    "relatedTours": "Related journeys",
+    "customJourney": "Looking for something different?",
+    "customJourneyText": "We design bespoke experiences. Tell us your vision.",
+    "backToJourneys": "Back to journeys"
+  },
+  "experience": {
+    "culturalDepth": "Cultural depth",
+    "physicalDemand": "Physical demand",
+    "comfort": "Comfort",
+    "groupIntimacy": "Group intimacy"
+  },
+  "cta": {
+    "exploreJourneys": "Explore journeys",
+    "requestItinerary": "Request itinerary",
+    "beginPlanning": "Begin planning",
+    "contactUs": "Contact us",
+    "sendInquiry": "Send inquiry"
+  },
+  "contact": {
+    "pageTitle": "Let's start a conversation",
+    "name": "Name",
+    "email": "Email",
+    "journey": "Journey of interest",
+    "dates": "Tentative dates",
+    "message": "Message",
+    "selectJourney": "Select a journey",
+    "customJourney": "Custom journey",
+    "successTitle": "Message sent",
+    "successMessage": "We'll get back to you within 48 hours.",
+    "responseTime": "We respond within 48 hours"
+  },
+  "journal": {
+    "pageTitle": "Journal",
+    "comingSoon": "Coming soon",
+    "comingSoonText": "We're preparing stories that deserve to be told with the depth they demand."
+  },
+  "about": {
+    "pageTitle": "About"
+  },
+  "footer": {
+    "tagline": "Travel that transforms the way you see",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© {year} Meridiana. All rights reserved.",
+    "madeWith": "Designed with intention"
+  },
+  "lang": {
+    "switch": "ES",
+    "current": "EN"
+  }
+}

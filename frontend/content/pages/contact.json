@@ -1,0 +1,20 @@
+{
+  "id": "contact",
+  "headline": {
+    "es": "Comencemos una conversación",
+    "en": "Let's begin a conversation"
+  },
+  "description": {
+    "es": "No hay compromiso en preguntar. Cuéntanos a dónde quieres ir y lo que estás buscando, y construiremos algo juntos.",
+    "en": "There's no commitment in asking. Tell us where you want to go and what you're looking for, and we'll build something together."
+  },
+  "email": "hola@meridianajourneys.com",
+  "responseTime": {
+    "es": "Respondemos en menos de 48 horas",
+    "en": "We respond within 48 hours"
+  },
+  "reassurance": {
+    "es": "Ningún itinerario estándar. Ninguna lista de precios fija. Solo una conversación honesta sobre lo que vale la pena hacer.",
+    "en": "No standard itinerary. No fixed price list. Just an honest conversation about what's worth doing."
+  }
+}

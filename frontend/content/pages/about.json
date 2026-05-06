@@ -1,0 +1,84 @@
+{
+  "id": "about",
+  "hero": {
+    "headline": {
+      "es": "Meridiana nació de una pregunta",
+      "en": "Meridiana was born from a question"
+    },
+    "subheadline": {
+      "es": "¿Qué significa viajar de verdad? No moverse entre destinos, sino comprender culturas desde adentro.",
+      "en": "What does it mean to travel, truly? Not to move between destinations, but to understand cultures from within."
+    },
+    "media": {
+      "type": "image",
+      "src": "/images/about-hero.jpg",
+      "alt": {
+        "es": "Vista de Cartagena al atardecer, donde el Caribe se convierte en historia viva",
+        "en": "Cartagena at dusk, where the Caribbean becomes living history"
+      }
+    }
+  },
+  "story": {
+    "headline": {
+      "es": "Por qué existimos",
+      "en": "Why we exist"
+    },
+    "body": {
+      "es": "<p>Colombia es uno de los países más complejos del mundo. Tres cordilleras, dos océanos, cincuenta y tantos millones de personas que hablan el mismo idioma con acentos tan distintos que parecen lenguas separadas. Un país que ha vivido décadas de guerra y que, en ese mismo período, ha producido literatura que sacude el mundo.</p><p>La mayor parte del turismo pasa por encima de todo eso. Llega con guías de bolsillo, con listas de cosas que ver, con la premisa de que los lugares son fondos de fotografía y no conversaciones en curso.</p><p>Meridiana existe porque creemos que un viaje bien hecho transforma la mirada. No la ciudad que visitas, sino la manera en que lees el mundo cuando regresas. Eso requiere tiempo, contexto, y una disposición que pocos servicios de viaje se toman el trabajo de cultivar.</p><p>Somos una empresa pequeña a propósito. No buscamos escala. Buscamos que cada persona que viaje con nosotros regrese con algo difícil de articular pero imposible de ignorar: una comprensión más honesta de América Latina, y quizás también, de sí misma.</p>",
+      "en": "<p>Colombia is one of the most complex countries in the world. Three mountain ranges, two oceans, fifty-something million people who speak the same language in accents so distinct they could be separate tongues. A country that lived decades of war and, in that same period, produced literature that shakes the world.</p><p>Most tourism flies over all of that. It arrives with pocket guides and lists of things to see, with the premise that places are backdrops for photographs rather than ongoing conversations.</p><p>Meridiana exists because we believe a well-made journey transforms the way you see. Not the city you visit, but the way you read the world when you return. That requires time, context, and a disposition that few travel services take the trouble to cultivate.</p><p>We are a small company by design. We are not looking for scale. We are looking for each person who travels with us to return with something difficult to articulate but impossible to ignore: a more honest understanding of Latin America, and perhaps of themselves.</p>"
+    }
+  },
+  "values": {
+    "headline": {
+      "es": "Cómo trabajamos",
+      "en": "How we work"
+    },
+    "items": [
+      {
+        "title": {
+          "es": "Narrativa antes que logística",
+          "en": "Narrative before logistics"
+        },
+        "description": {
+          "es": "Un itinerario es un argumento, no una lista de hoteles. Cada día tiene una arquitectura emocional: por qué esto, aquí, ahora, con quién. La logística es el soporte invisible de una experiencia que tiene sentido.",
+          "en": "An itinerary is an argument, not a list of hotels. Each day has an emotional architecture: why this, here, now, with whom. Logistics are the invisible support of an experience that makes sense."
+        }
+      },
+      {
+        "title": {
+          "es": "Curiosidad por encima del confort",
+          "en": "Curiosity over comfort"
+        },
+        "description": {
+          "es": "Ofrecemos comodidades reales — hoteles cuidados, traslados sin fricciones, guías que conocen su oficio. Pero nunca sacrificamos el encuentro genuino en el altar del lujo predecible. Los mejores momentos de un viaje suelen ocurrir en los bordes del programa.",
+          "en": "We offer real comforts — considered hotels, frictionless transfers, guides who know their craft. But we never sacrifice genuine encounter on the altar of predictable luxury. The best moments of a journey usually happen at the edges of the programme."
+        }
+      },
+      {
+        "title": {
+          "es": "Comprensión por encima del espectáculo",
+          "en": "Understanding over spectacle"
+        },
+        "description": {
+          "es": "Colombia tiene paisajes extraordinarios. Pero lo que más nos interesa no es lo que entra por los ojos, sino lo que permanece cuando los cierras. Construimos contexto: historia, música, cocina, lengua, arquitectura. Todo lo que convierte un lugar en un mundo.",
+          "en": "Colombia has extraordinary landscapes. But what interests us most is not what enters through the eyes, but what remains when you close them. We build context: history, music, cuisine, language, architecture. Everything that turns a place into a world."
+        }
+      }
+    ]
+  },
+  "cta": {
+    "headline": {
+      "es": "Planifiquemos algo juntos",
+      "en": "Let's plan something together"
+    },
+    "description": {
+      "es": "No hay itinerario estándar. Hay una conversación, una serie de preguntas, y luego un viaje diseñado para quien tú eres.",
+      "en": "There is no standard itinerary. There is a conversation, a series of questions, and then a journey designed for who you are."
+    },
+    "buttonText": {
+      "es": "Comenzar esa conversación",
+      "en": "Begin that conversation"
+    },
+    "buttonHref": "/contacto"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "classic-colombia-caribe",
+  "title": { "es": "Classic Colombia Caribe", "en": "Classic Colombia Caribbean" },
+  "subtitle": { "es": "De los Andes al Caribe afrodescendiente", "en": "From the Andes to the Afro-Caribbean" },
+  "category": "cultural",
+  "tier": "core",
+  "status": "published",
+  "duration": { "es": "10 días / 9 noches", "en": "10 days / 9 nights" },
+  "groupSize": { "es": "2–8 viajeros", "en": "2–8 travelers" },
+  "route": ["Bogotá", "Medellín", "Cartagena"],
+  "price": { "amount": 4500, "currency": "USD", "note": { "es": "por persona, ocupación doble", "en": "per person, double occupancy" } },
+  "location": { "country": "Colombia", "region": "Multi-región", "coordinates": [4.711, -74.0721] },
+  "difficulty": "easy",
+  "hero": { "image": "/images/tours/caribe-hero.jpg", "alt": { "es": "Balcones coloniales de Cartagena con buganvillas al atardecer", "en": "Colonial balconies of Cartagena draped in bougainvillea at sunset" }, "credit": "TODO" },
+  "gallery": ["/images/tours/caribe-01.jpg", "/images/tours/caribe-02.jpg"],
+  "narrative": {
+    "short": {
+      "es": "De la cosmología del oro en Bogotá a la reinvención urbana de Medellín, hasta las calles de Cartagena donde la herencia africana se cocina a fuego lento en cada cazuela. Este viaje traza la línea que conecta los Andes con el Caribe—no por geografía, sino por historia.",
+      "en": "From the cosmology of gold in Bogotá to Medellín's urban reinvention, to the streets of Cartagena where African heritage simmers in every cazuela. This journey traces the line connecting the Andes to the Caribbean—not by geography, but by history."
+    },
+    "long": {
+      "es": "<p>Hay una Colombia que desciende. Que baja desde los 2.640 metros del altiplano, atraviesa los valles de Antioquia, y llega al nivel del mar en Cartagena con el peso de tres regiones, tres climas y tres maneras de entender la identidad.</p><p>Classic Colombia Caribe sigue ese descenso. Comienza con el oro muisca y termina con un almuerzo preparado por una matrona caribeña en un patio de Getsemaní—una mujer que cocina la misma receta que su abuela aprendió de la suya, y que entiende la cocina como archivo cultural.</p><p>En el medio: Medellín y su capacidad de reescribir su propia historia. La Comuna 13, donde el grafiti no es decoración sino documento. Guatapé, donde la escala del paisaje antioqueño se hace física. Y Cartagena—no la de las murallas y los selfies, sino la de Getsemaní, donde la resistencia afrodescendiente se expresa en tambor, en sazón y en la manera de ocupar el espacio público.</p><p>La gastronomía no es un complemento de este viaje. Es su columna vertebral.</p>",
+      "en": "<p>There is a Colombia that descends. That drops from the 2,640 meters of the highland plateau, crosses the valleys of Antioquia, and arrives at sea level in Cartagena carrying the weight of three regions, three climates, and three ways of understanding identity.</p><p>Classic Colombia Caribbean follows that descent. It begins with Muisca gold and ends with a lunch prepared by a Caribbean matrona in a Getsemaní courtyard—a woman who cooks the same recipe her grandmother learned from hers, and who understands cooking as cultural archive.</p><p>In between: Medellín and its capacity to rewrite its own story. Comuna 13, where graffiti is not decoration but documentation. Guatapé, where the scale of the Antioquian landscape becomes physical. And Cartagena—not the one of walls and selfies, but the one of Getsemaní, where Afro-descendant resistance expresses itself through drum, seasoning, and the way public space is occupied.</p><p>Gastronomy is not a complement to this journey. It is its spine.</p>"
+    },
+    "pullQuote": { "es": "La gastronomía no es un complemento de este viaje. Es su columna vertebral.", "en": "Gastronomy is not a complement to this journey. It is its spine." }
+  },
+  "includes": [
+    { "es": "9 noches en hoteles boutique seleccionados", "en": "9 nights in selected boutique hotels" },
+    { "es": "Vuelos internos Bogotá–Medellín–Cartagena", "en": "Domestic flights Bogotá–Medellín–Cartagena" },
+    { "es": "Guías culturales especializados en cada ciudad", "en": "Specialized cultural guides in each city" },
+    { "es": "Almuerzo con matrona caribeña en Getsemaní", "en": "Lunch with Caribbean matrona in Getsemaní" },
+    { "es": "Tour histórico de Cartagena con enfoque afrodescendiente", "en": "Historical Cartagena tour with Afro-descendant focus" },
+    { "es": "Desayuno diario + 5 comidas de autor", "en": "Daily breakfast + 5 curated meals" }
+  ],
+  "excludes": [
+    { "es": "Vuelos internacionales", "en": "International flights" },
+    { "es": "Seguro de viaje", "en": "Travel insurance" },
+    { "es": "Gastos personales y propinas", "en": "Personal expenses and gratuities" }
+  ],
+  "itinerary": [
+    { "day": 1, "title": { "es": "Llegada a Bogotá", "en": "Arrival in Bogotá" }, "description": { "es": "Recepción y cena de bienvenida.", "en": "Reception and welcome dinner." }, "highlights": [{ "es": "Cena de bienvenida", "en": "Welcome dinner" }], "meals": ["dinner"], "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" } },
+    { "day": 2, "title": { "es": "Bogotá: Museo del Oro y La Candelaria", "en": "Bogotá: Museo del Oro & La Candelaria" }, "description": { "es": "Inmersión en la cosmología muisca y la historia colonial.", "en": "Immersion in Muisca cosmology and colonial history." }, "highlights": [{ "es": "Museo del Oro", "en": "Museo del Oro" }, { "es": "La Candelaria", "en": "La Candelaria" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" } },
+    { "day": 3, "title": { "es": "Guatavita y Monserrate", "en": "Guatavita & Monserrate" }, "description": { "es": "Laguna sagrada y vista panorámica de Bogotá.", "en": "Sacred lagoon and panoramic view of Bogotá." }, "highlights": [{ "es": "Laguna de Guatavita", "en": "Laguna de Guatavita" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" } },
+    { "day": 4, "title": { "es": "Vuelo a Medellín", "en": "Flight to Medellín" }, "description": { "es": "Traslado y exploración libre de El Poblado.", "en": "Transfer and free exploration of El Poblado." }, "highlights": [{ "es": "Llegada a Medellín", "en": "Arrival in Medellín" }], "meals": ["breakfast"], "accommodation": { "es": "Hotel boutique, El Poblado", "en": "Boutique hotel, El Poblado" } },
+    { "day": 5, "title": { "es": "Medellín: Comuna 13", "en": "Medellín: Comuna 13" }, "description": { "es": "Transformación urbana, arte y hip-hop como resistencia.", "en": "Urban transformation, art, and hip-hop as resistance." }, "highlights": [{ "es": "Comuna 13", "en": "Comuna 13" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, El Poblado", "en": "Boutique hotel, El Poblado" } },
+    { "day": 6, "title": { "es": "Guatapé", "en": "Guatapé" }, "description": { "es": "La Piedra del Peñol y el pueblo más colorido de Antioquia.", "en": "La Piedra del Peñol and Antioquia's most colorful town." }, "highlights": [{ "es": "Piedra del Peñol", "en": "Piedra del Peñol" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, El Poblado", "en": "Boutique hotel, El Poblado" } },
+    { "day": 7, "title": { "es": "Vuelo a Cartagena", "en": "Flight to Cartagena" }, "description": { "es": "Llegada al Caribe. Check-in dentro de la ciudad amurallada. Primer paseo nocturno.", "en": "Arrival to the Caribbean. Check-in inside the walled city. First evening walk." }, "highlights": [{ "es": "Ciudad amurallada de noche", "en": "Walled city at night" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Hotel boutique, Ciudad Amurallada", "en": "Boutique hotel, Walled City" } },
+    { "day": 8, "title": { "es": "Cartagena histórica", "en": "Historic Cartagena" }, "description": { "es": "Recorrido por la Cartagena colonial con lectura de la historia de la esclavitud, el comercio y la resistencia. San Basilio de Palenque como referencia.", "en": "Walk through colonial Cartagena with a reading of slavery, trade, and resistance history. San Basilio de Palenque as reference." }, "highlights": [{ "es": "Cartagena histórica", "en": "Historic Cartagena" }, { "es": "Getsemaní", "en": "Getsemaní" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, Ciudad Amurallada", "en": "Boutique hotel, Walled City" } },
+    { "day": 9, "title": { "es": "Getsemaní y la matrona", "en": "Getsemaní & the Matrona" }, "description": { "es": "Mañana libre. Almuerzo preparado por matrona caribeña—cocina como archivo cultural. Tarde en Getsemaní.", "en": "Free morning. Lunch prepared by Caribbean matrona—cooking as cultural archive. Afternoon in Getsemaní." }, "highlights": [{ "es": "Almuerzo con matrona caribeña", "en": "Lunch with Caribbean matrona" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, Ciudad Amurallada", "en": "Boutique hotel, Walled City" } },
+    { "day": 10, "title": { "es": "Partida", "en": "Departure" }, "description": { "es": "Desayuno y traslado al aeropuerto.", "en": "Breakfast and airport transfer." }, "highlights": [{ "es": "Traslado", "en": "Transfer" }], "meals": ["breakfast"], "accommodation": null }
+  ],
+  "experience": { "culturalDepth": 5, "physicalDemand": 2, "comfort": 5, "groupIntimacy": 4 },
+  "idealFor": [
+    { "es": "Amantes de la gastronomía como expresión cultural", "en": "Gastronomy lovers who see food as cultural expression" },
+    { "es": "Interesados en la herencia afrodescendiente", "en": "Those interested in Afro-descendant heritage" },
+    { "es": "Viajeros que prefieren ciudad y costa sobre naturaleza extrema", "en": "Travelers who prefer city and coast over extreme nature" }
+  ],
+  "signatureExperiences": [
+    { "es": "Almuerzo con matrona caribeña en Getsemaní", "en": "Lunch with Caribbean matrona in Getsemaní" },
+    { "es": "Cartagena con lectura de historia afrodescendiente", "en": "Cartagena with Afro-descendant history reading" },
+    { "es": "Gastronomía como columna vertebral del viaje", "en": "Gastronomy as the journey's spine" }
+  ],
+  "relatedTours": ["classic-colombia-cafetero", "classic-colombia-full", "en-busqueda-del-dorado"],
+  "seo": {
+    "es": { "metaTitle": "Classic Colombia Caribe — De los Andes al Caribe | Meridiana", "metaDescription": "10 días desde Bogotá hasta Cartagena pasando por Medellín. Gastronomía afrocaribeña, historia colonial y transformación urbana.", "keywords": ["tour colombia caribe", "cartagena cultural", "viaje colombia", "gastronomia caribe"] },
+    "en": { "metaTitle": "Classic Colombia Caribbean — Andes to Caribbean | Meridiana", "metaDescription": "10 days from Bogotá to Cartagena via Medellín. Afro-Caribbean gastronomy, colonial history, and urban transformation.", "keywords": ["colombia caribbean tour", "cartagena cultural", "colombia travel", "afro caribbean food"] }
+  }
+}

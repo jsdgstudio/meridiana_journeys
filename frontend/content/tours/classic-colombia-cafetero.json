@@ -1,0 +1,95 @@
+{
+  "id": "classic-colombia-cafetero",
+  "title": { "es": "Classic Colombia Cafetero", "en": "Classic Colombia Cafetero" },
+  "subtitle": { "es": "Del oro precolombino al café de altura", "en": "From Pre-Columbian Gold to Highland Coffee" },
+  "category": "cultural",
+  "tier": "core",
+  "status": "published",
+  "duration": { "es": "10 días / 9 noches", "en": "10 days / 9 nights" },
+  "groupSize": { "es": "2–8 viajeros", "en": "2–8 travelers" },
+  "route": ["Bogotá", "Medellín", "Eje Cafetero"],
+  "price": {
+    "amount": 4200,
+    "currency": "USD",
+    "note": { "es": "por persona, ocupación doble", "en": "per person, double occupancy" }
+  },
+  "location": {
+    "country": "Colombia",
+    "region": "Multi-región",
+    "coordinates": [4.711, -74.0721]
+  },
+  "difficulty": "moderate",
+  "hero": {
+    "image": "/images/tours/cafetero-hero.jpg",
+    "alt": { "es": "Palmas de cera en el Valle del Cocora al amanecer, niebla entre las montañas verdes", "en": "Wax palms in the Cocora Valley at dawn, mist threading through green mountains" },
+    "credit": "TODO"
+  },
+  "gallery": ["/images/tours/cafetero-01.jpg", "/images/tours/cafetero-02.jpg", "/images/tours/cafetero-03.jpg"],
+  "narrative": {
+    "short": {
+      "es": "Diez días trazando el hilo que conecta la cosmología muisca del altiplano con la transformación urbana de Medellín y la economía viva del café en el Eje Cafetero. No es un recorrido—es una lectura de Colombia a través de sus materias primas y las manos que las trabajan.",
+      "en": "Ten days tracing the thread that connects the Muisca cosmology of the highlands with Medellín's urban transformation and the living economy of coffee in the Eje Cafetero. Not a tour—a reading of Colombia through its raw materials and the hands that work them."
+    },
+    "long": {
+      "es": "<p>Colombia no se entiende desde un solo punto. Se entiende en movimiento—viendo cómo cambia la luz, la altitud, la temperatura, el acento y la manera de preparar un café entre Bogotá y el Eje Cafetero.</p><p>Este viaje comienza donde comienza Colombia misma: en el altiplano, con el oro muisca y los cinco siglos de historia que se comprimen en las calles de Bogotá. De ahí salta a Medellín, una ciudad que convirtió su narrativa más oscura en un laboratorio de innovación social—la Comuna 13 no es solo un mural, es un manifiesto. Guatapé no es solo una roca, es la escala del paisaje antioqueño hecha experiencia.</p><p>Y después, el café. No el café de la marca, sino el café de la finca: Hacienda Venecia, donde el grano se procesa a mano y el paisaje se lee como un mapa económico de dos siglos. El Valle del Cocora, donde las palmas de cera más altas del mundo marcan la frontera entre agricultura y bosque de niebla.</p><p>Este es el viaje fundacional de Meridiana. Si solo pudieras hacer uno, sería este.</p>",
+      "en": "<p>Colombia cannot be understood from a single point. It must be understood in motion—watching how the light, the altitude, the temperature, the accent, and the way a coffee is prepared all shift between Bogotá and the Eje Cafetero.</p><p>This journey begins where Colombia itself begins: on the high plateau, with Muisca gold and five centuries of history compressed into Bogotá's streets. From there it leaps to Medellín, a city that turned its darkest narrative into a laboratory of social innovation—Comuna 13 is not just a mural, it is a manifesto. Guatapé is not just a rock, it is the scale of the Antioquian landscape made experiential.</p><p>And then, the coffee. Not the brand's coffee, but the farm's coffee: Hacienda Venecia, where the bean is hand-processed and the landscape reads like a two-century economic map. The Cocora Valley, where the world's tallest wax palms mark the frontier between agriculture and cloud forest.</p><p>This is Meridiana's foundational journey. If you could only take one, this would be it.</p>"
+    },
+    "pullQuote": {
+      "es": "Colombia no se entiende desde un solo punto. Se entiende en movimiento.",
+      "en": "Colombia cannot be understood from a single point. It must be understood in motion."
+    }
+  },
+  "includes": [
+    { "es": "9 noches de alojamiento en hoteles boutique y hacienda cafetera", "en": "9 nights in boutique hotels and a coffee hacienda" },
+    { "es": "Todos los traslados terrestres y vuelos internos", "en": "All ground transfers and domestic flights" },
+    { "es": "Guías culturales especializados en cada región", "en": "Specialized cultural guides in each region" },
+    { "es": "Inmersión completa en finca cafetera (cosecha, proceso, catación)", "en": "Full coffee farm immersion (harvest, processing, cupping)" },
+    { "es": "Tour privado Museo del Oro + Comuna 13 + Guatapé", "en": "Private tours: Museo del Oro + Comuna 13 + Guatapé" },
+    { "es": "Desayuno diario + 5 comidas adicionales de autor", "en": "Daily breakfast + 5 additional curated meals" },
+    { "es": "Caminata guiada en el Valle del Cocora", "en": "Guided trek through the Cocora Valley" }
+  ],
+  "excludes": [
+    { "es": "Vuelos internacionales", "en": "International flights" },
+    { "es": "Seguro de viaje", "en": "Travel insurance" },
+    { "es": "Gastos personales y propinas", "en": "Personal expenses and gratuities" },
+    { "es": "Comidas no especificadas", "en": "Meals not specified in itinerary" }
+  ],
+  "itinerary": [
+    { "day": 1, "title": { "es": "Llegada a Bogotá", "en": "Arrival in Bogotá" }, "description": { "es": "Recepción, check-in en hotel boutique en La Candelaria. Cena de bienvenida.", "en": "Reception, check-in at boutique hotel in La Candelaria. Welcome dinner." }, "highlights": [{ "es": "Cena de bienvenida con menú regional", "en": "Welcome dinner with regional tasting menu" }], "meals": ["dinner"], "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" } },
+    { "day": 2, "title": { "es": "Bogotá: oro y cosmología", "en": "Bogotá: Gold & Cosmology" }, "description": { "es": "Museo del Oro, La Candelaria, arte urbano con muralista. Fragmentos.", "en": "Museo del Oro, La Candelaria, street art with muralist. Fragmentos." }, "highlights": [{ "es": "Museo del Oro con especialista", "en": "Museo del Oro with specialist" }, { "es": "Arte urbano en La Candelaria", "en": "Street art in La Candelaria" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" } },
+    { "day": 3, "title": { "es": "Guatavita y Monserrate", "en": "Guatavita & Monserrate" }, "description": { "es": "Laguna de Guatavita—origen de la leyenda de El Dorado. Monserrate al atardecer.", "en": "Laguna de Guatavita—origin of the El Dorado legend. Monserrate at sunset." }, "highlights": [{ "es": "Laguna de Guatavita", "en": "Laguna de Guatavita" }, { "es": "Monserrate", "en": "Monserrate" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" } },
+    { "day": 4, "title": { "es": "Vuelo a Medellín", "en": "Flight to Medellín" }, "description": { "es": "Traslado al aeropuerto, vuelo a Medellín. Check-in en El Poblado. Tarde libre para explorar.", "en": "Transfer to airport, flight to Medellín. Check-in in El Poblado. Free afternoon to explore." }, "highlights": [{ "es": "Llegada a Medellín", "en": "Arrival in Medellín" }], "meals": ["breakfast"], "accommodation": { "es": "Hotel boutique, El Poblado", "en": "Boutique hotel, El Poblado" } },
+    { "day": 5, "title": { "es": "Medellín: Comuna 13", "en": "Medellín: Comuna 13" }, "description": { "es": "Inmersión en la Comuna 13 con guía local—historia de transformación urbana, arte, hip-hop como resistencia. Tarde en el centro histórico.", "en": "Immersion in Comuna 13 with local guide—urban transformation history, art, hip-hop as resistance. Afternoon in the historic center." }, "highlights": [{ "es": "Comuna 13 con guía comunitario", "en": "Comuna 13 with community guide" }, { "es": "Centro histórico de Medellín", "en": "Medellín's historic center" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, El Poblado", "en": "Boutique hotel, El Poblado" } },
+    { "day": 6, "title": { "es": "Guatapé", "en": "Guatapé" }, "description": { "es": "Excursión de día completo a Guatapé. Ascenso a La Piedra del Peñol—740 escalones y una vista que redefine la escala. Almuerzo en el pueblo.", "en": "Full-day excursion to Guatapé. Ascent of La Piedra del Peñol—740 steps and a view that redefines scale. Lunch in town." }, "highlights": [{ "es": "Piedra del Peñol", "en": "Piedra del Peñol" }, { "es": "Pueblo de Guatapé", "en": "Guatapé town" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, El Poblado", "en": "Boutique hotel, El Poblado" } },
+    { "day": 7, "title": { "es": "Traslado al Eje Cafetero", "en": "Transfer to Coffee Region" }, "description": { "es": "Vuelo a Pereira. Traslado a hacienda cafetera. Introducción al mundo del café: la tierra, el clima, la variedad.", "en": "Flight to Pereira. Transfer to coffee hacienda. Introduction to the world of coffee: the soil, the climate, the variety." }, "highlights": [{ "es": "Llegada a hacienda cafetera", "en": "Arrival at coffee hacienda" }, { "es": "Primera inmersión cafetera", "en": "First coffee immersion" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Hacienda cafetera", "en": "Coffee hacienda" } },
+    { "day": 8, "title": { "es": "Hacienda Venecia: de la semilla a la taza", "en": "Hacienda Venecia: Seed to Cup" }, "description": { "es": "Día completo en la hacienda. Cosecha (si es temporada), proceso húmedo, secado, tostión y catación profesional. Conversación sobre economía cafetera y su impacto cultural.", "en": "Full day at the hacienda. Harvest (if in season), wet processing, drying, roasting, and professional cupping. Conversation about coffee economics and cultural impact." }, "highlights": [{ "es": "Proceso completo del café", "en": "Complete coffee process" }, { "es": "Catación profesional", "en": "Professional cupping session" }], "meals": ["breakfast", "lunch", "dinner"], "accommodation": { "es": "Hacienda cafetera", "en": "Coffee hacienda" } },
+    { "day": 9, "title": { "es": "Valle del Cocora", "en": "Cocora Valley" }, "description": { "es": "Caminata por el Valle del Cocora entre palmas de cera—el árbol nacional de Colombia, que puede alcanzar 60 metros. Almuerzo en Salento. Tarde libre en el pueblo.", "en": "Trek through the Cocora Valley among wax palms—Colombia's national tree, reaching up to 60 meters. Lunch in Salento. Free afternoon in town." }, "highlights": [{ "es": "Caminata Valle del Cocora", "en": "Cocora Valley trek" }, { "es": "Pueblo de Salento", "en": "Salento town" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hacienda cafetera", "en": "Coffee hacienda" } },
+    { "day": 10, "title": { "es": "Partida", "en": "Departure" }, "description": { "es": "Último desayuno en la hacienda. Traslado al aeropuerto de Pereira.", "en": "Final breakfast at the hacienda. Transfer to Pereira airport." }, "highlights": [{ "es": "Traslado al aeropuerto", "en": "Airport transfer" }], "meals": ["breakfast"], "accommodation": null }
+  ],
+  "experience": { "culturalDepth": 5, "physicalDemand": 3, "comfort": 4, "groupIntimacy": 4 },
+  "idealFor": [
+    { "es": "Viajeros que buscan entender Colombia, no solo visitarla", "en": "Travelers who want to understand Colombia, not just visit it" },
+    { "es": "Amantes del café que quieren ir más allá de la taza", "en": "Coffee lovers who want to go beyond the cup" },
+    { "es": "Curiosos de la transformación urbana y social", "en": "Those curious about urban and social transformation" }
+  ],
+  "signatureExperiences": [
+    { "es": "Inmersión cafetera completa en Hacienda Venecia", "en": "Complete coffee immersion at Hacienda Venecia" },
+    { "es": "Comuna 13 con guía comunitario", "en": "Comuna 13 with community guide" },
+    { "es": "Museo del Oro con lectura cosmológica", "en": "Museo del Oro with cosmological reading" },
+    { "es": "Narrativa económica-cultural del café colombiano", "en": "Economic-cultural narrative of Colombian coffee" }
+  ],
+  "relatedTours": ["classic-bogota", "classic-colombia-caribe", "classic-colombia-full"],
+  "preTrip": {
+    "packing": [
+      { "es": "Capas para altitudes variadas (0–2.640m)", "en": "Layers for varying altitudes (0–2,640m)" },
+      { "es": "Botas de trekking ligeras para Cocora", "en": "Light trekking boots for Cocora" },
+      { "es": "Protección solar y repelente", "en": "Sunscreen and insect repellent" }
+    ],
+    "reading": ["El olvido que seremos — Héctor Abad Faciolince", "The Sound of Things Falling — Juan Gabriel Vásquez"],
+    "preparation": { "es": "El viaje cubre altitudes desde el nivel del mar hasta 2.640m. La aclimatación ocurre naturalmente durante el itinerario.", "en": "The journey covers altitudes from sea level to 2,640m. Acclimatization happens naturally through the itinerary." }
+  },
+  "seo": {
+    "es": { "metaTitle": "Classic Colombia Cafetero — Del Oro al Café | Meridiana", "metaDescription": "10 días por Bogotá, Medellín y el Eje Cafetero. Inmersión cultural, café de origen y la transformación de Colombia.", "keywords": ["tour colombia", "eje cafetero", "viaje cultural colombia", "hacienda cafetera", "medellin comuna 13"] },
+    "en": { "metaTitle": "Classic Colombia Cafetero — From Gold to Coffee | Meridiana", "metaDescription": "10 days through Bogotá, Medellín, and the Coffee Region. Cultural immersion, origin coffee, and Colombia's transformation.", "keywords": ["colombia tour", "coffee region colombia", "cultural travel colombia", "coffee hacienda", "medellin comuna 13"] }
+  }
+}

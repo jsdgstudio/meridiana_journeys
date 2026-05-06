@@ -1,0 +1,78 @@
+{
+  "id": "en-busqueda-del-dorado",
+  "title": { "es": "En Búsqueda del Dorado", "en": "In Search of El Dorado" },
+  "subtitle": { "es": "El oro como eje de transformación histórica", "en": "Gold as the Axis of Historical Transformation" },
+  "category": "historical",
+  "tier": "premium",
+  "status": "published",
+  "duration": { "es": "8–9 días / 7–8 noches", "en": "8–9 days / 7–8 nights" },
+  "groupSize": { "es": "2–6 viajeros", "en": "2–6 travelers" },
+  "route": ["Bogotá", "Laguna de Guatavita", "Río Magdalena", "Falan", "Mompox", "Cartagena"],
+  "price": { "amount": 5500, "currency": "USD", "note": { "es": "por persona, ocupación doble", "en": "per person, double occupancy" } },
+  "location": { "country": "Colombia", "region": "Multi-región", "coordinates": [4.711, -74.0721] },
+  "difficulty": "moderate",
+  "hero": { "image": "/images/tours/dorado-hero.jpg", "alt": { "es": "Pieza de orfebrería muisca reflejada en aguas oscuras de laguna", "en": "Muisca goldwork reflected in the dark waters of a lagoon" }, "credit": "TODO" },
+  "gallery": ["/images/tours/dorado-01.jpg", "/images/tours/dorado-02.jpg"],
+  "narrative": {
+    "short": {
+      "es": "Una lectura de Colombia a través del oro—no como metal precioso, sino como sistema de significado. Desde la Laguna de Guatavita hasta los talleres de orfebrería de Mompox, pasando por las minas de Falan y la navegación del Río Magdalena, este viaje traza la ruta del despojo, el mestizaje y la reinvención.",
+      "en": "A reading of Colombia through gold—not as precious metal, but as a system of meaning. From Laguna de Guatavita to the goldsmithing workshops of Mompox, through the mines of Falan and navigation of the Magdalena River, this journey traces the route of dispossession, mestizaje, and reinvention."
+    },
+    "long": {
+      "es": "<p>El Dorado nunca fue un lugar. Fue un ritual—un cacique muisca cubierto en polvo de oro que se sumergía en una laguna sagrada como ofrenda. Los españoles lo convirtieron en mito, en excusa para la conquista, en la primera gran narrativa extractivista del continente.</p><p>Este viaje sigue esa narrativa, pero la invierte. No busca el oro como tesoro. Lo busca como lenguaje: ¿qué significaba para los muiscas? ¿Qué significó para los conquistadores? ¿Qué significa hoy en los talleres de Mompox, donde orfebres herederos de tradiciones coloniales transforman el metal con las mismas técnicas que sus ancestros aprendieron—a la fuerza o por elección—hace cuatro siglos?</p><p>El Río Magdalena es el hilo conductor literal. La arteria que conectó el interior con el Caribe, por donde bajó el oro, subieron los esclavos y se construyó la economía de un país. Navegarlo es entender Colombia desde su columna vertebral fluvial.</p><p>Este no es un viaje fácil. Es un viaje que exige del viajero tanto como le ofrece: disposición para la complejidad, tolerancia a la ambigüedad histórica, curiosidad por las preguntas que no tienen respuesta limpia.</p>",
+      "en": "<p>El Dorado was never a place. It was a ritual—a Muisca chief covered in gold dust who submerged himself in a sacred lagoon as an offering. The Spanish turned it into myth, into an excuse for conquest, into the continent's first great extractivist narrative.</p><p>This journey follows that narrative, but inverts it. It does not seek gold as treasure. It seeks it as language: what did it mean to the Muisca? What did it mean to the conquistadors? What does it mean today in the workshops of Mompox, where goldsmiths—heirs to colonial traditions—transform metal with the same techniques their ancestors learned, by force or by choice, four centuries ago?</p><p>The Magdalena River is the literal throughline. The artery that connected the interior with the Caribbean, through which gold descended, enslaved people ascended, and a country's economy was built. To navigate it is to understand Colombia from its fluvial spine.</p><p>This is not an easy journey. It demands of the traveler as much as it offers: a willingness for complexity, tolerance for historical ambiguity, curiosity for questions without clean answers.</p>"
+    },
+    "pullQuote": { "es": "El Dorado nunca fue un lugar. Fue un ritual.", "en": "El Dorado was never a place. It was a ritual." }
+  },
+  "includes": [
+    { "es": "7–8 noches en alojamiento seleccionado (boutique + hacienda + posada ribereña)", "en": "7–8 nights in selected lodging (boutique + hacienda + riverside inn)" },
+    { "es": "Navegación por el Río Magdalena", "en": "Magdalena River navigation" },
+    { "es": "Visita a minas históricas de Falan", "en": "Visit to historic Falan mines" },
+    { "es": "Taller de orfebrería en Mompox", "en": "Goldsmithing workshop in Mompox" },
+    { "es": "Guías especializados en historia colonial y precolombina", "en": "Guides specialized in colonial and pre-Columbian history" },
+    { "es": "Vuelos internos y todos los traslados terrestres y fluviales", "en": "Domestic flights and all ground and river transfers" },
+    { "es": "Desayuno diario + 6 comidas curadas", "en": "Daily breakfast + 6 curated meals" }
+  ],
+  "excludes": [
+    { "es": "Vuelos internacionales", "en": "International flights" },
+    { "es": "Seguro de viaje", "en": "Travel insurance" },
+    { "es": "Gastos personales y propinas", "en": "Personal expenses and gratuities" }
+  ],
+  "itinerary": [
+    { "day": 1, "title": { "es": "Bogotá: el oro como cosmología", "en": "Bogotá: Gold as Cosmology" }, "description": { "es": "Museo del Oro con lectura profunda de la cosmología muisca. No contamos piezas—leemos sistemas de pensamiento.", "en": "Museo del Oro with deep reading of Muisca cosmology. We don't count pieces—we read systems of thought." }, "highlights": [{ "es": "Museo del Oro — lectura cosmológica", "en": "Museo del Oro — cosmological reading" }], "meals": ["dinner"], "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" } },
+    { "day": 2, "title": { "es": "Laguna de Guatavita", "en": "Laguna de Guatavita" }, "description": { "es": "El lugar donde nació la leyenda. Caminata hasta la laguna sagrada con historiador especializado. Tarde en Bogotá.", "en": "The place where the legend was born. Hike to the sacred lagoon with specialized historian. Afternoon in Bogotá." }, "highlights": [{ "es": "Laguna de Guatavita con historiador", "en": "Laguna de Guatavita with historian" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" } },
+    { "day": 3, "title": { "es": "Hacia el Magdalena", "en": "Toward the Magdalena" }, "description": { "es": "Traslado terrestre descendiendo del altiplano hacia el valle del Magdalena. El paisaje cambia: de páramo a trópico. Llegada a la zona ribereña.", "en": "Ground transfer descending from the highlands toward the Magdalena valley. The landscape shifts: from páramo to tropics. Arrival at the riverside zone." }, "highlights": [{ "es": "Descenso del altiplano al valle", "en": "Descent from highlands to valley" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Posada ribereña", "en": "Riverside inn" } },
+    { "day": 4, "title": { "es": "Minas de Falan", "en": "Falan Mines" }, "description": { "es": "Visita a las minas coloniales de Falan—donde la obsesión española por el oro se hizo subterránea. Lectura del impacto minero en la economía y la demografía regional.", "en": "Visit to the colonial mines of Falan—where the Spanish obsession with gold went underground. Reading of mining's impact on regional economy and demographics." }, "highlights": [{ "es": "Minas históricas de Falan", "en": "Historic Falan mines" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Posada ribereña", "en": "Riverside inn" } },
+    { "day": 5, "title": { "es": "Navegación: Río Magdalena", "en": "Navigation: Magdalena River" }, "description": { "es": "Navegación por el Magdalena—la arteria que construyó Colombia. El río como sistema de transporte, comercio y memoria.", "en": "Navigation along the Magdalena—the artery that built Colombia. The river as system of transport, trade, and memory." }, "highlights": [{ "es": "Navegación del Río Magdalena", "en": "Magdalena River navigation" }], "meals": ["breakfast", "lunch", "dinner"], "accommodation": { "es": "A bordo o posada ribereña", "en": "On board or riverside inn" } },
+    { "day": 6, "title": { "es": "Llegada a Mompox", "en": "Arrival in Mompox" }, "description": { "es": "Mompox—la ciudad que el tiempo olvidó. Recorrido por el centro colonial declarado Patrimonio de la Humanidad. La ciudad donde García Márquez encontró la inspiración para su realismo.", "en": "Mompox—the city time forgot. Walk through the colonial center, a UNESCO World Heritage Site. The city where García Márquez found inspiration for his realism." }, "highlights": [{ "es": "Centro colonial de Mompox", "en": "Mompox colonial center" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Hotel colonial, Mompox", "en": "Colonial hotel, Mompox" } },
+    { "day": 7, "title": { "es": "Mompox: orfebrería", "en": "Mompox: Goldsmithing" }, "description": { "es": "Taller con orfebres momposinos. Filigrana como técnica heredada y transformada. Conversación sobre tradición, mercado y supervivencia cultural.", "en": "Workshop with Mompox goldsmiths. Filigree as inherited and transformed technique. Conversation about tradition, market, and cultural survival." }, "highlights": [{ "es": "Taller de orfebrería en filigrana", "en": "Filigree goldsmithing workshop" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel colonial, Mompox", "en": "Colonial hotel, Mompox" } },
+    { "day": 8, "title": { "es": "Mompox – Cartagena", "en": "Mompox – Cartagena" }, "description": { "es": "Traslado a Cartagena. Llegada al puerto donde el oro salía del continente. Cena de cierre en la ciudad amurallada.", "en": "Transfer to Cartagena. Arrival at the port from which gold left the continent. Closing dinner in the walled city." }, "highlights": [{ "es": "Cartagena como puerto del oro", "en": "Cartagena as the gold port" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Hotel boutique, Ciudad Amurallada", "en": "Boutique hotel, Walled City" } },
+    { "day": 9, "title": { "es": "Partida", "en": "Departure" }, "description": { "es": "Desayuno y traslado al aeropuerto de Cartagena.", "en": "Breakfast and transfer to Cartagena airport." }, "highlights": [{ "es": "Traslado", "en": "Transfer" }], "meals": ["breakfast"], "accommodation": null }
+  ],
+  "experience": { "culturalDepth": 5, "physicalDemand": 3, "comfort": 3, "groupIntimacy": 5 },
+  "idealFor": [
+    { "es": "Viajeros con interés profundo en historia colonial y precolombina", "en": "Travelers with deep interest in colonial and pre-Columbian history" },
+    { "es": "Quienes buscan rutas fuera de los circuitos convencionales", "en": "Those seeking routes outside conventional circuits" },
+    { "es": "Amantes del patrimonio artesanal y la orfebrería", "en": "Lovers of artisanal heritage and goldsmithing" }
+  ],
+  "signatureExperiences": [
+    { "es": "Navegación del Río Magdalena", "en": "Magdalena River navigation" },
+    { "es": "Taller de orfebrería en filigrana en Mompox", "en": "Filigree goldsmithing workshop in Mompox" },
+    { "es": "Minas coloniales de Falan", "en": "Colonial Falan mines" },
+    { "es": "Lectura histórica profunda: despojo, mestizaje, reinvención", "en": "Deep historical reading: dispossession, mestizaje, reinvention" }
+  ],
+  "relatedTours": ["classic-bogota", "macondo-realismo-magico", "classic-colombia-caribe"],
+  "preTrip": {
+    "packing": [
+      { "es": "Ropa ligera para clima tropical + capas para Bogotá", "en": "Light clothing for tropical weather + layers for Bogotá" },
+      { "es": "Repelente de insectos (zona ribereña)", "en": "Insect repellent (riverside zone)" },
+      { "es": "Calzado resistente al agua", "en": "Water-resistant footwear" }
+    ],
+    "reading": ["El general en su laberinto — Gabriel García Márquez", "The Conquest of New Granada — Robert Cunninghame Graham"],
+    "preparation": { "es": "Este viaje incluye traslados terrestres y fluviales extensos. La comodidad varía según el tramo—Mompox y la zona ribereña son rústicas pero con encanto.", "en": "This journey includes extensive ground and river transfers. Comfort varies by segment—Mompox and the riverside zone are rustic but charming." }
+  },
+  "seo": {
+    "es": { "metaTitle": "En Búsqueda del Dorado — El Oro como Historia | Meridiana", "metaDescription": "8–9 días siguiendo la ruta del oro desde Guatavita hasta Mompox. Historia profunda, navegación fluvial, orfebrería viva.", "keywords": ["el dorado tour", "mompox colombia", "rio magdalena", "tour historico colombia"] },
+    "en": { "metaTitle": "In Search of El Dorado — Gold as History | Meridiana", "metaDescription": "8–9 days following the gold route from Guatavita to Mompox. Deep history, river navigation, living goldsmithing.", "keywords": ["el dorado tour", "mompox colombia", "magdalena river", "historic colombia tour"] }
+  }
+}

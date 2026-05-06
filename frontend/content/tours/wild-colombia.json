@@ -1,0 +1,87 @@
+{
+  "id": "wild-colombia",
+  "title": { "es": "Wild Colombia", "en": "Wild Colombia" },
+  "subtitle": { "es": "Biodiversidad como sistema vivo", "en": "Biodiversity as a Living System" },
+  "category": "expedition",
+  "tier": "premium",
+  "status": "published",
+  "duration": { "es": "14–21 días / 13–20 noches", "en": "14–21 days / 13–20 nights" },
+  "groupSize": { "es": "2–4 viajeros", "en": "2–4 travelers" },
+  "route": ["Bogotá", "Chingaza", "Caño Cristales", "Amazonas", "Nuquí", "Sierra Nevada"],
+  "price": { "amount": 12500, "currency": "USD", "note": { "es": "por persona. Incluye vuelos internos y logística de expedición. Helicóptero opcional con costo adicional.", "en": "per person. Includes domestic flights and expedition logistics. Optional helicopter at additional cost." } },
+  "location": { "country": "Colombia", "region": "Multi-bioma", "coordinates": [4.711, -74.0721] },
+  "difficulty": "challenging",
+  "hero": { "image": "/images/tours/wild-hero.jpg", "alt": { "es": "Caño Cristales—el río de los cinco colores entre rocas cubiertas de macarenia clavigera", "en": "Caño Cristales—the river of five colors flowing over rocks covered in macarenia clavigera" }, "credit": "TODO" },
+  "gallery": ["/images/tours/wild-01.jpg", "/images/tours/wild-02.jpg", "/images/tours/wild-03.jpg"],
+  "narrative": {
+    "short": {
+      "es": "Colombia es el segundo país más biodiverso del planeta. Este viaje cruza cinco biomas—páramo, llano, selva, Pacífico y Caribe—para entender la biodiversidad no como dato sino como sistema vivo. Expedición científica con acceso extremo.",
+      "en": "Colombia is the second most biodiverse country on the planet. This journey crosses five biomes—páramo, plains, jungle, Pacific, and Caribbean—to understand biodiversity not as data but as a living system. Scientific expedition with extreme access."
+    },
+    "long": {
+      "es": "<p>Colombia tiene más especies de aves que ningún otro país. Más especies de orquídeas. Más tipos de ecosistemas por kilómetro cuadrado que casi cualquier nación en la tierra. Estos son datos. Wild Colombia los convierte en experiencia.</p><p>El viaje comienza en Chingaza, el páramo que alimenta de agua a Bogotá—un ecosistema que no existe en ningún otro continente, donde los frailejones crecen un centímetro por año y la niebla es parte del paisaje tanto como la roca. De ahí salta a la Orinoquía y Caño Cristales, el río que durante unas semanas al año se convierte en el más colorido del planeta gracias a la macarenia clavigera—una planta acuática que tiñe el agua de rojo, amarillo, azul, verde y negro.</p><p>Después: el Amazonas. Delfines rosados en ríos color café con leche. Comunidades indígenas que gestionan su territorio con sistemas de conocimiento que la ciencia occidental apenas empieza a entender. Y Nuquí, en el Pacífico colombiano, donde las ballenas jorobadas llegan cada año a parir—una de las migraciones más espectaculares del planeta, visible desde la costa.</p><p>El cierre es la Sierra Nevada de Santa Marta, la montaña costera más alta del mundo—que va del nivel del mar a 5.775 metros en 42 kilómetros. Hogar de los koguis, arhuacos y wiwas, pueblos indígenas que se consideran guardianes del equilibrio del mundo.</p><p>Este viaje incluye logística de expedición: vuelos chárter, lanchas, guías científicos. Helicóptero opcional para acceso a zonas remotas. No es turismo de naturaleza. Es una expedición.</p>",
+      "en": "<p>Colombia has more bird species than any other country. More orchid species. More ecosystem types per square kilometer than almost any nation on earth. These are data points. Wild Colombia turns them into experience.</p><p>The journey begins in Chingaza, the páramo that supplies Bogotá's water—an ecosystem that exists on no other continent, where frailejones grow one centimeter per year and fog is as much a part of the landscape as rock. From there it leaps to the Orinoquía and Caño Cristales, the river that for a few weeks each year becomes the most colorful on the planet thanks to macarenia clavigera—an aquatic plant that dyes the water red, yellow, blue, green, and black.</p><p>Then: the Amazon. Pink dolphins in café-au-lait rivers. Indigenous communities managing their territory with knowledge systems that Western science is only beginning to understand. And Nuquí, on Colombia's Pacific coast, where humpback whales arrive each year to give birth—one of the planet's most spectacular migrations, visible from shore.</p><p>The closing is the Sierra Nevada de Santa Marta, the world's highest coastal mountain—rising from sea level to 5,775 meters in 42 kilometers. Home to the Kogui, Arhuaco, and Wiwa, indigenous peoples who consider themselves guardians of the world's balance.</p><p>This journey includes expedition logistics: charter flights, boats, scientific guides. Optional helicopter for access to remote zones. This is not nature tourism. It is an expedition.</p>"
+    },
+    "pullQuote": { "es": "No es turismo de naturaleza. Es una expedición.", "en": "This is not nature tourism. It is an expedition." }
+  },
+  "includes": [
+    { "es": "13–20 noches en lodges, eco-hoteles y campamentos de expedición", "en": "13–20 nights in lodges, eco-hotels, and expedition camps" },
+    { "es": "Todos los vuelos internos (incluyendo chárter a zonas remotas)", "en": "All domestic flights (including charter to remote zones)" },
+    { "es": "Guías científicos y naturalistas en cada bioma", "en": "Scientific and naturalist guides in each biome" },
+    { "es": "Logística completa de expedición (lanchas, permisos, equipo)", "en": "Full expedition logistics (boats, permits, equipment)" },
+    { "es": "Avistamiento de ballenas en Nuquí (temporada julio–octubre)", "en": "Whale watching in Nuquí (season July–October)" },
+    { "es": "Inmersión en comunidad indígena amazónica", "en": "Immersion with Amazonian indigenous community" },
+    { "es": "Alimentación completa durante todo el viaje", "en": "Full board throughout the journey" }
+  ],
+  "excludes": [
+    { "es": "Vuelos internacionales", "en": "International flights" },
+    { "es": "Seguro de viaje (obligatorio para esta expedición)", "en": "Travel insurance (mandatory for this expedition)" },
+    { "es": "Helicóptero opcional (cotización por separado)", "en": "Optional helicopter (quoted separately)" },
+    { "es": "Equipo personal de trekking", "en": "Personal trekking equipment" }
+  ],
+  "itinerary": [
+    { "day": 1, "title": { "es": "Bogotá: briefing de expedición", "en": "Bogotá: Expedition Briefing" }, "description": { "es": "Llegada, briefing con el equipo científico, revisión de equipo, cena de bienvenida.", "en": "Arrival, briefing with the scientific team, equipment review, welcome dinner." }, "highlights": [{ "es": "Briefing de expedición", "en": "Expedition briefing" }], "meals": ["dinner"], "accommodation": { "es": "Hotel, Bogotá", "en": "Hotel, Bogotá" } },
+    { "day": 2, "title": { "es": "Chingaza: el páramo", "en": "Chingaza: the Páramo" }, "description": { "es": "Excursión al Parque Nacional Chingaza. Caminata entre frailejones y lagunas glaciares. Un ecosistema único del neotrópico.", "en": "Excursion to Chingaza National Park. Trek among frailejones and glacial lagoons. A unique neotropical ecosystem." }, "highlights": [{ "es": "Páramo de Chingaza", "en": "Chingaza páramo" }, { "es": "Lagunas glaciares", "en": "Glacial lagoons" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel, Bogotá", "en": "Hotel, Bogotá" } },
+    { "day": 3, "title": { "es": "Vuelo a Caño Cristales", "en": "Flight to Caño Cristales" }, "description": { "es": "Vuelo chárter a La Macarena. Primer contacto con el río de los cinco colores.", "en": "Charter flight to La Macarena. First contact with the river of five colors." }, "highlights": [{ "es": "Caño Cristales", "en": "Caño Cristales" }], "meals": ["breakfast", "lunch", "dinner"], "accommodation": { "es": "Lodge, La Macarena", "en": "Lodge, La Macarena" } },
+    { "day": 4, "title": { "es": "Caño Cristales: inmersión", "en": "Caño Cristales: Immersion" }, "description": { "es": "Día completo en el río. Caminata por los pozos naturales. Lectura geológica y biológica del fenómeno.", "en": "Full day at the river. Hike through natural pools. Geological and biological reading of the phenomenon." }, "highlights": [{ "es": "Exploración completa del río", "en": "Full river exploration" }], "meals": ["breakfast", "lunch", "dinner"], "accommodation": { "es": "Lodge, La Macarena", "en": "Lodge, La Macarena" } },
+    { "day": 5, "title": { "es": "Vuelo al Amazonas", "en": "Flight to the Amazon" }, "description": { "es": "Vuelo a Leticia. Traslado al lodge amazónico. Caminata nocturna en la selva.", "en": "Flight to Leticia. Transfer to Amazonian lodge. Night walk in the jungle." }, "highlights": [{ "es": "Llegada a la Amazonía", "en": "Arrival in the Amazon" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Lodge amazónico", "en": "Amazonian lodge" } },
+    { "day": 6, "title": { "es": "Amazonas: delfines rosados", "en": "Amazon: Pink Dolphins" }, "description": { "es": "Navegación en busca de delfines rosados. Visita a comunidad indígena. Pesca de pirañas (captura y suelta).", "en": "Navigation in search of pink dolphins. Visit to indigenous community. Piranha fishing (catch and release)." }, "highlights": [{ "es": "Delfines rosados", "en": "Pink dolphins" }, { "es": "Comunidad indígena", "en": "Indigenous community" }], "meals": ["breakfast", "lunch", "dinner"], "accommodation": { "es": "Lodge amazónico", "en": "Amazonian lodge" } },
+    { "day": 7, "title": { "es": "Amazonas: frontera triple", "en": "Amazon: Triple Border" }, "description": { "es": "Navegación a la frontera Colombia–Brasil–Perú. Puerto Nariño. Victoria regia.", "en": "Navigation to the Colombia–Brazil–Peru border. Puerto Nariño. Victoria regia." }, "highlights": [{ "es": "Frontera triple", "en": "Triple border" }, { "es": "Victoria regia", "en": "Victoria regia" }], "meals": ["breakfast", "lunch", "dinner"], "accommodation": { "es": "Lodge amazónico", "en": "Amazonian lodge" } },
+    { "day": 8, "title": { "es": "Vuelo a Nuquí (Pacífico)", "en": "Flight to Nuquí (Pacific)" }, "description": { "es": "Vuelo a Quibdó y conexión a Nuquí. Llegada al Pacífico colombiano—selva que cae al mar.", "en": "Flight to Quibdó and connection to Nuquí. Arrival to Colombia's Pacific coast—jungle that falls into the sea." }, "highlights": [{ "es": "Llegada al Pacífico", "en": "Arrival to the Pacific" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Eco-lodge, Nuquí", "en": "Eco-lodge, Nuquí" } },
+    { "day": 9, "title": { "es": "Nuquí: ballenas jorobadas", "en": "Nuquí: Humpback Whales" }, "description": { "es": "Avistamiento de ballenas jorobadas (julio–octubre). Playa y selva. Comunidades afrocolombianas del Pacífico.", "en": "Humpback whale watching (July–October). Beach and jungle. Afro-Colombian Pacific communities." }, "highlights": [{ "es": "Ballenas jorobadas", "en": "Humpback whales" }, { "es": "Comunidades del Pacífico", "en": "Pacific communities" }], "meals": ["breakfast", "lunch", "dinner"], "accommodation": { "es": "Eco-lodge, Nuquí", "en": "Eco-lodge, Nuquí" } },
+    { "day": 10, "title": { "es": "Nuquí: selva y termas", "en": "Nuquí: Jungle & Hot Springs" }, "description": { "es": "Caminata en la selva del Chocó. Termas naturales. Biodiversidad endémica.", "en": "Chocó jungle trek. Natural hot springs. Endemic biodiversity." }, "highlights": [{ "es": "Selva del Chocó", "en": "Chocó jungle" }, { "es": "Termas naturales", "en": "Natural hot springs" }], "meals": ["breakfast", "lunch", "dinner"], "accommodation": { "es": "Eco-lodge, Nuquí", "en": "Eco-lodge, Nuquí" } },
+    { "day": 11, "title": { "es": "Sierra Nevada de Santa Marta", "en": "Sierra Nevada de Santa Marta" }, "description": { "es": "Vuelo a Santa Marta. Traslado a las estribaciones de la Sierra Nevada—la montaña costera más alta del mundo.", "en": "Flight to Santa Marta. Transfer to the foothills of the Sierra Nevada—the world's highest coastal mountain." }, "highlights": [{ "es": "Sierra Nevada", "en": "Sierra Nevada" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Eco-lodge, Sierra Nevada", "en": "Eco-lodge, Sierra Nevada" } },
+    { "day": 12, "title": { "es": "Sierra Nevada: pueblos indígenas", "en": "Sierra Nevada: Indigenous Peoples" }, "description": { "es": "Encuentro con comunidades kogui y arhuaco (sujeto a aprobación comunitaria). Lectura de su cosmovisión como guardianes del equilibrio.", "en": "Encounter with Kogui and Arhuaco communities (subject to community approval). Reading of their worldview as guardians of balance." }, "highlights": [{ "es": "Encuentro con comunidades indígenas", "en": "Indigenous community encounter" }], "meals": ["breakfast", "lunch", "dinner"], "accommodation": { "es": "Eco-lodge, Sierra Nevada", "en": "Eco-lodge, Sierra Nevada" } },
+    { "day": 13, "title": { "es": "Regreso y cierre", "en": "Return & Closing" }, "description": { "es": "Descenso a Santa Marta. Cena de cierre frente al mar.", "en": "Descent to Santa Marta. Closing dinner by the sea." }, "highlights": [{ "es": "Cena de cierre", "en": "Closing dinner" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Hotel, Santa Marta", "en": "Hotel, Santa Marta" } },
+    { "day": 14, "title": { "es": "Partida", "en": "Departure" }, "description": { "es": "Traslado al aeropuerto.", "en": "Airport transfer." }, "highlights": [{ "es": "Traslado", "en": "Transfer" }], "meals": ["breakfast"], "accommodation": null }
+  ],
+  "experience": { "culturalDepth": 4, "physicalDemand": 5, "comfort": 2, "groupIntimacy": 5 },
+  "idealFor": [
+    { "es": "Exploradores y aventureros con interés científico", "en": "Explorers and adventurers with scientific interest" },
+    { "es": "Fotógrafos de naturaleza y vida salvaje", "en": "Nature and wildlife photographers" },
+    { "es": "Viajeros que buscan acceso extremo a ecosistemas únicos", "en": "Travelers seeking extreme access to unique ecosystems" }
+  ],
+  "signatureExperiences": [
+    { "es": "Caño Cristales—el río de los cinco colores", "en": "Caño Cristales—the river of five colors" },
+    { "es": "Delfines rosados en el Amazonas", "en": "Pink dolphins in the Amazon" },
+    { "es": "Ballenas jorobadas en Nuquí", "en": "Humpback whales in Nuquí" },
+    { "es": "Páramo de Chingaza", "en": "Chingaza páramo" },
+    { "es": "Comunidades indígenas de la Sierra Nevada", "en": "Sierra Nevada indigenous communities" },
+    { "es": "Helicóptero opcional para acceso remoto", "en": "Optional helicopter for remote access" }
+  ],
+  "relatedTours": ["macondo-realismo-magico", "en-busqueda-del-dorado"],
+  "preTrip": {
+    "packing": [
+      { "es": "Equipo de trekking para clima variado (0°C en páramo a 35°C en Amazonas)", "en": "Trekking gear for varied climate (0°C in páramo to 35°C in Amazon)" },
+      { "es": "Binoculares (imprescindibles)", "en": "Binoculars (essential)" },
+      { "es": "Repelente industrial y protección solar", "en": "Industrial-grade repellent and sun protection" },
+      { "es": "Botas impermeables + sandalias para agua", "en": "Waterproof boots + water sandals" }
+    ],
+    "reading": ["Colombia: A Concise Contemporary History — Michael LaRosa", "The Lost City of Z — David Grann"],
+    "preparation": { "es": "Esta expedición requiere buena condición física. Incluye caminatas de 4–8 horas, navegación en lancha y cambios extremos de altitud y temperatura. Seguro de viaje obligatorio. Consulta médica previa recomendada.", "en": "This expedition requires good physical condition. It includes 4–8 hour treks, boat navigation, and extreme changes in altitude and temperature. Travel insurance mandatory. Prior medical consultation recommended." }
+  },
+  "seo": {
+    "es": { "metaTitle": "Wild Colombia — Expedición por los Cinco Biomas | Meridiana", "metaDescription": "14–21 días cruzando páramo, llano, selva, Pacífico y Caribe. Caño Cristales, Amazonas, ballenas en Nuquí, Sierra Nevada.", "keywords": ["expedicion colombia", "cano cristales", "amazonas colombia", "nuqui ballenas", "wild colombia"] },
+    "en": { "metaTitle": "Wild Colombia — Expedition Across Five Biomes | Meridiana", "metaDescription": "14–21 days crossing páramo, plains, jungle, Pacific, and Caribbean. Caño Cristales, Amazon, whales in Nuquí, Sierra Nevada.", "keywords": ["colombia expedition", "cano cristales", "amazon colombia", "nuqui whales", "wild colombia"] }
+  }
+}

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://meridianajourneys.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://meridianajourneys.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridianajourneys.com/en"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://meridianajourneys.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meridianajourneys.com/en"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Tours grid -->
+  <url>
+    <loc>https://meridianajourneys.com/es/viajes</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/viajes</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Tour detail pages -->
+  <url>
+    <loc>https://meridianajourneys.com/es/viajes/classic-bogota</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/viajes/classic-bogota</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/viajes/classic-colombia-cafetero</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/viajes/classic-colombia-cafetero</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/viajes/classic-colombia-caribe</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/viajes/classic-colombia-caribe</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/viajes/classic-colombia-full</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/viajes/classic-colombia-full</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/viajes/en-busqueda-del-dorado</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/viajes/en-busqueda-del-dorado</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/viajes/macondo-realismo-magico</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/viajes/macondo-realismo-magico</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/viajes/wild-colombia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/viajes/wild-colombia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://meridianajourneys.com/es/nosotros</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/nosotros</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://meridianajourneys.com/es/contacto</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/contacto</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Journal -->
+  <url>
+    <loc>https://meridianajourneys.com/es/journal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/journal</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

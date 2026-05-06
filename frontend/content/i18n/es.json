@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "journeys": "Viajes",
+    "journal": "Journal",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "scrollIndicator": "Descubre más"
+  },
+  "tours": {
+    "pageTitle": "Viajes",
+    "pageSubtitle": "Experiencias culturales curadas",
+    "filterAll": "Todos",
+    "filterEntry": "Entrada",
+    "filterCore": "Core",
+    "filterPremium": "Premium",
+    "duration": "Duración",
+    "groupSize": "Grupo",
+    "from": "Desde",
+    "perPerson": "por persona",
+    "includes": "Incluye",
+    "excludes": "No incluye",
+    "itinerary": "Itinerario",
+    "experience": "La experiencia",
+    "idealFor": "Ideal para",
+    "signatureExperiences": "Experiencias distintivas",
+    "preTrip": "Antes del viaje",
+    "packing": "Qué llevar",
+    "reading": "Lecturas recomendadas",
+    "relatedTours": "Viajes relacionados",
+    "customJourney": "¿Buscas algo diferente?",
+    "customJourneyText": "Diseñamos experiencias a medida. Cuéntanos tu visión.",
+    "backToJourneys": "Volver a viajes"
+  },
+  "experience": {
+    "culturalDepth": "Profundidad cultural",
+    "physicalDemand": "Exigencia física",
+    "comfort": "Confort",
+    "groupIntimacy": "Intimidad del grupo"
+  },
+  "cta": {
+    "exploreJourneys": "Explorar viajes",
+    "requestItinerary": "Solicitar itinerario",
+    "beginPlanning": "Comenzar a planificar",
+    "contactUs": "Contáctanos",
+    "sendInquiry": "Enviar consulta"
+  },
+  "contact": {
+    "pageTitle": "Comencemos una conversación",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "journey": "Viaje de interés",
+    "dates": "Fechas tentativas",
+    "message": "Mensaje",
+    "selectJourney": "Selecciona un viaje",
+    "customJourney": "Viaje personalizado",
+    "successTitle": "Mensaje enviado",
+    "successMessage": "Te responderemos en un plazo de 48 horas.",
+    "responseTime": "Respondemos en menos de 48 horas"
+  },
+  "journal": {
+    "pageTitle": "Journal",
+    "comingSoon": "Próximamente",
+    "comingSoonText": "Estamos preparando historias que merecen ser contadas con la profundidad que exigen."
+  },
+  "about": {
+    "pageTitle": "Nosotros"
+  },
+  "footer": {
+    "tagline": "Viajes que transforman la mirada",
+    "navigation": "Navegación",
+    "contact": "Contacto",
+    "legal": "Legal",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "copyright": "© {year} Meridiana. Todos los derechos reservados.",
+    "madeWith": "Diseñado con intención"
+  },
+  "lang": {
+    "switch": "EN",
+    "current": "ES"
+  }
+}

@@ -1,0 +1,95 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./hooks/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        negro: "#0F130E",
+        "negro-80": "rgba(15, 19, 14, 0.80)",
+        "negro-60": "rgba(15, 19, 14, 0.60)",
+        "negro-40": "rgba(15, 19, 14, 0.40)",
+        "negro-20": "rgba(15, 19, 14, 0.20)",
+        verde: "#1A2E24",
+        terracota: "#CC754A",
+        tumbaga: "#9A7A3A",
+        "tumbaga-80": "rgba(154, 122, 58, 0.80)",
+        "tumbaga-40": "rgba(154, 122, 58, 0.40)",
+        marfil: "#E7D5BC",
+        "marfil-80": "rgba(231, 213, 188, 0.80)",
+        "marfil-40": "rgba(231, 213, 188, 0.40)",
+        "marfil-20": "rgba(231, 213, 188, 0.20)",
+        blanco: "#F8F4EE",
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "Palatino Linotype", "Georgia", "serif"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+      },
+      fontSize: {
+        xs: ["0.75rem", { lineHeight: "1.1" }],
+        sm: ["0.875rem", { lineHeight: "1.25" }],
+        base: ["1rem", { lineHeight: "1.65" }],
+        md: ["1.125rem", { lineHeight: "1.65" }],
+        lg: ["1.5rem", { lineHeight: "1.45" }],
+        xl: ["2rem", { lineHeight: "1.25" }],
+        "2xl": ["2.5rem", { lineHeight: "1.25" }],
+        "3xl": ["3.5rem", { lineHeight: "1.1" }],
+        "4xl": ["5rem", { lineHeight: "1.1" }],
+        "5xl": ["7.5rem", { lineHeight: "1.1" }],
+      },
+      spacing: {
+        1: "4px",
+        2: "8px",
+        3: "12px",
+        4: "16px",
+        5: "20px",
+        6: "24px",
+        8: "32px",
+        10: "40px",
+        12: "48px",
+        16: "64px",
+        20: "80px",
+        24: "96px",
+        32: "128px",
+        40: "160px",
+      },
+      borderRadius: {
+        none: "0px",
+        sm: "2px",
+        pill: "9999px",
+        DEFAULT: "0px",
+      },
+      boxShadow: {
+        none: "none",
+        float: "0 2px 24px rgba(15, 19, 14, 0.18)",
+        modal: "0 8px 48px rgba(15, 19, 14, 0.32)",
+      },
+      transitionTimingFunction: {
+        brand: "cubic-bezier(0.25, 0.1, 0.25, 1)",
+        "ease-out-brand": "cubic-bezier(0.0, 0.0, 0.2, 1)",
+        "ease-in-brand": "cubic-bezier(0.4, 0.0, 1, 1)",
+      },
+      transitionDuration: {
+        fast: "200ms",
+        base: "350ms",
+        slow: "600ms",
+        xslow: "900ms",
+      },
+      letterSpacing: {
+        tight: "-0.02em",
+        normal: "0em",
+        wide: "0.05em",
+        wider: "0.12em",
+        widest: "0.18em",
+      },
+    },
+  },
+  plugins: [require("@tailwindcss/typography")],
+};
+
+export default config;
