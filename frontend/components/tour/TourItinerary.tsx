@@ -53,6 +53,7 @@ export function TourItinerary({ tour, locale }: TourItineraryProps) {
                 {/* Header — always visible */}
                 <button
                   onClick={() => setOpenDay(isOpen ? null : i)}
+                  aria-expanded={isOpen}
                   className="w-full flex items-center justify-between gap-6 py-6 text-left group"
                 >
                   <div className="flex items-center gap-6">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -50,27 +51,42 @@ export function Navbar({ locale, ui }: NavbarProps) {
   return (
     <>
       <motion.header
-        className={[
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-          scrolled
-            ? "bg-blanco/95 backdrop-blur-sm border-b border-negro-20"
-            : "bg-transparent",
-        ].join(" ")}
+        className="fixed top-0 left-0 right-0 z-50"
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        <div className="mx-auto max-w-screen-2xl px-6 md:px-10 lg:px-16">
+        {/* Background layer — opacity-only transition, no color flash */}
+        <motion.div
+          className="absolute inset-0 bg-blanco/95 backdrop-blur-sm border-b border-negro/10"
+          initial={false}
+          animate={{ opacity: scrolled ? 1 : 0 }}
+          transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
+        />
+
+        <div className="relative mx-auto max-w-screen-2xl px-6 md:px-10 lg:px-16">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link
               href={`/${locale}`}
-              className={[
-                "font-display text-xl font-light tracking-wider uppercase transition-opacity duration-200 hover:opacity-70",
-                scrolled ? "text-negro" : "text-marfil",
-              ].join(" ")}
+              className="transition-opacity duration-200 hover:opacity-70 flex items-center"
             >
-              Meridiana
+              <Image
+                src="/images/logo_meridiana_marfil.svg"
+                alt="Meridiana"
+                width={140}
+                height={32}
+                priority
+                style={
+                  scrolled
+                    ? {
+                        filter:
+                          "brightness(0) saturate(100%) invert(49%) sepia(38%) saturate(502%) hue-rotate(6deg) brightness(88%) contrast(88%)",
+                      }
+                    : undefined
+                }
+                className="h-7 lg:h-8 w-auto"
+              />
             </Link>
 
             {/* Desktop nav */}
@@ -113,6 +129,8 @@ export function Navbar({ locale, ui }: NavbarProps) {
             {/* Mobile hamburger */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
               className={[
                 "lg:hidden flex flex-col justify-center gap-1.5 w-10 h-10 -mr-2 transition-opacity duration-200 hover:opacity-70",
                 scrolled ? "text-negro" : "text-marfil",
@@ -140,6 +158,7 @@ export function Navbar({ locale, ui }: NavbarProps) {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            id="mobile-menu"
             key="mobile-menu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

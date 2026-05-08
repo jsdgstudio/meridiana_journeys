@@ -41,6 +41,7 @@ export function ToursGrid({ tours, locale, ui }: ToursGridProps) {
             <button
               key={key}
               onClick={() => setActive(key)}
+              aria-pressed={isActive}
               className={[
                 "label text-xs tracking-widest uppercase px-4 py-2 border transition-all duration-200",
                 isActive

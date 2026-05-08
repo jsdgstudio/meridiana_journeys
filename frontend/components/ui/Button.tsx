@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md" | "lg";
@@ -35,6 +36,28 @@ const sizeStyles: Record<Size, string> = {
 const baseStyles =
   "inline-flex items-center justify-center font-sans font-bold uppercase tracking-widest rounded-none transition-colors duration-200 select-none cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tumbaga";
 
+function useMagnetic(enabled: boolean) {
+  const ref = useRef<HTMLDivElement>(null);
+  const rawX = useMotionValue(0);
+  const rawY = useMotionValue(0);
+  const x = useSpring(rawX, { stiffness: 200, damping: 18 });
+  const y = useSpring(rawY, { stiffness: 200, damping: 18 });
+
+  function onMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+    if (!enabled || !ref.current) return;
+    const rect = ref.current.getBoundingClientRect();
+    rawX.set(((e.clientX - rect.left - rect.width / 2) / rect.width) * 14);
+    rawY.set(((e.clientY - rect.top - rect.height / 2) / rect.height) * 7);
+  }
+
+  function onMouseLeave() {
+    rawX.set(0);
+    rawY.set(0);
+  }
+
+  return { ref, x, y, onMouseMove, onMouseLeave };
+}
+
 export function Button({
   children,
   variant = "primary",
@@ -45,33 +68,50 @@ export function Button({
   type = "button",
   disabled = false,
 }: ButtonProps) {
+  const isMagnetic = variant === "primary" || variant === "secondary";
+  const magnetic = useMagnetic(isMagnetic);
   const classes = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
-
-  const motionProps = {
-    whileHover: { scale: 1.02 },
-    whileTap: { scale: 0.98 },
-    transition: { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] },
-  };
 
   if (href) {
     return (
-      <motion.div {...motionProps} className="inline-flex">
-        <Link href={href} className={classes}>
-          {children}
-        </Link>
+      <motion.div
+        ref={magnetic.ref}
+        style={{ x: magnetic.x, y: magnetic.y }}
+        onMouseMove={magnetic.onMouseMove}
+        onMouseLeave={magnetic.onMouseLeave}
+        className="inline-flex"
+      >
+        <motion.div
+          whileTap={{ scale: 0.97, y: 1 }}
+          transition={{ type: "spring", stiffness: 300, damping: 25 }}
+          className="inline-flex"
+        >
+          <Link href={href} className={classes}>
+            {children}
+          </Link>
+        </motion.div>
       </motion.div>
     );
   }
 
   return (
-    <motion.button
-      {...motionProps}
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={classes}
+    <motion.div
+      ref={magnetic.ref}
+      style={{ x: magnetic.x, y: magnetic.y }}
+      onMouseMove={magnetic.onMouseMove}
+      onMouseLeave={magnetic.onMouseLeave}
+      className="inline-flex"
     >
-      {children}
-    </motion.button>
+      <motion.button
+        whileTap={{ scale: 0.97, y: 1 }}
+        transition={{ type: "spring", stiffness: 300, damping: 25 }}
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
+        className={classes}
+      >
+        {children}
+      </motion.button>
+    </motion.div>
   );
 }

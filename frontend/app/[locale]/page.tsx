@@ -3,7 +3,7 @@ import type { Locale } from "@/types/tour";
 import { getHomepageContent } from "@/hooks/useContent";
 import { getToursByIds } from "@/hooks/useTours";
 import { Hero } from "@/components/sections/Hero";
-import { ValueProposition } from "@/components/sections/ValueProposition";
+import { AboutPreview } from "@/components/sections/AboutPreview";
 import { FeaturedTours } from "@/components/sections/FeaturedTours";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { CallToAction } from "@/components/sections/CallToAction";
@@ -40,7 +40,7 @@ export default function HomePage({ params }: HomePageProps) {
   return (
     <>
       <Hero content={content.hero} locale={locale} />
-      <ValueProposition content={content.valueProp} locale={locale} />
+      <AboutPreview content={content.aboutPreview} locale={locale} />
       <FeaturedTours
         content={content.featuredTours}
         tours={featuredTours}

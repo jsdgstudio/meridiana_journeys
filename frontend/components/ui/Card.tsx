@@ -28,7 +28,7 @@ function CardInner({
   className = "",
 }: Omit<CardProps, "href">) {
   return (
-    <div className={`group rounded-none overflow-hidden bg-negro ${className}`}>
+    <div className={`group rounded-none overflow-hidden bg-gradient-card ${className}`}>
       <div className={`relative ${aspectStyles[aspectRatio]} overflow-hidden`}>
         <motion.div
           className="w-full h-full"

@@ -10,11 +10,11 @@ const themeStyles: Record<
   { bg: string; text: string }
 > = {
   dark: {
-    bg: "bg-negro",
+    bg: "bg-gradient-section",
     text: "text-marfil",
   },
   verde: {
-    bg: "bg-verde",
+    bg: "bg-gradient-section-inv",
     text: "text-marfil",
   },
   light: {

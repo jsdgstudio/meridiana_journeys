@@ -15,16 +15,33 @@ interface FeaturedToursProps {
   locale: Locale;
 }
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.14, delayChildren: 0.05 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 28 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring" as const, stiffness: 80, damping: 22 },
+  },
+};
+
 export function FeaturedTours({ content, tours, locale }: FeaturedToursProps) {
+  const [featured, ...rest] = tours;
+
   return (
     <SectionWrapper theme="light">
       <Container>
+        {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ type: "spring", stiffness: 80, damping: 22 }}
           >
             <Heading as="h2" className="text-negro">
               {content.headline[locale]}
@@ -35,7 +52,7 @@ export function FeaturedTours({ content, tours, locale }: FeaturedToursProps) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ type: "spring", stiffness: 80, damping: 22, delay: 0.1 }}
           >
             <Button href={`/${locale}/viajes`} variant="ghost" size="sm">
               {locale === "es" ? "Ver todos los viajes →" : "View all journeys →"}
@@ -43,23 +60,30 @@ export function FeaturedTours({ content, tours, locale }: FeaturedToursProps) {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
-          {tours.map((tour, i) => (
-            <motion.div
-              key={tour.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{
-                duration: 0.7,
-                delay: i * 0.12,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-            >
-              <TourCard tour={tour} locale={locale} />
+        {/* Asymmetric grid — featured left (3fr), secondary right (2fr) */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-40px" }}
+          className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-10 lg:gap-14 items-start"
+        >
+          {/* Featured tour — tall portrait format */}
+          {featured && (
+            <motion.div variants={itemVariants}>
+              <TourCard tour={featured} locale={locale} featured />
             </motion.div>
-          ))}
-        </div>
+          )}
+
+          {/* Secondary tours — stacked */}
+          <div className="grid grid-cols-1 gap-8 lg:gap-10 lg:pt-10">
+            {rest.map((tour) => (
+              <motion.div key={tour.id} variants={itemVariants}>
+                <TourCard tour={tour} locale={locale} />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </Container>
     </SectionWrapper>
   );

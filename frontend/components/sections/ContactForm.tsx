@@ -72,18 +72,21 @@ const inputBase =
 const labelBase = "block label text-xs tracking-widest uppercase text-negro/45 mb-2";
 
 interface FieldProps {
+  id: string;
   label: string;
   error?: string;
   children: React.ReactNode;
 }
 
-function Field({ label, error, children }: FieldProps) {
+function Field({ id, label, error, children }: FieldProps) {
   return (
     <div className="space-y-1">
-      <label className={labelBase}>{label}</label>
+      <label htmlFor={id} className={labelBase}>{label}</label>
       {children}
       {error && (
-        <p className="font-sans text-xs text-terracota mt-1">{error}</p>
+        <p id={`${id}-error`} className="font-sans text-xs text-terracota mt-1" role="alert">
+          {error}
+        </p>
       )}
     </div>
   );
@@ -158,8 +161,9 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
         >
           {/* Name + Email row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <Field label={labels.name[locale]} error={errors.name}>
+            <Field id="field-name" label={labels.name[locale]} error={errors.name}>
               <input
+                id="field-name"
                 name="name"
                 type="text"
                 autoComplete="name"
@@ -167,12 +171,13 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 aria-invalid={!!errors.name}
-                aria-describedby={errors.name ? "error-name" : undefined}
+                aria-describedby={errors.name ? "field-name-error" : undefined}
                 className={`${inputBase} ${errors.name ? "border-terracota" : ""}`}
               />
             </Field>
-            <Field label={labels.email[locale]} error={errors.email}>
+            <Field id="field-email" label={labels.email[locale]} error={errors.email}>
               <input
+                id="field-email"
                 name="email"
                 type="email"
                 autoComplete="email"
@@ -180,15 +185,17 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 aria-invalid={!!errors.email}
+                aria-describedby={errors.email ? "field-email-error" : undefined}
                 className={`${inputBase} ${errors.email ? "border-terracota" : ""}`}
               />
             </Field>
           </div>
 
           {/* Journey of interest */}
-          <Field label={labels.journey[locale]}>
+          <Field id="field-journey" label={labels.journey[locale]}>
             <div className="relative">
               <select
+                id="field-journey"
                 name="journey"
                 value={data.journey}
                 onChange={handleChange}
@@ -204,7 +211,7 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
               </select>
               {/* Custom chevron */}
               <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
                   <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square"/>
                 </svg>
               </div>
@@ -212,8 +219,9 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
           </Field>
 
           {/* Dates */}
-          <Field label={labels.dates[locale]}>
+          <Field id="field-dates" label={labels.dates[locale]}>
             <input
+              id="field-dates"
               name="dates"
               type="text"
               placeholder={labels.datesHint[locale]}
@@ -224,8 +232,9 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
           </Field>
 
           {/* Message */}
-          <Field label={labels.message[locale]} error={errors.message}>
+          <Field id="field-message" label={labels.message[locale]} error={errors.message}>
             <textarea
+              id="field-message"
               name="message"
               rows={5}
               placeholder={labels.messagePlaceholder[locale]}
@@ -233,6 +242,7 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
               onChange={handleChange}
               onBlur={handleBlur}
               aria-invalid={!!errors.message}
+              aria-describedby={errors.message ? "field-message-error" : undefined}
               className={`${inputBase} resize-none ${errors.message ? "border-terracota" : ""}`}
             />
           </Field>

@@ -47,7 +47,7 @@ export function TourPricing({ tour, locale }: TourPricingProps) {
               {labels.from[locale]}
             </p>
             <p className="font-display text-5xl font-light text-marfil leading-tight">
-              ${tour.price.amount.toLocaleString()}
+              ${tour.price.amount.toLocaleString('en-US')}
               <span className="text-xl ml-2 text-marfil/40">USD</span>
             </p>
             <p className="font-sans text-sm text-marfil/40">

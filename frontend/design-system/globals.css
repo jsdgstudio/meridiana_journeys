@@ -51,6 +51,15 @@
   --bg-page:          var(--blanco);
   --bg-overlay:       rgba(15, 19, 14, 0.65);
 
+  /* ── Gradient tokens ── */
+  --gradient-card:        linear-gradient(160deg, var(--negro) 0%, var(--verde) 100%);
+  --gradient-card-hover:  linear-gradient(160deg, var(--verde) 0%, rgba(154, 122, 58, 0.15) 100%);
+  --gradient-section:     linear-gradient(180deg, var(--negro) 0%, var(--verde) 100%);
+  --gradient-section-inv: linear-gradient(180deg, var(--verde) 0%, var(--negro) 100%);
+  --gradient-hero:        linear-gradient(180deg, rgba(15, 19, 14, 0.25) 0%, rgba(15, 19, 14, 0.65) 45%, rgba(15, 19, 14, 0.95) 100%);
+  --gradient-accent:      linear-gradient(135deg, var(--tumbaga) 0%, var(--terracota) 100%);
+  --gradient-text:        linear-gradient(135deg, var(--marfil) 0%, var(--tumbaga) 100%);
+
   /* Semantic — Foregrounds */
   --fg-on-dark:       var(--marfil);
   --fg-on-dark-muted: rgba(231, 213, 188, 0.65);
@@ -143,9 +152,14 @@
 }
 
 html {
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

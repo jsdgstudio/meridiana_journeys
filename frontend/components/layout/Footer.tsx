@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface FooterProps {
   locale: string;
@@ -28,9 +29,15 @@ export function Footer({ locale, ui }: FooterProps) {
           <div className="space-y-6">
             <Link
               href={`/${locale}`}
-              className="font-display text-2xl font-light tracking-wider uppercase hover:opacity-70 transition-opacity duration-200"
+              className="hover:opacity-70 transition-opacity duration-200 inline-flex items-center"
             >
-              Meridiana
+              <Image
+                src="/images/logo_meridiana_marfil.svg"
+                alt="Meridiana"
+                width={160}
+                height={36}
+                className="h-9 w-auto"
+              />
             </Link>
             <p className="font-sans text-sm leading-relaxed opacity-60 max-w-xs">
               {ui.footer.tagline}

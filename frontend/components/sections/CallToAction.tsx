@@ -23,7 +23,7 @@ export function CallToAction({ content, locale }: CallToActionProps) {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ type: "spring", stiffness: 75, damping: 22 }}
           className="text-center space-y-8"
         >
           {/* Tumbaga rule above */}
@@ -41,7 +41,7 @@ export function CallToAction({ content, locale }: CallToActionProps) {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ type: "spring", stiffness: 75, damping: 22, delay: 0.15 }}
           >
             <Button href={href} variant="secondary" size="lg">
               {content.buttonText[locale]}

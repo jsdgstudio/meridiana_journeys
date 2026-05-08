@@ -8,6 +8,7 @@ import type { Tour, Locale } from "@/types/tour";
 interface TourCardProps {
   tour: Tour;
   locale: Locale;
+  featured?: boolean;
 }
 
 const tierColors: Record<Tour["tier"], string> = {
@@ -28,29 +29,37 @@ const tierLabel: Record<Tour["tier"], { es: string; en: string }> = {
   premium: { es: "Premium", en: "Premium" },
 };
 
-export function TourCard({ tour, locale }: TourCardProps) {
+export function TourCard({ tour, locale, featured = false }: TourCardProps) {
   const href = `/${locale}/viajes/${tour.id}`;
 
   return (
     <motion.article
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+      whileHover={{ y: featured ? -6 : -4 }}
+      transition={{ type: "spring", stiffness: 220, damping: 26 }}
       className="group"
     >
       <Link href={href} className="block">
         {/* Image */}
-        <div className="relative aspect-[4/3] overflow-hidden bg-verde mb-5">
+        <div
+          className={`relative overflow-hidden bg-verde mb-5 ${
+            featured ? "aspect-[3/4]" : "aspect-[4/3]"
+          }`}
+        >
           <motion.div
             className="absolute inset-0"
             whileHover={{ scale: 1.04 }}
-            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ type: "spring", stiffness: 120, damping: 26 }}
           >
             <Image
               src={tour.hero.image}
               alt={tour.hero.alt[locale]}
               fill
               className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes={
+                featured
+                  ? "(max-width: 768px) 100vw, 60vw"
+                  : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              }
             />
           </motion.div>
 
@@ -65,7 +74,7 @@ export function TourCard({ tour, locale }: TourCardProps) {
             </span>
           </div>
 
-          {/* Gradient overlay */}
+          {/* Hover overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-negro/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>
 
@@ -81,7 +90,11 @@ export function TourCard({ tour, locale }: TourCardProps) {
         </div>
 
         {/* Title + subtitle */}
-        <h3 className="font-display text-xl font-normal text-negro leading-snug mb-1 group-hover:opacity-70 transition-opacity duration-200">
+        <h3
+          className={`font-display font-normal text-negro leading-snug mb-1 group-hover:opacity-70 transition-opacity duration-200 ${
+            featured ? "text-2xl" : "text-xl"
+          }`}
+        >
           {tour.title[locale]}
         </h3>
         <p className="font-display text-base italic text-negro/50 mb-3">
@@ -105,7 +118,11 @@ export function TourCard({ tour, locale }: TourCardProps) {
         )}
 
         {/* Short narrative */}
-        <p className="font-sans text-sm leading-relaxed text-negro/55 line-clamp-3 mb-4">
+        <p
+          className={`font-sans text-sm leading-relaxed text-negro/55 mb-4 ${
+            featured ? "" : "line-clamp-3"
+          }`}
+        >
           {tour.narrative.short[locale]}
         </p>
 
@@ -113,7 +130,7 @@ export function TourCard({ tour, locale }: TourCardProps) {
         <p className="font-sans text-sm text-negro/40">
           {locale === "es" ? "Desde" : "From"}{" "}
           <span className="text-negro/70 font-medium">
-            ${tour.price.amount.toLocaleString()} USD
+            ${tour.price.amount.toLocaleString('en-US')} USD
           </span>
           {tour.price.note && (
             <span className="text-xs ml-1">/ {tour.price.note[locale]}</span>

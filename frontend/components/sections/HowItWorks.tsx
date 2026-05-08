@@ -12,6 +12,20 @@ interface HowItWorksProps {
   locale: Locale;
 }
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.18, delayChildren: 0.05 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring" as const, stiffness: 80, damping: 22 },
+  },
+};
+
 export function HowItWorks({ content, locale }: HowItWorksProps) {
   return (
     <SectionWrapper theme="page">
@@ -20,7 +34,7 @@ export function HowItWorks({ content, locale }: HowItWorksProps) {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ type: "spring", stiffness: 80, damping: 22 }}
           className="mb-16 lg:mb-20"
         >
           <Heading as="h2" className="text-negro">
@@ -28,23 +42,25 @@ export function HowItWorks({ content, locale }: HowItWorksProps) {
           </Heading>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid grid-cols-1 lg:grid-cols-3 gap-0"
+        >
           {content.steps.map((step, i) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{
-                duration: 0.7,
-                delay: i * 0.15,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
+              variants={itemVariants}
               className="relative lg:pr-16 space-y-5"
             >
               {/* Step number */}
               <div className="flex items-start gap-6">
-                <span className="font-display text-5xl font-light text-negro/10 leading-none select-none">
+                <span
+                  className="font-display text-4xl font-light leading-none select-none"
+                  style={{ color: "var(--terracota)", opacity: 0.85 }}
+                >
                   {String(step.number).padStart(2, "0")}
                 </span>
                 <div className="pt-3 flex-1 space-y-4">
@@ -63,7 +79,7 @@ export function HowItWorks({ content, locale }: HowItWorksProps) {
               )}
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Container>
     </SectionWrapper>
   );
