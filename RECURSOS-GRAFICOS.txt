@@ -1,0 +1,162 @@
+MERIDIANA — INVENTARIO DE RECURSOS GRAFICOS
+===========================================
+Generado: 2026-05-04
+
+
+== VIDEOS — Heroes de pagina ==
+
+Cada video necesita version .mp4 + .webm para compatibilidad.
+Resolucion minima: 1920x1080. Duracion: 15-30s, loop sin audio.
+
+hero-home.mp4 / .webm
+  Hero de la homepage. Paisaje cinematografico de Colombia — cordillera andina,
+  niebla, luz dorada al amanecer. Sin texto sobreimpuesto. Tono oscuro, lento,
+  contemplativo.
+
+hero-bogota.mp4 / .webm
+  Hero del tour Classic Bogota. Tejados de terracota de La Candelaria contra
+  los cerros orientales al atardecer. Urban, arquitectonico.
+
+hero-cafetero.mp4 / .webm
+  Hero del tour Eje Cafetero. Palmas de cera en el Valle del Cocora al amanecer,
+  niebla entre montanas verdes. Natural, etereo.
+
+hero-caribe.mp4 / .webm
+  Hero del tour Caribe. Balcones coloniales de Cartagena con buganvillas al
+  atardecer. Calido, colonial.
+
+hero-colombia-full.mp4 / .webm
+  Hero del tour Colombia Full. Secuencia que combina los tres territorios:
+  montana, selva, mar.
+
+hero-dorado.mp4 / .webm
+  Hero del tour En Busqueda del Dorado. Orfebreria muisca, agua oscura de laguna,
+  luz baja y dramatica. Historico, misterioso.
+
+hero-macondo.mp4 / .webm
+  Hero del tour Macondo. Casa colonial en Aracataca, luz tropical filtrada entre
+  hojas de platano. Literario, onirico.
+
+hero-wild.mp4 / .webm
+  Hero del tour Wild Colombia. Cano Cristales — el rio de los cinco colores —
+  sobre rocas con macarenia clavigera. Natural, espectacular.
+
+
+== IMAGENES — Heroes estaticos (fallback) ==
+
+Formato: JPG 1920x1080
+Carpeta: public/images/
+
+hero-home.jpg
+  Fallback estatico del hero homepage. Misma vision que el video.
+
+about-hero.jpg
+  Cartagena al atardecer desde el mar. El Caribe como historia viva.
+
+
+== IMAGENES — Galerias de tours ==
+
+Formato: JPG. Resolucion recomendada: 1200x800 minimo.
+Carpeta: public/images/tours/
+
+--- Classic Bogota ---
+bogota-hero.jpg     Tejados de La Candelaria contra los cerros, hora dorada
+bogota-01.jpg       Interior del Museo del Oro — pieza de orfebreria muisca en vitrina
+bogota-02.jpg       Fachada del Teatro Colon o arquitectura republicana del centro
+bogota-03.jpg       Mercado de Paloquemao — frutas tropicales, color saturado, vida cotidiana
+
+--- Classic Colombia Cafetero ---
+cafetero-hero.jpg   Palmas de cera en el Cocora al amanecer con niebla
+cafetero-01.jpg     Finca cafetera tradicional — proceso de beneficio del cafe
+cafetero-02.jpg     Salento — balcones coloridos, arquitectura paisa
+cafetero-03.jpg     Paisaje del Eje Cafetero — montanas verdes, clima
+
+--- Classic Colombia Caribe ---
+caribe-hero.jpg     Balcones coloniales de Cartagena con buganvillas al atardecer
+caribe-01.jpg       Ciudad Amurallada — detalle arquitectonico colonial
+caribe-02.jpg       Sierra Nevada de Santa Marta o Tayrona — selva que llega al mar
+
+--- Classic Colombia Full ---
+colombia-full-hero.jpg   Composicion visual que integra los tres territorios del tour:
+                         oro precolombino, cafe, costa
+
+--- En Busqueda del Dorado ---
+dorado-hero.jpg     Pieza de orfebreria muisca reflejada en agua oscura — luz dramatica, baja
+dorado-01.jpg       Laguna de Guatavita desde arriba — circulo perfecto de agua verde en la montana
+dorado-02.jpg       Sala del Museo del Oro — vitrinas iluminadas con piezas precolombinas
+
+--- Macondo y el Realismo Magico ---
+macondo-hero.jpg    Casa colonial con patio interior en Aracataca — luz tropical entre hojas de platano
+macondo-01.jpg      Casa natal de Garcia Marquez en Aracataca
+macondo-02.jpg      Juglar vallenato — musico con acordeon, contexto autentico, no turistico
+
+--- Wild Colombia ---
+wild-hero.jpg       Cano Cristales — rio de cinco colores, macarenia clavigera sobre las rocas
+wild-01.jpg         Selva amazonica o Serrania de Chiribiquete — paisaje remoto, escarpado
+wild-02.jpg         Vida silvestre — fauna emblema (jaguar, delfin rosado, o aves endemicas)
+wild-03.jpg         Amanecer en paramo o sur del pais — luz fria, horizonte limpio
+
+
+== IMAGEN — Logo e Identidad ==
+
+Carpeta: public/images/ (raiz)
+
+logo.svg            Logotipo Meridiana — version principal (para fondo oscuro)
+logo-light.svg      Logotipo version clara (para fondos claros o footer invertido)
+favicon.ico         Icono del sitio para navegador
+icon.svg            Version SVG del favicon
+og-image.jpg        Imagen Open Graph 1200x630 para compartir en redes sociales
+
+
+== ESTRUCTURA DE CARPETAS ==
+
+public/
+├── video/
+│   ├── hero-home.mp4 + hero-home.webm
+│   ├── hero-bogota.mp4 + hero-bogota.webm
+│   ├── hero-cafetero.mp4 + hero-cafetero.webm
+│   ├── hero-caribe.mp4 + hero-caribe.webm
+│   ├── hero-colombia-full.mp4 + hero-colombia-full.webm
+│   ├── hero-dorado.mp4 + hero-dorado.webm
+│   ├── hero-macondo.mp4 + hero-macondo.webm
+│   └── hero-wild.mp4 + hero-wild.webm
+└── images/
+    ├── hero-home.jpg
+    ├── about-hero.jpg
+    ├── og-image.jpg
+    ├── logo.svg
+    ├── logo-light.svg
+    ├── favicon.ico
+    ├── icon.svg
+    └── tours/
+        ├── bogota-hero.jpg
+        ├── bogota-01.jpg
+        ├── bogota-02.jpg
+        ├── bogota-03.jpg
+        ├── cafetero-hero.jpg
+        ├── cafetero-01.jpg
+        ├── cafetero-02.jpg
+        ├── cafetero-03.jpg
+        ├── caribe-hero.jpg
+        ├── caribe-01.jpg
+        ├── caribe-02.jpg
+        ├── colombia-full-hero.jpg
+        ├── dorado-hero.jpg
+        ├── dorado-01.jpg
+        ├── dorado-02.jpg
+        ├── macondo-hero.jpg
+        ├── macondo-01.jpg
+        ├── macondo-02.jpg
+        ├── wild-hero.jpg
+        ├── wild-01.jpg
+        ├── wild-02.jpg
+        └── wild-03.jpg
+
+
+== TOTALES ==
+
+Videos:   8 clips x 2 formatos = 16 archivos
+Imagenes: 28 fotografias
+Identidad: 5 archivos (logo x2, favicon, icon, og-image)
+-------------------------------------------------
+TOTAL: 49 archivos graficos
