@@ -2,12 +2,12 @@
   "id": "homepage",
   "hero": {
     "headline": {
-      "es": "Cada territorio colombiano lleva siglos contando su historia.",
-      "en": "Every Colombian territory has been telling its story for centuries."
+      "es": "Cada territorio cuenta una historia.",
+      "en": "Every territory tells a story."
     },
     "subheadline": {
-      "es": "Nosotros traducimos sus voces.",
-      "en": "We translate their voices."
+      "es": "Nosotros la traducimos.",
+      "en": "We translate it."
     },
     "media": {
       "type": "image",
@@ -91,7 +91,95 @@
       "es": "Viajes curados",
       "en": "Curated Journeys"
     },
-    "tourIds": ["classic-bogota", "classic-colombia-cafetero", "en-busqueda-del-dorado"]
+    "tourIds": ["classic-bogota", "classic-colombia", "en-busqueda-del-dorado"]
+  },
+  "travelCards": {
+    "eyebrow": { "es": "Meridiana · Colombia", "en": "Meridiana · Colombia" },
+    "headline": { "es": "Viajes curados", "en": "Curated Journeys" },
+    "headerCta": { "es": "Conoce nuestros tours", "en": "Explore our journeys" },
+    "ctaLearnMore": { "es": "Conoce más", "en": "Learn more" },
+    "ctaBook": { "es": "Agenda este viaje", "en": "Book this journey" },
+    "row1": [
+      {
+        "id": "classic-bogota",
+        "imageSrc": "https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=1600&q=80&auto=format&fit=crop",
+        "imageAlt": "Bogotá",
+        "tone": "terracotta",
+        "tourLabel": { "es": "Tour 01", "en": "Tour 01" },
+        "region": { "es": "Cundinamarca", "en": "Cundinamarca" },
+        "meta": { "es": "2–3 días · 2–8 viajeros · desde $1,850 USD", "en": "2–3 days · 2–8 travelers · from $1,850 USD" },
+        "title": { "es": "Classic Bogotá", "en": "Classic Bogotá" },
+        "description": {
+          "es": "Cinco siglos de historia a través de los ojos de quienes mejor conocen la ciudad. De la cosmovisión Muisca a las minas de sal que sedujeron a los conquistadores, hasta el arte urbano nacido del Bogotazo. Conversaciones privadas con chefs, espacios patrimoniales y relatos que no encontrarás en ninguna guía.",
+          "en": "Five centuries of history through the eyes of those who know the city best. From the Muisca cosmovision to the salt mines that seduced the conquistadors, to the street art born from the Bogotazo. Private conversations with chefs, heritage spaces, and stories you won't find in any guidebook."
+        }
+      },
+      {
+        "id": "classic-colombia",
+        "imageSrc": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600&q=80&auto=format&fit=crop",
+        "imageAlt": "Classic Colombia",
+        "tone": "emerald",
+        "tourLabel": { "es": "Tour 02", "en": "Tour 02" },
+        "region": { "es": "Andes · Caribe", "en": "Andes · Caribbean" },
+        "meta": { "es": "9–10 días · 2–8 viajeros · desde $6,800 USD", "en": "9–10 days · 2–8 travelers · from $6,800 USD" },
+        "title": { "es": "Classic Colombia", "en": "Classic Colombia" },
+        "description": {
+          "es": "Colombia se comprende en actos. La Bogotá andina que custodia el oro precolombino, la Medellín que transformó violencia en innovación social, el Eje Cafetero donde pequeños productores cultivan la economía del país, y el Caribe afrodescendiente de herencia ancestral.",
+          "en": "Colombia is understood in acts. The Andean Bogotá that guards pre-Columbian gold, the Medellín that transformed violence into social innovation, the Coffee Region where small producers cultivate the country's economy, and the Afro-descendant Caribbean of ancestral heritage."
+        }
+      },
+      {
+        "id": "en-busqueda-del-dorado",
+        "imageSrc": "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&q=80&auto=format&fit=crop",
+        "imageAlt": "En Búsqueda del Dorado",
+        "tone": "gold",
+        "tourLabel": { "es": "Tour 03", "en": "Tour 03" },
+        "region": { "es": "Bogotá · Mompox · Cartagena", "en": "Bogotá · Mompox · Cartagena" },
+        "meta": { "es": "8–9 días · 2–4 viajeros · desde $3,400 USD", "en": "8–9 days · 2–4 travelers · from $3,400 USD" },
+        "title": { "es": "En Búsqueda del Dorado", "en": "In Search of El Dorado" },
+        "description": {
+          "es": "El eco de una obsesión: la promesa de oro que sedujo imperios. De Bogotá a Falan, de Mompox a Cartagena, el viaje se hilvana por ríos y caminos donde la ambición quedó inscrita en la memoria del territorio. Un mestizaje profundo y deslumbrante que aún define la identidad del país.",
+          "en": "The echo of an obsession: the promise of gold that seduced empires. From Bogotá to Falan, from Mompox to Cartagena, the journey threads through rivers and roads where ambition was inscribed in the territory's memory. A profound and dazzling mestizaje that still defines the country's identity."
+        }
+      }
+    ],
+    "row2": [
+      {
+        "id": "macondo-realismo-magico",
+        "imageSrc": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1600&q=80&auto=format&fit=crop",
+        "imageAlt": "Macondo",
+        "tone": "terracotta",
+        "tourLabel": { "es": "Tour 04", "en": "Tour 04" },
+        "region": { "es": "Aracataca · Cartagena", "en": "Aracataca · Cartagena" },
+        "meta": { "es": "7–10 días · 2–6 viajeros · desde $2,900 USD", "en": "7–10 days · 2–6 travelers · from $2,900 USD" },
+        "title": { "es": "Macondo y el Realismo Mágico", "en": "Macondo and Magical Realism" },
+        "titleEmphasis": { "es": "Realismo Mágico", "en": "Magical Realism" },
+        "description": {
+          "es": "En el Caribe colombiano García Márquez no inventó el realismo mágico, lo transcribió. Aracataca, el Macondo real. Ciénaga y la masacre bananera. Valledupar, donde el vallenato guarda la memoria oral que Gabo llevó a la prosa. Cartagena, donde Florentino Ariza esperó cincuenta y tres años, siete meses y once días.",
+          "en": "In the Colombian Caribbean, García Márquez didn't invent magical realism — he transcribed it. Aracataca, the real Macondo. Ciénaga and the banana massacre. Valledupar, where vallenato preserves the oral memory that Gabo brought to prose. Cartagena, where Florentino Ariza waited fifty-three years, seven months, and eleven days."
+        }
+      },
+      {
+        "id": "wild-colombia",
+        "imageSrc": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1600&q=80&auto=format&fit=crop",
+        "imageAlt": "Wild Colombia",
+        "tone": "emerald",
+        "tourLabel": { "es": "Tour 05 · Expedición", "en": "Tour 05 · Expedition" },
+        "region": { "es": "5 ecosistemas", "en": "5 ecosystems" },
+        "meta": { "es": "17–21 días · 2–4 viajeros · desde $9,500 USD", "en": "17–21 days · 2–4 travelers · from $9,500 USD" },
+        "title": { "es": "Wild Colombia", "en": "Wild Colombia" },
+        "description": {
+          "es": "21 días por los cinco ecosistemas del segundo país más biodiverso del planeta. De los páramos de Chingaza a los llanos de la Orinoquía, de los delfines rosados del Amazonas a las ballenas jorobadas del Pacífico, hasta la Sierra Nevada donde los Arhuacos leen el territorio desde hace milenios.",
+          "en": "21 days across the five ecosystems of the second most biodiverse country on the planet. From the páramos of Chingaza to the Orinoquía plains, from the pink dolphins of the Amazon to the humpback whales of the Pacific, to the Sierra Nevada where the Arhuacos have read the territory for millennia."
+        }
+      }
+    ]
+  },
+  "infoBar": {
+    "text": {
+      "es": "Nuestros viajes nacen de una propuesta curatorial responsable y auténtica. Lo que nos diferencia no es solo lo que mostramos, sino quién lo cuenta.",
+      "en": "Our journeys are born from a responsible and authentic curatorial approach. What sets us apart is not just what we show, but who tells the story."
+    }
   },
   "howItWorks": {
     "headline": {
@@ -140,8 +228,8 @@
       "en": "Begin Your Journey"
     },
     "description": {
-      "es": "Siete itinerarios. Desde tres días en Bogotá hasta tres semanas entre selva, páramo y litoral. Todos construidos alrededor de una idea, no de una lista de atracciones.",
-      "en": "Seven itineraries. From three days in Bogotá to three weeks across jungle, páramo, and coastline. All built around an idea, not a list of attractions."
+      "es": "Cinco itinerarios. Desde tres días en Bogotá hasta tres semanas entre selva, páramo y litoral. Todos construidos alrededor de una idea, no de una lista de atracciones.",
+      "en": "Five itineraries. From three days in Bogotá to three weeks across jungle, páramo, and coastline. All built around an idea, not a list of attractions."
     },
     "buttonText": {
       "es": "Explorar viajes",

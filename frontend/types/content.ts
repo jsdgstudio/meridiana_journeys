@@ -16,11 +16,40 @@ export type SectionTheme = "light" | "dark" | "alt";
 
 // --- Homepage ---
 
+export interface TravelCardItem {
+  id: string;
+  imageSrc: string;
+  imageAlt: string;
+  tone: "terracotta" | "gold" | "emerald";
+  tourLabel: LocaleString;
+  region: LocaleString;
+  meta: LocaleString;
+  title: LocaleString;
+  titleEmphasis?: LocaleString;
+  description: LocaleString;
+}
+
+export interface TravelCardsContent {
+  eyebrow: LocaleString;
+  headline: LocaleString;
+  headerCta: LocaleString;
+  ctaLearnMore: LocaleString;
+  ctaBook: LocaleString;
+  row1: TravelCardItem[];
+  row2: TravelCardItem[];
+}
+
+export interface InfoBarContent {
+  text: LocaleString;
+}
+
 export interface HomepageContent {
   id: "homepage";
   hero: HeroContent;
   aboutPreview: AboutPreviewContent;
   featuredTours: FeaturedToursContent;
+  travelCards: TravelCardsContent;
+  infoBar: InfoBarContent;
   howItWorks: HowItWorksContent;
   cta: CTAContent;
 }

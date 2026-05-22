@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/types/tour";
 import { getHomepageContent } from "@/hooks/useContent";
-import { getToursByIds } from "@/hooks/useTours";
 import { Hero } from "@/components/sections/Hero";
 import { AboutPreview } from "@/components/sections/AboutPreview";
-import { FeaturedTours } from "@/components/sections/FeaturedTours";
+import { TravelCards } from "@/components/sections/TravelCards";
+import { InfoBar } from "@/components/sections/InfoBar";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { CallToAction } from "@/components/sections/CallToAction";
 
@@ -35,17 +35,13 @@ export async function generateMetadata({
 export default function HomePage({ params }: HomePageProps) {
   const { locale } = params;
   const content = getHomepageContent();
-  const featuredTours = getToursByIds(content.featuredTours.tourIds);
 
   return (
     <>
       <Hero content={content.hero} locale={locale} />
       <AboutPreview content={content.aboutPreview} locale={locale} />
-      <FeaturedTours
-        content={content.featuredTours}
-        tours={featuredTours}
-        locale={locale}
-      />
+      <TravelCards content={content.travelCards} locale={locale} />
+      <InfoBar content={content.infoBar} locale={locale} />
       <HowItWorks content={content.howItWorks} locale={locale} />
       <CallToAction content={content.cta} locale={locale} />
     </>
