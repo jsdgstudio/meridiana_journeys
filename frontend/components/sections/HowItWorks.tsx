@@ -53,25 +53,54 @@ export function HowItWorks({ content, locale }: HowItWorksProps) {
             <motion.div
               key={step.number}
               variants={itemVariants}
+              whileHover="hovered"
+              initial="rest"
+              animate="rest"
               className="relative lg:pr-16 space-y-5"
+              style={{ willChange: "transform" }}
+              transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             >
-              {/* Step number */}
-              <div className="flex items-start gap-6">
-                <span
-                  className="font-display text-4xl font-light leading-none select-none"
-                  style={{ color: "var(--terracota)", opacity: 0.85 }}
-                >
-                  {String(step.number).padStart(2, "0")}
-                </span>
-                <div className="pt-3 flex-1 space-y-4">
-                  <Heading as="h3" className="text-negro">
-                    {step.title[locale]}
-                  </Heading>
-                  <p className="font-sans text-sm leading-relaxed text-negro/55">
-                    {step.description[locale]}
-                  </p>
+              {/* Hover: subtle scale on the whole card */}
+              <motion.div
+                variants={{
+                  rest: { scale: 1 },
+                  hovered: { scale: 1.015 },
+                }}
+                transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+              >
+                <div className="flex items-start gap-6">
+                  {/* Step number — brightens on hover */}
+                  <motion.span
+                    variants={{
+                      rest: { opacity: 0.85 },
+                      hovered: { opacity: 1 },
+                    }}
+                    transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+                    className="font-display text-4xl font-light leading-none select-none"
+                    style={{ color: "var(--terracota)" }}
+                  >
+                    {String(step.number).padStart(2, "0")}
+                  </motion.span>
+
+                  <div className="pt-3 flex-1 space-y-4">
+                    <Heading as="h3" className="text-negro">
+                      {step.title[locale]}
+                    </Heading>
+
+                    {/* Description — lifts and becomes fully opaque on hover */}
+                    <motion.p
+                      variants={{
+                        rest: { opacity: 0.7, y: 0 },
+                        hovered: { opacity: 1, y: -2 },
+                      }}
+                      transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+                      className="font-sans text-sm leading-relaxed text-negro/55"
+                    >
+                      {step.description[locale]}
+                    </motion.p>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Connector line (desktop only, not on last) */}
               {i < content.steps.length - 1 && (

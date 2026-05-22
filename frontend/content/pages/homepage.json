@@ -176,48 +176,52 @@
     ]
   },
   "infoBar": {
-    "text": {
-      "es": "Nuestros viajes nacen de una propuesta curatorial responsable y auténtica. Lo que nos diferencia no es solo lo que mostramos, sino quién lo cuenta.",
-      "en": "Our journeys are born from a responsible and authentic curatorial approach. What sets us apart is not just what we show, but who tells the story."
+    "headline": {
+      "es": "Nuestros viajes nacen de una propuesta curatorial responsable y auténtica.",
+      "en": "Our journeys are born from a responsible and authentic curatorial approach."
+    },
+    "subline": {
+      "es": "Lo que nos diferencia no es solo lo que mostramos, sino quién lo cuenta.",
+      "en": "What sets us apart is not just what we show, but who tells the story."
     }
   },
   "howItWorks": {
     "headline": {
       "es": "Cómo funciona",
-      "en": "How It Works"
+      "en": "How it works"
     },
     "steps": [
       {
         "number": 1,
         "title": {
-          "es": "Explora",
-          "en": "Explore"
+          "es": "Descubre",
+          "en": "Discover"
         },
         "description": {
           "es": "Navega el catálogo de viajes. Cada uno está documentado con la profundidad que merece: la historia detrás del destino, las experiencias que lo definen, el tipo de viajero para quien fue diseñado.",
-          "en": "Browse the journey catalog. Each one is documented with the depth it deserves: the history behind the destination, the experiences that define it, the kind of traveler it was designed for."
+          "en": "Browse the journey catalog. Each one is documented with the depth it deserves: the story behind the destination, the experiences that define it, the type of traveler it was designed for."
         }
       },
       {
         "number": 2,
         "title": {
-          "es": "Conversa",
-          "en": "Connect"
+          "es": "Decide",
+          "en": "Decide"
         },
         "description": {
           "es": "Escríbenos. No hay formularios automatizados ni respuestas predefinidas. Una persona de Meridiana responde en menos de 48 horas para entender lo que buscas y cómo podemos construirlo juntos.",
-          "en": "Write to us. No automated forms, no canned responses. A Meridiana person responds within 48 hours to understand what you are looking for and how we can build it together."
+          "en": "Write to us. No automated forms or pre-set answers. A person from Meridiana responds within 48 hours to understand what you're looking for and how we can build it together."
         }
       },
       {
         "number": 3,
         "title": {
           "es": "Viaja",
-          "en": "Journey"
+          "en": "Travel"
         },
         "description": {
           "es": "El día del viaje, todo está listo. Lo que no está en el itinerario es la conversación que tendrás con el ceramista que lleva cuarenta años estudiando los patrones precolombinos, o el silencio exacto de las seis de la mañana en la laguna.",
-          "en": "On the day of travel, everything is ready. What is not in the itinerary is the conversation you will have with the ceramicist who has spent forty years studying pre-Columbian patterns, or the exact silence of six in the morning on the lagoon."
+          "en": "On the day of travel, everything is ready. What's not on the itinerary is the conversation you'll have with the ceramist who's spent forty years studying pre-Columbian patterns, or the exact silence of six in the morning at the lagoon."
         }
       }
     ]
