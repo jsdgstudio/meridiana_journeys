@@ -32,7 +32,7 @@ export default function AboutPage({ params }: AboutPageProps) {
 
   return (
     <>
-      <Hero content={content.hero} locale={locale} />
+      <Hero content={content.hero} locale={locale} leadVariant="body" />
       <AboutStory content={content.story} locale={locale} />
       <TeamCards content={content.team} locale={locale} />
       <CallToAction content={content.cta} locale={locale} />

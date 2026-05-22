@@ -8,9 +8,10 @@ import type { Locale } from "@/types/tour";
 interface HeroProps {
   content: HeroContent;
   locale: Locale;
+  leadVariant?: "editorial" | "body";
 }
 
-export function Hero({ content, locale }: HeroProps) {
+export function Hero({ content, locale, leadVariant = "editorial" }: HeroProps) {
   const headline = content.headline[locale];
   const subheadline = content.subheadline[locale];
   const alt = content.media.alt[locale];
@@ -54,7 +55,7 @@ export function Hero({ content, locale }: HeroProps) {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.15 }}
-          className="font-display text-3xl lg:text-4xl xl:text-5xl font-light text-marfil leading-tight tracking-tight mb-6"
+          className="font-display text-4xl lg:text-5xl xl:text-6xl font-light text-marfil leading-tight tracking-tight mb-6"
         >
           {headline}
         </motion.h1>
@@ -62,8 +63,12 @@ export function Hero({ content, locale }: HeroProps) {
         <motion.p
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.45 }}
-          className="font-display italic text-xl font-light text-marfil/80 max-w-[28ch]"
+          transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.55 }}
+          className={
+            leadVariant === "body"
+              ? "font-sans text-sm leading-relaxed text-marfil/60 max-w-[52ch]"
+              : "font-display italic text-xl lg:text-2xl font-light text-marfil/80 max-w-[28ch]"
+          }
         >
           {subheadline}
         </motion.p>
