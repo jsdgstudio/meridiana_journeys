@@ -76,8 +76,8 @@ function TeamCard({ member, locale, index }: TeamCardProps) {
             <div
               className="flex-shrink-0 rounded-full overflow-hidden flex items-center justify-center"
               style={{
-                width: 52,
-                height: 52,
+                width: 88,
+                height: 88,
                 border: "1px solid rgba(231,213,188,0.12)",
                 background: "rgba(26,46,36,0.70)",
               }}
@@ -86,14 +86,14 @@ function TeamCard({ member, locale, index }: TeamCardProps) {
                 <Image
                   src={member.photo}
                   alt={member.name}
-                  width={52}
-                  height={52}
+                  width={88}
+                  height={88}
                   className="w-full h-full object-cover"
                 />
               ) : (
                 <span
                   className="font-display font-light select-none"
-                  style={{ fontSize: "var(--text-base)", color: "var(--tumbaga)" }}
+                  style={{ fontSize: "var(--text-xl)", color: "var(--tumbaga)" }}
                 >
                   {initials}
                 </span>
