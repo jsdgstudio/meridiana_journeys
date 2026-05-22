@@ -4,19 +4,17 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import type { ContactContent } from "@/types/content";
-import type { Tour, Locale } from "@/types/tour";
+import type { Locale } from "@/types/tour";
 
 interface ContactFormProps {
   content: ContactContent;
-  tours: Pick<Tour, "id" | "title">[];
   locale: Locale;
 }
 
 interface FormData {
   name: string;
+  country: string;
   email: string;
-  journey: string;
-  dates: string;
   message: string;
 }
 
@@ -27,30 +25,26 @@ interface FormErrors {
 }
 
 const labels = {
-  name:        { es: "Nombre",                  en: "Name"                   },
-  email:       { es: "Correo electrónico",       en: "Email"                  },
-  journey:     { es: "Viaje de interés",         en: "Journey of interest"    },
-  journeyDefault:{ es: "— Selecciona un viaje —",en: "— Select a journey —"  },
-  customJourney:{ es: "Viaje personalizado",     en: "Custom journey"         },
-  dates:       { es: "Fechas tentativas",        en: "Tentative dates"        },
-  datesHint:   { es: "Ej. Octubre 2025, flexible", en: "E.g. October 2025, flexible" },
-  message:     { es: "Mensaje",                  en: "Message"               },
+  name:    { es: "Nombre",              en: "Name"           },
+  country: { es: "País",                en: "Country"        },
+  email:   { es: "Correo electrónico",  en: "Email"          },
+  message: { es: "Mensaje",             en: "Message"        },
   messagePlaceholder: {
     es: "Cuéntanos lo que estás buscando, cuántas personas viajan, cualquier contexto que nos ayude a entender tu visión.",
     en: "Tell us what you're looking for, how many people are travelling, any context that helps us understand your vision.",
   },
-  submit:      { es: "Enviar consulta",          en: "Send inquiry"           },
-  submitting:  { es: "Enviando…",                en: "Sending…"               },
-  successTitle:{ es: "Mensaje recibido",         en: "Message received"       },
+  submit:      { es: "Enviar consulta", en: "Send inquiry" },
+  submitting:  { es: "Enviando…",       en: "Sending…"     },
+  successTitle:{ es: "Mensaje recibido", en: "Message received" },
   successBody: {
     es: "Nos pondremos en contacto contigo en menos de 48 horas. Mientras tanto, si quieres explorar más, los itinerarios están esperando.",
     en: "We'll be in touch within 48 hours. In the meantime, the itineraries are waiting if you'd like to keep exploring.",
   },
   errors: {
-    nameRequired:    { es: "El nombre es obligatorio",          en: "Name is required"              },
-    emailRequired:   { es: "El correo es obligatorio",          en: "Email is required"             },
-    emailInvalid:    { es: "El correo no es válido",            en: "Email is not valid"            },
-    messageRequired: { es: "El mensaje es obligatorio",         en: "Message is required"           },
+    nameRequired:    { es: "El nombre es obligatorio",  en: "Name is required"    },
+    emailRequired:   { es: "El correo es obligatorio",  en: "Email is required"   },
+    emailInvalid:    { es: "El correo no es válido",    en: "Email is not valid"   },
+    messageRequired: { es: "El mensaje es obligatorio", en: "Message is required" },
   },
 };
 
@@ -67,7 +61,7 @@ function validate(data: FormData, locale: Locale): FormErrors {
 }
 
 const inputBase =
-  "w-full bg-transparent border border-negro/20 px-4 py-3 font-sans text-sm text-negro placeholder:text-negro/30 focus:border-tumbaga focus:outline-none transition-colors duration-200 appearance-none";
+  "w-full bg-transparent border border-negro/20 px-4 py-3 font-sans text-sm text-negro placeholder:text-negro/30 focus:border-tumbaga focus:outline-none transition-colors duration-200";
 
 const labelBase = "block label text-xs tracking-widest uppercase text-negro/45 mb-2";
 
@@ -92,16 +86,16 @@ function Field({ id, label, error, children }: FieldProps) {
   );
 }
 
-export function ContactForm({ content, tours, locale }: ContactFormProps) {
+export function ContactForm({ content, locale }: ContactFormProps) {
   const [data, setData] = useState<FormData>({
-    name: "", email: "", journey: "", dates: "", message: "",
+    name: "", country: "", email: "", message: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
 
   function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
     const { name, value } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
@@ -159,7 +153,7 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
           transition={{ duration: 0.5 }}
           className="space-y-7"
         >
-          {/* Name + Email row */}
+          {/* Name + Country row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <Field id="field-name" label={labels.name[locale]} error={errors.name}>
               <input
@@ -175,59 +169,32 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
                 className={`${inputBase} ${errors.name ? "border-terracota" : ""}`}
               />
             </Field>
-            <Field id="field-email" label={labels.email[locale]} error={errors.email}>
+            <Field id="field-country" label={labels.country[locale]}>
               <input
-                id="field-email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                value={data.email}
+                id="field-country"
+                name="country"
+                type="text"
+                autoComplete="country-name"
+                value={data.country}
                 onChange={handleChange}
-                onBlur={handleBlur}
-                aria-invalid={!!errors.email}
-                aria-describedby={errors.email ? "field-email-error" : undefined}
-                className={`${inputBase} ${errors.email ? "border-terracota" : ""}`}
+                className={inputBase}
               />
             </Field>
           </div>
 
-          {/* Journey of interest */}
-          <Field id="field-journey" label={labels.journey[locale]}>
-            <div className="relative">
-              <select
-                id="field-journey"
-                name="journey"
-                value={data.journey}
-                onChange={handleChange}
-                className={`${inputBase} pr-10 cursor-pointer`}
-              >
-                <option value="">{labels.journeyDefault[locale]}</option>
-                {tours.map((tour) => (
-                  <option key={tour.id} value={tour.id}>
-                    {tour.title[locale]}
-                  </option>
-                ))}
-                <option value="custom">{labels.customJourney[locale]}</option>
-              </select>
-              {/* Custom chevron */}
-              <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2">
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
-                  <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square"/>
-                </svg>
-              </div>
-            </div>
-          </Field>
-
-          {/* Dates */}
-          <Field id="field-dates" label={labels.dates[locale]}>
+          {/* Email */}
+          <Field id="field-email" label={labels.email[locale]} error={errors.email}>
             <input
-              id="field-dates"
-              name="dates"
-              type="text"
-              placeholder={labels.datesHint[locale]}
-              value={data.dates}
+              id="field-email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              value={data.email}
               onChange={handleChange}
-              className={inputBase}
+              onBlur={handleBlur}
+              aria-invalid={!!errors.email}
+              aria-describedby={errors.email ? "field-email-error" : undefined}
+              className={`${inputBase} ${errors.email ? "border-terracota" : ""}`}
             />
           </Field>
 
@@ -260,6 +227,11 @@ export function ContactForm({ content, tours, locale }: ContactFormProps) {
                 : labels.submit[locale]}
             </Button>
           </div>
+
+          {/* Response time note */}
+          <p className="font-sans text-xs text-negro/35 tracking-wide">
+            {content.responseTime[locale]}
+          </p>
         </motion.form>
       )}
     </AnimatePresence>

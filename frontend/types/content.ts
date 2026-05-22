@@ -154,6 +154,11 @@ export interface ContactContent {
   headline: LocaleString;
   description: LocaleString;
   email: string;
+  whatsapp: {
+    number: string;
+    label: LocaleString;
+    href: string;
+  };
   responseTime: LocaleString;
   reassurance: LocaleString;
 }

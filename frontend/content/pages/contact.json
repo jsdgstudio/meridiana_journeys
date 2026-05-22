@@ -8,7 +8,12 @@
     "es": "No hay compromiso en preguntar. Cuéntanos a dónde quieres ir y lo que estás buscando, y construiremos algo juntos.",
     "en": "There's no commitment in asking. Tell us where you want to go and what you're looking for, and we'll build something together."
   },
-  "email": "hola@meridianajourneys.com",
+  "email": "info@meridianajourneys.com",
+  "whatsapp": {
+    "number": "+57 310 7561974",
+    "label": { "es": "WhatsApp (ideal)", "en": "WhatsApp (preferred)" },
+    "href": "https://wa.me/573107561974"
+  },
   "responseTime": {
     "es": "Respondemos en menos de 48 horas",
     "en": "We respond within 48 hours"
