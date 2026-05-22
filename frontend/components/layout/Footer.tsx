@@ -94,10 +94,10 @@ export function Footer({ locale, ui }: FooterProps) {
             </p>
             <div className="space-y-4">
               <a
-                href="mailto:hola@meridianajourneys.com"
+                href="mailto:info@meridianajourneys.com"
                 className="block font-sans text-sm opacity-60 hover:opacity-100 transition-opacity duration-200"
               >
-                hola@meridianajourneys.com
+                info@meridianajourneys.com
               </a>
               <div className="space-y-1">
                 <p className="font-sans text-xs opacity-40">Bogotá, Colombia</p>

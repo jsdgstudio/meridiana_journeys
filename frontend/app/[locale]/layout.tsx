@@ -23,7 +23,7 @@ const organizationSchema = {
     "Experiencias de viaje cultural por Colombia y América Latina. Narrativa antes que logística.",
   contactPoint: {
     "@type": "ContactPoint",
-    email: "hola@meridianajourneys.com",
+    email: "info@meridianajourneys.com",
     contactType: "customer service",
     availableLanguage: ["Spanish", "English"],
   },
