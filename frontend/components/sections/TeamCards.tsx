@@ -20,9 +20,13 @@ interface TeamCardProps {
   index: number;
 }
 
+/* ── ease-out-quint ────────────────────────────────────────── */
+const easeOutQuint: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 function TeamCard({ member, locale, index }: TeamCardProps) {
   const [open, setOpen] = useState(false);
   const bioLines = member.bio[locale].split("\n\n");
+
   const initials = member.name
     .split(" ")
     .map((n) => n[0])
@@ -31,66 +35,65 @@ function TeamCard({ member, locale, index }: TeamCardProps) {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 32 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={viewport}
-      transition={{
-        type: "spring",
-        stiffness: 60,
-        damping: 20,
-        delay: index * 0.12,
-      }}
+      transition={{ duration: 0.55, delay: index * 0.10, ease: easeOutQuint }}
       className="flex flex-col overflow-hidden"
       style={{
         background: "var(--gradient-card)",
-        borderLeft: "2px solid rgba(154,122,58,0.35)",
+        border: "1px solid rgba(231,213,188,0.08)",
       }}
     >
-      {/* ── Header — siempre visible ─────────────────────────── */}
+      {/* ── Cabecera ─────────────────────────────────────────── */}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
-        className="text-left w-full p-8 lg:p-10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-tumbaga"
+        className="text-left w-full focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-tumbaga"
+        style={{ padding: "2.5rem 2.5rem 2rem" }}
         aria-expanded={open}
       >
-        {/* Número decorativo */}
+        {/* Ordinal */}
         <span
           aria-hidden
-          className="font-display font-light select-none block mb-6"
+          className="font-display font-light select-none block"
           style={{
-            fontSize: "clamp(3.5rem, 8vw, 5rem)",
+            fontSize: "clamp(3rem, 7vw, 4.5rem)",
             lineHeight: 1,
-            color: "rgba(154,122,58,0.12)",
             letterSpacing: "-0.03em",
+            color: "rgba(154,122,58,0.10)",
+            marginBottom: "1.5rem",
           }}
         >
           0{index + 1}
         </span>
 
         <div className="flex items-start justify-between gap-6">
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
             {/* Avatar */}
             <div
-              className="w-14 h-14 rounded-full flex-shrink-0 overflow-hidden flex items-center justify-center"
+              className="flex-shrink-0 rounded-full overflow-hidden flex items-center justify-center"
               style={{
-                border: "1px solid rgba(231,213,188,0.15)",
-                background: "rgba(26,46,36,0.8)",
+                width: 52,
+                height: 52,
+                border: "1px solid rgba(231,213,188,0.12)",
+                background: "rgba(26,46,36,0.70)",
               }}
             >
               {member.photo ? (
                 <Image
                   src={member.photo}
                   alt={member.name}
-                  width={56}
-                  height={56}
+                  width={52}
+                  height={52}
                   className="w-full h-full object-cover"
                 />
               ) : (
                 <span
-                  className="font-display font-light"
-                  style={{ fontSize: "var(--text-md)", color: "var(--tumbaga)" }}
+                  className="font-display font-light select-none"
+                  style={{ fontSize: "var(--text-base)", color: "var(--tumbaga)" }}
                 >
                   {initials}
                 </span>
@@ -99,33 +102,40 @@ function TeamCard({ member, locale, index }: TeamCardProps) {
 
             <div>
               <h3
-                className="font-display font-light leading-snug"
-                style={{ fontSize: "var(--text-lg)", color: "var(--marfil)" }}
+                className="font-display font-light"
+                style={{
+                  fontSize: "var(--text-lg)",
+                  lineHeight: "var(--leading-snug)",
+                  color: "var(--marfil)",
+                }}
               >
                 {member.name}
               </h3>
               <p
-                className="font-sans mt-1 uppercase tracking-widest"
-                style={{ fontSize: "0.7rem", color: "var(--tumbaga)" }}
+                className="font-sans uppercase tracking-widest mt-1"
+                style={{ fontSize: "0.68rem", color: "var(--tumbaga)" }}
               >
                 {member.role[locale]}
               </p>
             </div>
           </div>
 
-          {/* Chevron */}
+          {/* Indicador */}
           <motion.span
             animate={{ rotate: open ? 180 : 0 }}
-            transition={{ type: "spring", stiffness: 200, damping: 25 }}
-            className="flex-shrink-0 mt-1"
-            style={{ color: open ? "var(--terracota)" : "rgba(154,122,58,0.5)" }}
+            transition={{ duration: 0.3, ease: easeOutQuint }}
             aria-hidden
+            style={{
+              flexShrink: 0,
+              marginTop: 4,
+              color: open ? "rgba(154,122,58,0.80)" : "rgba(154,122,58,0.35)",
+            }}
           >
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
-                d="M4 7l5 5 5-5"
+                d="M3.5 6l4.5 4.5L12.5 6"
                 stroke="currentColor"
-                strokeWidth="1.5"
+                strokeWidth="1.25"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -134,58 +144,62 @@ function TeamCard({ member, locale, index }: TeamCardProps) {
         </div>
       </button>
 
-      {/* ── Bio — fondo terracota ─────────────────────────────── */}
+      {/* ── Bio — negro, marfil, tumbaga ─────────────────────── */}
       <AnimatePresence initial={false}>
         {open && (
           <motion.div
             key="bio"
-            initial={{ height: 0 }}
-            animate={{ height: "auto" }}
-            exit={{ height: 0 }}
-            transition={{ type: "spring", stiffness: 80, damping: 22 }}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{
+              height: { duration: 0.42, ease: easeOutQuint },
+              opacity: { duration: 0.28, ease: "easeOut" },
+            }}
             style={{ overflow: "hidden" }}
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
           >
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25, delay: 0.1 }}
-              style={{ background: "var(--terracota)" }}
+            <div
+              style={{
+                background: "var(--negro)",
+                borderTop: "1px solid rgba(154,122,58,0.18)",
+                padding: "2rem 2.5rem 2.75rem",
+              }}
             >
-              {/* Label */}
-              <div
-                className="px-8 lg:px-10 pt-7 pb-2 flex items-center gap-3"
-                style={{ borderTop: "1px solid rgba(154,122,58,0.4)" }}
+              {/* Etiqueta */}
+              <p
+                className="font-sans uppercase tracking-widest"
+                style={{
+                  fontSize: "0.62rem",
+                  color: "rgba(154,122,58,0.65)",
+                  marginBottom: "1.25rem",
+                }}
               >
-                <div className="h-px flex-1" style={{ background: "rgba(154,122,58,0.5)" }} />
-                <span
-                  className="font-sans uppercase tracking-widest flex-shrink-0"
-                  style={{ fontSize: "0.65rem", color: "var(--tumbaga)" }}
-                >
-                  {locale === "es" ? "Trayectoria" : "Background"}
-                </span>
-                <div className="h-px flex-1" style={{ background: "rgba(154,122,58,0.5)" }} />
-              </div>
+                {locale === "es" ? "Trayectoria" : "Background"}
+              </p>
 
               {/* Párrafos */}
-              <div className="px-8 lg:px-10 pb-9 pt-5 space-y-4">
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 {bioLines.map((paragraph, i) => (
                   <p
                     key={i}
-                    className="font-sans leading-relaxed"
+                    className="font-sans"
                     style={{
-                      fontSize: i === 0 ? "var(--text-sm)" : "var(--text-sm)",
-                      color: i === 0 ? "rgba(247,244,238,0.90)" : "rgba(247,244,238,0.72)",
+                      fontSize: "var(--text-sm)",
                       lineHeight: "var(--leading-relaxed)",
+                      color:
+                        i === 0
+                          ? "rgba(231,213,188,0.80)"
+                          : "rgba(231,213,188,0.52)",
+                      maxWidth: "62ch",
                     }}
                   >
                     {paragraph}
                   </p>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -197,46 +211,50 @@ export function TeamCards({ content, locale }: TeamCardsProps) {
   return (
     <SectionWrapper theme="dark">
       <Container>
-        {/* Section label */}
+        {/* Etiqueta de sección */}
         <motion.div
-          initial={{ opacity: 0, x: -12 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={viewport}
-          transition={{ type: "spring", stiffness: 80, damping: 20 }}
-          className="flex items-center gap-4 mb-14"
+          transition={{ duration: 0.5, ease: easeOutQuint }}
+          className="flex items-center gap-4"
+          style={{ marginBottom: "3.5rem" }}
         >
-          <div className="w-6 h-px" style={{ background: "var(--tumbaga)" }} />
+          <div
+            style={{ width: 24, height: 1, background: "var(--tumbaga)", flexShrink: 0 }}
+          />
           <span
             className="font-sans uppercase tracking-widest"
-            style={{ fontSize: "0.65rem", color: "var(--tumbaga)" }}
+            style={{ fontSize: "0.62rem", color: "var(--tumbaga)" }}
           >
             {content.headline[locale]}
           </span>
         </motion.div>
 
-        {/* Cards */}
+        {/* Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
           {content.members.map((member, i) => (
             <TeamCard key={member.name} member={member} locale={locale} index={i} />
           ))}
         </div>
 
-        {/* Hint desktop */}
+        {/* Instrucción — solo desktop */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={viewport}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="hidden lg:block mt-5 font-sans"
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="hidden lg:block font-sans"
           style={{
-            fontSize: "0.65rem",
-            color: "rgba(231,213,188,0.20)",
-            letterSpacing: "0.08em",
+            marginTop: "1.25rem",
+            fontSize: "0.62rem",
+            letterSpacing: "0.07em",
+            color: "rgba(231,213,188,0.18)",
           }}
         >
           {locale === "es"
-            ? "Pasa el cursor sobre cada tarjeta para leer la bio completa"
-            : "Hover each card to read the full bio"}
+            ? "Pasa el cursor para leer la trayectoria completa"
+            : "Hover to read the full background"}
         </motion.p>
       </Container>
     </SectionWrapper>
