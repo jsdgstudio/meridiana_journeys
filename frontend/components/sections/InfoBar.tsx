@@ -13,7 +13,7 @@ export function InfoBar({ content, locale }: InfoBarProps) {
   return (
     <section
       style={{ backgroundColor: "var(--terracota)" }}
-      className="pt-12 pb-0"
+      className="py-12"
     >
       <div className="mx-auto max-w-3xl px-6 text-center">
         <motion.p
@@ -49,7 +49,7 @@ export function InfoBar({ content, locale }: InfoBarProps) {
           {content.subline[locale]}
         </motion.p>
       </div>
-      <div style={{ height: "6px", backgroundColor: "var(--negro)" }} />
+      <div style={{ height: "6px", backgroundColor: "#0F130E", width: "100%" }} />
     </section>
   );
 }
