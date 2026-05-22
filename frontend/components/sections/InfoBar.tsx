@@ -12,7 +12,7 @@ interface InfoBarProps {
 export function InfoBar({ content, locale }: InfoBarProps) {
   return (
     <section
-      style={{ backgroundColor: "var(--terracota)" }}
+      style={{ backgroundColor: "var(--terracota)", borderBottom: "6px solid #0F130E" }}
       className="py-12"
     >
       <div className="mx-auto max-w-3xl px-6 text-center">
@@ -49,7 +49,6 @@ export function InfoBar({ content, locale }: InfoBarProps) {
           {content.subline[locale]}
         </motion.p>
       </div>
-      <div style={{ height: "6px", backgroundColor: "#0F130E", width: "100%" }} />
     </section>
   );
 }
