@@ -13,18 +13,9 @@ export function InfoBar({ content, locale }: InfoBarProps) {
   return (
     <section
       style={{ backgroundColor: "var(--terracota)" }}
-      className="relative overflow-hidden pt-12 pb-20"
+      className="py-12"
     >
-      {/* Bottom fade — dissolves into the TravelCards dark palette */}
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 right-0 h-20"
-        style={{
-          background: "linear-gradient(to bottom, transparent 0%, var(--negro) 100%)",
-        }}
-        aria-hidden="true"
-      />
-
-      <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
+      <div className="mx-auto max-w-3xl px-6 text-center">
         <motion.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,6 +49,7 @@ export function InfoBar({ content, locale }: InfoBarProps) {
           {content.subline[locale]}
         </motion.p>
       </div>
+      <div style={{ height: "6px", backgroundColor: "var(--negro)" }} />
     </section>
   );
 }
