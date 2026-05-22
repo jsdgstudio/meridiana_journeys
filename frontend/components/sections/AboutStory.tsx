@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Container } from "@/components/ui/Container";
-import { Heading } from "@/components/ui/Heading";
 import { RichText } from "@/components/ui/RichText";
 import { fadeInUp, viewport } from "@/lib/animations";
 import type { AboutContent } from "@/types/content";
@@ -18,19 +17,28 @@ export function AboutStory({ content, locale }: AboutStoryProps) {
   return (
     <SectionWrapper theme="page">
       <Container size="narrow">
-        <motion.div
+        {/* Pull quote */}
+        <motion.blockquote
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
           variants={fadeInUp}
-          className="flex items-center gap-4 mb-10"
+          className="mb-12"
         >
-          <div className="w-6 h-px bg-tumbaga" />
-          <Heading as="h2" className="text-negro">
-            {content.headline[locale]}
-          </Heading>
-        </motion.div>
+          <div className="w-6 h-px bg-tumbaga mb-8" />
+          <p
+            className="font-display font-light italic leading-snug tracking-tight"
+            style={{
+              fontSize: "var(--text-xl)",
+              color: "var(--negro)",
+              lineHeight: "var(--leading-snug)",
+            }}
+          >
+            &ldquo;{content.pullQuote[locale]}&rdquo;
+          </p>
+        </motion.blockquote>
 
+        {/* Body */}
         <motion.div
           initial="hidden"
           whileInView="visible"

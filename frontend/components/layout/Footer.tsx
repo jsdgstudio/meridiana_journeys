@@ -16,7 +16,7 @@ export function Footer({ locale, ui }: FooterProps) {
   const navLinks = [
     { label: ui.nav.journeys, href: `/${locale}/viajes` },
     { label: ui.nav.journal, href: `/${locale}/journal` },
-    { label: ui.nav.about, href: `/${locale}/nosotros` },
+    { label: ui.nav.about, href: `/${locale}/sobre-meridiana` },
     { label: ui.nav.contact, href: `/${locale}/contacto` },
   ];
 

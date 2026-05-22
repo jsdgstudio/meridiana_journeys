@@ -40,7 +40,8 @@ export interface TravelCardsContent {
 }
 
 export interface InfoBarContent {
-  text: LocaleString;
+  headline: LocaleString;
+  subline: LocaleString;
 }
 
 export interface HomepageContent {
@@ -125,19 +126,23 @@ export interface CTAContent {
 
 // --- About ---
 
+export interface TeamMember {
+  name: string;
+  role: LocaleString;
+  photo: string | null;
+  bio: LocaleString;
+}
+
 export interface AboutContent {
   id: "about";
   hero: HeroContent;
   story: {
-    headline: LocaleString;
+    pullQuote: LocaleString;
     body: LocaleString; // HTML
   };
-  values: {
+  team: {
     headline: LocaleString;
-    items: {
-      title: LocaleString;
-      description: LocaleString;
-    }[];
+    members: TeamMember[];
   };
   cta: CTAContent;
 }

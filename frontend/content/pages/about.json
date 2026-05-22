@@ -2,12 +2,12 @@
   "id": "about",
   "hero": {
     "headline": {
-      "es": "Meridiana nació de una pregunta",
-      "en": "Meridiana was born from a question"
+      "es": "Meridiana Cultural",
+      "en": "Meridiana Cultural"
     },
     "subheadline": {
-      "es": "¿Qué significa viajar de verdad? No moverse entre destinos, sino comprender culturas desde adentro.",
-      "en": "What does it mean to travel, truly? Not to move between destinations, but to understand cultures from within."
+      "es": "Somos una agencia de viajes culturales hechos a la medida que conecta a viajeros conscientes con la esencia de una Colombia auténtica, biodiversa y excepcionalmente creativa. Nuestras propuestas nacen desde la investigación y acercamientos con creadores, pensadores y comunidades, dando forma a rutas culturales únicas que transforman el viaje en un acto de comprensión cultural para mentes curiosas que valoran el arte, la historia y el respeto genuino por las comunidades que nos abren sus puertas.",
+      "en": "We are a bespoke cultural travel agency that connects conscious travellers with the essence of an authentic, biodiverse, and exceptionally creative Colombia. Our proposals emerge from research and close relationships with creators, thinkers, and communities, shaping unique cultural routes that transform travel into an act of cultural understanding for curious minds who value art, history, and genuine respect for the communities that open their doors to us."
     },
     "media": {
       "type": "image",
@@ -19,49 +19,43 @@
     }
   },
   "story": {
-    "headline": {
-      "es": "Por qué existimos",
-      "en": "Why we exist"
+    "pullQuote": {
+      "es": "Redefinimos la forma en que el mundo experimenta Colombia.",
+      "en": "We redefine the way the world experiences Colombia."
     },
     "body": {
-      "es": "<p>Colombia es uno de los países más complejos del mundo. Tres cordilleras, dos océanos, cincuenta y tantos millones de personas que hablan el mismo idioma con acentos tan distintos que parecen lenguas separadas. Un país que ha vivido décadas de guerra y que, en ese mismo período, ha producido literatura que sacude el mundo.</p><p>La mayor parte del turismo pasa por encima de todo eso. Llega con guías de bolsillo, con listas de cosas que ver, con la premisa de que los lugares son fondos de fotografía y no conversaciones en curso.</p><p>Meridiana existe porque creemos que un viaje bien hecho transforma la mirada. No la ciudad que visitas, sino la manera en que lees el mundo cuando regresas. Eso requiere tiempo, contexto, y una disposición que pocos servicios de viaje se toman el trabajo de cultivar.</p><p>Somos una empresa pequeña a propósito. No buscamos escala. Buscamos que cada persona que viaje con nosotros regrese con algo difícil de articular pero imposible de ignorar: una comprensión más honesta de América Latina, y quizás también, de sí misma.</p>",
-      "en": "<p>Colombia is one of the most complex countries in the world. Three mountain ranges, two oceans, fifty-something million people who speak the same language in accents so distinct they could be separate tongues. A country that lived decades of war and, in that same period, produced literature that shakes the world.</p><p>Most tourism flies over all of that. It arrives with pocket guides and lists of things to see, with the premise that places are backdrops for photographs rather than ongoing conversations.</p><p>Meridiana exists because we believe a well-made journey transforms the way you see. Not the city you visit, but the way you read the world when you return. That requires time, context, and a disposition that few travel services take the trouble to cultivate.</p><p>We are a small company by design. We are not looking for scale. We are looking for each person who travels with us to return with something difficult to articulate but impossible to ignore: a more honest understanding of Latin America, and perhaps of themselves.</p>"
+      "es": "<p>Como parte de nuestro compromiso fomentamos proyectos en las comunidades en donde operamos, con programas de preservación y traspaso de saberes, ayuda a productores locales e iniciativas de conservación.</p><p>Queremos mostrarte un país donde dialogan la memoria y la contemporaneidad.</p><p>Donde cinco ecosistemas han dado forma a culturas anfibias. Donde la gastronomía cuenta historias de mestizaje y resistencia.</p><p>Donde la artesanía piensa el mundo en sus propias formas.</p><p>Si quieres ser parte de una experiencia cultural inolvidable, Meridiana te transporta al alma de Colombia.</p>",
+      "en": "<p>As part of our commitment, we foster projects in the communities where we operate, with programmes for the preservation and transmission of knowledge, support for local producers, and conservation initiatives.</p><p>We want to show you a country where memory and contemporaneity are in dialogue.</p><p>Where five ecosystems have shaped amphibious cultures. Where gastronomy tells stories of mestizaje and resistance.</p><p>Where craft thinks the world in its own forms.</p><p>If you want to be part of an unforgettable cultural experience, Meridiana transports you to the soul of Colombia.</p>"
     }
   },
-  "values": {
+  "team": {
     "headline": {
-      "es": "Cómo trabajamos",
-      "en": "How we work"
+      "es": "Quiénes Somos",
+      "en": "Who We Are"
     },
-    "items": [
+    "members": [
       {
-        "title": {
-          "es": "Narrativa antes que logística",
-          "en": "Narrative before logistics"
+        "name": "Laura Querubín",
+        "role": {
+          "es": "Co-founder y CEO",
+          "en": "Co-founder & CEO"
         },
-        "description": {
-          "es": "Un itinerario es un argumento, no una lista de hoteles. Cada día tiene una arquitectura emocional: por qué esto, aquí, ahora, con quién. La logística es el soporte invisible de una experiencia que tiene sentido.",
-          "en": "An itinerary is an argument, not a list of hotels. Each day has an emotional architecture: why this, here, now, with whom. Logistics are the invisible support of an experience that makes sense."
+        "photo": null,
+        "bio": {
+          "es": "Nacida en Bogotá, Laura lleva más de dieciséis años construyendo la manera en que Colombia es comprendida en el mundo. Su trayectoria cruza la diplomacia, la narrativa cultural y el posicionamiento estratégico desde roles clave: Agregada Cultural en la Embajada de Colombia en Londres, asesora en Invest in Bogotá e iNNpulsa, y Coordinadora de Producción del episodio sobre Colombia de The Arts Hour on Tour de la BBC.\n\nSu formación académica profundizó su comprensión de las fuerzas históricas, las arquitecturas institucionales y las dinámicas culturales que definen el lugar de América Latina en el mundo. Es licenciada en Estudios Latinoamericanos, Historia y Gobierno por la Universidad de Texas en Austin, y Magíster en Administración Pública con énfasis en Desarrollo Internacional por la London School of Economics. Además, es guía de turismo certificada por el Ministerio de Comercio, Industria y Turismo de Colombia.\n\nUna inmersión en Historia del Arte en París amplió su entendimiento de cómo las culturas se narran a sí mismas a través de la forma, el espacio y la materia.\n\nSu convicción es simple: la forma en que se cuenta un país determina la manera en que es valorado.",
+          "en": "Born in Bogotá, Laura has spent more than sixteen years shaping the way Colombia is understood in the world. Her career traverses diplomacy, cultural narrative, and strategic positioning from key roles: Cultural Attaché at the Colombian Embassy in London, advisor at Invest in Bogotá and iNNpulsa, and Production Coordinator for the Colombia episode of The Arts Hour on Tour on BBC World Service.\n\nHer academic training deepened her understanding of the historical forces, institutional architectures, and cultural dynamics that define Latin America's place in the world. She holds a degree in Latin American Studies, History and Government from the University of Texas at Austin, and a Master's in Public Administration with a focus on International Development from the London School of Economics. She is also a certified tourism guide by Colombia's Ministry of Commerce, Industry and Tourism.\n\nAn immersion in Art History in Paris broadened her understanding of how cultures narrate themselves through form, space, and material.\n\nHer conviction is simple: the way a country is told determines the way it is valued."
         }
       },
       {
-        "title": {
-          "es": "Curiosidad por encima del confort",
-          "en": "Curiosity over comfort"
+        "name": "Fabrizio Rubio",
+        "role": {
+          "es": "Co-founder y Director Creativo",
+          "en": "Co-founder & Creative Director"
         },
-        "description": {
-          "es": "Ofrecemos comodidades reales — hoteles cuidados, traslados sin fricciones, guías que conocen su oficio. Pero nunca sacrificamos el encuentro genuino en el altar del lujo predecible. Los mejores momentos de un viaje suelen ocurrir en los bordes del programa.",
-          "en": "We offer real comforts — considered hotels, frictionless transfers, guides who know their craft. But we never sacrifice genuine encounter on the altar of predictable luxury. The best moments of a journey usually happen at the edges of the programme."
-        }
-      },
-      {
-        "title": {
-          "es": "Comprensión por encima del espectáculo",
-          "en": "Understanding over spectacle"
-        },
-        "description": {
-          "es": "Colombia tiene paisajes extraordinarios. Pero lo que más nos interesa no es lo que entra por los ojos, sino lo que permanece cuando los cierras. Construimos contexto: historia, música, cocina, lengua, arquitectura. Todo lo que convierte un lugar en un mundo.",
-          "en": "Colombia has extraordinary landscapes. But what interests us most is not what enters through the eyes, but what remains when you close them. We build context: history, music, cuisine, language, architecture. Everything that turns a place into a world."
+        "photo": null,
+        "bio": {
+          "es": "Fabrizio es economista chileno egresado de la Universidad del Desarrollo, con una especialización en Apreciación del Arte Contemporáneo y una Maestría en Política Internacional y Economía de la Universidad de San Andrés en Buenos Aires, donde su tesis examinó la construcción de la diplomacia cultural y la marca país de México.\n\nDurante más de ocho años ha trabajado en la intersección entre la economía creativa y la cultura, desde la convicción de que la cultura es un activo estratégico capaz de transformar la manera en que los territorios son comprendidos, valorados y conectados.\n\nSu trayectoria incluye la Coordinación Nacional de Exportación de Servicios en ProChile, donde lideró estrategias de internacionalización para las industrias de servicios de Chile. Recientemente, lideró la caracterización de las economías culturales y creativas de Cartagena como consultor del Banco de Desarrollo de América Latina y el Caribe (CAF). Fundó y dirigió MoCuLat, plataforma de cultura latinoamericana que trabajó con artistas, curadores, chefs y emprendedores culturales de todo el continente.\n\nSus años formativos en Buenos Aires, Lima y París consolidaron su comprensión de que la producción cultural y la vitalidad económica son inseparables.",
+          "en": "Fabrizio is a Chilean economist from Universidad del Desarrollo, with a specialisation in Contemporary Art Appreciation and a Master's in International Policy and Economics from Universidad de San Andrés in Buenos Aires, where his thesis examined the construction of cultural diplomacy and Mexico's country brand.\n\nFor more than eight years he has worked at the intersection of the creative economy and culture, from the conviction that culture is a strategic asset capable of transforming the way territories are understood, valued, and connected.\n\nHis career includes the National Coordination of Service Exports at ProChile, where he led internationalisation strategies for Chile's services industries. Most recently, he led the characterisation of the cultural and creative economies of Cartagena as a consultant for the Development Bank of Latin America and the Caribbean (CAF). He founded and directed MoCuLat, a Latin American culture platform that worked with artists, curators, chefs, and cultural entrepreneurs from across the continent.\n\nHis formative years in Buenos Aires, Lima, and Paris consolidated his understanding that cultural production and economic vitality are inseparable."
         }
       }
     ]

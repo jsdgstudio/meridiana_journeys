@@ -42,32 +42,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://meridianajourneys.com/es/viajes/classic-colombia-cafetero</loc>
+    <loc>https://meridianajourneys.com/es/viajes/classic-colombia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://meridianajourneys.com/en/viajes/classic-colombia-cafetero</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meridianajourneys.com/es/viajes/classic-colombia-caribe</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meridianajourneys.com/en/viajes/classic-colombia-caribe</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meridianajourneys.com/es/viajes/classic-colombia-full</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://meridianajourneys.com/en/viajes/classic-colombia-full</loc>
+    <loc>https://meridianajourneys.com/en/viajes/classic-colombia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -104,12 +84,12 @@
 
   <!-- About -->
   <url>
-    <loc>https://meridianajourneys.com/es/nosotros</loc>
+    <loc>https://meridianajourneys.com/es/sobre-meridiana</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://meridianajourneys.com/en/nosotros</loc>
+    <loc>https://meridianajourneys.com/en/sobre-meridiana</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

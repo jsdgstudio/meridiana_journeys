@@ -26,8 +26,8 @@ export function Navbar({ locale, ui }: NavbarProps) {
 
   const navLinks: NavLink[] = [
     { label: ui.nav.journeys, href: `/${locale}/viajes` },
+    { label: ui.nav.about, href: `/${locale}/sobre-meridiana` },
     { label: ui.nav.journal, href: `/${locale}/journal` },
-    { label: ui.nav.about, href: `/${locale}/nosotros` },
     { label: ui.nav.contact, href: `/${locale}/contacto` },
   ];
 
@@ -96,7 +96,7 @@ export function Navbar({ locale, ui }: NavbarProps) {
                   key={href}
                   href={href}
                   className={[
-                    "label text-xs tracking-widest uppercase transition-all duration-200 relative group",
+                    "font-normal text-xs tracking-widest uppercase transition-all duration-200 relative group",
                     scrolled ? "text-negro" : "text-marfil",
                     isActive(href) ? "opacity-100" : "opacity-60 hover:opacity-100",
                   ].join(" ")}
@@ -118,7 +118,7 @@ export function Navbar({ locale, ui }: NavbarProps) {
               <Link
                 href={localePath}
                 className={[
-                  "label text-xs tracking-widest uppercase transition-opacity duration-200 opacity-40 hover:opacity-80 border-l pl-6",
+                  "font-normal text-xs tracking-widest uppercase transition-opacity duration-200 opacity-40 hover:opacity-80 border-l pl-6",
                   scrolled ? "text-negro border-negro-20" : "text-marfil border-marfil-20",
                 ].join(" ")}
               >
