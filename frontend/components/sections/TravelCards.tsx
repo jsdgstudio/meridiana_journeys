@@ -185,77 +185,80 @@ const rowVariants = {
 interface TravelCardsProps {
   content: TravelCardsContent;
   locale: Locale;
+  theme?: "dark" | "light";
 }
 
-export function TravelCards({ content, locale }: TravelCardsProps) {
+export function TravelCards({ content, locale, theme = "dark" }: TravelCardsProps) {
   const toursHref = `/${locale}/viajes`;
+  const isLight = theme === "light";
 
   return (
     <section
       className="relative w-full"
       style={{
-        background: "linear-gradient(to bottom, #0F130E 0%, #080808 100%)",
+        background: isLight
+          ? "var(--blanco)"
+          : "linear-gradient(to bottom, #0F130E 0%, #080808 100%)",
       }}
       aria-label={content.headline[locale]}
     >
 
-      {/* Section header */}
-      <motion.header
-        className="relative z-10 w-full px-6 md:px-12 pt-16 md:pt-24 pb-10 md:pb-14"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 0.9, ease }}
-      >
-        <div className="flex items-end justify-between gap-8 flex-wrap">
-          <div>
-            {/* Eyebrow */}
-            <div
-              className="flex items-center gap-3 mb-4"
-              style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.24em" }}
-            >
-              <span
-                aria-hidden="true"
+      {/* Section header — only on dark (home) */}
+      {!isLight && (
+        <motion.header
+          className="relative z-10 w-full px-6 md:px-12 pt-16 md:pt-24 pb-10 md:pb-14"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.9, ease }}
+        >
+          <div className="flex items-end justify-between gap-8 flex-wrap">
+            <div>
+              <div
+                className="flex items-center gap-3 mb-4"
+                style={{ fontSize: "11px", textTransform: "uppercase", letterSpacing: "0.24em" }}
+              >
+                <span
+                  aria-hidden="true"
+                  style={{
+                    display: "inline-block",
+                    width: "32px",
+                    height: "1px",
+                    background: "var(--tumbaga)",
+                  }}
+                />
+                <span style={{ color: "var(--tumbaga)" }}>
+                  {content.eyebrow[locale]}
+                </span>
+              </div>
+              <h2
+                className="font-display font-light"
                 style={{
-                  display: "inline-block",
-                  width: "32px",
-                  height: "1px",
-                  background: "var(--tumbaga)",
+                  fontSize: "clamp(2.8rem, 6vw, 5.2rem)",
+                  lineHeight: 0.92,
+                  letterSpacing: "-0.01em",
+                  color: "var(--marfil)",
                 }}
-              />
-              <span style={{ color: "var(--tumbaga)" }}>
-                {content.eyebrow[locale]}
-              </span>
+              >
+                {content.headline[locale]}
+              </h2>
             </div>
-
-            {/* Headline */}
-            <h2
-              className="font-display font-light"
-              style={{
-                fontSize: "clamp(2.8rem, 6vw, 5.2rem)",
-                lineHeight: 0.92,
-                letterSpacing: "-0.01em",
-                color: "var(--marfil)",
-              }}
+            <Link
+              href={toursHref}
+              className="tc-header-cta group inline-flex items-center gap-3 rounded-full px-6 py-3.5 text-sm tracking-wide"
             >
-              {content.headline[locale]}
-            </h2>
+              {content.headerCta[locale]}
+              <span className="tc-arrow">
+                <ArrowIcon size={16} />
+              </span>
+            </Link>
           </div>
-
-          {/* Header CTA */}
-          <Link
-            href={toursHref}
-            className="tc-header-cta group inline-flex items-center gap-3 rounded-full px-6 py-3.5 text-sm tracking-wide"
-          >
-            {content.headerCta[locale]}
-            <span className="tc-arrow">
-              <ArrowIcon size={16} />
-            </span>
-          </Link>
-        </div>
-      </motion.header>
+        </motion.header>
+      )}
 
       {/* Cards rows */}
+      {isLight && <div className="h-1.5" />}
+
       <motion.div
         variants={sectionVariants}
         initial="hidden"

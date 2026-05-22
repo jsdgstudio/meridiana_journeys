@@ -5,13 +5,16 @@
   "category": "cultural",
   "tier": "entry",
   "status": "published",
-  "duration": { "es": "2–3 días", "en": "2–3 days" },
-  "groupSize": { "es": "2–8 viajeros", "en": "2–8 travelers" },
-  "route": ["Bogotá"],
+  "duration": { "es": "2 noches / 3 días", "en": "2 nights / 3 days" },
+  "groupSize": { "es": "Máximo 12 personas", "en": "Maximum 12 people" },
+  "route": ["Bogotá", "Guatavita", "Zipaquirá"],
   "price": {
-    "amount": 1850,
     "currency": "USD",
-    "note": { "es": "por persona, ocupación doble", "en": "per person, double occupancy" }
+    "customQuote": true,
+    "note": {
+      "es": "Cada itinerario se cotiza a medida. Escríbenos y construimos el tuyo.",
+      "en": "Each itinerary is quoted bespoke. Write to us and we'll build yours."
+    }
   },
   "location": {
     "country": "Colombia",
@@ -22,134 +25,134 @@
   "difficulty": "easy",
   "hero": {
     "image": "/images/tours/bogota-hero.jpg",
-    "alt": { "es": "Los tejados de terracota de La Candelaria contra los cerros orientales de Bogotá al atardecer", "en": "The terracotta rooftops of La Candelaria against Bogotá's Eastern Hills at golden hour" },
+    "alt": {
+      "es": "Los tejados de terracota de La Candelaria contra los cerros orientales de Bogotá al atardecer",
+      "en": "The terracotta rooftops of La Candelaria against Bogotá's Eastern Hills at golden hour"
+    },
     "credit": "TODO"
   },
   "gallery": ["/images/tours/bogota-01.jpg", "/images/tours/bogota-02.jpg", "/images/tours/bogota-03.jpg"],
   "narrative": {
     "short": {
-      "es": "Bogotá no es una ciudad que se revele a quienes la recorren con prisa. Este viaje traza cinco siglos de colisión y reinvención a través de los corredores coloniales de La Candelaria, las salas del Museo del Oro y el arte callejero que ha convertido el concreto en crónica.",
-      "en": "Bogotá is not a city that reveals itself to those who rush. This journey traces five centuries of collision and reinvention across La Candelaria's colonial corridors, the gold-laden halls of the Museo del Oro, and the street art that has turned concrete into chronicle."
+      "es": "Tres días para leer Bogotá como lo que es: cinco siglos superpuestos en la misma cuadra. De la Laguna Sagrada del Dorado al Museo del Oro, de Monserrate a la Catedral de Sal, una ciudad que se ha incendiado y reinventado varias veces.",
+      "en": "Three days to read Bogotá for what it is: five centuries layered on the same block. From the Sacred Lagoon of El Dorado to the Museo del Oro, from Monserrate to the Salt Cathedral—a city that has burned and reinvented itself many times."
     },
     "long": {
-      "es": "<p>Existe una versión de Bogotá en las guías de viaje—una lista de monumentos y museos, ordenados por barrio. Esta no es esa versión.</p><p>Classic Bogotá es una inmersión en la identidad estratificada de una capital que ha sido construida, quemada, reconstruida y reimaginada durante cinco siglos. Desde los sitios ceremoniales muiscas anteriores a la llegada española hasta los muros cubiertos de grafiti de La Candelaria que narran la cuenta pendiente de Colombia con su propia historia, cada cuadra cuenta una historia que la siguiente complica.</p><p>Caminarás por el Museo del Oro no como turista contando piezas, sino con un guía que entiende los sistemas cosmológicos detrás de cada artefacto. Comerás en la escena culinaria en evolución de Bogotá—no en los lugares que encabezan blogs de viaje, sino en las mesas donde la identidad gastronómica de la ciudad se negocia activamente entre tradición y reinvención.</p><p>Esta es Bogotá como la viven sus habitantes: contradictoria, densa, vertical en todos los sentidos. Una ciudad donde una iglesia colonial comparte pared con un bar punk, y ninguno parece fuera de lugar.</p>",
-      "en": "<p>There is a version of Bogotá that exists in guidebooks—a checklist of monuments and museums, neatly organized by neighborhood. This is not that version.</p><p>Classic Bogotá is an immersion into the layered identity of a capital city that has been built, burned, rebuilt, and reimagined across five centuries. From the Muisca ceremonial sites that predate the Spanish arrival to the graffiti-covered walls of La Candelaria that narrate Colombia's unfinished reckoning with its own history, every block tells a story that the next block complicates.</p><p>You will walk through the Museo del Oro not as a tourist counting gold pieces, but with a guide who understands the cosmological systems behind each artifact. You will eat in Bogotá's evolving culinary scene—not at the places that top travel blogs, but at the tables where the city's food identity is being actively negotiated between tradition and reinvention.</p><p>This is Bogotá as its residents experience it: contradictory, dense, vertical in every sense. A city where a colonial church shares a wall with a punk bar, and neither seems out of place.</p>"
+      "es": "<p>Bogotá tiene cinco siglos encima y los lleva todos al mismo tiempo. En una misma cuadra de La Candelaria conviven el barroco colonial, la arquitectura republicana y un mural pintado después del 9 de abril de 1948, el día en que asesinaron a Gaitán y la ciudad se incendió y de alguna manera se volvió a hacer.</p><p>Esa superposición de tiempos es lo que hace a Bogotá tan difícil de entender para quien llega de afuera, y tan apasionante para quien se toma tres días de verdad.</p>",
+      "en": "<p>Bogotá carries five centuries on its shoulders and wears them all at once. On the same block of La Candelaria you'll find colonial Baroque, Republican architecture, and a mural painted after April 9, 1948—the day Gaitán was assassinated and the city burned and somehow remade itself.</p><p>That layering of times is what makes Bogotá so hard to grasp for the outsider, and so compelling for anyone who takes three real days with it.</p>"
     },
     "pullQuote": {
-      "es": "Cada cuadra cuenta una historia que la siguiente complica.",
-      "en": "Every block tells a story that the next block complicates."
+      "es": "Cinco siglos encima y los lleva todos al mismo tiempo.",
+      "en": "Five centuries on its shoulders, worn all at once."
     }
   },
   "includes": [
-    { "es": "2 noches en hotel boutique en La Candelaria", "en": "2 nights in a boutique hotel in La Candelaria" },
-    { "es": "Todas las experiencias guiadas con especialistas culturales bilingües", "en": "All guided experiences with bilingual cultural specialists" },
-    { "es": "Transporte privado dentro de la ciudad", "en": "Private transportation within the city" },
-    { "es": "Cena de bienvenida en restaurante de autor colombiano", "en": "Welcome dinner at a chef-led Colombian restaurant" },
-    { "es": "Acceso prioritario al Museo del Oro y Museo Botero", "en": "Priority access to Museo del Oro and Museo Botero" },
-    { "es": "Tour de arte urbano con muralista local", "en": "Street art tour with a local muralist" },
-    { "es": "Desayuno diario y una comida adicional por día", "en": "Daily breakfast and one additional meal per day" },
-    { "es": "Excursión a Laguna de Guatavita", "en": "Excursion to Laguna de Guatavita" },
-    { "es": "Visita a la Catedral de Sal de Zipaquirá", "en": "Visit to Zipaquirá's Salt Cathedral" }
+    { "es": "Guía experto dedicado durante todo el recorrido", "en": "Dedicated expert guide throughout the entire journey" },
+    { "es": "Todas las entradas a museos e instituciones culturales", "en": "All entrance fees to museums and cultural institutions" },
+    { "es": "Experiencia gastronómica privada con chef (Día 1)", "en": "Private gastronomic experience with chef (Day 1)" },
+    { "es": "Transporte privado en todos los trayectos", "en": "Private transportation for all transfers" },
+    { "es": "Hospedaje (2 noches, hoteles boutique patrimoniales en Chapinero)", "en": "Lodging (2 nights, heritage boutique hotels in Chapinero)" },
+    { "es": "Seguros de viaje completos", "en": "Comprehensive travel insurance" },
+    { "es": "Visita a la Laguna Sagrada del Dorado y la Catedral de Sal de Zipaquirá", "en": "Visit to the Sacred Lagoon of El Dorado and the Salt Cathedral of Zipaquirá" }
   ],
   "excludes": [
-    { "es": "Vuelos internacionales o domésticos", "en": "International or domestic flights" },
-    { "es": "Seguro de viaje", "en": "Travel insurance" },
-    { "es": "Gastos personales y propinas", "en": "Personal expenses and gratuities" },
-    { "es": "Bebidas alcohólicas fuera de la cena de bienvenida", "en": "Alcoholic beverages beyond welcome dinner" }
+    { "es": "Transporte aéreo", "en": "Air transportation" },
+    { "es": "Almuerzos y cenas los días 2 y 3", "en": "Lunches and dinners on days 2 and 3" },
+    { "es": "Bebidas adicionales", "en": "Additional beverages" },
+    { "es": "Compras personales", "en": "Personal purchases" }
   ],
   "itinerary": [
     {
       "day": 1,
-      "title": { "es": "Llegada y La Candelaria", "en": "Arrival & La Candelaria" },
+      "title": { "es": "Llegada y Cena de Bienvenida", "en": "Arrival & Welcome Dinner" },
       "description": {
-        "es": "Instalación en el hotel en el centro histórico. Caminata por las calles empedradas de La Candelaria con un historiador que lee la arquitectura de la ciudad como un texto. Cierre con una cena de bienvenida que presenta las cocinas regionales de Colombia en un menú curado.",
-        "en": "Settle into your hotel in the historic center, then walk the cobblestone streets of La Candelaria with a historian who reads the city's architecture like a text. End with a welcome dinner introducing Colombia's regional cuisines in a single, curated menu."
+        "es": "Recepción y traslado al hotel. Visita a Monserrate al atardecer, si las condiciones lo permiten, para situar la ciudad desde su altura. Cena de bienvenida y conversación privada con el chef.",
+        "en": "Reception and transfer to hotel. Visit to Monserrate at sunset, weather permitting, to situate the city from its highest point. Welcome dinner and private conversation with the chef."
       },
       "highlights": [
-        { "es": "Check-in en hotel boutique", "en": "Check-in at boutique hotel" },
-        { "es": "Recorrido por La Candelaria con historiador arquitectónico", "en": "Walking tour of La Candelaria with architectural historian" },
-        { "es": "Cena de bienvenida con menú de degustación regional", "en": "Welcome dinner with regional tasting menu" }
+        { "es": "Monserrate al atardecer", "en": "Monserrate at sunset" },
+        { "es": "Cena de bienvenida con chef", "en": "Welcome dinner with chef" }
       ],
       "meals": ["dinner"],
-      "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" }
+      "accommodation": { "es": "Hotel boutique patrimonial, Chapinero", "en": "Heritage boutique hotel, Chapinero" }
     },
     {
       "day": 2,
-      "title": { "es": "Oro, grafiti y gastronomía", "en": "Gold, Graffiti & Gastronomy" },
+      "title": { "es": "Más Allá de la Ciudad", "en": "Beyond the City" },
       "description": {
-        "es": "Mañana en el Museo del Oro con lectura guiada de la cosmología muisca. Tarde: escena de arte urbano de Bogotá con un muralista en ejercicio. Fragmentos. Noche libre para explorar Zona G o la oferta culinaria de Chapinero.",
-        "en": "Morning at the Museo del Oro with a guided reading of Muisca cosmology. Afternoon: Bogotá's street art scene with a practicing muralist. Fragmentos. Evening free to explore Zona G or Chapinero's culinary offerings."
+        "es": "La sabana que formó a Bogotá. Mañana en la Laguna Sagrada del Dorado, donde se cree que nació la leyenda. Tarde en la Catedral de Sal de Zipaquirá, tallada en el interior de una montaña.",
+        "en": "The savanna that shaped Bogotá. Morning at the Sacred Lagoon of El Dorado, where the legend is believed to have been born. Afternoon at the Salt Cathedral of Zipaquirá, carved inside a mountain."
       },
       "highlights": [
-        { "es": "Tour privado del Museo del Oro", "en": "Private guided tour of Museo del Oro" },
-        { "es": "Tour de arte urbano con muralista local", "en": "Street art tour with local muralist" },
-        { "es": "Almuerzo de la tierra a la mesa en Chapinero", "en": "Farm-to-table lunch in Chapinero" },
-        { "es": "Noche libre en Zona G", "en": "Free evening in Zona G" }
+        { "es": "Laguna Sagrada del Dorado", "en": "Sacred Lagoon of El Dorado" },
+        { "es": "Catedral de Sal de Zipaquirá", "en": "Salt Cathedral of Zipaquirá" }
       ],
-      "meals": ["breakfast", "lunch"],
-      "accommodation": { "es": "Hotel boutique, La Candelaria", "en": "Boutique hotel, La Candelaria" }
+      "meals": ["breakfast"],
+      "accommodation": { "es": "Hotel boutique patrimonial, Chapinero", "en": "Heritage boutique hotel, Chapinero" }
     },
     {
       "day": 3,
-      "title": { "es": "Guatavita, Monserrate y partida", "en": "Guatavita, Monserrate & Departure" },
+      "title": { "es": "El Corazón de La Candelaria", "en": "The Heart of La Candelaria" },
       "description": {
-        "es": "Ascenso temprano a Monserrate para vistas de la ciudad y un momento de quietud. Excursión a la Laguna de Guatavita—el lugar de origen de la leyenda de El Dorado. Brunch en Usaquén. Traslado al aeropuerto.",
-        "en": "Early ascent to Monserrate for views over the city and a moment of stillness. Excursion to Laguna de Guatavita—the origin site of the El Dorado legend. Brunch in Usaquén's flea market neighborhood. Transfer to airport."
+        "es": "Museo del Oro, iglesias coloniales, comerciantes de esmeraldas, Museo Botero, Fragmentos, Teatro Colón, Claustro de San Agustín, Escuela de Artes y Oficios. La ciudad como biografía arquitectónica.",
+        "en": "Museo del Oro, colonial churches, emerald merchants, Museo Botero, Fragmentos, Teatro Colón, Claustro de San Agustín, School of Arts and Crafts. The city as architectural biography."
       },
       "highlights": [
-        { "es": "Visita al amanecer a Monserrate", "en": "Sunrise visit to Monserrate" },
-        { "es": "Laguna de Guatavita", "en": "Laguna de Guatavita" },
-        { "es": "Brunch en Usaquén", "en": "Brunch in Usaquén" },
-        { "es": "Traslado al aeropuerto", "en": "Airport transfer" }
+        { "es": "Museo del Oro", "en": "Museo del Oro" },
+        { "es": "Museo Botero", "en": "Museo Botero" },
+        { "es": "Fragmentos · Teatro Colón", "en": "Fragmentos · Teatro Colón" },
+        { "es": "Claustro de San Agustín", "en": "Claustro de San Agustín" }
       ],
       "meals": ["breakfast"],
       "accommodation": null
     }
   ],
   "experience": {
+    "duration": { "es": "2 noches / 3 días", "en": "2 nights / 3 days" },
+    "groupSize": { "es": "Máximo 12 personas", "en": "Maximum 12 people" },
+    "pace": { "es": "Moderado — caminatas, traslados en vehículo privado", "en": "Moderate — walking, transfers in private vehicle" },
+    "language": { "es": "Español, inglés o francés", "en": "Spanish, English, or French" },
+    "startPoint": { "es": "Bogotá (El Dorado, BOG)", "en": "Bogotá (El Dorado, BOG)" },
+    "season": { "es": "Todo el año", "en": "Year-round" },
+    "physicalLevel": { "es": "Bajo — sin actividades de alta exigencia", "en": "Low — no high-demand activities" },
     "culturalDepth": 5,
     "physicalDemand": 2,
     "comfort": 4,
     "groupIntimacy": 4
   },
   "idealFor": [
-    { "es": "Entusiastas de la historia y la arquitectura", "en": "History and architecture enthusiasts" },
-    { "es": "Visitantes primerizos en Colombia", "en": "First-time visitors to Colombia" },
-    { "es": "Amantes del arte y la gastronomía", "en": "Art and gastronomy lovers" },
-    { "es": "Viajeros curiosos que buscan profundidad", "en": "Curious travelers seeking depth over breadth" }
+    { "es": "Viajeros con curiosidad intelectual", "en": "Travelers with intellectual curiosity" },
+    { "es": "Amantes del arte, la historia y la gastronomía", "en": "Lovers of art, history, and gastronomy" },
+    { "es": "Parejas, amigos cercanos o viajeros solos que quieren entender una ciudad, no solo verla", "en": "Couples, close friends, or solo travelers who want to understand a city, not just see it" }
   ],
   "signatureExperiences": [
-    { "es": "Tour privado del Museo del Oro con especialista en cosmología", "en": "Private Museo del Oro tour with cosmology specialist" },
-    { "es": "Recorrido de arte urbano con muralista bogotano en ejercicio", "en": "Street art walk with a practicing Bogotá muralist" },
-    { "es": "Cena de autor explorando la identidad culinaria regional de Colombia", "en": "Chef-led dinner exploring Colombia's regional culinary identity" },
-    { "es": "Conversaciones con historiadores, chefs y artistas locales", "en": "Conversations with historians, chefs, and local artists" }
+    { "es": "Cena privada con chef y conversación de bienvenida", "en": "Private dinner with chef and welcome conversation" },
+    { "es": "Visita a la Laguna Sagrada del Dorado", "en": "Visit to the Sacred Lagoon of El Dorado" },
+    { "es": "Recorrido completo de La Candelaria con guía experto", "en": "Full La Candelaria walk with expert guide" },
+    { "es": "Catedral de Sal de Zipaquirá", "en": "Salt Cathedral of Zipaquirá" }
   ],
-  "relatedTours": ["classic-colombia-cafetero", "classic-colombia-caribe", "en-busqueda-del-dorado"],
+  "relatedTours": ["classic-colombia", "en-busqueda-del-dorado"],
   "preTrip": {
     "packing": [
-      { "es": "Capas — Bogotá está a 2.640m y el clima cambia rápido", "en": "Layers — Bogotá is at 2,640m and weather shifts quickly" },
-      { "es": "Zapatos cómodos para caminar sobre empedrado", "en": "Comfortable walking shoes for cobblestones" },
-      { "es": "Chaqueta impermeable ligera", "en": "Light rain jacket" }
-    ],
-    "reading": [
-      "El ruido de las cosas al caer — Juan Gabriel Vásquez",
-      "Bogotá: A Cultural History"
+      { "es": "Capas — Bogotá está a 2.640m y el clima cambia rápido", "en": "Layers — Bogotá sits at 2,640m and weather shifts quickly" },
+      { "es": "Zapatos cómodos para caminar sobre empedrado", "en": "Comfortable shoes for cobblestone walking" },
+      { "es": "Chaqueta impermeable ligera", "en": "Light waterproof jacket" }
     ],
     "preparation": {
       "es": "Bogotá está a 2.640 metros sobre el nivel del mar. Si es posible, llegue un día antes para aclimatarse. La altitud afecta los niveles de energía y la tolerancia al alcohol.",
-      "en": "Bogotá sits at 2,640 meters above sea level. Arrive a day early if possible to acclimate. The altitude affects energy levels and alcohol tolerance."
+      "en": "Bogotá sits at 2,640 meters above sea level. Arrive a day early if possible to acclimate. Altitude affects energy levels and alcohol tolerance."
     }
   },
   "seo": {
     "es": {
       "metaTitle": "Classic Bogotá — Cinco Siglos en Tres Días | Meridiana",
-      "metaDescription": "Inmersión cultural de 3 días en la historia estratificada de Bogotá. Guías privados, alojamiento boutique, profundidad editorial.",
-      "keywords": ["tour cultural bogota", "viaje bogota", "experiencia cultural colombia", "tour la candelaria", "viaje de lujo bogota"]
+      "metaDescription": "Tres días en Bogotá: La Candelaria, Museo del Oro, Laguna Sagrada del Dorado y Catedral de Sal. Guía experto, hospedaje patrimonial, cotización a medida.",
+      "keywords": ["tour cultural bogota", "viaje bogota", "experiencia cultural colombia", "tour la candelaria", "laguna del dorado"]
     },
     "en": {
       "metaTitle": "Classic Bogotá — Five Centuries in Three Days | Meridiana",
-      "metaDescription": "A 3-day cultural immersion into Bogotá's layered history. Private guides, boutique stays, editorial-level depth.",
-      "keywords": ["bogota cultural tour", "bogota travel", "colombia cultural experience", "la candelaria tour", "bogota luxury travel"]
+      "metaDescription": "Three days in Bogotá: La Candelaria, Museo del Oro, the Sacred Lagoon of El Dorado, and the Salt Cathedral. Expert guide, heritage lodging, bespoke quote.",
+      "keywords": ["bogota cultural tour", "bogota travel", "colombia cultural experience", "la candelaria tour", "el dorado lagoon"]
     }
   }
 }

@@ -2,6 +2,7 @@ interface SectionWrapperProps {
   children: React.ReactNode;
   theme?: "dark" | "verde" | "light" | "page";
   className?: string;
+  style?: React.CSSProperties;
   as?: "section" | "div" | "article";
 }
 
@@ -31,11 +32,12 @@ export function SectionWrapper({
   children,
   theme = "page",
   className = "",
+  style,
   as: Tag = "section",
 }: SectionWrapperProps) {
   const { bg, text } = themeStyles[theme];
   return (
-    <Tag className={`w-full py-20 lg:py-32 ${bg} ${text} ${className}`}>
+    <Tag className={`w-full py-20 lg:py-32 ${bg} ${text} ${className}`} style={style}>
       {children}
     </Tag>
   );

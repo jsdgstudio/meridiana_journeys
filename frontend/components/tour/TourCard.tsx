@@ -127,15 +127,44 @@ export function TourCard({ tour, locale, featured = false }: TourCardProps) {
         </p>
 
         {/* Price */}
-        <p className="font-sans text-sm text-negro/40">
-          {locale === "es" ? "Desde" : "From"}{" "}
-          <span className="text-negro/70 font-medium">
-            ${tour.price.amount.toLocaleString('en-US')} USD
-          </span>
-          {tour.price.note && (
-            <span className="text-xs ml-1">/ {tour.price.note[locale]}</span>
-          )}
-        </p>
+        {(() => {
+          const { price } = tour;
+          if (price.customQuote) {
+            return (
+              <p className="font-sans text-sm text-negro/40">
+                <span className="text-negro/70 font-medium italic">
+                  {locale === "es" ? "Cotización a medida" : "Custom quote"}
+                </span>
+              </p>
+            );
+          }
+          if (price.tiers && price.tiers.length > 0) {
+            const lowest = price.tiers.reduce(
+              (min, t) => (t.amount < min.amount ? t : min),
+              price.tiers[0]
+            );
+            return (
+              <p className="font-sans text-sm text-negro/40">
+                {locale === "es" ? "Desde" : "From"}{" "}
+                <span className="text-negro/70 font-medium">
+                  ${lowest.amount.toLocaleString("en-US")} USD
+                </span>
+                <span className="text-xs ml-1">/ {lowest.label[locale]}</span>
+              </p>
+            );
+          }
+          return (
+            <p className="font-sans text-sm text-negro/40">
+              {locale === "es" ? "Desde" : "From"}{" "}
+              <span className="text-negro/70 font-medium">
+                ${(price.amount ?? 0).toLocaleString("en-US")} USD
+              </span>
+              {price.note && (
+                <span className="text-xs ml-1">/ {price.note[locale]}</span>
+              )}
+            </p>
+          );
+        })()}
       </Link>
     </motion.article>
   );

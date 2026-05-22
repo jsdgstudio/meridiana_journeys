@@ -1,0 +1,279 @@
+{
+  "id": "classic-colombia",
+  "title": { "es": "Classic Colombia", "en": "Classic Colombia" },
+  "subtitle": { "es": "La experiencia fundacional de Meridiana", "en": "Meridiana's Foundational Experience" },
+  "category": "cultural",
+  "tier": "core",
+  "status": "published",
+  "duration": { "es": "13 días", "en": "13 days" },
+  "groupSize": { "es": "Máximo 8 personas", "en": "Maximum 8 people" },
+  "route": ["Bogotá", "Medellín", "Guatapé", "Eje Cafetero", "Cartagena"],
+  "price": {
+    "currency": "USD",
+    "tiers": [
+      { "label": { "es": "Grupo de 2", "en": "Group of 2" }, "amount": 8200 },
+      { "label": { "es": "Grupo de 4", "en": "Group of 4" }, "amount": 6800 }
+    ],
+    "note": {
+      "es": "Incluye hospedaje boutique y hacienda cafetera, vuelos domésticos, transporte privado, guías especializados, todas las experiencias de los tres itinerarios Classic, cenas curadas y acceso privado a creadores. No incluye vuelos internacionales. En caso de querer un tour más corto se puede reemplazar un destino por otro o se puede agregar Parque Tayrona al finalizar el tour.",
+      "en": "Includes boutique lodging and coffee hacienda, domestic flights, private transportation, specialized guides, all experiences from the three Classic itineraries, curated dinners, and private access to creators. Does not include international flights. For a shorter tour, one destination can be swapped for another, or Parque Tayrona can be added at the end."
+    }
+  },
+  "location": {
+    "country": "Colombia",
+    "region": "Multi-región",
+    "coordinates": [4.711, -74.0721]
+  },
+  "difficulty": "moderate",
+  "hero": {
+    "image": "/images/tours/colombia-full-hero.jpg",
+    "alt": {
+      "es": "Diagonal cultural de Colombia: andes, eje cafetero y caribe",
+      "en": "Colombia's cultural diagonal: Andes, coffee region, and Caribbean"
+    },
+    "credit": "TODO"
+  },
+  "gallery": [],
+  "narrative": {
+    "short": {
+      "es": "Una diagonal cultural que atraviesa el país: de la Bogotá andina a la transformación de Medellín, del motor cafetero al Caribe afrodescendiente. Trece días para comprender Colombia en actos.",
+      "en": "A cultural diagonal that crosses the country: from Andean Bogotá to the transformation of Medellín, from the coffee engine to the Afro-descendant Caribbean. Thirteen days to understand Colombia in acts."
+    },
+    "long": {
+      "es": "<p>Colombia se comprende en actos: una diagonal cultural que atraviesa el país desde la Bogotá andina, donde 2.600 metros de altura custodian el oro precolombino y cinco siglos de historia en La Candelaria, hasta la transformación de Medellín. En la capital antioqueña, la resiliencia ha convertido la violencia en innovación social y arte urbano, permitiendo que lugares como la Comuna 13 narren la fuerza de una comunidad que abraza su pasado para rediseñar su futuro.</p><p>La ruta desciende hacia el Eje Cafetero, motor de la economía local, para culminar en el Caribe afrodescendiente y su herencia ancestral. En Cartagena, el poderío de la España colonial grabado en el Castillo de San Felipe se funde con la vibrante resistencia de Getsemaní. Allí, entre murallas y tambores, la experiencia se sella con la gastronomía de matronas locales, cuyas recetas no solo alimentan, sino que transmiten la dignidad de una cultura extraordinaria que ha resistido el paso del tiempo.</p>",
+      "en": "<p>Colombia is understood in acts: a cultural diagonal that crosses the country from Andean Bogotá, where 2,600 meters of altitude guard pre-Columbian gold and five centuries of history in La Candelaria, to the transformation of Medellín. In the Antioquian capital, resilience has turned violence into social innovation and urban art, allowing places like Comuna 13 to narrate the strength of a community that embraces its past to redesign its future.</p><p>The route descends to the Coffee Region, engine of the local economy, before culminating in the Afro-descendant Caribbean and its ancestral heritage. In Cartagena, the might of colonial Spain inscribed in the Castillo de San Felipe fuses with the vibrant resistance of Getsemaní. There, between walls and drums, the experience is sealed by the cooking of local matronas—recipes that not only nourish but transmit the dignity of an extraordinary culture that has withstood the passage of time.</p>"
+    },
+    "pullQuote": {
+      "es": "Colombia se comprende en actos.",
+      "en": "Colombia is understood in acts."
+    }
+  },
+  "includes": [
+    { "es": "Hospedaje boutique en cada ciudad y hacienda cafetera en el Eje Cafetero", "en": "Boutique lodging in each city and coffee hacienda in the Coffee Region" },
+    { "es": "Guías especializados y guías comunitarios por región", "en": "Specialized guides and community guides by region" },
+    { "es": "Todas las entradas a museos e instituciones culturales", "en": "All entrance fees to museums and cultural institutions" },
+    { "es": "Inmersión cafetera completa en Hacienda Venecia", "en": "Full coffee immersion at Hacienda Venecia" },
+    { "es": "Almuerzo privado con matrona caribeña en Cartagena", "en": "Private lunch with a Caribbean matrona in Cartagena" },
+    { "es": "Almuerzo con chef comunitaria en Medellín", "en": "Lunch with a community chef in Medellín" },
+    { "es": "Cenas curadas en espacios únicos en cada ciudad", "en": "Curated dinners in unique spaces in each city" },
+    { "es": "Acceso privado a creadores y espacios que no abren para turismo convencional", "en": "Private access to creators and spaces closed to conventional tourism" },
+    { "es": "Transporte privado en todos los trayectos", "en": "Private transportation for all transfers" },
+    { "es": "Vuelos domésticos", "en": "Domestic flights" },
+    { "es": "Seguros de viaje completos", "en": "Comprehensive travel insurance" }
+  ],
+  "excludes": [
+    { "es": "Vuelos internacionales", "en": "International flights" },
+    { "es": "Propinas", "en": "Gratuities" },
+    { "es": "Artículos de uso personal", "en": "Personal items" }
+  ],
+  "itinerary": [
+    {
+      "day": 1,
+      "title": { "es": "Bogotá — Llegada", "en": "Bogotá — Arrival" },
+      "description": {
+        "es": "Recepción y traslado al hotel boutique. Primera noche en la capital andina.",
+        "en": "Reception and transfer to boutique hotel. First night in the Andean capital."
+      },
+      "highlights": [{ "es": "Llegada a Bogotá", "en": "Arrival in Bogotá" }],
+      "meals": ["dinner"],
+      "accommodation": { "es": "Hotel boutique, Bogotá", "en": "Boutique hotel, Bogotá" }
+    },
+    {
+      "day": 2,
+      "title": { "es": "Bogotá — Oro y La Candelaria", "en": "Bogotá — Gold & La Candelaria" },
+      "description": {
+        "es": "Museo del Oro, La Candelaria, Fragmentos, Museo Botero. Gastronomía andina contemporánea.",
+        "en": "Museo del Oro, La Candelaria, Fragmentos, Museo Botero. Contemporary Andean gastronomy."
+      },
+      "highlights": [
+        { "es": "Museo del Oro", "en": "Museo del Oro" },
+        { "es": "Fragmentos", "en": "Fragmentos" },
+        { "es": "Museo Botero", "en": "Museo Botero" }
+      ],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Bogotá", "en": "Boutique hotel, Bogotá" }
+    },
+    {
+      "day": 3,
+      "title": { "es": "Bogotá — Monserrate y cierre", "en": "Bogotá — Monserrate & Closing" },
+      "description": {
+        "es": "Monserrate al amanecer. La ciudad desde su altura. Cena de cierre del capítulo andino.",
+        "en": "Monserrate at sunrise. The city from its height. Closing dinner of the Andean chapter."
+      },
+      "highlights": [{ "es": "Monserrate", "en": "Monserrate" }],
+      "meals": ["breakfast", "dinner"],
+      "accommodation": { "es": "Hotel boutique, Bogotá", "en": "Boutique hotel, Bogotá" }
+    },
+    {
+      "day": 4,
+      "title": { "es": "Medellín — Llegada", "en": "Medellín — Arrival" },
+      "description": {
+        "es": "Vuelo a Medellín. Museo de Antioquia. Plaza Botero. Introducción a la capital antioqueña.",
+        "en": "Flight to Medellín. Museo de Antioquia. Plaza Botero. Introduction to the Antioquian capital."
+      },
+      "highlights": [
+        { "es": "Museo de Antioquia", "en": "Museo de Antioquia" },
+        { "es": "Plaza Botero", "en": "Plaza Botero" }
+      ],
+      "meals": ["breakfast"],
+      "accommodation": { "es": "Hotel boutique, Medellín", "en": "Boutique hotel, Medellín" }
+    },
+    {
+      "day": 5,
+      "title": { "es": "Medellín — Comuna 13 y Jardín Botánico", "en": "Medellín — Comuna 13 & Botanical Garden" },
+      "description": {
+        "es": "Comuna 13 con guías comunitarios. Jardín Botánico y gastronomía botánica. Resiliencia como narrativa urbana.",
+        "en": "Comuna 13 with community guides. Botanical Garden and botanical gastronomy. Resilience as urban narrative."
+      },
+      "highlights": [
+        { "es": "Comuna 13 con guías comunitarios", "en": "Comuna 13 with community guides" },
+        { "es": "Jardín Botánico", "en": "Botanical Garden" }
+      ],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Medellín", "en": "Boutique hotel, Medellín" }
+    },
+    {
+      "day": 6,
+      "title": { "es": "Guatapé y Carmen de Viboral", "en": "Guatapé & Carmen de Viboral" },
+      "description": {
+        "es": "La Piedra del Peñol, tour en bote por el embalse. Talleres de cerámica en Carmen de Viboral.",
+        "en": "Piedra del Peñol, boat tour of the reservoir. Ceramics workshops in Carmen de Viboral."
+      },
+      "highlights": [
+        { "es": "Piedra del Peñol", "en": "Piedra del Peñol" },
+        { "es": "Talleres de cerámica", "en": "Ceramics workshops" }
+      ],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Medellín", "en": "Boutique hotel, Medellín" }
+    },
+    {
+      "day": 7,
+      "title": { "es": "Eje Cafetero — Llegada a Hacienda Venecia", "en": "Coffee Region — Arrival at Hacienda Venecia" },
+      "description": {
+        "es": "Vuelo al Eje Cafetero. Check-in en Hacienda Venecia. Primer contacto con el paisaje cafetero.",
+        "en": "Flight to the Coffee Region. Check-in at Hacienda Venecia. First contact with the coffee landscape."
+      },
+      "highlights": [{ "es": "Hacienda Venecia", "en": "Hacienda Venecia" }],
+      "meals": ["breakfast", "dinner"],
+      "accommodation": { "es": "Hacienda cafetera", "en": "Coffee hacienda" }
+    },
+    {
+      "day": 8,
+      "title": { "es": "Eje Cafetero — Inmersión cafetera", "en": "Coffee Region — Coffee Immersion" },
+      "description": {
+        "es": "Inmersión cafetera completa: proceso, catas, conversación con cafeteros. El café como economía viva.",
+        "en": "Full coffee immersion: process, tastings, conversation with growers. Coffee as a living economy."
+      },
+      "highlights": [
+        { "es": "Catas de café", "en": "Coffee tastings" },
+        { "es": "Proceso completo del café", "en": "Full coffee process" }
+      ],
+      "meals": ["breakfast", "lunch", "dinner"],
+      "accommodation": { "es": "Hacienda cafetera", "en": "Coffee hacienda" }
+    },
+    {
+      "day": 9,
+      "title": { "es": "Valle del Cocora y Salento", "en": "Cocora Valley & Salento" },
+      "description": {
+        "es": "Valle del Cocora entre palmas de cera. Salento como pueblo cafetero patrimonial.",
+        "en": "Cocora Valley among wax palms. Salento as a heritage coffee town."
+      },
+      "highlights": [
+        { "es": "Valle del Cocora", "en": "Cocora Valley" },
+        { "es": "Salento", "en": "Salento" }
+      ],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hacienda cafetera", "en": "Coffee hacienda" }
+    },
+    {
+      "day": 10,
+      "title": { "es": "Vuelo a Cartagena", "en": "Flight to Cartagena" },
+      "description": {
+        "es": "Llegada al Caribe. Check-in en la ciudad amurallada. Cena de bienvenida caribeña.",
+        "en": "Arrival in the Caribbean. Check-in in the walled city. Caribbean welcome dinner."
+      },
+      "highlights": [{ "es": "Ciudad amurallada", "en": "Walled city" }],
+      "meals": ["breakfast", "dinner"],
+      "accommodation": { "es": "Hotel boutique, Cartagena", "en": "Boutique hotel, Cartagena" }
+    },
+    {
+      "day": 11,
+      "title": { "es": "Cartagena — Castillo de San Felipe", "en": "Cartagena — Castillo de San Felipe" },
+      "description": {
+        "es": "Castillo de San Felipe, museos, casas patrimoniales. El poderío colonial leído desde el presente.",
+        "en": "Castillo de San Felipe, museums, heritage houses. Colonial might read from the present."
+      },
+      "highlights": [
+        { "es": "Castillo de San Felipe", "en": "Castillo de San Felipe" },
+        { "es": "Casas patrimoniales", "en": "Heritage houses" }
+      ],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Cartagena", "en": "Boutique hotel, Cartagena" }
+    },
+    {
+      "day": 12,
+      "title": { "es": "Almuerzo con matrona caribeña — Getsemaní", "en": "Lunch with Caribbean Matrona — Getsemaní" },
+      "description": {
+        "es": "Almuerzo privado con una matrona caribeña. Getsemaní: murallas, tambores, resistencia viva.",
+        "en": "Private lunch with a Caribbean matrona. Getsemaní: walls, drums, living resistance."
+      },
+      "highlights": [
+        { "es": "Almuerzo con matrona caribeña", "en": "Lunch with Caribbean matrona" },
+        { "es": "Getsemaní", "en": "Getsemaní" }
+      ],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Cartagena", "en": "Boutique hotel, Cartagena" }
+    },
+    {
+      "day": 13,
+      "title": { "es": "Cartagena — Partida", "en": "Cartagena — Departure" },
+      "description": {
+        "es": "Desayuno y traslado al aeropuerto de Cartagena (CTG).",
+        "en": "Breakfast and transfer to Cartagena airport (CTG)."
+      },
+      "highlights": [{ "es": "Traslado al aeropuerto", "en": "Airport transfer" }],
+      "meals": ["breakfast"],
+      "accommodation": null
+    }
+  ],
+  "experience": {
+    "duration": { "es": "13 días", "en": "13 days" },
+    "departures": { "es": "1 al año, agosto", "en": "Once a year, August" },
+    "groupSize": { "es": "Máximo 8 personas", "en": "Maximum 8 people" },
+    "pace": { "es": "Moderado, variado por región", "en": "Moderate, varying by region" },
+    "language": { "es": "Español o inglés", "en": "Spanish or English" },
+    "startPoint": { "es": "Bogotá (BOG)", "en": "Bogotá (BOG)" },
+    "endPoint": { "es": "Cartagena (CTG)", "en": "Cartagena (CTG)" },
+    "season": { "es": "Agosto", "en": "August" },
+    "physicalLevel": { "es": "Bajo a medio", "en": "Low to medium" },
+    "culturalDepth": 5,
+    "physicalDemand": 3,
+    "comfort": 5,
+    "groupIntimacy": 5
+  },
+  "idealFor": [
+    { "es": "Viajeros que visitan Colombia por primera vez y quieren entenderla de verdad", "en": "Travelers visiting Colombia for the first time who want to truly understand it" },
+    { "es": "Quienes ya conocen Colombia en partes y quieren verla entera", "en": "Those who already know Colombia in parts and want to see it whole" },
+    { "es": "Acceso privado a creadores y espacios que no abren para turismo convencional", "en": "Private access to creators and spaces closed to conventional tourism" }
+  ],
+  "signatureExperiences": [
+    { "es": "Inmersión cafetera completa en Hacienda Venecia", "en": "Full coffee immersion at Hacienda Venecia" },
+    { "es": "Comuna 13 con guías comunitarios", "en": "Comuna 13 with community guides" },
+    { "es": "Almuerzo privado con matrona caribeña en Cartagena", "en": "Private lunch with a Caribbean matrona in Cartagena" },
+    { "es": "Acceso privado a creadores en cada ciudad", "en": "Private access to creators in each city" },
+    { "es": "Castillo de San Felipe y Getsemaní", "en": "Castillo de San Felipe and Getsemaní" }
+  ],
+  "relatedTours": ["classic-bogota", "en-busqueda-del-dorado", "macondo-realismo-magico"],
+  "seo": {
+    "es": {
+      "metaTitle": "Classic Colombia — La experiencia fundacional | Meridiana",
+      "metaDescription": "13 días por Bogotá, Medellín, Eje Cafetero y Cartagena. Hospedaje boutique, vuelos domésticos, guías especializados, acceso privado a creadores.",
+      "keywords": ["tour colombia", "viaje colombia", "experiencia colombia", "classic colombia", "eje cafetero", "cartagena"]
+    },
+    "en": {
+      "metaTitle": "Classic Colombia — The Foundational Experience | Meridiana",
+      "metaDescription": "13 days through Bogotá, Medellín, the Coffee Region, and Cartagena. Boutique lodging, domestic flights, specialized guides, private access to creators.",
+      "keywords": ["colombia tour", "colombia travel", "colombia experience", "classic colombia", "coffee region", "cartagena"]
+    }
+  }
+}

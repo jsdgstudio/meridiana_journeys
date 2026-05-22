@@ -110,7 +110,7 @@ export function Footer({ locale, ui }: FooterProps) {
         <div className="mt-20 pt-8 border-t border-marfil-20 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <p className="font-sans text-xs opacity-30">{copyright}</p>
           <p className="font-sans text-xs opacity-30 italic font-display">
-            {ui.footer.madeWith}
+            {ui.footer.madeWith} · @somosttestudio
           </p>
         </div>
       </div>

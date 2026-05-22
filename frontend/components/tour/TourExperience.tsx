@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Container } from "@/components/ui/Container";
 import { Heading } from "@/components/ui/Heading";
-import type { Tour, Locale } from "@/types/tour";
+import type { Tour, Locale, ExperienceData } from "@/types/tour";
 
 interface TourExperienceProps {
   tour: Tour;
@@ -18,11 +18,35 @@ const metricLabels = {
   groupIntimacy:    { es: "Intimidad del grupo",    en: "Group intimacy"    },
 };
 
+const factLabels = {
+  duration:      { es: "Duración",          en: "Duration"        },
+  departures:    { es: "Salidas",           en: "Departures"      },
+  groupSize:     { es: "Tamaño",            en: "Group size"      },
+  pace:          { es: "Ritmo",             en: "Pace"            },
+  language:      { es: "Idioma",            en: "Language"        },
+  startPoint:    { es: "Punto de inicio",   en: "Start point"     },
+  endPoint:      { es: "Punto de cierre",   en: "End point"       },
+  season:        { es: "Temporada",         en: "Season"          },
+  physicalLevel: { es: "Nivel físico",      en: "Physical level"  },
+};
+
 const sectionLabels = {
   title:      { es: "La experiencia",            en: "The experience"        },
   signature:  { es: "Experiencias distintivas",  en: "Signature experiences" },
   idealFor:   { es: "Ideal para",                en: "Ideal for"             },
 };
+
+type RatingKey = "culturalDepth" | "physicalDemand" | "comfort" | "groupIntimacy";
+type FactKey =
+  | "duration"
+  | "departures"
+  | "groupSize"
+  | "pace"
+  | "language"
+  | "startPoint"
+  | "endPoint"
+  | "season"
+  | "physicalLevel";
 
 interface MetricBarProps {
   label: string;
@@ -66,35 +90,81 @@ function MetricBar({ label, value }: MetricBarProps) {
 export function TourExperience({ tour, locale }: TourExperienceProps) {
   const { experience, signatureExperiences, idealFor } = tour;
 
-  const metrics: { key: keyof typeof experience; label: string }[] = [
+  const metrics: { key: RatingKey; label: string }[] = [
     { key: "culturalDepth",  label: metricLabels.culturalDepth[locale]  },
     { key: "physicalDemand", label: metricLabels.physicalDemand[locale] },
     { key: "comfort",        label: metricLabels.comfort[locale]        },
     { key: "groupIntimacy",  label: metricLabels.groupIntimacy[locale]  },
   ];
 
+  const factOrder: FactKey[] = [
+    "duration",
+    "departures",
+    "groupSize",
+    "pace",
+    "language",
+    "startPoint",
+    "endPoint",
+    "season",
+    "physicalLevel",
+  ];
+
+  const facts = factOrder
+    .map((key) => {
+      const value = experience[key as keyof ExperienceData] as
+        | { es: string; en: string }
+        | undefined;
+      return value ? { key, label: factLabels[key][locale], value: value[locale] } : null;
+    })
+    .filter((f): f is { key: FactKey; label: string; value: string } => f !== null);
+
   return (
     <SectionWrapper theme="verde">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          {/* Left — metrics */}
-          <div>
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-6 h-px bg-tumbaga" />
-              <Heading as="h2" className="text-marfil">
-                {sectionLabels.title[locale]}
-              </Heading>
+          {/* Left — metrics + factual details */}
+          <div className="space-y-12">
+            <div>
+              <div className="flex items-center gap-4 mb-10">
+                <div className="w-6 h-px bg-tumbaga" />
+                <Heading as="h2" className="text-marfil">
+                  {sectionLabels.title[locale]}
+                </Heading>
+              </div>
+
+              <div className="space-y-8">
+                {metrics.map(({ key, label }) => (
+                  <MetricBar
+                    key={key}
+                    label={label}
+                    value={experience[key]}
+                  />
+                ))}
+              </div>
             </div>
 
-            <div className="space-y-8">
-              {metrics.map(({ key, label }) => (
-                <MetricBar
-                  key={key}
-                  label={label}
-                  value={experience[key]}
-                />
-              ))}
-            </div>
+            {/* Factual details */}
+            {facts.length > 0 && (
+              <dl className="space-y-3 pt-2 border-t border-marfil-20">
+                {facts.map((f, i) => (
+                  <motion.div
+                    key={f.key}
+                    initial={{ opacity: 0, y: 8 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.04 }}
+                    className="grid grid-cols-[140px_1fr] gap-4 py-2 border-b border-marfil/[0.06]"
+                  >
+                    <dt className="label text-xs tracking-widest uppercase text-tumbaga/80">
+                      {f.label}
+                    </dt>
+                    <dd className="font-sans text-sm text-marfil/75 leading-relaxed">
+                      {f.value}
+                    </dd>
+                  </motion.div>
+                ))}
+              </dl>
+            )}
           </div>
 
           {/* Right — signature + idealFor */}

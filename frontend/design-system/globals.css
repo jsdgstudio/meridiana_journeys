@@ -271,3 +271,173 @@ a:hover {
 /* @tailwind base;   */
 /* @tailwind components; */
 /* @tailwind utilities; */
+
+/* ============================================================
+   TRAVEL CARDS — Accordion expand section (.tc-*)
+   ============================================================ */
+
+/* Row: hovered card grows, siblings shrink */
+.tc-row .tc-card {
+  transition: flex-grow 520ms cubic-bezier(0.65, 0, 0.35, 1),
+              flex-shrink 520ms cubic-bezier(0.65, 0, 0.35, 1),
+              flex-basis 520ms cubic-bezier(0.65, 0, 0.35, 1);
+  flex: 1 1 0;
+}
+.tc-row:hover .tc-card       { flex: 0.75 1 0; }
+.tc-row .tc-card:hover       { flex: 3.2 1 0; }
+
+/* Media image */
+.tc-card .tc-media       { transition: transform 900ms cubic-bezier(0.65, 0, 0.35, 1), filter 520ms cubic-bezier(0.65, 0, 0.35, 1); }
+.tc-card:hover .tc-media { transform: scale(1.06); filter: saturate(1.1) brightness(0.95); }
+
+/* Scrim base */
+.tc-card .tc-scrim-base       { transition: opacity 520ms cubic-bezier(0.65, 0, 0.35, 1); }
+.tc-card:hover .tc-scrim-base { opacity: 0.55; }
+
+/* Top gradient — always visible for meta row legibility */
+.tc-card .tc-scrim-top {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 28%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Hover reveal scrim */
+.tc-card .tc-scrim-hover       { transition: opacity 520ms cubic-bezier(0.65, 0, 0.35, 1); opacity: 0; }
+.tc-card:hover .tc-scrim-hover { opacity: 1; }
+
+/* Meta row */
+.tc-card .tc-meta-row       { transition: transform 520ms cubic-bezier(0.65, 0, 0.35, 1), opacity 520ms cubic-bezier(0.65, 0, 0.35, 1); }
+.tc-card:hover .tc-meta-row { transform: translateY(-2px); opacity: 1; }
+
+/* Title */
+.tc-card .tc-title       { transition: transform 520ms cubic-bezier(0.65, 0, 0.35, 1); }
+.tc-card:hover .tc-title { transform: translateY(-4px); }
+
+/* Reveal elements */
+.tc-card .tc-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 520ms cubic-bezier(0.65, 0, 0.35, 1),
+              transform 520ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+.tc-card:hover .tc-reveal        { opacity: 1; transform: translateY(0); }
+.tc-card .tc-reveal-d1           { transition-delay: 80ms; }
+.tc-card .tc-reveal-d2           { transition-delay: 140ms; }
+
+/* Body content fades out in compressed siblings */
+.tc-card .tc-collapse       { transition: opacity 320ms cubic-bezier(0.65, 0, 0.35, 1); }
+.tc-row:hover .tc-card:not(:hover) .tc-collapse { opacity: 0; }
+
+/* CTA arrow nudge */
+.tc-card .tc-arrow       { transition: transform 380ms cubic-bezier(0.65, 0, 0.35, 1); }
+.tc-card:hover .tc-arrow { transform: translateX(4px); }
+
+/* Tag chip */
+.tc-tag {
+  color: var(--marfil);
+  background-color: rgba(154, 122, 58, 0.18);
+  border-color: rgba(154, 122, 58, 0.45);
+  transition: background-color 420ms cubic-bezier(0.65, 0, 0.35, 1),
+              border-color 420ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+.tc-card:hover .tc-tag {
+  background-color: rgba(154, 122, 58, 0.32);
+  border-color: rgba(231, 213, 188, 0.5);
+}
+
+/* Region label */
+.tc-region {
+  color: rgba(231, 213, 188, 0.85);
+  letter-spacing: 0.22em;
+  transition: color 520ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+.tc-card:hover .tc-region { color: var(--marfil); }
+
+/* Meridiana isotipo badge — bottom-right corner */
+.tc-card .tc-isotipo {
+  position: absolute; bottom: 1.5rem; right: 1.5rem;
+  width: 32px; height: 32px;
+  color: var(--tumbaga);
+  opacity: 0.45;
+  transition: opacity 520ms cubic-bezier(0.65, 0, 0.35, 1),
+              color 520ms cubic-bezier(0.65, 0, 0.35, 1),
+              transform 520ms cubic-bezier(0.65, 0, 0.35, 1);
+  pointer-events: none;
+  z-index: 3;
+}
+.tc-card:hover .tc-isotipo {
+  opacity: 0.85;
+  color: var(--marfil);
+  transform: translateY(-2px);
+}
+.tc-row:hover .tc-card:not(:hover) .tc-isotipo { opacity: 0.25; }
+
+@media (min-width: 768px) {
+  .tc-card .tc-isotipo { bottom: 2rem; right: 2rem; width: 38px; height: 38px; }
+}
+
+/* Image fallback backgrounds */
+.tc-media.tc-failed                          { background: linear-gradient(135deg, #4a3a28 0%, #2a1f15 100%); }
+.tc-media.tc-failed[data-tone="terracotta"]  { background: linear-gradient(135deg, #6b3a26 0%, #2a1410 100%); }
+.tc-media.tc-failed[data-tone="gold"]        { background: linear-gradient(135deg, #7a5a1e 0%, #2a1d08 100%); }
+.tc-media.tc-failed[data-tone="emerald"]     { background: linear-gradient(135deg, #1f4a3a 0%, #0c1f18 100%); }
+
+/* CTA primary (cream pill) */
+.tc-cta-primary {
+  background: var(--marfil);
+  color: var(--negro);
+  text-shadow: none;
+  transition: background-color 320ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+.tc-cta-primary:hover { background: #f3e4ce; opacity: 1; }
+
+/* CTA secondary (gold-outlined) */
+.tc-cta-secondary {
+  color: var(--marfil);
+  border: 1px solid rgba(154, 122, 58, 0.55);
+  transition: background-color 320ms cubic-bezier(0.65, 0, 0.35, 1),
+              border-color 320ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+.tc-cta-secondary:hover {
+  background-color: rgba(154, 122, 58, 0.18);
+  border-color: var(--tumbaga);
+  opacity: 1;
+}
+
+/* Header CTA */
+.tc-header-cta {
+  color: var(--marfil);
+  border: 1px solid rgba(154, 122, 58, 0.55);
+  transition: background-color 360ms cubic-bezier(0.65, 0, 0.35, 1),
+              color 360ms cubic-bezier(0.65, 0, 0.35, 1),
+              border-color 360ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+.tc-header-cta:hover {
+  background: var(--marfil);
+  color: var(--negro);
+  border-color: var(--marfil);
+  opacity: 1;
+}
+
+/* Section closing rule */
+.tc-section-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(154, 122, 58, 0.55) 18%,
+    rgba(154, 122, 58, 0.55) 82%,
+    transparent 100%
+  );
+}
+
+/* Mobile: stack cards vertically */
+@media (max-width: 820px) {
+  .tc-row { flex-direction: column !important; height: auto !important; }
+  .tc-row .tc-card,
+  .tc-row:hover .tc-card,
+  .tc-row .tc-card:hover { flex: 1 1 auto !important; min-height: 320px; }
+  .tc-card .tc-reveal     { opacity: 1 !important; transform: none !important; }
+  .tc-card .tc-scrim-base { opacity: 0.55 !important; }
+  .tc-card .tc-collapse   { opacity: 1 !important; }
+}

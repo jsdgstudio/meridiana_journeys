@@ -172,18 +172,6 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
               >
                 {content.lead[locale]}
               </motion.p>
-              <motion.p
-                className="text-[14px] md:text-[15px] leading-[1.9] text-marfil/60"
-                {...fadeUp(1.12)}
-              >
-                {content.editorial.body1[locale]}
-              </motion.p>
-              <motion.p
-                className="text-[14px] md:text-[15px] leading-[1.9] text-marfil/60"
-                {...fadeUp(1.24)}
-              >
-                {content.editorial.body2[locale]}
-              </motion.p>
             </div>
           </div>
 
@@ -213,7 +201,7 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
       {/* ── ZONA VIDEO: línea superior + isotipo + pull quote + línea inferior ── */}
       <div className="relative z-10 overflow-hidden">
 
-        {/* Video autoplay exclusivo de esta zona */}
+        {/* Video — textura sutil al mínimo */}
         <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none">
           <video
             autoPlay
@@ -221,36 +209,32 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
             loop
             playsInline
             preload="auto"
-            className="absolute inset-0 w-full h-full object-cover opacity-22"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ opacity: 0.45 }}
           >
             <source src="/fondo_redefinimos.mp4" type="video/mp4" />
           </video>
-          {/* Capa de oscurecimiento — z-index explícito para sobrevivir compositing de Framer Motion */}
-          <div
-            className="absolute inset-0"
-            style={{ background: "rgba(15,19,14,0.80)", zIndex: 1 }}
-          />
-          {/* Fade de bordes: absorbe media línea superior e inferior */}
+          {/* Backing sólido — garantía de contraste sobre el texto */}
+          <div className="absolute inset-0" style={{ background: "rgba(15,19,14,0.78)" }} />
+          {/* Transición a secciones adyacentes — capa separada, no toca el centro */}
           <div
             className="absolute inset-0"
             style={{
-              zIndex: 2,
               background:
-                "linear-gradient(180deg, #0F130E 0%, rgba(15,19,14,0.1) 14%, transparent 30%, transparent 70%, rgba(15,19,14,0.1) 86%, #0F130E 100%)",
+                "linear-gradient(180deg, #0F130E 0%, transparent 11%, transparent 89%, #0F130E 100%)",
+              zIndex: 1,
             }}
           />
         </div>
 
-        {/* Línea decorativa superior — mitad dentro del video */}
-        <div className="relative z-10 flex justify-center">
+        {/* Línea decorativa superior */}
+        <div className="relative z-10 flex justify-center pt-4">
           <motion.div
             aria-hidden="true"
-            className="bg-tumbaga/55"
-            style={{ width: "1px" }}
-            initial={{ height: 0 }}
+            style={{ width: "1px", height: 0, background: "rgba(154,122,58,0.5)" }}
             whileInView={{ height: 64 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.1, ease }}
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
           />
         </div>
 
@@ -265,7 +249,7 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
               className="select-none"
               draggable={false}
               style={{
-                width: "clamp(60px, 6vw, 88px)",
+                width: "clamp(56px, 5.5vw, 80px)",
                 height: "auto",
                 filter:
                   "brightness(0) saturate(100%) invert(49%) sepia(38%) saturate(502%) hue-rotate(6deg) brightness(88%) contrast(88%)",
@@ -274,9 +258,9 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
           </motion.div>
         </div>
 
-        {/* Pull quote */}
-        <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-12 py-2 md:py-4">
-          <motion.blockquote
+        {/* Pull quote — reveal palabra a palabra */}
+        <div className="relative z-10 max-w-[1100px] mx-auto px-6 md:px-12 py-4 md:py-8">
+          <blockquote
             className="mx-auto text-center font-display font-light text-marfil"
             style={{
               fontStyle: "italic",
@@ -284,27 +268,24 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
               lineHeight: 1.18,
               maxWidth: "22ch",
             }}
-            initial={{ opacity: 0, y: 20, scale: 0.985 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 1.1, ease, delay: 0.2 }}
           >
-            {pqBefore}
-            <span style={{ color: "#C8A96A" }}>{highlight}</span>
-            {pqAfter}
-          </motion.blockquote>
+            <WordReveal text={pqBefore.trim()} delay={0.1} />
+            {" "}
+            <span style={{ color: "#C8A96A" }}>
+              <WordReveal text={highlight} delay={0.65} />
+            </span>
+            <WordReveal text={pqAfter.trimStart()} delay={0.95} />
+          </blockquote>
         </div>
 
-        {/* Línea decorativa inferior — mitad dentro del video */}
-        <div className="relative z-10 flex justify-center">
+        {/* Línea decorativa inferior */}
+        <div className="relative z-10 flex justify-center pb-4">
           <motion.div
             aria-hidden="true"
-            className="bg-tumbaga/55"
-            style={{ width: "1px" }}
-            initial={{ height: 0 }}
+            style={{ width: "1px", height: 0, background: "rgba(154,122,58,0.5)" }}
             whileInView={{ height: 64 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.1, ease, delay: 0.3 }}
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1], delay: 0.45 }}
           />
         </div>
       </div>

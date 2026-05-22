@@ -13,14 +13,18 @@ interface TourPricingProps {
 }
 
 const labels = {
-  from:    { es: "Desde",                    en: "From"                     },
-  pp:      { es: "por persona",              en: "per person"               },
-  cta:     { es: "Solicitar itinerario",     en: "Request this itinerary"   },
-  sub:     { es: "Te responderemos en menos de 48 horas.", en: "We'll respond within 48 hours." },
+  from:        { es: "Desde",                    en: "From"                     },
+  pp:          { es: "por persona",              en: "per person"               },
+  cta:         { es: "Solicitar itinerario",     en: "Request this itinerary"   },
+  sub:         { es: "Te responderemos en menos de 48 horas.", en: "We'll respond within 48 hours." },
+  customQuote: { es: "Por confirmar",            en: "Custom quote"             },
 };
 
 export function TourPricing({ tour, locale }: TourPricingProps) {
   const contactHref = `/${locale}/contacto`;
+  const { price } = tour;
+  const hasTiers = price.tiers && price.tiers.length > 0;
+  const isCustom = price.customQuote === true;
 
   return (
     <SectionWrapper theme="dark">
@@ -42,18 +46,57 @@ export function TourPricing({ tour, locale }: TourPricingProps) {
           />
 
           {/* Price */}
-          <motion.div variants={fadeInUp} className="space-y-2">
-            <p className="label text-xs tracking-widest uppercase text-marfil/40">
-              {labels.from[locale]}
-            </p>
-            <p className="font-display text-5xl font-light text-marfil leading-tight">
-              ${tour.price.amount.toLocaleString('en-US')}
-              <span className="text-xl ml-2 text-marfil/40">USD</span>
-            </p>
-            <p className="font-sans text-sm text-marfil/40">
-              {tour.price.note ? tour.price.note[locale] : labels.pp[locale]}
-            </p>
-          </motion.div>
+          {isCustom ? (
+            <motion.div variants={fadeInUp} className="space-y-2">
+              <p className="label text-xs tracking-widest uppercase text-marfil/40">
+                {labels.from[locale]}
+              </p>
+              <p className="font-display text-4xl md:text-5xl font-light text-marfil leading-tight italic">
+                {labels.customQuote[locale]}
+              </p>
+            </motion.div>
+          ) : hasTiers ? (
+            <motion.div variants={fadeInUp} className="space-y-3">
+              <p className="label text-xs tracking-widest uppercase text-marfil/40">
+                {labels.from[locale]}
+              </p>
+              <div className="space-y-2">
+                {price.tiers!.map((tier, i) => (
+                  <div key={i} className="flex items-baseline justify-center gap-3">
+                    <p className="font-display text-3xl md:text-4xl font-light text-marfil leading-tight">
+                      ${tier.amount.toLocaleString("en-US")}
+                      <span className="text-base ml-2 text-marfil/40">USD</span>
+                    </p>
+                    <span className="font-sans text-xs text-marfil/50 italic">
+                      · {tier.label[locale]}
+                    </span>
+                  </div>
+                ))}
+              </div>
+              <p className="font-sans text-sm text-marfil/40">{labels.pp[locale]}</p>
+            </motion.div>
+          ) : (
+            <motion.div variants={fadeInUp} className="space-y-2">
+              <p className="label text-xs tracking-widest uppercase text-marfil/40">
+                {labels.from[locale]}
+              </p>
+              <p className="font-display text-5xl font-light text-marfil leading-tight">
+                ${(price.amount ?? 0).toLocaleString("en-US")}
+                <span className="text-xl ml-2 text-marfil/40">USD</span>
+              </p>
+              <p className="font-sans text-sm text-marfil/40">{labels.pp[locale]}</p>
+            </motion.div>
+          )}
+
+          {/* Price note (always shown when present) */}
+          {price.note && (
+            <motion.p
+              variants={fadeInUp}
+              className="font-sans text-sm leading-relaxed text-marfil/55 max-w-lg mx-auto"
+            >
+              {price.note[locale]}
+            </motion.p>
+          )}
 
           {/* Key includes reminder */}
           <motion.p

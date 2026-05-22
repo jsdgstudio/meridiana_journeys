@@ -47,10 +47,17 @@ export interface Tour {
   };
 }
 
-export interface TourPrice {
+export interface TourPriceTier {
+  label: LocaleString;   // e.g. "grupo de 2", "grupo de 4"
   amount: number;
+}
+
+export interface TourPrice {
+  amount?: number;            // legacy single-amount support (optional)
+  tiers?: TourPriceTier[];    // tiered pricing — preferred when present
   currency: "USD";
   note?: LocaleString;
+  customQuote?: boolean;      // true when price is "Por confirmar"
 }
 
 export interface TourLocation {
@@ -79,10 +86,19 @@ export interface ItineraryDay {
   description: LocaleString;
   highlights: LocaleString[];
   meals?: MealType[];
-  accommodation?: LocaleString;
+  accommodation?: LocaleString | null;
 }
 
 export interface ExperienceData {
+  duration?: LocaleString;
+  departures?: LocaleString;
+  groupSize?: LocaleString;
+  pace?: LocaleString;
+  language?: LocaleString;
+  startPoint?: LocaleString;
+  endPoint?: LocaleString;
+  season?: LocaleString;
+  physicalLevel?: LocaleString;
   culturalDepth: 1 | 2 | 3 | 4 | 5;
   physicalDemand: 1 | 2 | 3 | 4 | 5;
   comfort: 1 | 2 | 3 | 4 | 5;
@@ -90,6 +106,9 @@ export interface ExperienceData {
 }
 
 export interface PreTripInfo {
+  kit?: LocaleString;
+  virtualEvent?: LocaleString;
+  addOns?: LocaleString[];
   packing?: LocaleString[];
   reading?: string[];
   preparation?: LocaleString;

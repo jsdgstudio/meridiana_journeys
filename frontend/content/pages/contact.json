@@ -11,7 +11,7 @@
   "email": "info@meridianajourneys.com",
   "whatsapp": {
     "number": "+57 310 7561974",
-    "label": { "es": "WhatsApp (ideal)", "en": "WhatsApp (preferred)" },
+    "label": { "es": "WhatsApp", "en": "WhatsApp" },
     "href": "https://wa.me/573107561974"
   },
   "responseTime": {

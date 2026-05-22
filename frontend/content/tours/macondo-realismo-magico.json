@@ -1,79 +1,254 @@
 {
   "id": "macondo-realismo-magico",
   "title": { "es": "Macondo y el Realismo Mágico", "en": "Macondo & Magical Realism" },
-  "subtitle": { "es": "Literatura desde el territorio", "en": "Literature from the Territory" },
+  "subtitle": { "es": "Literatura desde el territorio que la escribió", "en": "Literature from the Territory That Wrote It" },
   "category": "cultural",
   "tier": "premium",
   "status": "published",
-  "duration": { "es": "7–10 días / 6–9 noches", "en": "7–10 days / 6–9 nights" },
-  "groupSize": { "es": "2–6 viajeros", "en": "2–6 travelers" },
-  "route": ["Aracataca", "Ciénaga", "Valledupar", "Cartagena"],
-  "price": { "amount": 5200, "currency": "USD", "note": { "es": "por persona, ocupación doble", "en": "per person, double occupancy" } },
-  "location": { "country": "Colombia", "region": "Caribe colombiano", "coordinates": [10.5932, -74.1146] },
-  "difficulty": "moderate",
-  "hero": { "image": "/images/tours/macondo-hero.jpg", "alt": { "es": "Casa colonial con patio interior en Aracataca, luz tropical filtrada entre hojas de plátano", "en": "Colonial house with interior courtyard in Aracataca, tropical light filtered through banana leaves" }, "credit": "TODO" },
+  "duration": { "es": "7 a 10 días", "en": "7 to 10 days" },
+  "groupSize": { "es": "Máximo 12 personas", "en": "Maximum 12 people" },
+  "route": ["Santa Marta", "Aracataca", "Ciénaga", "Valledupar", "Cartagena"],
+  "price": {
+    "currency": "USD",
+    "tiers": [
+      { "label": { "es": "Grupo de 2", "en": "Group of 2" }, "amount": 3800 },
+      { "label": { "es": "Grupo de 4 a 6", "en": "Group of 4 to 6" }, "amount": 2900 }
+    ],
+    "note": {
+      "es": "Incluye hospedaje boutique, transporte privado, guías especializados, todas las experiencias del itinerario, fotógrafo profesional, cenas curadas, kit pre-viaje y evento virtual. No incluye vuelos.",
+      "en": "Includes boutique lodging, private transportation, specialized guides, all itinerary experiences, professional photographer, curated dinners, pre-trip kit, and virtual event. Does not include flights."
+    }
+  },
+  "location": {
+    "country": "Colombia",
+    "region": "Caribe colombiano",
+    "coordinates": [10.5932, -74.1146]
+  },
+  "difficulty": "easy",
+  "hero": {
+    "image": "/images/tours/macondo-hero.jpg",
+    "alt": {
+      "es": "Casa colonial con patio interior en Aracataca, luz tropical filtrada entre hojas de plátano",
+      "en": "Colonial house with interior courtyard in Aracataca, tropical light filtered through banana leaves"
+    },
+    "credit": "TODO"
+  },
   "gallery": ["/images/tours/macondo-01.jpg", "/images/tours/macondo-02.jpg"],
   "narrative": {
     "short": {
-      "es": "Recorrer los lugares que García Márquez convirtió en literatura—no como peregrinación turística, sino como lectura del territorio que hizo posible el realismo mágico. Desde la casa natal en Aracataca hasta los juglares de Valledupar y la Cartagena de El amor en los tiempos del cólera.",
-      "en": "Walk through the places García Márquez turned into literature—not as tourist pilgrimage, but as a reading of the territory that made magical realism possible. From the birth house in Aracataca to the juglares of Valledupar and the Cartagena of Love in the Time of Cholera."
+      "es": "García Márquez no inventó el realismo mágico, lo transcribió. Aracataca, Ciénaga, Valledupar y Cartagena: el universo narrativo que dio forma a Cien años de soledad, El amor en los tiempos del cólera y Crónica de una muerte anunciada.",
+      "en": "García Márquez did not invent magical realism—he transcribed it. Aracataca, Ciénaga, Valledupar, and Cartagena: the narrative universe that shaped One Hundred Years of Solitude, Love in the Time of Cholera, and Chronicle of a Death Foretold."
     },
     "long": {
-      "es": "<p>El realismo mágico no fue un invento literario. Fue una transcripción. García Márquez no imaginó Macondo—lo recordó. Lo que parece fantástico en sus novelas es, en gran parte, la realidad del Caribe colombiano procesada por una memoria prodigiosa.</p><p>Este viaje invierte la operación: donde Gabo convirtió territorio en literatura, nosotros convertimos literatura en territorio. Aracataca no es un museo—es el pueblo donde las mariposas amarillas no eran metáfora sino plaga estacional. Ciénaga no es una parada—es el escenario de la masacre bananera que el país intentó borrar y que Cien años de soledad se negó a olvidar.</p><p>En Valledupar, el vallenato no es folklore para turistas. Es el sistema de transmisión cultural del Caribe colombiano—una enciclopedia oral cantada por juglares que cargan siglos de historia en décimas improvisadas. Sentarse frente a un juglar es sentarse frente a una tradición que funciona como internet antes de internet.</p><p>Y Cartagena. No la de las murallas fotogénicas, sino la de los patios interiores donde García Márquez situó el amor imposible de Florentino Ariza. Una caminata literaria que no ilustra la novela—la contextualiza.</p><p>Este viaje exige haber leído a García Márquez. No para entender las referencias, sino para medir la distancia exacta entre lo que él escribió y lo que el territorio todavía cuenta.</p>",
-      "en": "<p>Magical realism was not a literary invention. It was a transcription. García Márquez did not imagine Macondo—he remembered it. What seems fantastical in his novels is, in large part, the reality of the Colombian Caribbean processed through a prodigious memory.</p><p>This journey inverts the operation: where Gabo turned territory into literature, we turn literature into territory. Aracataca is not a museum—it is the town where yellow butterflies were not metaphor but seasonal plague. Ciénaga is not a stop—it is the site of the banana massacre the country tried to erase and that One Hundred Years of Solitude refused to forget.</p><p>In Valledupar, vallenato is not folklore for tourists. It is the cultural transmission system of the Colombian Caribbean—an oral encyclopedia sung by juglares who carry centuries of history in improvised décimas. To sit before a juglar is to sit before a tradition that functioned as the internet before the internet.</p><p>And Cartagena. Not the one of photogenic walls, but the one of interior courtyards where García Márquez placed the impossible love of Florentino Ariza. A literary walk that does not illustrate the novel—it contextualizes it.</p><p>This journey requires having read García Márquez. Not to understand the references, but to measure the exact distance between what he wrote and what the territory still tells.</p>"
+      "es": "<p>En el Caribe colombiano García Márquez no inventó el realismo mágico, lo transcribió. Aracataca, el Macondo real, donde su abuela le enseñó que los muertos conversan con los vivos y eso no sorprende a nadie. Ciénaga, uno de los 17 pueblos patrimonio de Colombia, donde ocurrió la masacre bananera de 1928 que se convirtió en capítulo central de Cien años de soledad. Valledupar, donde el vallenato guarda la misma memoria oral que Gabo llevó a la prosa. Cartagena, donde Florentino Ariza esperó cincuenta y tres años, siete meses y once días.</p><p>Guías que conocieron a la familia García, almuerzos en casas donde aún se cuentan las mismas historias que escuchó el Nobel, encuentros con juglares que guardan la memoria oral del Caribe. Una inmersión en el universo narrativo que dio forma a Cien años de soledad, El amor en los tiempos del cólera y Crónica de una muerte anunciada.</p>",
+      "en": "<p>In the Colombian Caribbean, García Márquez did not invent magical realism—he transcribed it. Aracataca, the real Macondo, where his grandmother taught him that the dead converse with the living and no one is surprised. Ciénaga, one of Colombia's 17 heritage towns, where the 1928 banana massacre took place—the event that became a central chapter of One Hundred Years of Solitude. Valledupar, where vallenato preserves the same oral memory that Gabo carried into prose. Cartagena, where Florentino Ariza waited fifty-three years, seven months, and eleven days.</p><p>Guides who knew the García family, lunches in homes where the same stories the Nobel laureate heard are still told, encounters with juglares who hold the oral memory of the Caribbean. An immersion in the narrative universe that shaped One Hundred Years of Solitude, Love in the Time of Cholera, and Chronicle of a Death Foretold.</p>"
     },
-    "pullQuote": { "es": "García Márquez no imaginó Macondo—lo recordó.", "en": "García Márquez did not imagine Macondo—he remembered it." }
+    "pullQuote": {
+      "es": "No inventó el realismo mágico, lo transcribió.",
+      "en": "He did not invent magical realism—he transcribed it."
+    }
   },
   "includes": [
-    { "es": "6–9 noches en alojamiento seleccionado", "en": "6–9 nights in selected lodging" },
-    { "es": "Guía literario especializado en García Márquez y el Caribe colombiano", "en": "Literary guide specialized in García Márquez and the Colombian Caribbean" },
-    { "es": "Visita a la casa natal de García Márquez en Aracataca", "en": "Visit to García Márquez's birth house in Aracataca" },
-    { "es": "Encuentro con juglar vallenato", "en": "Encounter with vallenato juglar" },
-    { "es": "Caminata literaria en Cartagena", "en": "Literary walk in Cartagena" },
-    { "es": "Contexto histórico de la masacre bananera en Ciénaga", "en": "Historical context of the banana massacre in Ciénaga" },
-    { "es": "Todos los traslados terrestres", "en": "All ground transfers" },
-    { "es": "Desayuno diario + 5 comidas curadas", "en": "Daily breakfast + 5 curated meals" }
+    { "es": "Hospedaje en cada destino", "en": "Lodging at each destination" },
+    { "es": "Guías locales especializados en historia y literatura del Caribe colombiano", "en": "Local guides specialized in history and literature of the Colombian Caribbean" },
+    { "es": "Almuerzo en casa de familia en Aracataca", "en": "Lunch at a family home in Aracataca" },
+    { "es": "Encuentro con juglar vallenato en Valledupar", "en": "Encounter with a vallenato juglar in Valledupar" },
+    { "es": "Caminata literaria por los lugares de El amor en los tiempos del cólera en Cartagena", "en": "Literary walk through the locations of Love in the Time of Cholera in Cartagena" },
+    { "es": "Visita histórica a Ciénaga con historiador especializado en la masacre bananera", "en": "Historic visit to Ciénaga with a historian specialized in the banana massacre" },
+    { "es": "Acceso a espacios culturales relacionados con la Fundación Gabo", "en": "Access to cultural spaces connected to the Fundación Gabo" },
+    { "es": "Encuentro con comunidad indígena de la Sierra Nevada", "en": "Encounter with an indigenous community of the Sierra Nevada" },
+    { "es": "Cenas curadas en espacios históricos y cocinas contemporáneas", "en": "Curated dinners in historic spaces and contemporary kitchens" },
+    { "es": "Fotógrafo profesional documentando momentos clave del viaje", "en": "Professional photographer documenting key moments of the journey" },
+    { "es": "Transporte privado en todos los trayectos", "en": "Private transportation for all transfers" },
+    { "es": "Seguros de viaje completos", "en": "Comprehensive travel insurance" },
+    { "es": "Kit pre-viaje: journal de cuero, mapa ilustrado de la ruta y bibliografía recomendada", "en": "Pre-trip kit: leather journal, illustrated route map, and recommended bibliography" },
+    { "es": "Evento virtual pre-viaje con historiador y crítico literario", "en": "Pre-trip virtual event with a historian and literary critic" },
+    { "es": "Add-on opcional: Taller de escritura creativa y taller de narrativa vallenata", "en": "Optional add-on: creative writing workshop and vallenato narrative workshop" }
   ],
   "excludes": [
-    { "es": "Vuelos internacionales y domésticos", "en": "International and domestic flights" },
-    { "es": "Seguro de viaje", "en": "Travel insurance" },
-    { "es": "Gastos personales y propinas", "en": "Personal expenses and gratuities" },
-    { "es": "Libros de García Márquez (recomendamos traer los propios)", "en": "García Márquez books (we recommend bringing your own)" }
+    { "es": "Vuelos", "en": "Flights" },
+    { "es": "Propinas", "en": "Gratuities" },
+    { "es": "Artículos de uso personal", "en": "Personal items" }
   ],
   "itinerary": [
-    { "day": 1, "title": { "es": "Llegada a Santa Marta / traslado a Aracataca", "en": "Arrival in Santa Marta / transfer to Aracataca" }, "description": { "es": "Llegada al Caribe colombiano. Traslado a Aracataca—el Macondo real. Primer contacto con el calor, la luz y el ritmo del pueblo que lo empezó todo.", "en": "Arrival to the Colombian Caribbean. Transfer to Aracataca—the real Macondo. First contact with the heat, the light, and the rhythm of the town where it all began." }, "highlights": [{ "es": "Llegada a Aracataca", "en": "Arrival in Aracataca" }], "meals": ["dinner"], "accommodation": { "es": "Alojamiento local, Aracataca", "en": "Local lodging, Aracataca" } },
-    { "day": 2, "title": { "es": "Aracataca: la casa, el pueblo, la memoria", "en": "Aracataca: the House, the Town, the Memory" }, "description": { "es": "Casa natal de García Márquez. Recorrido por el pueblo con guía literario—cada esquina tiene su correlato en Cien años de soledad. La estación del tren. La iglesia. La casa del telegrafista.", "en": "García Márquez's birth house. Walk through town with literary guide—every corner has its counterpart in One Hundred Years of Solitude. The train station. The church. The telegraphist's house." }, "highlights": [{ "es": "Casa natal de García Márquez", "en": "García Márquez birth house" }, { "es": "Recorrido literario por Aracataca", "en": "Literary walk through Aracataca" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Alojamiento local, Aracataca", "en": "Local lodging, Aracataca" } },
-    { "day": 3, "title": { "es": "Ciénaga: la masacre que el país olvidó", "en": "Ciénaga: the Massacre the Country Forgot" }, "description": { "es": "Traslado a Ciénaga. Contexto histórico de la masacre bananera de 1928—el evento que Colombia borró de su memoria oficial y que García Márquez inscribió en la literatura universal.", "en": "Transfer to Ciénaga. Historical context of the 1928 banana massacre—the event Colombia erased from official memory and that García Márquez inscribed into world literature." }, "highlights": [{ "es": "Historia de la masacre bananera", "en": "Banana massacre history" }, { "es": "Zona bananera", "en": "Banana zone" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel en Santa Marta", "en": "Hotel in Santa Marta" } },
-    { "day": 4, "title": { "es": "Traslado a Valledupar", "en": "Transfer to Valledupar" }, "description": { "es": "Cruce del norte del Cesar hacia Valledupar—capital del vallenato. Llegada y primera inmersión en la cultura musical.", "en": "Crossing northern Cesar toward Valledupar—capital of vallenato. Arrival and first immersion in the musical culture." }, "highlights": [{ "es": "Llegada a Valledupar", "en": "Arrival in Valledupar" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Hotel boutique, Valledupar", "en": "Boutique hotel, Valledupar" } },
-    { "day": 5, "title": { "es": "Valledupar: el juglar", "en": "Valledupar: the Juglar" }, "description": { "es": "Encuentro con juglar vallenato. No es un show—es una conversación cantada. El vallenato como sistema de transmisión cultural, enciclopedia oral, periodismo antes del periodismo.", "en": "Encounter with vallenato juglar. This is not a show—it is a sung conversation. Vallenato as cultural transmission system, oral encyclopedia, journalism before journalism." }, "highlights": [{ "es": "Encuentro con juglar vallenato", "en": "Encounter with vallenato juglar" }, { "es": "Historia del vallenato", "en": "History of vallenato" }], "meals": ["breakfast", "lunch"], "accommodation": { "es": "Hotel boutique, Valledupar", "en": "Boutique hotel, Valledupar" } },
-    { "day": 6, "title": { "es": "Valledupar – Cartagena", "en": "Valledupar – Cartagena" }, "description": { "es": "Traslado a Cartagena. Llegada a la ciudad que García Márquez eligió como hogar y como escenario de sus novelas de madurez.", "en": "Transfer to Cartagena. Arrival in the city García Márquez chose as home and as the setting of his mature novels." }, "highlights": [{ "es": "Llegada a Cartagena", "en": "Arrival in Cartagena" }], "meals": ["breakfast"], "accommodation": { "es": "Hotel boutique, Ciudad Amurallada", "en": "Boutique hotel, Walled City" } },
-    { "day": 7, "title": { "es": "Cartagena: caminata literaria", "en": "Cartagena: Literary Walk" }, "description": { "es": "Recorrido por la Cartagena de El amor en los tiempos del cólera. Los patios, las calles, los rincones que García Márquez convirtió en escenario. Cena de despedida.", "en": "Walk through the Cartagena of Love in the Time of Cholera. The courtyards, streets, and corners García Márquez turned into scenery. Farewell dinner." }, "highlights": [{ "es": "Caminata literaria por Cartagena", "en": "Literary walk through Cartagena" }, { "es": "Cena de despedida", "en": "Farewell dinner" }], "meals": ["breakfast", "dinner"], "accommodation": { "es": "Hotel boutique, Ciudad Amurallada", "en": "Boutique hotel, Walled City" } },
-    { "day": 8, "title": { "es": "Partida", "en": "Departure" }, "description": { "es": "Desayuno y traslado al aeropuerto.", "en": "Breakfast and airport transfer." }, "highlights": [{ "es": "Traslado", "en": "Transfer" }], "meals": ["breakfast"], "accommodation": null }
+    {
+      "day": 1,
+      "title": { "es": "Llegada a Santa Marta", "en": "Arrival in Santa Marta" },
+      "description": {
+        "es": "Recepción y traslado. Introducción al Caribe colombiano que escribió García Márquez.",
+        "en": "Reception and transfer. Introduction to the Colombian Caribbean that García Márquez wrote."
+      },
+      "highlights": [{ "es": "Llegada a Santa Marta", "en": "Arrival in Santa Marta" }],
+      "meals": ["dinner"],
+      "accommodation": { "es": "Hotel boutique, Santa Marta", "en": "Boutique hotel, Santa Marta" }
+    },
+    {
+      "day": 2,
+      "title": { "es": "Aracataca — El Macondo real", "en": "Aracataca — The Real Macondo" },
+      "description": {
+        "es": "Traslado a Aracataca. La casa natal, las calles que Úrsula Iguarán recorrió mil veces. Guías que conocieron a la familia García.",
+        "en": "Transfer to Aracataca. The birth house, the streets Úrsula Iguarán walked a thousand times. Guides who knew the García family."
+      },
+      "highlights": [
+        { "es": "Casa natal de García Márquez", "en": "García Márquez's birth house" },
+        { "es": "Recorrido por Aracataca", "en": "Aracataca walk" }
+      ],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Santa Marta", "en": "Boutique hotel, Santa Marta" }
+    },
+    {
+      "day": 3,
+      "title": { "es": "Aracataca — Almuerzo en casa de familia", "en": "Aracataca — Lunch at a Family Home" },
+      "description": {
+        "es": "Almuerzo en casa de familia con historias que nunca llegaron a los libros. La memoria oral como archivo vivo.",
+        "en": "Lunch at a family home with stories that never made it into the books. Oral memory as a living archive."
+      },
+      "highlights": [{ "es": "Almuerzo en casa de familia", "en": "Lunch at family home" }],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Santa Marta", "en": "Boutique hotel, Santa Marta" }
+    },
+    {
+      "day": 4,
+      "title": { "es": "Ciénaga — La herida histórica", "en": "Ciénaga — The Historical Wound" },
+      "description": {
+        "es": "La plaza de la masacre bananera de 1928, la estación del tren amarillo, las plantaciones aún activas. Lectura del pasaje de Cien años de soledad en el lugar exacto donde ocurrió.",
+        "en": "The square of the 1928 banana massacre, the yellow train station, the still-active plantations. Reading of the passage from One Hundred Years of Solitude at the exact location where it happened."
+      },
+      "highlights": [
+        { "es": "Plaza de la masacre bananera", "en": "Banana massacre square" },
+        { "es": "Lectura en el lugar exacto", "en": "Reading at the exact site" }
+      ],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Santa Marta", "en": "Boutique hotel, Santa Marta" }
+    },
+    {
+      "day": 5,
+      "title": { "es": "Valledupar — La narrativa cantada", "en": "Valledupar — The Sung Narrative" },
+      "description": {
+        "es": "Encuentro con juglar que conecta a Escalona con García Márquez. El vallenato como memoria oral del Caribe.",
+        "en": "Encounter with a juglar who connects Escalona with García Márquez. Vallenato as oral memory of the Caribbean."
+      },
+      "highlights": [{ "es": "Juglar vallenato", "en": "Vallenato juglar" }],
+      "meals": ["breakfast", "dinner"],
+      "accommodation": { "es": "Hotel boutique, Valledupar", "en": "Boutique hotel, Valledupar" }
+    },
+    {
+      "day": 6,
+      "title": { "es": "Valledupar — Taller de narrativa vallenata", "en": "Valledupar — Vallenato Narrative Workshop" },
+      "description": {
+        "es": "Taller opcional de narrativa vallenata. Conversación sobre la oralidad caribe que dio forma a la prosa de Gabo.",
+        "en": "Optional vallenato narrative workshop. Conversation on the Caribbean orality that shaped Gabo's prose."
+      },
+      "highlights": [{ "es": "Taller de narrativa vallenata", "en": "Vallenato narrative workshop" }],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Valledupar", "en": "Boutique hotel, Valledupar" }
+    },
+    {
+      "day": 7,
+      "title": { "es": "Cartagena — La ciudad de Florentino Ariza", "en": "Cartagena — The City of Florentino Ariza" },
+      "description": {
+        "es": "Caminata literaria por El amor en los tiempos del cólera. Casas patrimoniales, Getsemaní.",
+        "en": "Literary walk through Love in the Time of Cholera. Heritage houses, Getsemaní."
+      },
+      "highlights": [
+        { "es": "Caminata literaria", "en": "Literary walk" },
+        { "es": "Casas patrimoniales", "en": "Heritage houses" }
+      ],
+      "meals": ["breakfast", "lunch"],
+      "accommodation": { "es": "Hotel boutique, Cartagena", "en": "Boutique hotel, Cartagena" }
+    },
+    {
+      "day": 8,
+      "title": { "es": "Cartagena — Fundación Gabo y gastronomía", "en": "Cartagena — Fundación Gabo & Gastronomy" },
+      "description": {
+        "es": "Acceso a espacios de la Fundación Gabo. Gastronomía afrocaribeña con matrona.",
+        "en": "Access to Fundación Gabo spaces. Afro-Caribbean gastronomy with a matrona."
+      },
+      "highlights": [
+        { "es": "Espacios de la Fundación Gabo", "en": "Fundación Gabo spaces" },
+        { "es": "Gastronomía con matrona", "en": "Gastronomy with matrona" }
+      ],
+      "meals": ["breakfast", "lunch", "dinner"],
+      "accommodation": { "es": "Hotel boutique, Cartagena", "en": "Boutique hotel, Cartagena" }
+    },
+    {
+      "day": 9,
+      "title": { "es": "Cartagena — Cierre", "en": "Cartagena — Closing" },
+      "description": {
+        "es": "Día reservado para taller de escritura creativa (opcional) o tiempo libre en la ciudad amurallada.",
+        "en": "Day reserved for creative writing workshop (optional) or free time in the walled city."
+      },
+      "highlights": [{ "es": "Taller de escritura creativa (opcional)", "en": "Creative writing workshop (optional)" }],
+      "meals": ["breakfast"],
+      "accommodation": { "es": "Hotel boutique, Cartagena", "en": "Boutique hotel, Cartagena" }
+    },
+    {
+      "day": 10,
+      "title": { "es": "Cartagena — Partida", "en": "Cartagena — Departure" },
+      "description": {
+        "es": "Desayuno y traslado al aeropuerto de Cartagena (CTG).",
+        "en": "Breakfast and transfer to Cartagena airport (CTG)."
+      },
+      "highlights": [{ "es": "Traslado al aeropuerto", "en": "Airport transfer" }],
+      "meals": ["breakfast"],
+      "accommodation": null
+    }
   ],
-  "experience": { "culturalDepth": 5, "physicalDemand": 2, "comfort": 3, "groupIntimacy": 5 },
+  "experience": {
+    "duration": { "es": "7 a 10 días", "en": "7 to 10 days" },
+    "groupSize": { "es": "Máximo 12 personas", "en": "Maximum 12 people" },
+    "pace": { "es": "Pausado, caminatas literarias e históricas, conversaciones largas", "en": "Slow-paced, literary and historical walks, long conversations" },
+    "language": { "es": "Español o inglés", "en": "Spanish or English" },
+    "startPoint": { "es": "Santa Marta", "en": "Santa Marta" },
+    "endPoint": { "es": "Cartagena (CTG)", "en": "Cartagena (CTG)" },
+    "season": { "es": "Todo el año", "en": "Year-round" },
+    "physicalLevel": { "es": "Bajo, sin actividades de alta exigencia", "en": "Low, no high-demand activities" },
+    "culturalDepth": 5,
+    "physicalDemand": 2,
+    "comfort": 4,
+    "groupIntimacy": 5
+  },
   "idealFor": [
-    { "es": "Lectores de García Márquez y la literatura latinoamericana", "en": "Readers of García Márquez and Latin American literature" },
-    { "es": "Interesados en la tradición oral y musical del Caribe", "en": "Those interested in Caribbean oral and musical tradition" },
-    { "es": "Viajeros académicos o con curiosidad intelectual profunda", "en": "Academic travelers or those with deep intellectual curiosity" }
+    { "es": "Lectores exigentes, profesores de literatura, hispanistas y escritores", "en": "Demanding readers, literature professors, hispanists, and writers" },
+    { "es": "Personas que entienden que para leer bien a García Márquez primero hay que entender el territorio que lo escribió", "en": "People who understand that to read García Márquez well, one must first understand the territory that wrote him" }
   ],
   "signatureExperiences": [
-    { "es": "Encuentro con juglar vallenato", "en": "Encounter with vallenato juglar" },
-    { "es": "Casa natal de García Márquez con guía literario", "en": "García Márquez birth house with literary guide" },
-    { "es": "Caminata literaria en Cartagena", "en": "Literary walk in Cartagena" },
-    { "es": "Contexto histórico de la masacre bananera", "en": "Historical context of the banana massacre" }
+    { "es": "Almuerzo en casa de familia en Aracataca con guías que conocieron a la familia García", "en": "Lunch at a family home in Aracataca with guides who knew the García family" },
+    { "es": "Lectura del pasaje de la masacre bananera en el lugar exacto donde ocurrió", "en": "Reading of the banana massacre passage at the exact site where it happened" },
+    { "es": "Encuentro con juglar vallenato", "en": "Encounter with a vallenato juglar" },
+    { "es": "Acceso a espacios de la Fundación Gabo", "en": "Access to Fundación Gabo spaces" },
+    { "es": "Fotógrafo profesional durante todo el recorrido", "en": "Professional photographer throughout the journey" }
   ],
-  "relatedTours": ["en-busqueda-del-dorado", "classic-colombia-caribe", "wild-colombia"],
+  "relatedTours": ["classic-colombia", "en-busqueda-del-dorado", "wild-colombia"],
   "preTrip": {
-    "packing": [
-      { "es": "Ropa ligera—clima tropical todo el recorrido", "en": "Light clothing—tropical climate throughout" },
-      { "es": "Sombrero y protección solar", "en": "Hat and sun protection" },
-      { "es": "Cuaderno de notas (en serio)", "en": "Notebook (seriously)" }
+    "kit": {
+      "es": "Kit pre-viaje con journal de cuero, mapa ilustrado de la ruta y bibliografía recomendada.",
+      "en": "Pre-trip kit with leather journal, illustrated route map, and recommended bibliography."
+    },
+    "virtualEvent": {
+      "es": "Evento virtual pre-viaje con historiador y crítico literario.",
+      "en": "Pre-trip virtual event with a historian and literary critic."
+    },
+    "addOns": [
+      { "es": "Taller de escritura creativa", "en": "Creative writing workshop" },
+      { "es": "Taller de narrativa vallenata", "en": "Vallenato narrative workshop" }
     ],
-    "reading": ["Cien años de soledad — Gabriel García Márquez", "El amor en los tiempos del cólera — Gabriel García Márquez", "Vivir para contarla — Gabriel García Márquez"],
-    "preparation": { "es": "Este viaje requiere haber leído al menos Cien años de soledad antes de llegar. No es un requisito arbitrario—es la diferencia entre ver un pueblo y leer un territorio.", "en": "This journey requires having read at least One Hundred Years of Solitude before arrival. This is not an arbitrary requirement—it is the difference between seeing a town and reading a territory." }
+    "packing": [
+      { "es": "Ropa ligera de algodón o lino para clima tropical", "en": "Light cotton or linen clothing for tropical climate" },
+      { "es": "Repelente de insectos", "en": "Insect repellent" },
+      { "es": "Sombrero y protección solar", "en": "Hat and sun protection" }
+    ]
   },
   "seo": {
-    "es": { "metaTitle": "Macondo y el Realismo Mágico — Literatura desde el Territorio | Meridiana", "metaDescription": "7–10 días recorriendo la Colombia de García Márquez. Aracataca, Ciénaga, Valledupar, Cartagena. Experiencia literaria viva.", "keywords": ["macondo tour", "garcia marquez", "realismo magico", "aracataca", "vallenato valledupar"] },
-    "en": { "metaTitle": "Macondo & Magical Realism — Literature from the Territory | Meridiana", "metaDescription": "7–10 days through García Márquez's Colombia. Aracataca, Ciénaga, Valledupar, Cartagena. Living literary experience.", "keywords": ["macondo tour", "garcia marquez", "magical realism", "aracataca", "vallenato valledupar"] }
+    "es": {
+      "metaTitle": "Macondo y el Realismo Mágico — La ruta de García Márquez | Meridiana",
+      "metaDescription": "7 a 10 días por Aracataca, Ciénaga, Valledupar y Cartagena. El universo narrativo que dio forma a Cien años de soledad y El amor en los tiempos del cólera.",
+      "keywords": ["garcia marquez tour", "macondo aracataca", "realismo magico", "literatura colombia", "tour cultural caribe"]
+    },
+    "en": {
+      "metaTitle": "Macondo & Magical Realism — The García Márquez Route | Meridiana",
+      "metaDescription": "7 to 10 days through Aracataca, Ciénaga, Valledupar, and Cartagena. The narrative universe that shaped One Hundred Years of Solitude and Love in the Time of Cholera.",
+      "keywords": ["garcia marquez tour", "macondo aracataca", "magical realism", "colombia literature", "caribbean cultural tour"]
+    }
   }
 }
