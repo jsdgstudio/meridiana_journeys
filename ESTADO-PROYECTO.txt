@@ -1,0 +1,839 @@
+================================================================================
+                    MERIDIANA — ESTADO DEL PROYECTO
+                         Informe de Contexto
+                          Fecha: 2026-05-17
+================================================================================
+
+RESUMEN EJECUTIVO
+================================================================================
+Meridiana es una plataforma de viajes culturales premium enfocada en Colombia y
+América Latina. Se posiciona como una publicación editorial con capacidad de
+reserva, NO como una agencia de viajes comercial.
+
+Estado: Tasks 01-10 completadas. Task 11 en progreso (homepage patch).
+Último commit: Task 11 — Homepage patch (gradients, hero redesign, AboutPreview)
+
+STACK TECNOLÓGICO
+================================================================================
+- Framework: Next.js 14+ (App Router)
+- Lenguaje: TypeScript (strict mode)
+- Estilos: Tailwind CSS 3.4+ (sin custom CSS, todo vía globals.css)
+- Animaciones: Framer Motion (NUNCA CSS transitions)
+- Deployment: Vercel
+- Fuente de contenido: JSON local (Phase 1) → Supabase (Phase 2)
+- Tipografías:
+  - Headings: Cormorant Garamond (peso 300 light, NUNCA bold)
+  - Body/UI: General Sans Variable (200-700)
+
+ESTRUCTURA DE CARPETAS
+================================================================================
+meridiana/
+├── CLAUDE.md                    ← Instrucciones maestras del proyecto
+├── ESTADO-PROYECTO.txt          ← TÚ ESTÁS AQUÍ
+├── docs/
+│   ├── architecture.md          ← Decisiones técnicas + patrones
+│   ├── content-model.md         ← Schema JSON tours/pages
+│   ├── design-tokens.md         ← Paleta, tipografía, espaciado
+│   ├── experience-engine.md     ← Flujo UX
+│   └── copy-rules.md            ← Tono editorial + restricciones
+├── frontend/
+│   ├── app/
+│   │   ├── layout.tsx           ← Root layout
+│   │   ├── [locale]/            ← Bilingual routing (es/en)
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx         ← HOMEPAGE
+│   │   │   ├── (about)/         ← Sobre nosotros
+│   │   │   ├── (journeys)/      ← Catálogo de viajes
+│   │   │   ├── journal/         ← Coming soon
+│   │   │   └── (contact)/       ← Formulario
+│   │   └── middleware.ts        ← Detección + redirect de locale
+│   ├── components/
+│   │   ├── ui/                  ← Primitivos (Container, Heading, Button, etc)
+│   │   ├── sections/            ← Secciones del sitio
+│   │   ├── tour/                ← Componentes específicos de tours
+│   │   └── layout/              ← Navbar, Footer, PageWrapper
+│   ├── content/
+│   │   ├── tours/               ← 7 tours bilinguales (*.json)
+│   │   ├── pages/               ← homepage.json, about.json, contact.json
+│   │   └── i18n/                ← es.json, en.json (strings UI)
+│   ├── design-system/
+│   │   ├── globals.css          ← FUENTE ÚNICA DE VERDAD: todos los tokens
+│   │   └── tailwind.config.ts
+│   ├── hooks/                   ← useContent, useTours
+│   ├── types/                   ← TypeScript interfaces
+│   ├── lib/                     ← Utilities
+│   └── public/
+│       ├── fonts/               ← .ttf files
+│       ├── images/
+│       └── video/
+└── tasks/
+    ├── 01-setup.md              ← Completada
+    ├── 02-design-system.md      ← Completada
+    ... (Tasks 03-10 completadas)
+    ├── 11-homepage-patch.md     ← En progreso
+
+
+PALETA DE COLORES (CRÍTICO)
+================================================================================
+Semantic naming (usar estos nombres, NO hex codes):
+- negro:      #0F130E   (fondo primario, oscuro total)
+- verde:      #1A2E24   (acento verde oscuro, fondos secundarios)
+- terracota:  #CC754A   (acento naranja/rojo cálido)
+- tumbaga:    #9A7A3A   (oro/dorado, accents premium)
+- marfil:     #E7D5BC   (crema clara, texto sobre oscuro)
+- blanco:     #F8F4EE   (blanco off-white, fondo light pages)
+
+Usa estas clases Tailwind:
+- bg-negro, text-negro, border-negro
+- bg-marfil, text-marfil
+- etc.
+
+Gradientes predefinidos en globals.css:
+- --gradient-card:        linear-gradient(160deg, negro 0%, verde 100%)
+- --gradient-section:     linear-gradient(180deg, negro 0%, verde 100%)
+- --gradient-hero:        especial para hero (ver Hero.tsx)
+- --gradient-accent:      linear-gradient(135deg, tumbaga 0%, terracota 100%)
+
+
+HOMEPAGE — ESTRUCTURA ACTUAL (Y SECCIONES)
+================================================================================
+El homepage (frontend/app/[locale]/page.tsx) renderiza estas secciones EN ORDEN:
+
+1. <Hero /> [SIN CAMBIOS ESTRUCTURALES]
+   - Archivo: frontend/components/sections/Hero.tsx
+   - Contenido: frontend/content/pages/homepage.json → hero
+   - Elementos: Video + imagen fallback, overlay gradient, headline + subheadline
+   - Ancho: 100dvh min, left-aligned text en la parte inferior
+   - Nota: Tiene indicador de scroll animado en la parte inferior
+   - Status: MANTENER tal cual está
+
+2. <AboutPreview /> [REDISEÑO FUERTE PENDIENTE]
+   - Archivo: frontend/components/sections/AboutPreview.tsx (refactor needed)
+   - Contenido: frontend/content/pages/homepage.json → aboutPreview (reestructurar)
+   - Estructura ACTUAL (densa):
+     a) Intro + logo (2-column layout)
+     b) Método + editorial body (2-column editorial)
+     c) Pull quote (centro, con word reveal)
+     d) Lista "Donde" (4 items con números)
+     e) CTA "comenzar el viaje"
+     f) Slab diferencial (fondo marfil) con quote + firma
+   - Estructura NUEVA (minimalista + interactivo):
+     [A definir en tareas próximas]
+     - Menos texto visible inicialmente
+     - Interactividad: click/hover para expandir secciones
+     - Visual primero: imágenes/mosaico
+     - Textos: resumidos, pulidos, no densos
+   - Status: PENDIENTE REDISEÑO
+
+3. <FeaturedTours /> [CAMBIO A MOSAICO PENDIENTE]
+   - Archivo: frontend/components/sections/FeaturedTours.tsx (refactor needed)
+   - Contenido: frontend/content/pages/homepage.json → featuredTours (simplificar)
+   - Layout ACTUAL: Grid asimétrico (1 featured + 2 secondary)
+   - Layout NUEVO: MOSAICO asimétrico (tipo Pinterest/Unsplash)
+   - Tours: classic-bogota, classic-colombia-cafetero, en-busqueda-del-dorado
+   - Cambios:
+     • Texto mínimo en card (solo título)
+     • Descripción en hover/click (reveal)
+     • Fotos con movimiento (zoom on hover, parallax)
+     • Botón "Ver todos los viajes" mantener
+   - Status: PENDIENTE REDISEÑO
+
+4. <HowItWorks /> [REVISAR, POSIBLE CAMBIO]
+   - Archivo: frontend/components/sections/HowItWorks.tsx
+   - Contenido: frontend/content/pages/homepage.json → howItWorks
+   - Estructura: 3 pasos (Explora, Conversa, Viaja) con descripción larga
+   - Layout: Grid 3-column (1-column mobile)
+   - Posible cambio: simplificar o reemplazar con visual interactivo
+   - Status: REVISAR EN TAREAS PRÓXIMAS
+
+5. <CallToAction /> [MANTENER O REVISAR]
+   - Archivo: frontend/components/sections/CallToAction.tsx
+   - Contenido: frontend/content/pages/homepage.json → cta
+   - Elementos: Headline, descripción, botón "Explorar viajes"
+   - Status: MANTENER O REVISAR según avance
+
+
+CONTENIDO DEL HOMEPAGE (JSON)
+================================================================================
+Ubicación: frontend/content/pages/homepage.json
+
+Secciones JSON:
+- hero:
+  └─ headline, subheadline, media (type, src, alt)
+- aboutPreview:
+  ├─ label, headline (line1, line2), lead
+  ├─ editorial (methodLabel, method, body1, body2)
+  ├─ pullQuote, pullQuoteHighlight
+  ├─ donde (sectionLabel, intro, lines array)
+  ├─ closing
+  ├─ differentiator (label, subtitle, textBase, textEmphasis, quote, signature)
+  ├─ cta (text, href)
+  ├─ logo, isotipo
+  └─ (todos bilingues con keys es/en)
+- featuredTours:
+  ├─ headline
+  └─ tourIds: ["classic-bogota", "classic-colombia-cafetero", "en-busqueda-del-dorado"]
+- howItWorks:
+  ├─ headline
+  └─ steps (array de 3 pasos con number, title, description)
+- cta:
+  ├─ headline, description, buttonText, buttonHref
+
+
+TOURS DISPONIBLES (7 total)
+================================================================================
+Cada tour es un archivo JSON en frontend/content/tours/
+
+1. classic-bogota                  (Entry tier, 2-3 days)
+2. classic-colombia-cafetero       (Core tier, 10 days)
+3. classic-colombia-caribe         (Core tier, 10 days)
+4. classic-colombia-full           (Core tier, 13 days)
+5. en-busqueda-del-dorado          (Premium tier, 8-9 days)
+6. macondo-realismo-magico         (Premium tier, 7-10 days)
+7. wild-colombia                   (Premium tier, 14-21 days)
+
+Todos son bilinguales (es/en) y contienen:
+- ID, nombre, descripción
+- Duración, tamaño de grupo
+- Precio, moneda
+- Experiencia (profundidad cultural, exigencia física, confort, intimidad)
+- Narrativa, itinerario, qué incluye/no incluye
+- Lecturas recomendadas, lista de packing
+
+
+RUTAS Y PÁGINAS
+================================================================================
+Bilingual routing: /[locale]/
+
+Español (es):
+- /es/                          ← homepage
+- /es/nosotros                  ← About
+- /es/viajes                    ← Tours grid
+- /es/viajes/[slug]             ← Tour detail
+- /es/journal                   ← Coming soon
+- /es/contacto                  ← Contact form
+
+English (en):
+- /en/                          ← homepage
+- /en/nosotros                  ← About (label traducido pero URL no)
+- /en/journeys                  ← Tours grid
+- /en/journeys/[slug]           ← Tour detail
+- /en/journal                   ← Coming soon
+- /en/contact                   ← Contact form
+
+Default locale: ES (redirect desde "/" a "/es")
+
+
+COMPONENTES UI PRINCIPALES (Actuales + Proyectados)
+================================================================================
+Todos en frontend/components/
+
+Primitivos (ui/) — EXISTENTES:
+- Container.tsx         ← max-w wrapper estándar
+- Heading.tsx          ← h1-h6, font-display light
+- Text.tsx             ← párrafos, semantic
+- Button.tsx           ← variants: primary, secondary, ghost
+- Card.tsx             ← tour cards
+- RichText.tsx         ← markdown-like
+- SectionWrapper.tsx   ← padding + background wrapper
+
+Primitivos (ui/) — A CREAR:
+- ExpandableSection.tsx ← sección con texto expandible con click
+- InteractiveCard.tsx   ← card con progressive text reveal
+- MosaicGrid.tsx        ← grid asimétrico tipo mosaico
+- PhotoWithMotion.tsx   ← imagen con parallax/zoom/animation
+
+Secciones (sections/) — EXISTENTES:
+- Hero.tsx             ← Landing hero completa [SIN CAMBIOS]
+- AboutPreview.tsx     ← About preview [REFACTOR PENDIENTE → minimalista + interactivo]
+- FeaturedTours.tsx    ← 3 tours destacados [REFACTOR PENDIENTE → mosaico]
+- HowItWorks.tsx       ← 3-step process [REVISAR]
+- CallToAction.tsx     ← CTA final [REVISAR]
+- AboutStory.tsx       ← About page full story [REDISEÑO PENDIENTE]
+- AboutValues.tsx      ← About page values list
+- ContactForm.tsx      ← Contact form [SIMPLIFICAR PENDIENTE]
+
+Secciones (sections/) — A CREAR:
+- WaitingPage.tsx      ← Landing page de espera ("¿Listo para...")
+- SimpleContactInfo.tsx ← Contact info minimalista
+
+Tours (tour/) — EXISTENTES:
+- TourCard.tsx         ← Card de tour [POSIBLE REFACTOR para minimalismo]
+- TourHero.tsx         ← Hero dentro de tour detail
+- TourNarrative.tsx    ← Narrative section
+- TourExperience.tsx   ← Experience ratings
+- TourItinerary.tsx    ← Itinerary accordion
+- TourIncludes.tsx     ← What's included
+- TourPricing.tsx      ← Pricing display
+- ToursGrid.tsx        ← Grid de todos los tours
+
+Layout (layout/) — EXISTENTES:
+- Navbar.tsx           ← Navigation + lang toggle [SIN CAMBIOS]
+- Footer.tsx           ← Footer completo [SIN CAMBIOS]
+- PageWrapper.tsx      ← Page container wrapper
+- Providers.tsx        ← Context providers (locale)
+
+
+ANIMACIONES (Framer Motion)
+================================================================================
+REGLA CRÍTICA: NUNCA usar CSS transitions. SIEMPRE usar Framer Motion.
+
+Patrones comunes:
+- fadeUp:       opacity 0→1, y 16→0
+- fadeIn:       opacity 0→1 simple
+- wordReveal:   cada palabra sube individualmente
+- staggerChildren: múltiples items con delay staggered
+
+Easing: [0.25, 0.1, 0.25, 1] para la mayoría
+Motion: spring (stiffness: 80, damping: 22) para scroll reveals
+
+
+REGLAS DE CONTENIDO
+================================================================================
+Editorial tone (CRÍTICO):
+- Literary: Dense, reflective prose
+- Cinematic: Visual pacing, not bullet-point tourism
+- Intellectual: Assumes cultured, curious reader
+- Anti-cliché: NO "discover paradise", NO "hidden gems"
+
+Tour names ejemplo:
+✗ "Bogotá Tour"
+✓ "Classic Bogotá — Five Centuries in Three Days"
+
+Strings UI: frontend/content/i18n/es.json + en.json
+
+
+CÓMO HACER CAMBIOS
+================================================================================
+
+1. CAMBIAR TEXTOS EN HOMEPAGE:
+   - Editar: frontend/content/pages/homepage.json
+   - Cambiar dentro de los objetos bilingues (es/en)
+   - NO necesitas recompilar, Next.js lo recarga automáticamente
+   - PRÓXIMAS TAREAS: pulir/resumir todos los textos existentes
+
+2. CAMBIAR SECCIONES / LAYOUT:
+   - Editar componente: frontend/components/sections/*.tsx
+   - Cambios de tamaño/padding: editar className (Tailwind)
+   - Cambios de colores: usar nombres semánticos (negro, marfil, etc)
+   - Próximas tareas: pasar AboutPreview y FeaturedTours a minimalista + interactivo
+
+3. AGREGAR INTERACTIVIDAD (Progressive Disclosure):
+   - Crear componentes como ExpandableSection.tsx, InteractiveCard.tsx
+   - Usar Framer Motion para reveal animations
+   - Patrón: textos/contenido inicialmente hidden, reveal con click/hover
+   - Ejemplo: AboutPreview mostrará 1 párrafo, rest hidden hasta click
+
+4. MOSAICO Y FOTOS CON MOVIMIENTO:
+   - Crear MosaicGrid.tsx para asimétrico layout
+   - Agregar PhotoWithMotion.tsx para parallax/zoom effects
+   - Usar Next.js Image component para optimización
+   - Framer Motion para hover animations (zoom, fade, parallax)
+
+5. REEMPLAZAR UNA SECCIÓN:
+   - Opción A: Editar el archivo *.tsx de la sección
+   - Opción B: Crear nueva sección, importar en frontend/app/[locale]/page.tsx
+   - Importar y reemplazar en la línea de composición (línea ~35-52)
+   - Próximo: AboutPreview y FeaturedTours van a cambiar estructuralmente
+
+6. CAMBIAR COLORES / TIPOGRAFÍA:
+   - Editar: frontend/design-system/globals.css (líneas 27-62)
+   - Cambios aplican globalmente vía CSS vars
+   - NUNCA hardcodear hex en componentes
+
+7. AGREGAR NUEVA SECCIÓN:
+   - Crear archivo: frontend/components/sections/NuevaSeccion.tsx
+   - Exportar función default
+   - Importar en homepage: frontend/app/[locale]/page.tsx
+   - Agregar a la composición de JSX
+   - Agregar datos en homepage.json si necesita contenido
+   - Próximo: WaitingPage.tsx para landing de espera
+
+8. CREAR NUEVA PÁGINA:
+   - Crear folder: frontend/app/[locale]/[route]/
+   - Crear page.tsx con contenido
+   - Agregar a i18n routes si bilingual
+   - Ejemplo: /waiting (¿Listo para una nueva experiencia?)
+
+9. CAMBIAR TOUR DATA:
+   - Editar JSON: frontend/content/tours/[tour-id].json
+   - O editar la descripción en homepage.json → featuredTours.tourIds
+   - Próximas tareas: resumir descripciones de tours
+
+10. CAMBIAR PÁGINA NOSOTROS/ABOUT:
+    - Editar: frontend/content/pages/about.json (simplificar, mosaico)
+    - Editar/crear: frontend/components/sections/AboutStory.tsx (rediseño)
+    - Hacer minimalista + interactivo (texto reveal con click)
+
+11. CAMBIAR PÁGINA CONTACTO:
+    - Editar: frontend/content/pages/contact.json (SOLO form + info)
+    - Editar: frontend/components/sections/ContactForm.tsx (simplificar UI)
+    - Remover: descripciones previas, sections elaboradas
+
+
+ARQUITECTURA DE DATOS
+================================================================================
+Flujo: JSON → hooks (useContent/useTours) → locale filter → componentes → UI
+
+Frontend hooks:
+- useContent:      Lee *.json de content/pages/, retorna contenido + locale
+- useTours:        Lee tour JSONs, filtra por locale, retorna tours
+
+Tipos TypeScript: frontend/types/
+- Locale = "es" | "en"
+- Tour = { id, nombre, descripción, duración, ... }
+- HeroContent, AboutPreviewContent, etc.
+
+Bilingual pattern:
+interface LocaleString { es: string; en: string; }
+
+En componentes:
+const text = content.headline[locale]; ← automático locale switching
+
+
+DISEÑO VISUAL — DETALLES
+================================================================================
+- Bordes (radius): SHARP por defecto (radius-none), sin 50px roundedness
+- Sombras: soft shadows, NO drop shadows heavy
+- Gradientes: predefinidos en globals.css, usar --gradient-* vars
+- Spacing: escala 4px (--space-1 = 4px, --space-2 = 8px, etc)
+- Font weights:
+  - Display (headings): 300 light SIEMPRE (nunca 400)
+  - Body: 400 regular
+  - Accentos/labels: 500-700 (bold caps)
+- Aesthetic: Editorial, dark-dominant, NO SaaS, NO agency glossy
+
+
+TASK 11 — ESTADO ACTUAL (COMPLETADA)
+================================================================================
+Último commit: "Task 11: Homepage patch — gradients, hero redesign, AboutPreview, design upgrades"
+
+Cambios en Task 11:
+- Hero: mejoradas gradients, reposicionamiento de elementos
+- AboutPreview: completa reescritura con micro-animaciones
+- Gradientes: aplicados a más secciones
+- Design system: mejoras en tokens
+
+
+TASK 12+ — ROADMAP PRÓXIMAS ACTUALIZACIONES
+================================================================================
+Las siguientes tareas se ejecutarán en secuencia. CAMBIOS IMPORTANTES:
+
+═══════════════════════════════════════════════════════════════════════════════
+RESUMEN EJECUTIVO DE CAMBIOS (Task 12+)
+═══════════════════════════════════════════════════════════════════════════════
+Paradigm shift: Dense Editorial → Minimalista Interactivo
+
+CAMBIOS PRINCIPALES:
+────────────────────
+1. TEXTOS: Pasar & pulir TODOS (resumir, reducir densidad)
+2. HOMEPAGE AboutPreview: Rediseño completo (minimalista + interactivo)
+3. HOMEPAGE FeaturedTours: Cambio a MOSAICO (asimétrico, moving photos)
+4. PÁGINA CONTACTO: Solo formulario + info (eliminar descriptivas)
+5. PÁGINA NOSOTROS: Nueva página minimalista + interactiva
+6. PÁGINA ESPERA: Nuevo landing "¿Listo para una nueva experiencia?"
+7. ANIMACIONES: Fotos con parallax, zoom, fade (Framer Motion)
+8. INTERACTIVIDAD: Progressive disclosure (texto revela con click/hover)
+
+AESTHETIC ANTES → DESPUÉS:
+──────────────────────────
+ANTES (Task 11):
+✗ Mucho texto visible
+✗ Layouts complejos multi-sección
+✗ Párrafos densos y largos
+✗ Información entregada completa arriba
+✗ Fotos estáticas
+
+DESPUÉS (Task 12+):
+✓ Texto mínimo, progresivo
+✓ Layouts limpios con breathing room
+✓ Párrafos cortos, concisos
+✓ Información revelada progresivamente (click/hover)
+✓ Fotos como protagonistas con movimiento
+✓ Interactividad sutil pero clara
+✓ Sofisticación minimalista
+
+═══════════════════════════════════════════════════════════════════════════════
+
+DIRECTRICES GENERALES PARA TODAS LAS TAREAS:
+✓ Fotos tipo MOSAICO — menos texto, más minimalista
+✓ Interactividad: texto agregándose con CLICK (reveal progresivo)
+✓ Sofisticación: animaciones sutiles, micro-interacciones
+✓ PULIR Y RESUMIR todos los textos (reducir densidad)
+✓ Movimiento en fotos (parallax, hover effects, zoom subtle)
+✓ Aesthetic: minimalista + interactivo, NO densa/textual
+
+
+PÁGINA: HOMEPAGE (Secciones a rediseñar)
+────────────────────────────────────────
+Cambios estratégicos:
+1. Hero
+   - Mantener video + overlay, mantener headline
+   - Ajustar scroll indicator si es necesario
+   - [Sin cambios estructurales]
+
+2. AboutPreview (REDISEÑO FUERTE)
+   - Estructura actual: densa, mucho texto, múltiples subsecciones
+   - Nuevo enfoque: MINIMALISTA + INTERACTIVO
+   - Texto se revela con CLICK (progressive disclosure)
+   - Visual: usar imágenes/mosaico donde sea posible
+   - Reducir: pullquote, lista "donde", cita diferencial
+   - Simplificar: mostrar solo lo esencial, resto hidden→click
+
+3. FeaturedTours (MOSAICO)
+   - Cambio: grid tipo MOSAICO (asimétrico, visual-first)
+   - Menos texto descriptivo en cards
+   - Texto expandible al hover/click
+   - Fotos con movimiento (hover zoom, parallax)
+   - Tours: classic-bogota, classic-colombia-cafetero, en-busqueda-del-dorado
+
+4. HowItWorks
+   - Posible simplificación de pasos
+   - O reemplazar por visual interactivo
+   - [A definir según avance]
+
+5. CallToAction
+   - Mantener o simplificar
+   - [A definir según avance]
+
+
+PÁGINA: NOSOTROS (About) — REDISEÑO COMPLETO
+────────────────────────────────────────────
+Contenido actual: frontend/content/pages/about.json
+
+Nuevo enfoque:
+- Sección: "Quiénes somos" + "Sobre Meridiana"
+- Visual primero: mosaico de fotos + texto expandible
+- Textos resumidos y pulidos (reducir densidad editorial actual)
+- Interactivo: click para expandir secciones, reveal de contenido
+- Sin: mucho texto lineal, sin bloques de párrafos pesados
+
+
+PÁGINA: CONTACTO (Contact) — SIMPLIFICACIÓN
+────────────────────────────────────────────
+Cambio radical:
+- SOLO formulario + información de contacto
+- NO: secciones previas, descripciones, CTA elaboradas
+- Layout: limpio, minimalista, directo
+- Formulario: nombre, email, viaje, fechas, mensaje
+- Información: email, teléfono, ubicación (si aplica)
+- Tono: simple, no editorial
+
+
+SITIO DE ESPERA (Waiting Page) — NUEVA PÁGINA
+──────────────────────────────────────────────
+Nueva sección/página: landing pre-lanzamiento
+
+Contenido:
+Headline: "¿Listo para una nueva experiencia?"
+Subheading: "¿Cómo percibes Colombia?"
+Concepto: Preguntas reflexivas, minimalista, elegante
+Duración esperada: corta (teaser)
+
+Función:
+- Captar email (simple form)
+- Crear anticipación (somos nuevos/evolucionamos)
+- Aesthetic: muy limpio, pocas palabras, mucho espacio en blanco
+- Animaciones: sutiles, reflexivas (NO agresivas)
+
+Ruta posible: /proximamente, /espera, o root "/" si aún no lanzamos
+
+
+CAMBIOS A CONTENIDO JSON
+────────────────────────
+1. homepage.json
+   - aboutPreview: restructurar para interactividad
+   - featuredTours: reducir texto en descripción
+   - Agregar clases/IDs para reveal interactions
+
+2. about.json (NUEVA ESTRUCTURA)
+   - Secciones simplificadas
+   - Mosaico de imágenes + texto
+   - Expandible sections
+
+3. contact.json
+   - REDUCIR al mínimo
+   - Solo form fields + contact info
+
+4. waiting.json (NUEVO)
+   - Headline: "¿Listo para una nueva experiencia?"
+   - Subheading: "¿Cómo percibes Colombia?"
+   - CTA: email signup
+   - Imágenes minimalistas (opcional)
+
+
+CAMBIOS A COMPONENTES
+─────────────────────
+Nuevos componentes probables:
+- MosaicGrid.tsx         ← grid asimétrico con hover/click reveal
+- InteractiveCard.tsx    ← card con progressive text reveal
+- ExpandableSection.tsx  ← section que expande con click
+- WaitingPage.tsx        ← landing page de espera
+- PhotoWithMotion.tsx    ← imagen con parallax/zoom/animation
+
+Componentes a refactorizar:
+- AboutPreview.tsx       ← de densa a minimalista + interactiva
+- FeaturedTours.tsx      ← mosaico + text reveal
+- ContactForm.tsx        ← simplificar UI
+
+Componentes a mantener:
+- Hero.tsx               ← sin cambios
+- HowItWorks.tsx         ← revisar, posible simplificación
+- Navbar.tsx             ← sin cambios
+- Footer.tsx             ← sin cambios
+
+
+AESTHETIC Y GUIDING PRINCIPLES
+───────────────────────────────
+Cambio de paradigma: Dense Editorial → Minimalista Interactivo
+
+De:
+✗ Mucho texto visible
+✗ Layouts multisección
+✗ Párrafos largos
+✗ Información completa arriba
+
+A:
+✓ Texto mínimo, progresivo
+✓ Layouts limpios, breathing room
+✓ Párrafos cortos, puntuales
+✓ Información se descubre (click/hover)
+✓ Fotos como protagonistas
+✓ Interactividad sutil (no invasiva)
+✓ Movimiento en imágenes (parallax, zoom, fade)
+
+Manteniendo:
+✓ Tono editorial (culto, reflexivo)
+✓ Paleta de colores Meridiana
+✓ Tipografía (Cormorant + General Sans)
+✓ Animaciones Framer Motion
+✓ Bilingüismo (es/en)
+
+
+FASES RECOMENDADAS
+──────────────────
+1. Pasar textos (copyriting: resumir, pulir)
+2. Rediseñar AboutPreview (minimalista + interactivo)
+3. Rediseñar FeaturedTours (mosaico + reveal)
+4. Simplificar Contacto
+5. Crear página de espera (waiting page)
+6. Crear página Nosotros (about redesign)
+7. Testing, refinamientos, animaciones
+8. Deploy
+
+
+TEXTOS PENDIENTES
+─────────────────
+- Homepage hero: revisar
+- AboutPreview: RESTRUCTURAR todo (reducir, interactivo)
+- FeaturedTours: descripciones cortas
+- HowItWorks: simplificar si es necesario
+- Contact: minimalista
+- About page: crear nuevo contenido minimalista
+- Waiting page: crear "¿Listo para una nueva experiencia?" messaging
+
+
+IMÁGENES/ASSETS PENDIENTES
+───────────────────────────
+Para mosaicos y moving photos:
+- Fotos high-quality (será enviadas por el usuario)
+- Será necesario: optimización de imágenes
+- Next.js Image component para lazy load + optimization
+- Parallax/zoom effect en hover (Framer Motion)
+
+
+TODO para continuar (Task 12+):
+────────────────────────────────
+FASE 1 — CONTENIDO & COPYWRITING:
+- [ ] Task 12a: Pasar & pulir TODOS los textos
+  └─ frontend/content/pages/homepage.json (resumir AboutPreview)
+  └─ frontend/content/pages/about.json (crear minimalista)
+  └─ frontend/content/pages/contact.json (reducir al mínimo)
+  └─ Revisar tonalidad: mantener editorial, reducir densidad
+
+FASE 2 — HOMEPAGE REDISEÑOS:
+- [ ] Task 12b: Rediseñar AboutPreview
+  └─ Componente: frontend/components/sections/AboutPreview.tsx
+  └─ Cambio: minimalista + interactivo
+  └─ Agregar: ExpandableSection.tsx si es necesario
+  └─ Usar: Framer Motion para progressive reveals
+
+- [ ] Task 12c: Rediseñar FeaturedTours a MOSAICO
+  └─ Componente: frontend/components/sections/FeaturedTours.tsx
+  └─ Crear: MosaicGrid.tsx, PhotoWithMotion.tsx
+  └─ Cambio: grid asimétrico (mosaico)
+  └─ Agregar: parallax/zoom effects en hover
+  └─ Usar: InteractiveCard.tsx para text reveal
+
+FASE 3 — OTRAS PÁGINAS:
+- [ ] Task 12d: Simplificar página CONTACTO
+  └─ Contenido: frontend/content/pages/contact.json
+  └─ Componente: frontend/components/sections/ContactForm.tsx
+  └─ Cambio: solo form + contact info (remover descriptivas)
+
+- [ ] Task 12e: Crear/Rediseñar página NOSOTROS
+  └─ Contenido: frontend/content/pages/about.json
+  └─ Componente: frontend/components/sections/AboutStory.tsx
+  └─ Nuevo contenido: "Quiénes somos", minimalista + interactivo
+  └─ Usar: mosaico de imágenes + texto expandible
+
+- [ ] Task 12f: Crear página de ESPERA (Waiting Page)
+  └─ Crear: frontend/app/[locale]/espera/page.tsx
+  └─ Crear: frontend/components/sections/WaitingPage.tsx
+  └─ Crear: frontend/content/pages/waiting.json
+  └─ Contenido: "¿Listo para una nueva experiencia?"
+  └─           "¿Cómo percibes Colombia?"
+  └─ Agregar: simple email signup form
+  └─ Aesthetic: muy minimalista, whitespace prominente
+
+FASE 4 — ANIMACIONES & REFINAMIENTOS:
+- [ ] Task 12g: Agregar animaciones a fotos
+  └─ Parallax effects
+  └─ Zoom on hover
+  └─ Fade animations
+  └─ Usar: Framer Motion + Next.js Image
+
+- [ ] Task 12h: Testing responsivo
+  └─ Desktop (1920px), tablet (768px), mobile (375px)
+  └─ Chrome DevTools: performance check
+  └─ Verificar animaciones smooth en mobile
+
+- [ ] Task 12i: Refinamientos finales & Deploy
+  └─ Code review de cambios
+  └─ Fix bugs/issues encontrados
+  └─ Git push → Vercel deploy
+
+
+INSTRUCCIONES PARA SIGUIENTE IA (PRÓXIMAS TAREAS)
+================================================================================
+ANTES DE EMPEZAR:
+1. LEE: ESTADO-PROYECTO.txt (este archivo) + CLAUDE.md
+2. LEE: docs/architecture.md + docs/content-model.md
+3. LEE: Sección TASK 12+ en este documento (directrices específicas)
+
+DIRECTRICES PARA TAREAS PRÓXIMAS:
+
+A. CAMBIOS DE CONTENIDO (Copywriting):
+   - Archivo: frontend/content/pages/homepage.json + about.json + contact.json
+   - Acción: PULIR Y RESUMIR todos los textos
+   - Regla: Textos CORTOS, densos→concisos, minimalista
+   - Bilingual: Siempre es/en en objetos
+   - NO: dejes textos largos de párrafos
+
+B. REDISEÑO AboutPreview (MINIMALISTA + INTERACTIVO):
+   - Archivo componente: frontend/components/sections/AboutPreview.tsx
+   - Archivo contenido: frontend/content/pages/homepage.json → aboutPreview
+   - Cambio: De 6 subsecciones densa → minimalista con text reveal
+   - Crear: nuevo layout más limpio, interactive elements
+   - Usar: Framer Motion para animations
+   - Estructura: mostrar lo esencial, resto hidden→click to reveal
+
+C. REDISEÑO FeaturedTours (MOSAICO):
+   - Archivo componente: frontend/components/sections/FeaturedTours.tsx
+   - Posible crear: MosaicGrid.tsx, InteractiveCard.tsx
+   - Cambio: Grid asimétrico tipo mosaico (NO 1+2 layout)
+   - Fotos: prominentes, con hover effects (zoom subtle, parallax)
+   - Texto: mínimo en vista inicial, expandible con click/hover
+   - Tours: classic-bogota, classic-colombia-cafetero, en-busqueda-del-dorado
+
+D. SIMPLIFICAR CONTACTO:
+   - Archivo: frontend/content/pages/contact.json
+   - Archivo: frontend/components/sections/ContactForm.tsx
+   - Acción: REMOVER toda descripción, solo form + contact info
+   - Layout: limpio, minimalista, directo
+   - Form fields: nombre, email, viaje, fechas, mensaje (existentes, mantener)
+
+E. CREAR PÁGINA NOSOTROS (About):
+   - Archivo: frontend/content/pages/about.json (crear/editar)
+   - Archivo: frontend/components/sections/AboutStory.tsx (crear/editar)
+   - Contenido: "Quiénes somos" + "Sobre Meridiana"
+   - Aesthetic: minimalista + interactivo
+   - Visual first: mosaico + texto expandible
+
+F. CREAR PÁGINA DE ESPERA (Waiting Page):
+   - Crear: frontend/app/[locale]/espera/page.tsx (o /waiting)
+   - Crear: frontend/components/sections/WaitingPage.tsx
+   - Crear: frontend/content/pages/waiting.json
+   - Contenido:
+     Headline: "¿Listo para una nueva experiencia?"
+     Subheading: "¿Cómo percibes Colombia?"
+     Form: email signup simple
+     Aesthetic: muy minimalista, poco texto, mucho whitespace
+     Animaciones: sutiles, reflexivas
+
+REGLAS GENERALES PRÓXIMAS TAREAS:
+- Interactividad: click/hover para reveal (progressive disclosure)
+- Fotos: siempre con movimiento (parallax, zoom, animation)
+- Texto: mínimo visible, máximo hidden→reveal
+- Aesthetic: minimalista, editorial, sofisticado
+- Animaciones: SIEMPRE Framer Motion, NUNCA CSS transitions
+- Bilingüismo: TODOS los textos es/en
+- Componentes: modular, reutilizable
+- Performance: lazy load images, optimizar animaciones
+
+ANTES DE HACER CAMBIOS:
+- Identifica qué archivo(s) necesitan cambio
+- Lee el archivo COMPLETO
+- Entiende la estructura actual
+- Haz cambios MÍNIMOS pero efectivos
+- NO refactorices más de lo necesario
+- Mantén el tono editorial/cultural
+
+COMMITS:
+- Descriptivo: "Task 12a: pulir textos homepage" o "Task 12b: rediseño AboutPreview"
+- Co-authored-by: Claude Haiku 4.5 <noreply@anthropic.com>
+
+TESTING:
+- npm run dev ← servidor local
+- Prueba en navegador en /es y /en
+- Verifica animaciones, especialmente en mobile
+- Verifica interactividad (click/hover reveal)
+- Verifica imágenes cargan y animan correctamente
+
+
+GIT / DEPLOYMENT
+================================================================================
+Repo: Git local con Vercel deployment automático
+URL: meridianajourneys.com
+
+Commits recientes:
+  ✓ 4bdc76d: chore: trigger Vercel GitHub deploy
+  ✓ b5a06eb: Add RECURSOS-GRAFICOS and update .gitignore
+  ✓ 3779f5e: Task 11: Homepage patch
+  ✓ 61ec715: Initial commit: Tasks 01-10
+
+Commits PRÓXIMOS (Task 12+):
+  [ ] Task 12a: Pulir y resumir textos (homepage, about, contact)
+  [ ] Task 12b: Rediseño AboutPreview (minimalista + interactivo)
+  [ ] Task 12c: Rediseño FeaturedTours (mosaico + moving photos)
+  [ ] Task 12d: Simplificar página Contacto
+  [ ] Task 12e: Crear/rediseñar página Nosotros (About)
+  [ ] Task 12f: Crear página de espera (Waiting page)
+  [ ] Task 12g: Refinamientos, testing, optimizaciones
+
+Deploy: Vercel (automático con git push a rama main)
+
+
+REFERENCIAS A DOCUMENTOS
+================================================================================
+Leer estos para más contexto:
+- docs/architecture.md      ← Decisiones técnicas
+- docs/content-model.md     ← Schema JSON detallado
+- docs/design-tokens.md     ← Paleta + tipografía completa
+- docs/experience-engine.md ← UX flow
+- docs/copy-rules.md        ← Tone + editorial constraints
+- CLAUDE.md                 ← Instrucciones maestras
+
+
+CONTACTO / USUARIO
+================================================================================
+Email del proyecto: silvajaime.s@gmail.com
+Zona horaria: [probablemente América Latina]
+Preferencias: Editorial tone over generic tourism language
+
+
+================================================================================
+FIN DEL INFORME
+================================================================================
+Generado: 2026-05-17
+Para más contexto, ver CLAUDE.md y docs/ en el repositorio.

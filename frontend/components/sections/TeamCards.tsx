@@ -76,8 +76,8 @@ function TeamCard({ member, locale, index }: TeamCardProps) {
             <div
               className="flex-shrink-0 rounded-full overflow-hidden flex items-center justify-center"
               style={{
-                width: 88,
-                height: 88,
+                width: "clamp(88px, 10vw, 123px)",
+                height: "clamp(88px, 10vw, 123px)",
                 border: "1px solid rgba(231,213,188,0.12)",
                 background: "rgba(26,46,36,0.70)",
               }}
@@ -86,8 +86,8 @@ function TeamCard({ member, locale, index }: TeamCardProps) {
                 <Image
                   src={member.photo}
                   alt={member.name}
-                  width={88}
-                  height={88}
+                  width={123}
+                  height={123}
                   className="w-full h-full object-cover"
                 />
               ) : (

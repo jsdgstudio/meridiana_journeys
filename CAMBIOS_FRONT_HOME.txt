@@ -1,0 +1,89 @@
+Necesito que me ayudes a hacer un sistema tipo scaffold para aplicar todos los cambios al sitio de meridiana, haré una lista de eventos :
+
+--- CAMBIOS HOME ---
+
+NAVBAR : la nueva jerarquía es : VIAJES - SOBRE MERIDIANA - JOURNAL - CONTACTO 
+
+1- Hero Home: 
+
+Reemplazar la frase del hero 
+
+" Cada territorio cuenta una historia. "
+Nosotros la traducimos. 
+
+> Ajusta su tamaño,  visualidad y animación
+
+---
+
+2- Sobre Meridiana:
+
+Quitar " Método · 01  Investigación, escucha, curaduría."
+
+Mantener el resto del texto y rediseñar sus elementos en una nueva composición atractiva y profesional  hasta 
+
+la frase : 
+"Redefinimos la forma en que el mundo experimenta Colombia." 
+
+debe mantener las líneas del centro y la animación |  debe tener un video de fondo que se haga play sincronizado con el scroll  y el isotipo.svg en tumbaga al centro aparece con una animación envolvente activada por el scroll también de manera sincronizada con el video, la animación de la mascara de gradiente se da en los limites del video y juega con una mascara con gradiente interna en base al tono negro territorio del sistema, puedes experimentar con puntos pequeños que suavemente generen un efecto dither con puntos svg , funcionando como filtro y que también se accione por scroll, la idea es que encuentres la manera mas ligera y simple de implementarlo, mi idea es un abstracto pero si tienes una mejor sugerencia para no romper nada y tener una animación muy atractiva puedes proponerlo, lo principal es hacer algo simple y liviano  | el video correspondiente estará en la carpeta public del proyecto y se llamará fondo_redefinimos.mp4 . 
+
+- La sección " lo que mostramos" Quitala 
+
+la frase 
+"Si quieres ser parte de una experiencia cultural inolvidable, Meridiana te transporta al alma de Colombia. " y el CTA se mantienen.
+
+---
+
+3- 
+
+Se debe quitar la sección "EL DIFERENCIAL" completa y aqui debes insertar la sección en "meridiana-travel-cards.html" ( en C:\Users\Jaime\Desktop\DG SS\TT estudio\SITIO - meridianajourneys.com\meridiana\TRAVELCARDS ) añade los elementos y asegúrate que siga las directrices del sistema , 
+
+esto dijo Claude design " Para integrar con Claude Code:
+
+Quita el <script src="cdn.tailwindcss.com"> — usa tu build de Tailwind
+Mueve el <style> scopeado (.meridiana-cards { ... }) a tu CSS global o a un módulo
+Conecta los data-i18n a tu JSON de traducciones (snippet incluido en el HTML)
+Caveats: las imágenes son placeholders genéricos que no son de Colombia — solo dan el tono. Reemplázalas en los 5 <img src> cuando tengas la fotografía final." 
+
+adáptalo pensando en el estado del proyecto 
+
+Crítico: no deben existir errores
+
+---
+4- 
+
+la sección "EL DIFERENCIAL" se debe transformar en una simple barra informativa bajo esto y su fondo debe ser en terracota del sistema.
+
+---
+
+5 - 
+
+modifica un poco los textos de la sección 
+
+Cómo funciona
+
+
+Descubre: Navega el catálogo de viajes. Cada uno está documentado con la profundidad que merece: la historia detrás del destino, las experiencias que lo definen, el tipo de viajero para quien fue diseñado. 
+
+
+Decide: Escríbenos. No hay formularios automatizados ni respuestas predefinidas. Una persona de Meridiana responde en menos de 48 horas para entender lo que buscas y cómo podemos construirlo juntos. 
+
+
+Viaja: El día del viaje, todo está listo. Lo que no está en el itinerario es la conversación que tendrás con el ceramista que lleva cuarenta años estudiando los patrones precolombinos, o el silencio exacto de las seis de la mañana en la laguna. 
+
+-
+implementa una animación en el hover donde el texto suavemente se resalte de manera elegante y sutil , mantén los colores  
+
+---
+
+6- Comienza tu viaje , se mantiene 
+
+---
+
+Necesito que cada etapa numerada  la transformes en un .MD separado para dar la orden de ejecutarlo, uno a la vez utilizando /GSD .  al acabar con una task inscribes los cambios y esperas la confirmación de la tarea para ejecutar la siguiente
+
+
+
+
+
+
+

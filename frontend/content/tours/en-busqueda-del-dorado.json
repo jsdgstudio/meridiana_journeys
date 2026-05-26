@@ -33,7 +33,38 @@
     },
     "credit": "TODO"
   },
-  "gallery": ["/images/tours/dorado-01.jpg", "/images/tours/dorado-02.jpg"],
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #1A1200 0%, #2E2005 50%, #3A2808 100%)",
+      "place": { "es": "Laguna de Guatavita", "en": "Lake Guatavita" },
+      "tag": { "es": "lago sagrado muisca", "en": "sacred Muisca lake" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #1A0E00 0%, #2E1800 50%, #3A2005 100%)",
+      "place": { "es": "Museo del Oro", "en": "Gold Museum" },
+      "tag": { "es": "orfebrería muisca", "en": "Muisca goldwork" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #050A0F 0%, #0A1220 50%, #101825 100%)",
+      "place": { "es": "Catedral de Sal", "en": "Salt Cathedral" },
+      "tag": { "es": "Zipaquirá", "en": "Zipaquirá" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #1A1500 0%, #2E2500 50%, #3A3005 100%)",
+      "place": { "es": "Alto Magdalena", "en": "Alto Magdalena" },
+      "tag": { "es": "huella del Dorado", "en": "El Dorado trail" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #1A0A00 0%, #2E1500 50%, #3A1800 100%)",
+      "place": { "es": "Villa de Leyva", "en": "Villa de Leyva" },
+      "tag": { "es": "tiempo detenido", "en": "time frozen" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #1A1200 0%, #302209 50%, #3E2C0A 100%)",
+      "place": { "es": "Tunja colonial", "en": "Colonial Tunja" },
+      "tag": { "es": "capital muisca", "en": "Muisca capital" }
+    }
+  ],
   "narrative": {
     "short": {
       "es": "El eco de una obsesión: la promesa de oro que sedujo imperios y transformó territorios. De Bogotá a Falan, de Mompox a Cartagena, el viaje se hilvana a través de ríos, caminos y ciudades donde la ambición quedó inscrita en la memoria del territorio.",

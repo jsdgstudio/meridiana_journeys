@@ -25,8 +25,8 @@ export function Navbar({ locale, ui }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks: NavLink[] = [
-    { label: ui.nav.journeys, href: `/${locale}/viajes` },
     { label: ui.nav.about, href: `/${locale}/sobre-meridiana` },
+    { label: ui.nav.journeys, href: `/${locale}/viajes` },
     { label: ui.nav.journal, href: `/${locale}/journal` },
     { label: ui.nav.contact, href: `/${locale}/contacto` },
   ];

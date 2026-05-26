@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridiana — Viajes Culturales por Colombia</title>
+  <meta name="description" content="Meridiana es una agencia de viajes culturales que conecta viajeros conscientes con la esencia de una Colombia auténtica, biodiversa y excepcionalmente creativa. Próximamente.">
+  <meta property="og:title" content="Meridiana — Viajes Culturales por Colombia">
+  <meta property="og:description" content="Colombia a través de otro lente. Próximamente.">
+  <meta property="og:image" content="frontend/public/images/hero-home.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Design Tokens ── */
+    :root {
+      --negro:     #0F130E;
+      --verde:     #1A2E24;
+      --terracota: #CC754A;
+      --tumbaga:   #9A7A3A;
+      --marfil:    #E7D5BC;
+      --blanco:    #F8F4EE;
+
+      --marfil-70: rgba(231, 213, 188, 0.70);
+      --marfil-40: rgba(231, 213, 188, 0.40);
+      --marfil-15: rgba(231, 213, 188, 0.15);
+      --negro-80:  rgba(15, 19, 14, 0.80);
+      --negro-60:  rgba(15, 19, 14, 0.60);
+      --tumbaga-50: rgba(154, 122, 58, 0.50);
+
+      --font-display: 'Cormorant Garamond', 'Palatino Linotype', Georgia, serif;
+      --font-sans: system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+      --ease-brand: cubic-bezier(0.25, 0.1, 0.25, 1);
+      --ease-out:   cubic-bezier(0.0, 0.0, 0.2, 1);
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: var(--negro);
+      color: var(--marfil);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--tumbaga-50);
+      color: var(--negro);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('frontend/public/images/hero-home.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      transform: scale(1.04);
+      animation: heroScale 18s var(--ease-out) forwards;
+    }
+
+    @keyframes heroScale {
+      to { transform: scale(1); }
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(15, 19, 14, 0.38) 0%,
+        rgba(15, 19, 14, 0.62) 42%,
+        rgba(15, 19, 14, 0.94) 100%
+      );
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 24px;
+      animation: fadeUp 1.4s var(--ease-out) 0.3s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero__logo {
+      width: min(480px, 72vw);
+      margin-bottom: 56px;
+    }
+
+    .hero__rule {
+      width: 48px;
+      height: 1px;
+      background: var(--tumbaga);
+      margin: 0 auto 36px;
+    }
+
+    .hero__label {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--tumbaga);
+      margin-bottom: 28px;
+    }
+
+    .hero__headline {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2.6rem, 6vw, 5.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--marfil);
+      max-width: 760px;
+      margin-bottom: 20px;
+    }
+
+    .hero__subheadline {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.5rem, 3vw, 2.4rem);
+      line-height: 1.2;
+      color: var(--marfil-70);
+      margin-bottom: 60px;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid var(--tumbaga-50);
+      padding: 10px 28px;
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--marfil-70);
+    }
+
+    .hero__badge-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--terracota);
+      animation: pulse 2.4s ease infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      animation: fadeUp 1.8s var(--ease-out) 1.2s both;
+    }
+
+    .hero__scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(180deg, var(--tumbaga) 0%, transparent 100%);
+      animation: scrollLine 2s ease infinite;
+    }
+
+    @keyframes scrollLine {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: top; }
+      51%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ── Manifesto ── */
+    .manifesto {
+      background: var(--verde);
+      padding: 100px 24px;
+    }
+
+    .manifesto__inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    @media (max-width: 720px) {
+      .manifesto__inner { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    .manifesto__left {}
+
+    .manifesto__section-label {
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--tumbaga);
+      margin-bottom: 32px;
+    }
+
+    .manifesto__quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+      line-height: 1.18;
+      color: var(--marfil);
+      border-left: 1px solid var(--tumbaga);
+      padding-left: 28px;
+    }
+
+    .manifesto__quote em {
+      font-style: normal;
+      color: var(--tumbaga);
+    }
+
+    .manifesto__right {
+      padding-top: 8px;
+    }
+
+    .manifesto__body {
+      font-family: var(--font-sans);
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--marfil-70);
+      margin-bottom: 28px;
+    }
+
+    .manifesto__donde {
+      margin-top: 40px;
+    }
+
+    .manifesto__donde-intro {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--marfil-70);
+      margin-bottom: 16px;
+    }
+
+    .manifesto__donde-line {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--marfil-15);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: var(--marfil-70);
+      line-height: 1.5;
+    }
+
+    .manifesto__donde-line::before {
+      content: '—';
+      color: var(--tumbaga);
+      flex-shrink: 0;
+      font-family: var(--font-display);
+    }
+
+    /* ── Gallery ── */
+    .gallery {
+      background: var(--negro);
+      padding: 80px 0;
+      overflow: hidden;
+    }
+
+    .gallery__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .gallery__header { padding: 0 24px; }
+    }
+
+    .gallery__label {
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--tumbaga);
+    }
+
+    .gallery__hint {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      color: var(--marfil-40);
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .gallery__hint svg {
+      opacity: 0.5;
+    }
+
+    .gallery__track {
+      display: flex;
+      gap: 3px;
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+      padding: 0 48px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      cursor: grab;
+    }
+
+    .gallery__track::-webkit-scrollbar { display: none; }
+    .gallery__track:active { cursor: grabbing; }
+
+    @media (max-width: 600px) {
+      .gallery__track { padding: 0 24px; }
+    }
+
+    .gallery__item {
+      flex-shrink: 0;
+      position: relative;
+      scroll-snap-align: start;
+      overflow: hidden;
+    }
+
+    /* Varying widths and heights for editorial feel */
+    .gallery__item:nth-child(odd)  { width: 280px; height: 380px; }
+    .gallery__item:nth-child(even) { width: 240px; height: 320px; }
+    .gallery__item:nth-child(3n)   { width: 320px; height: 420px; }
+    .gallery__item:nth-child(5)    { width: 200px; height: 280px; }
+    .gallery__item:nth-child(8)    { width: 360px; height: 440px; }
+
+    .gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s var(--ease-out);
+    }
+
+    .gallery__item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery__item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        transparent 50%,
+        rgba(15, 19, 14, 0.82) 100%
+      );
+      opacity: 0;
+      transition: opacity 0.5s var(--ease-brand);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .gallery__item:hover .gallery__item-overlay { opacity: 1; }
+
+    .gallery__item-caption {
+      font-family: var(--font-sans);
+      font-size: 0.625rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--marfil-70);
+    }
+
+    .gallery__fade-right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 120px;
+      background: linear-gradient(90deg, transparent, var(--negro));
+      pointer-events: none;
+    }
+
+    /* ── CTA Block ── */
+    .cta {
+      background: var(--negro);
+      padding: 120px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-top: 1px solid var(--marfil-15);
+    }
+
+    .cta__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--tumbaga);
+      margin-bottom: 40px;
+    }
+
+    .cta__headline {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      line-height: 1.12;
+      color: var(--marfil);
+      max-width: 680px;
+      margin-bottom: 16px;
+    }
+
+    .cta__sub {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      color: var(--marfil-70);
+      margin-bottom: 64px;
+      max-width: 520px;
+    }
+
+    .cta__rule {
+      width: 40px;
+      height: 1px;
+      background: var(--tumbaga);
+      margin: 0 auto 64px;
+    }
+
+    .cta__invite {
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: var(--marfil-70);
+      letter-spacing: 0.02em;
+      margin-bottom: 40px;
+      line-height: 1.6;
+      max-width: 440px;
+    }
+
+    .cta__actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 72px;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--terracota);
+      color: var(--blanco);
+      text-decoration: none;
+      padding: 16px 36px;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      transition: background 0.3s var(--ease-brand), transform 0.3s var(--ease-out);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--tumbaga);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp svg { flex-shrink: 0; }
+
+    .btn-email {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--marfil-70);
+      text-decoration: none;
+      border-bottom: 1px solid var(--marfil-40);
+      padding-bottom: 2px;
+      transition: color 0.25s, border-color 0.25s;
+    }
+
+    .btn-email:hover {
+      color: var(--marfil);
+      border-color: var(--tumbaga);
+    }
+
+    .cta__socials {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--marfil-70);
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      transition: color 0.25s var(--ease-brand);
+    }
+
+    .social-link:hover { color: var(--marfil); }
+
+    .social-link svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .social-link--ig path { fill: var(--marfil-70); transition: fill 0.25s; }
+    .social-link--ig:hover path { fill: var(--marfil); }
+
+    .social-divider {
+      width: 1px;
+      height: 20px;
+      background: var(--marfil-15);
+    }
+
+    /* ── About Strip ── */
+    .about-strip {
+      background: var(--verde);
+      padding: 64px 48px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background-color: var(--marfil-15);
+    }
+
+    @media (max-width: 720px) {
+      .about-strip { grid-template-columns: 1fr; padding: 48px 24px; }
+    }
+
+    .about-strip__item {
+      background: var(--verde);
+      padding: 40px 36px;
+    }
+
+    .about-strip__num {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      color: var(--tumbaga);
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
+    }
+
+    .about-strip__title {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      color: var(--marfil);
+      margin-bottom: 12px;
+    }
+
+    .about-strip__text {
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      line-height: 1.7;
+      color: var(--marfil-70);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--negro);
+      border-top: 1px solid var(--marfil-15);
+      padding: 48px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      footer { flex-direction: column; align-items: flex-start; padding: 40px 24px; }
+    }
+
+    .footer__brand {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--marfil-70);
+    }
+
+    .footer__meta {
+      font-family: var(--font-sans);
+      font-size: 0.6875rem;
+      color: var(--marfil-40);
+      letter-spacing: 0.06em;
+      text-align: right;
+    }
+
+    @media (max-width: 600px) {
+      .footer__meta { text-align: left; }
+    }
+
+    /* ── Scroll-driven gallery animation ── */
+    @media (prefers-reduced-motion: no-preference) {
+      .gallery__item {
+        opacity: 0;
+        transform: translateY(16px);
+        animation: revealItem 0.7s var(--ease-out) both;
+      }
+      .gallery__item:nth-child(1)  { animation-delay: 0.05s; }
+      .gallery__item:nth-child(2)  { animation-delay: 0.10s; }
+      .gallery__item:nth-child(3)  { animation-delay: 0.15s; }
+      .gallery__item:nth-child(4)  { animation-delay: 0.20s; }
+      .gallery__item:nth-child(5)  { animation-delay: 0.25s; }
+      .gallery__item:nth-child(6)  { animation-delay: 0.30s; }
+      .gallery__item:nth-child(7)  { animation-delay: 0.35s; }
+      .gallery__item:nth-child(8)  { animation-delay: 0.40s; }
+      .gallery__item:nth-child(9)  { animation-delay: 0.45s; }
+      .gallery__item:nth-child(10) { animation-delay: 0.50s; }
+      @keyframes revealItem {
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════ HERO ══════════════════════════════ -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <!-- Logo SVG inline — marfil -->
+      <svg class="hero__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 797.02 132.93" aria-label="Meridiana">
+        <defs><style>.ml{fill:#e7d5bc;}</style></defs>
+        <g>
+          <path class="ml" d="M215.11,125.34c-.3,0-.45-.29-.45-.88s.15-.89.45-.89c3,0,5.11-.71,6.19-2.14s1.63-4.1,1.63-8V85.65a16.51,16.51,0,0,0-1-6.72,3.64,3.64,0,0,0-3.55-2.14,11.56,11.56,0,0,0-3.1.52,29.14,29.14,0,0,0-4,1.55c-.39.2-.69,0-.89-.59s-.19-.93,0-1l20.52-10a6.61,6.61,0,0,1,1-.29q1.62,0,3.25,3.54t1.62,10.18v32.76c0,3.94.56,6.62,1.7,8s3.22,2.14,6.27,2.14c.29,0,.44.3.44.89s-.15.88-.44.88c-2,0-4.23,0-6.79-.14s-5.26-.15-8.12-.15-5.41,0-8,.15S217.07,125.34,215.11,125.34Zm37.92,0c-.29,0-.44-.29-.44-.88s.15-.89.44-.89q4.57,0,6.27-2.14t1.7-8V92.14q0-15.65-11.07-15.64a19.08,19.08,0,0,0-8.85,2.21,18.84,18.84,0,0,0-6.94,6.05L233.41,83a46.62,46.62,0,0,1,11.28-11.88,23,23,0,0,1,13.65-4.5q7.83,0,12.11,4.28t4.28,12.54v30q0,5.91,1.69,8t6.27,2.14c.4,0,.59.3.59.89s-.19.88-.59.88c-2,0-4.23,0-6.78-.14s-5.27-.15-8.12-.15-5.41,0-8,.15S255,125.34,253,125.34Zm38.67,0c-.3,0-.45-.29-.45-.88s.15-.89.45-.89c3,0,5.14-.71,6.27-2.14s1.69-4.1,1.69-8V92.14q0-15.65-11.06-15.64a19.15,19.15,0,0,0-8.86,2.21,18.89,18.89,0,0,0-6.93,6.05L272.07,83a46.65,46.65,0,0,1,11.29-11.88A22.92,22.92,0,0,1,297,66.61q7.82,0,12.1,4.5t4.28,14v28.33c0,3.94.56,6.62,1.7,8s3.22,2.14,6.27,2.14c.39,0,.59.3.59.89s-.2.88-.59.88c-2,0-4.23,0-6.79-.14s-5.26-.15-8.12-.15-5.41,0-8,.15S293.66,125.34,291.7,125.34Z"/>
+          <path class="ml" d="M358.69,127.11q-9.58,0-16.3-4a26.53,26.53,0,0,1-10.19-10.55A30.9,30.9,0,0,1,333,82.7a32,32,0,0,1,11.81-11.37,34.35,34.35,0,0,1,17.27-4.28q8.7,0,13.94,4t5.24,13a15.71,15.71,0,0,1-.29,3.25c-.2.89-.65,1.33-1.33,1.33H365.48c.2-5.61-.35-10.11-1.62-13.5a7.26,7.26,0,0,0-7.38-5.1q-5.91,0-9.37,6.06t-3.47,16.08a37.32,37.32,0,0,0,2.66,14.76,21,21,0,0,0,7.82,9.59,22.62,22.62,0,0,0,12.69,3.39,22.05,22.05,0,0,0,7.45-1.1,58,58,0,0,0,6.72-3c.19-.19.46-.1.81.3s.41.73.22,1a34.1,34.1,0,0,1-11.14,7.75A32.41,32.41,0,0,1,358.69,127.11ZM338.48,88.75l-.15-2.81,32.32-.59V88.6Z"/>
+          <path class="ml" d="M391.45,125.34c-.29,0-.44-.29-.44-.88s.15-.89.44-.89q4.57,0,6.2-2.14t1.62-8V85.65a16.34,16.34,0,0,0-1-6.72,3.63,3.63,0,0,0-3.54-2.14,11.44,11.44,0,0,0-3.1.52,28.64,28.64,0,0,0-4,1.55c-.4.2-.69,0-.89-.59s-.2-.93,0-1l20.51-10a6.57,6.57,0,0,1,1-.29q1.62,0,3.24,3.54c1.08,2.36,1.63,5.75,1.63,10.18v32.76a13.35,13.35,0,0,0,1.18,6.12,6.41,6.41,0,0,0,4.05,3.18,28,28,0,0,0,7.9.88c.39,0,.59.3.59.89s-.2.88-.59.88c-2.66,0-5.68,0-9.08-.14s-7.06-.15-11-.15c-2.76,0-5.41,0-8,.15S393.42,125.34,391.45,125.34Zm18-40-1.18-1.92A112.73,112.73,0,0,1,418,73.25a33.23,33.23,0,0,1,6.78-4.94,10,10,0,0,1,11.44.88,7,7,0,0,1,3.32,6,7.19,7.19,0,0,1-1.84,5.09,6.59,6.59,0,0,1-5.09,2A6.14,6.14,0,0,1,428,80.63c-1-1.08-2-2.14-2.81-3.17a4.35,4.35,0,0,0-3.61-1.55,5,5,0,0,0-2.29.66,20.91,20.91,0,0,0-3.54,2.66Q413.43,81.22,409.46,85.35Z"/>
+          <path class="ml" d="M447.38,125.34c-.29,0-.44-.29-.44-.88s.15-.89.44-.89q4.58,0,6.2-2.14t1.62-8V87a19.72,19.72,0,0,0-1-7.16,3.46,3.46,0,0,0-3.46-2.29,8.48,8.48,0,0,0-2.44.44,27.77,27.77,0,0,0-3,1.18c-.4.1-.72-.14-1-.73s-.22-.94.07-1l22.28-10.33a1.28,1.28,0,0,1,.45-.14,2.11,2.11,0,0,1,1.47.73,2.08,2.08,0,0,1,.74,1.33q0,1.77-.15,5.9t-.15,11.81v26.71q0,5.91,1.7,8t6.27,2.14c.3,0,.45.3.45.89s-.15.88-.45.88c-2,0-4.23,0-6.78-.14s-5.27-.15-8.12-.15-5.41,0-8,.15S449.35,125.34,447.38,125.34Zm14.17-73A9.06,9.06,0,0,1,455,49.94a8.85,8.85,0,0,1-2.43-6.65A8,8,0,0,1,455,37.17a9.24,9.24,0,0,1,6.57-2.29,7.81,7.81,0,0,1,8.56,8.41Q470.11,52.3,461.55,52.3Z"/>
+          <path class="ml" d="M508.33,127.26a20.9,20.9,0,0,1-11.59-3.39,24.08,24.08,0,0,1-8.41-9.82,34.73,34.73,0,0,1-3.17-15.56q0-9,3.24-15.13a28.28,28.28,0,0,1,8.34-9.81,35.2,35.2,0,0,1,11-5.39A40.62,40.62,0,0,1,519,66.46a35.56,35.56,0,0,1,9.89,1.33A45.42,45.42,0,0,1,537.1,71L533.71,83q-3.11-6.64-7.08-9.67a15.94,15.94,0,0,0-9.89-3,14.87,14.87,0,0,0-12,5.24q-4.42,5.24-4.42,18.22a43.56,43.56,0,0,0,2.06,14.32,20.17,20.17,0,0,0,5.76,9,12.49,12.49,0,0,0,8.26,3.1,17,17,0,0,0,10.33-3.25,56.68,56.68,0,0,0,8.56-7.82l1.48,1.33a100.66,100.66,0,0,1-7.31,7.45,42.76,42.76,0,0,1-9.44,6.64A25,25,0,0,1,508.33,127.26Zm36-107v88q0,5,1,7.08a3.27,3.27,0,0,0,3.18,2.07,9.63,9.63,0,0,0,2.58-.45c1-.29,2.19-.68,3.47-1.18.29-.19.59,0,.88.52s.35.91.15,1.11l-20.37,9.88a2.36,2.36,0,0,1-.73.15q-1.49,0-2.73-3.69a33.9,33.9,0,0,1-1.26-10.48V38.42a21.92,21.92,0,0,0-.88-7.3,3.35,3.35,0,0,0-3.4-2.29,8.09,8.09,0,0,0-2.43.45,24.3,24.3,0,0,0-3,1.18c-.39.1-.74-.15-1-.74s-.35-.94-.15-1L541.23,18.5a1.47,1.47,0,0,1,.59-.15,2.82,2.82,0,0,1,1.63.67C544,19.46,544.33,19.88,544.33,20.27Z"/>
+          <path class="ml" d="M561.45,125.34c-.29,0-.44-.29-.44-.88s.15-.89.44-.89q4.57,0,6.2-2.14t1.62-8V87a19.72,19.72,0,0,0-1-7.16,3.46,3.46,0,0,0-3.47-2.29,8.42,8.42,0,0,0-2.43.44,28.7,28.7,0,0,0-3,1.18c-.39.1-.71-.14-1-.73s-.23-.94.07-1l22.28-10.33a1.28,1.28,0,0,1,.45-.14,2.11,2.11,0,0,1,1.47.73,2.08,2.08,0,0,1,.74,1.33q0,1.77-.15,5.9t-.15,11.81v26.71q0,5.91,1.7,8t6.27,2.14c.3,0,.45.3.45.89s-.15.88-.45.88c-2,0-4.23,0-6.79-.14s-5.26-.15-8.11-.15-5.41,0-8,.15S563.42,125.34,561.45,125.34Zm14.17-73a9,9,0,0,1-6.57-2.36,8.85,8.85,0,0,1-2.43-6.65,8,8,0,0,1,2.43-6.12,9.22,9.22,0,0,1,6.57-2.29,7.81,7.81,0,0,1,8.56,8.41Q584.18,52.3,575.62,52.3Z"/>
+          <path class="ml" d="M613.25,126.38q-6.5,0-9.67-2.88a9.93,9.93,0,0,1-3.17-7.75c0-3.24.88-5.73,2.65-7.45a19.14,19.14,0,0,1,6.94-4.13c2.85-1,5.8-2.09,8.85-3.18l14.76-5.46.59,2.22-8.41,3.84c-.79.29-1.92.76-3.39,1.4a12.21,12.21,0,0,0-4,2.8,7.27,7.27,0,0,0-1.77,5.24,6.59,6.59,0,0,0,2.51,5.68,8.43,8.43,0,0,0,5,1.85,7.62,7.62,0,0,0,4.87-1.63l7.37-5,.15,2.36-10.33,7.37a24,24,0,0,1-6.2,3.62A19.16,19.16,0,0,1,613.25,126.38Zm28.33-.15a3.25,3.25,0,0,1-1.48.29q-2.65,0-5.31-3.54t-2.65-10.18V87.71q0-9.28-1.48-13.65t-5.31-4.35A6.68,6.68,0,0,0,619.81,72a12.73,12.73,0,0,0-2.51,5.09,32.21,32.21,0,0,0-.81,4.72c-.29,3-1.18,5.19-2.65,6.42a9,9,0,0,1-5.91,1.84q-3.84,0-5.46-1.62a5.42,5.42,0,0,1-1.62-4A9.49,9.49,0,0,1,604,77.75a31,31,0,0,1,8.05-5.61,53.14,53.14,0,0,1,10.1-3.83,36.09,36.09,0,0,1,9.23-1.4,15,15,0,0,1,10.33,3.83Q646,74.58,646,83.29v26.12a12,12,0,0,0,1.55,6.64,4.92,4.92,0,0,0,4.35,2.36,10.23,10.23,0,0,0,4.28-1q.59-.3,1,.51c.24.54.12.91-.37,1.11Z"/>
+          <path class="ml" d="M662.39,125.34c-.3,0-.45-.29-.45-.88s.15-.89.45-.89c3,0,5.11-.71,6.19-2.14s1.63-4.1,1.63-8V85.65a16.31,16.31,0,0,0-1-6.72,3.63,3.63,0,0,0-3.54-2.14,11.5,11.5,0,0,0-3.1.52,28.64,28.64,0,0,0-4,1.55c-.4.2-.69,0-.89-.59s-.19-.93,0-1l20.52-10a6.61,6.61,0,0,1,1-.29q1.62,0,3.25,3.54t1.62,10.18v32.76c0,3.94.56,6.62,1.7,8s3.22,2.14,6.27,2.14c.29,0,.44.3.44.89s-.15.88-.44.88c-2,0-4.23,0-6.79-.14s-5.27-.15-8.12-.15-5.41,0-8,.15S664.35,125.34,662.39,125.34Zm39.69,0c-.29,0-.44-.29-.44-.88s.15-.89.44-.89q4.57,0,6.2-2.14t1.62-8V92.14q0-8-2.87-11.81T698,76.5a21.13,21.13,0,0,0-9.08,2.21,19.48,19.48,0,0,0-7.45,6.05L680.68,83a47.13,47.13,0,0,1,11.66-11.88,24.36,24.36,0,0,1,14.17-4.5q8.26,0,12.76,5.17t4.51,13.28v28.33q0,5.91,1.69,8t6.27,2.14c.3,0,.45.3.45.89s-.15.88-.45.88c-2,0-4.23,0-6.78-.14s-5.27-.15-8.12-.15-5.41,0-8,.15S704.05,125.34,702.08,125.34Z"/>
+          <path class="ml" d="M753,126.38q-6.5,0-9.66-2.88a9.93,9.93,0,0,1-3.18-7.75c0-3.24.89-5.73,2.66-7.45a19.06,19.06,0,0,1,6.94-4.13c2.85-1,5.8-2.09,8.85-3.18l14.76-5.46.59,2.22-8.41,3.84c-.79.29-1.92.76-3.4,1.4a12.27,12.27,0,0,0-4,2.8,7.27,7.27,0,0,0-1.77,5.24,6.58,6.58,0,0,0,2.5,5.68,8.48,8.48,0,0,0,5,1.85,8.72,8.72,0,0,0,2.29-.3,8.58,8.58,0,0,0,2.58-1.33l7.38-5,.15,2.36L766,121.65a24.19,24.19,0,0,1-6.2,3.62A19.22,19.22,0,0,1,753,126.38Zm28.34-.15a3.28,3.28,0,0,1-1.48.29q-2.65,0-5.31-3.54t-2.66-10.18V87.71q0-9.28-1.47-13.65t-5.32-4.35A6.66,6.66,0,0,0,759.56,72a12.6,12.6,0,0,0-2.51,5.09,32.21,32.21,0,0,0-.81,4.72c-.3,3-1.18,5.19-2.66,6.42a8.9,8.9,0,0,1-5.9,1.84q-3.84,0-5.46-1.62a5.42,5.42,0,0,1-1.62-4,9.45,9.45,0,0,1,3.17-6.72,30.92,30.92,0,0,1,8-5.61,53.49,53.49,0,0,1,10.11-3.83,36,36,0,0,1,9.22-1.4,15,15,0,0,1,10.33,3.83q4.29,3.84,4.28,12.55v26.12a12.1,12.1,0,0,0,1.55,6.64,5,5,0,0,0,4.36,2.36,10.27,10.27,0,0,0,4.28-1c.39-.2.71,0,.95.51s.13.91-.36,1.11Z"/>
+          <!-- Isotipo -->
+          <path class="ml" d="M160.7,106v-.16h0c0-.3,0-.59,0-.87-.33-5.88-2.57-7.7-4.6-8.12l-.29,0-.56,0h-.53a6.73,6.73,0,0,0-1.14.17c-.83.2-1.67.38-2.53.54s-1.72.32-2.59.46a443.74,443.74,0,0,1-48.14,5,1.88,1.88,0,0,1-.34,0,1.75,1.75,0,0,1-1.45-2.15,1.7,1.7,0,0,1,1-1.15c2.12-1,4.38-2.07,6.78-3.15a355.63,355.63,0,0,1,37.54-14.6c1.35-.44,2.7-.84,4-1.16a4.17,4.17,0,0,0,2.8-2A4.42,4.42,0,0,0,151,76.8a8.47,8.47,0,0,0-.44-2.71,17.73,17.73,0,0,0-.94-2.36h0l-.06-.12-.06-.11h0a11.21,11.21,0,0,0-3.21-4.17,4.29,4.29,0,0,0-1.48-.72,3.53,3.53,0,0,0-.55-.1,3.81,3.81,0,0,0-2.1.41,3.07,3.07,0,0,0-.36.2,4.3,4.3,0,0,0-.59.42c-1.06.87-2.2,1.7-3.37,2.51a363.8,363.8,0,0,1-43,25.62,1.93,1.93,0,0,1-.59.19H94a1.79,1.79,0,0,1-1.51-1,1.71,1.71,0,0,1,.11-1.66c2.53-4,5.59-8.77,9.12-13.91,4.71-6.86,10.26-14.46,16.52-22.21q2.34-2.91,4.82-5.84c.92-1.08,1.85-2.14,2.82-3.12a4.74,4.74,0,0,0,.35-.39l.24-.32.11-.18a3.66,3.66,0,0,0,.31-.59,4,4,0,0,0,.22-.69,3.84,3.84,0,0,0-.38-2.55l-.17-.32a6.68,6.68,0,0,0-.73-1,13.78,13.78,0,0,0-3.13-2.57h0l-.11-.07a.41.41,0,0,1-.11-.07h0a14.64,14.64,0,0,0-3.25-1.51l-.45-.13a5.85,5.85,0,0,0-.84-.16,4.45,4.45,0,0,0-2.55.33,4.29,4.29,0,0,0-2,2.49q-.33,1-.72,2c-.26.66-.53,1.31-.81,2-.54,1.27-1.09,2.53-1.64,3.77s-1.11,2.48-1.67,3.69C102.94,63.94,97,74.83,92,83.49c-.5.87-1,1.71-1.49,2.53-1,1.65-1.91,3.2-2.8,4.64l-.3.5a2.31,2.31,0,0,1-4.27-1.24c0-6.4.26-14.09.78-22.61.5-8.21,1.29-43.57,2.51-52.91.17-1.34.36-2.68.55-4s.39-2.58.65-3.83c0-.18.06-.36.1-.54l.06-.34c.29-1.84,0-5.36-6.7-5.64H79.63c-6.64.28-7,3.8-6.7,5.64L73,6c0,.18.07.36.11.54.25,1.25.46,2.53.65,3.83s.37,2.69.54,4c1.22,9.34,2,44.7,2.51,52.91.52,8.52.73,16.21.78,22.61a2.31,2.31,0,0,1-4.27,1.24l-.3-.5c-.89-1.44-1.83-3-2.8-4.64-.49-.82-1-1.66-1.49-2.53-5.06-8.66-11-19.55-16.55-31.75-.56-1.21-1.12-2.45-1.67-3.69s-1.1-2.5-1.64-3.77c-.28-.65-.55-1.3-.81-2s-.5-1.3-.72-2a4.25,4.25,0,0,0-2-2.49,4.45,4.45,0,0,0-2.55-.33,5.85,5.85,0,0,0-.84.16l-.45.13a14.39,14.39,0,0,0-3.24,1.51h0l-.11.07a.41.41,0,0,0-.11.07h0a14,14,0,0,0-3.13,2.57,7.46,7.46,0,0,0-.73,1l-.17.32a3.84,3.84,0,0,0-.38,2.55,5.05,5.05,0,0,0,.22.69,4.68,4.68,0,0,0,.31.59l.12.18a3.71,3.71,0,0,0,.23.32,4.74,4.74,0,0,0,.35.39c1,1,1.9,2,2.82,3.12q2.48,2.93,4.82,5.84C48.7,64.82,54.25,72.42,59,79.28c3.53,5.14,6.59,9.86,9.12,13.91a1.71,1.71,0,0,1,.11,1.66,1.79,1.79,0,0,1-1.5,1H66.4a2,2,0,0,1-.59-.19,364.61,364.61,0,0,1-43-25.62c-1.16-.81-2.3-1.64-3.37-2.51a4.3,4.3,0,0,0-.59-.42,3.07,3.07,0,0,0-.36-.2,3.81,3.81,0,0,0-2.1-.41,3.76,3.76,0,0,0-.55.1,4.38,4.38,0,0,0-1.48.72,11.32,11.32,0,0,0-3.21,4.17h0l-.06.11a.61.61,0,0,0,0,.12h0a16.62,16.62,0,0,0-1,2.36,8.42,8.42,0,0,0-.43,2.71,4.27,4.27,0,0,0,.44,1.88,4.13,4.13,0,0,0,2.8,2c1.33.32,2.68.72,4,1.16a355.63,355.63,0,0,1,37.54,14.6c2.4,1.08,4.67,2.14,6.78,3.15a1.67,1.67,0,0,1,1,1.15,1.75,1.75,0,0,1-1.45,2.15,1.88,1.88,0,0,1-.34,0,443.33,443.33,0,0,1-48.13-5c-.87-.14-1.74-.29-2.6-.46s-1.7-.34-2.53-.54A6.73,6.73,0,0,0,6,96.77H5.49l-.56,0-.29,0C2.61,97.28.37,99.1,0,105q0,.42,0,.87H0v.32H0q0,.9.06,1.68a10.77,10.77,0,0,0,1.59,5.51,3.92,3.92,0,0,0,.25.32,4.9,4.9,0,0,0,1.08,1l.28.17a4.29,4.29,0,0,0,.58.26,4.23,4.23,0,0,0,.58.17,3.78,3.78,0,0,0,.57.1,6.29,6.29,0,0,0,2-.11c1.67-.36,3.4-.64,5.15-.88l3.53-.47.28,0a449.09,449.09,0,0,1,47.57-3.43l.35,0a0,0,0,0,1,0,0l.33,0A10.55,10.55,0,0,1,74.7,121a9.46,9.46,0,0,1-.11,1.41h0c-.06.44-.11.87-.18,1.32-.18,1.32-.39,2.63-.67,3.89a4.14,4.14,0,0,0,.47,3.13l.15.2c.78,1,2.33,1.87,5.29,2H81c3-.12,4.51-1,5.3-2a2.43,2.43,0,0,0,.14-.2,4.14,4.14,0,0,0,.47-3.13c-.27-1.26-.48-2.57-.67-3.89-.07-.45-.12-.88-.18-1.32h0A11,11,0,0,1,86,121a10.55,10.55,0,0,1,10.55-10.56l.32,0s0,0,0,0l.34,0a449.09,449.09,0,0,1,47.57,3.43l.29,0,3.53.47c1.74.24,3.47.52,5.14.88a6.33,6.33,0,0,0,2,.11,4.28,4.28,0,0,0,.57-.1,4.11,4.11,0,0,0,.57-.17,4.29,4.29,0,0,0,.58-.26l.29-.17a4.86,4.86,0,0,0,1.07-1,3.92,3.92,0,0,0,.25-.32,10.67,10.67,0,0,0,1.6-5.51c0-.52,0-1.08,0-1.68h0Z"/>
+        </g>
+      </svg>
+
+      <div class="hero__rule"></div>
+      <p class="hero__label">Viajes Culturales · Colombia</p>
+
+      <h1 class="hero__headline">Cada territorio cuenta una historia.</h1>
+      <p class="hero__subheadline">Nosotros la traducimos.</p>
+
+      <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Próximamente · 2025
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ MANIFESTO ══════════════════════════════ -->
+  <section class="manifesto">
+    <div class="manifesto__inner">
+      <div class="manifesto__left">
+        <p class="manifesto__section-label">Sobre Meridiana</p>
+        <blockquote class="manifesto__quote">
+          "Redefinimos la forma en que el mundo <em>experimenta</em> Colombia."
+        </blockquote>
+      </div>
+      <div class="manifesto__right">
+        <p class="manifesto__body">
+          Somos una agencia de viajes culturales hechos a la medida que conecta a viajeros conscientes con la esencia de una Colombia auténtica, biodiversa y excepcionalmente creativa.
+        </p>
+        <p class="manifesto__body">
+          Nuestras propuestas nacen desde la investigación y el acercamiento a creadores, pensadores y comunidades — dando forma a rutas culturales únicas que transforman el viaje en un acto de comprensión.
+        </p>
+        <div class="manifesto__donde">
+          <p class="manifesto__donde-intro">Queremos mostrarte un país donde…</p>
+          <div class="manifesto__donde-line">la memoria y la contemporaneidad dialogan</div>
+          <div class="manifesto__donde-line">cinco ecosistemas han dado forma a culturas anfibias</div>
+          <div class="manifesto__donde-line">la gastronomía cuenta historias de mestizaje y resistencia</div>
+          <div class="manifesto__donde-line">la artesanía piensa el mundo en sus propias formas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ GALLERY ══════════════════════════════ -->
+  <section class="gallery">
+    <div class="gallery__header">
+      <span class="gallery__label">— Rutas por Colombia</span>
+      <span class="gallery__hint">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M14 5l7 7-7 7M3 12h18"/>
+        </svg>
+        desliza para explorar
+      </span>
+    </div>
+
+    <div class="gallery__track" id="galleryTrack">
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Classic%20Bogot%C3%A1/classic-bogota-catedral-primada-plaza-bolivar-nubes.jpg"
+             alt="Catedral Primada, Plaza Bolívar, Bogotá" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Bogotá — La Candelaria</span>
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Classic%20Colombia/classic-colombia-quindio-valle-cocora-palmas-de-cera.jpg"
+             alt="Valle del Cocora, palmas de cera, Quindío" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Eje Cafetero — Valle del Cocora</span>
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Ruta%20Macondo/ruta-macondo-cartagena-catedral-calle-colonial-balcones.jpg"
+             alt="Cartagena de Indias, centro histórico" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Cartagena — Ciudad Amurallada</span>
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Classic%20Bogot%C3%A1/classic-bogota-museo-oro-mascara-precolombina-muisca.jpg"
+             alt="Máscara muisca, Museo del Oro, Bogotá" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Bogotá — Museo del Oro</span>
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Classic%20Colombia/classic-colombia-medellin-plaza-botero-esculturas.jpg"
+             alt="Plaza Botero, Medellín" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Medellín — Plaza Botero</span>
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Classic%20Bogot%C3%A1/classic-bogota-santuario-monserrate-cerros-orientales.jpg"
+             alt="Santuario de Monserrate, cerros orientales" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Bogotá — Monserrate</span>
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Classic%20Colombia/classic-colombia-valle-cocora-paisaje-editorial-flores.jpg"
+             alt="Valle del Cocora, paisaje editorial" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Quindío — Cocora</span>
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Ruta%20Macondo/ruta-macondo-cartagena-iglesia-san-pedro-claver-atardecer.jpg"
+             alt="Iglesia San Pedro Claver al atardecer, Cartagena" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Cartagena — San Pedro Claver</span>
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Classic%20Colombia/classic-colombia-salento-arquitectura-colonias-balcones.jpg"
+             alt="Arquitectura colonial, Salento, Eje Cafetero" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Eje Cafetero — Salento</span>
+        </div>
+      </div>
+
+      <div class="gallery__item">
+        <img src="frontend/public/images/FOTOS_CARDS_VIAJES/Classic%20Bogot%C3%A1/classic-bogota-capitolio-nacional-arquitectura-patio.jpg"
+             alt="Capitolio Nacional, Bogotá" loading="lazy">
+        <div class="gallery__item-overlay">
+          <span class="gallery__item-caption">Bogotá — Capitolio Nacional</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ ABOUT PILLARS ══════════════════════════════ -->
+  <div class="about-strip">
+    <div class="about-strip__item">
+      <p class="about-strip__num">01 — Investigación</p>
+      <h3 class="about-strip__title">Curaduría desde adentro</h3>
+      <p class="about-strip__text">Cada ruta nace del trabajo con creadores, pensadores y comunidades. No agregadores de tours.</p>
+    </div>
+    <div class="about-strip__item">
+      <p class="about-strip__num">02 — Narrativa</p>
+      <h3 class="about-strip__title">El viaje como comprensión</h3>
+      <p class="about-strip__text">Transformamos la logística en experiencia literaria. La Colombia que no aparece en los itinerarios convencionales.</p>
+    </div>
+    <div class="about-strip__item">
+      <p class="about-strip__num">03 — Compromiso</p>
+      <h3 class="about-strip__title">Raíces en las comunidades</h3>
+      <p class="about-strip__text">Preservación de saberes, apoyo a productores locales e iniciativas de conservación como parte del viaje.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ CTA ══════════════════════════════ -->
+  <section class="cta">
+    <p class="cta__eyebrow">Mientras preparamos algo extraordinario</p>
+    <h2 class="cta__headline">El alma de Colombia,<br>contada por quien la habita.</h2>
+    <p class="cta__sub">Un nuevo modo de experimentar Colombia llega pronto.</p>
+    <div class="cta__rule"></div>
+    <p class="cta__invite">
+      Si tienes curiosidad sobre nuestros viajes, escríbenos.<br>
+      Cada conversación es el inicio de una ruta.
+    </p>
+    <div class="cta__actions">
+      <a href="https://wa.me/573107561974?text=Hola%20Meridiana%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20sus%20viajes." class="btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Escribir por WhatsApp
+      </a>
+      <a href="mailto:info@meridianajourneys.com" class="btn-email">info@meridianajourneys.com</a>
+    </div>
+
+    <div class="cta__socials">
+      <a href="https://www.instagram.com/meridiana.journeys/" class="social-link social-link--ig" target="_blank" rel="noopener" aria-label="Instagram de Meridiana">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="#e7d5bc"/>
+        </svg>
+        @meridiana.journeys
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+  <footer>
+    <span class="footer__brand">Meridiana</span>
+    <p class="footer__meta">
+      Viajes Culturales · Colombia<br>
+      &copy; 2025 Meridiana Journeys SAS
+    </p>
+  </footer>
+
+  <script>
+    /* Drag-to-scroll gallery */
+    const track = document.getElementById('galleryTrack');
+    let isDragging = false, startX, scrollLeft;
+
+    track.addEventListener('mousedown', e => {
+      isDragging = true;
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
+      track.style.cursor = 'grabbing';
+    });
+    track.addEventListener('mouseleave', () => { isDragging = false; track.style.cursor = 'grab'; });
+    track.addEventListener('mouseup',    () => { isDragging = false; track.style.cursor = 'grab'; });
+    track.addEventListener('mousemove',  e => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      track.scrollLeft = scrollLeft - (x - startX) * 1.4;
+    });
+  </script>
+
+</body>
+</html>

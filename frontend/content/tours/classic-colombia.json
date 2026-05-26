@@ -17,6 +17,10 @@
     "note": {
       "es": "Incluye hospedaje boutique y hacienda cafetera, vuelos domésticos, transporte privado, guías especializados, todas las experiencias de los tres itinerarios Classic, cenas curadas y acceso privado a creadores. No incluye vuelos internacionales. En caso de querer un tour más corto se puede reemplazar un destino por otro o se puede agregar Parque Tayrona al finalizar el tour.",
       "en": "Includes boutique lodging and coffee hacienda, domestic flights, private transportation, specialized guides, all experiences from the three Classic itineraries, curated dinners, and private access to creators. Does not include international flights. For a shorter tour, one destination can be swapped for another, or Parque Tayrona can be added at the end."
+    },
+    "contextPhrase": {
+      "es": "Trece días que redefinen la manera en que el mundo experimenta Colombia.",
+      "en": "Thirteen days that redefine the way the world experiences Colombia."
     }
   },
   "location": {
@@ -26,14 +30,87 @@
   },
   "difficulty": "moderate",
   "hero": {
-    "image": "/images/tours/colombia-full-hero.jpg",
+    "video": "/video/tour-hero_classic_colombia.mp4",
+    "image": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-paisaje-editorial-flores.jpg",
+    "objectPosition": "center 40%",
     "alt": {
-      "es": "Diagonal cultural de Colombia: andes, eje cafetero y caribe",
-      "en": "Colombia's cultural diagonal: Andes, coffee region, and Caribbean"
+      "es": "Valle de Cocora al amanecer entre flores y palmas de cera, Eje Cafetero",
+      "en": "Valle de Cocora at dawn among flowers and wax palms, Coffee Region"
     },
-    "credit": "TODO"
+    "credit": "Meridiana"
   },
-  "gallery": [],
+  "gallery": [
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-quindio-valle-cocora-palmas-de-cera.jpg",
+      "place": { "es": "Valle del Cocora", "en": "Cocora Valley" },
+      "tag": { "es": "palma de cera", "en": "wax palm" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-plaza-botero-esculturas.jpg",
+      "place": { "es": "Plaza Botero", "en": "Plaza Botero" },
+      "tag": { "es": "Medellín", "en": "Medellín" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-palacio-cultura-arquitectura-gotica.jpg",
+      "place": { "es": "Palacio de la Cultura", "en": "Palace of Culture" },
+      "tag": { "es": "arquitectura gótica", "en": "gothic architecture" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-jardin-botanico-orquideorama.jpg",
+      "place": { "es": "Orquideórama", "en": "Orquideorama" },
+      "tag": { "es": "Jardín Botánico", "en": "Botanical Garden" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-salento-arquitectura-colonias-balcones.jpg",
+      "place": { "es": "Salento", "en": "Salento" },
+      "tag": { "es": "arquitectura colonial", "en": "colonial architecture" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-paisaje-montanas-neblina.jpg",
+      "place": { "es": "montañas del Cocora", "en": "Cocora mountains" },
+      "tag": { "es": "neblina · Eje Cafetero", "en": "mist · Coffee Region" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-comuna-13-casas-laderas.jpg",
+      "place": { "es": "laderas de Medellín", "en": "Medellín hillsides" },
+      "tag": { "es": "comunas", "en": "comunas" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-colina-palmeras-cera.jpg",
+      "place": { "es": "colina del Cocora", "en": "Cocora hillside" },
+      "tag": { "es": "palma de cera", "en": "wax palm" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-comuna-13-calle-vida-urbana.jpg",
+      "place": { "es": "vida urbana", "en": "urban life" },
+      "tag": { "es": "Comuna 13", "en": "Comuna 13" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-comuna-13-graffiti-murales-motos.jpg",
+      "place": { "es": "murales", "en": "murals" },
+      "tag": { "es": "Comuna 13", "en": "Comuna 13" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-salento-mirador-calle-real-eje-cafetero.jpg",
+      "place": { "es": "Calle Real", "en": "Calle Real" },
+      "tag": { "es": "Salento · mirador", "en": "Salento · lookout" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-paisaje-editorial-flores.jpg",
+      "place": { "es": "flora del Cocora", "en": "Cocora flora" },
+      "tag": { "es": "editorial", "en": "editorial" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-comuna-13-cancha-deportes.jpg",
+      "place": { "es": "cancha de barrio", "en": "neighbourhood pitch" },
+      "tag": { "es": "Comuna 13", "en": "Comuna 13" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-sendero-caminata.jpg",
+      "place": { "es": "sendero del Cocora", "en": "Cocora trail" },
+      "tag": { "es": "caminata", "en": "hiking" }
+    }
+  ],
   "narrative": {
     "short": {
       "es": "Una diagonal cultural que atraviesa el país: de la Bogotá andina a la transformación de Medellín, del motor cafetero al Caribe afrodescendiente. Trece días para comprender Colombia en actos.",

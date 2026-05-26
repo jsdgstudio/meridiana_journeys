@@ -25,7 +25,7 @@ export interface Tour {
   difficulty: Difficulty;
 
   hero: TourHero;
-  gallery?: string[];
+  gallery?: GalleryItem[];
 
   narrative: TourNarrative;
 
@@ -58,6 +58,7 @@ export interface TourPrice {
   currency: "USD";
   note?: LocaleString;
   customQuote?: boolean;      // true when price is "Por confirmar"
+  contextPhrase?: LocaleString;
 }
 
 export interface TourLocation {
@@ -67,11 +68,19 @@ export interface TourLocation {
   coordinates?: [number, number];
 }
 
+export interface GalleryItem {
+  src?: string;
+  gradient?: string;
+  place: LocaleString;
+  tag: LocaleString;
+}
+
 export interface TourHero {
   image: string;
   video?: string;
   alt: LocaleString;
   credit?: string;
+  objectPosition?: string;
 }
 
 export interface TourNarrative {

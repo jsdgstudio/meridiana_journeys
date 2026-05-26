@@ -1,0 +1,63 @@
+
+
+
+Contenido pagina  Sobre Meridiana | reemplaza a /nosotros | mantén la distribución, el diseño y las animaciones del apartado nosotros 
+
+
+- HERO-
+
+Meridiana Cultural 
+Somos una agencia de viajes culturales hechos a la medida que conecta a viajeros conscientes con la esencia de una Colombia auténtica, biodiversa y excepcionalmente creativa.
+Nuestras propuestas nacen desde la investigación y acercamientos con creadores, pensadores y comunidades, dando forma a rutas culturales únicas que transforman el viaje en un acto de comprensión cultural para mentes curiosas que valoran el arte, la historia y el respeto genuino por las comunidades que nos abren sus puertas.
+
+--
+
+"Redefinimos la forma en que el mundo experimenta Colombia. "
+
+Como parte de nuestro compromiso fomentamos proyectos en las comunidades en donde operamos, con programas de preservación y traspaso de saberes, ayuda a productores locales e iniciativas de conservación.
+Queremos mostrarte un país donde dialogan la memoria y la contemporaneidad. 
+
+Donde cinco ecosistemas han dado forma a culturas anfibias. Donde la gastronomía cuenta historias de mestizaje y resistencia. 
+
+Donde la artesanía piensa el mundo en sus propias formas. 
+
+Si quieres ser parte de una experiencia cultural inolvidable, Meridiana te transporta al alma de Colombia. 
+
+
+##
+
+ Quienes Somos 
+
+Laura Querubín / Co-founder y CEO
+Nacida en Bogotá, Laura lleva más de dieciséis años construyendo la manera en que Colombia es comprendida en el mundo. Su trayectoria cruza la diplomacia, la narrativa cultural y el posicionamiento estratégico desde roles clave: Agregada Cultural en la Embajada de Colombia en Londres, asesora en Invest in Bogotá e iNNpulsa, y Coordinadora de Producción del episodio sobre Colombia de The Arts Hour on Tour de la BBC.
+Su formación académica profundizó su comprensión de las fuerzas históricas, las arquitecturas institucionales y las dinámicas culturales que definen el lugar de América Latina en el mundo. Es licenciada en Estudios Latinoamericanos, Historia y Gobierno por la Universidad de Texas en Austin, y Magíster en Administración Pública con énfasis en Desarrollo Internacional por la London School of Economics. Además, es guía de turismo certificada por el Ministerio de Comercio, Industria y Turismo de Colombia.
+Una inmersión en Historia del Arte en París amplió su entendimiento de cómo las culturas se narran a sí mismas a través de la forma, el espacio y la materia. 
+Su convicción es simple: la forma en que se cuenta un país determina la manera en que es valorado. 
+
+
+Fabrizio Rubio — Co-founder y Director Creativo
+Fabrizio es economista chileno egresado de la Universidad del Desarrollo, con una especialización en Apreciación del Arte Contemporáneo y una Maestría en Política Internacional y Economía de la Universidad de San Andrés en Buenos Aires, donde su tesis examinó la construcción de la diplomacia cultural y la marca país de México.
+Durante más de ocho años ha trabajado en la intersección entre la economía creativa y la cultura, desde la convicción de que la cultura es un activo estratégico capaz de transformar la manera en que los territorios son comprendidos, valorados y conectados.
+Su trayectoria incluye la Coordinación Nacional de Exportación de Servicios en ProChile, donde lideró estrategias de internacionalización para las industrias de servicios de Chile. Recientemente, lideró la caracterización de las economías culturales y creativas de Cartagena como consultor del Banco de Desarrollo de América Latina y el Caribe (CAF). Fundó y dirigió MoCuLat, plataforma de cultura latinoamericana que trabajó con artistas, curadores, chefs y emprendedores culturales de todo el continente.
+Sus años formativos en Buenos Aires, Lima y París consolidaron su comprensión de que la producción cultural y la vitalidad económica son inseparables.
+
+/ deja sus bios en un sistema de tarjetas que se desplieguen con el hover , que se vea elegante y sutil, deja espacio para una foto de perfil pequeña , es importante que los textos queden exactamente igual , si es demasiado texto que se desplieguen, usa el sistema de diseño
+
+////
+
+/contacto se modifica con : 
+
+
+Contenidos:
+Formulario 
+Nombre
+País
+Correo
+Mensaje
+Email: info@meridianajourneys.com
+WhatsApp (ideal): +57 310 7561974
+
+/////
+
+
+necesito que cada etapa numerada  la transformes en un .MD separado para dar la orden de ejecutarlo, uno a la vez utilizando /GSD .  al acabar con una task inscribes los cambios y esperas la confirmación de la tarea para ejecutar la siguiente | este texto es para los cambios de las paginas /sobre_meridiana y /contacto

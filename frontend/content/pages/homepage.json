@@ -25,8 +25,8 @@
       "line2": { "es": "contada por quien la habita.", "en": "told by those who live it." }
     },
     "lead": {
-      "es": "Somos una agencia de viajes culturales hechos a la medida que conecta a viajeros conscientes con la esencia de una Colombia auténtica, biodiversa y excepcionalmente creativa.",
-      "en": "We are a bespoke cultural travel agency connecting conscious travelers with the essence of an authentic, biodiverse, and exceptionally creative Colombia."
+      "es": "Somos una agencia de viajes culturales hechos a la medida, que conecta a viajeros conscientes con la esencia de una Colombia auténtica, biodiversa y excepcionalmente creativa.",
+      "en": "We are a bespoke cultural travel agency, connecting conscious travelers with the essence of an authentic, biodiverse, and exceptionally creative Colombia."
     },
     "editorial": {
       "methodLabel": { "es": "Método · 01", "en": "Method · 01" },
@@ -102,8 +102,8 @@
     "row1": [
       {
         "id": "classic-bogota",
-        "imageSrc": "https://images.unsplash.com/photo-1568632234157-ce7aecd03d0d?w=1600&q=80&auto=format&fit=crop",
-        "imageAlt": "Bogotá",
+        "imageSrc": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-catedral-primada-plaza-bolivar-nubes.jpg",
+        "imageAlt": "Catedral Primada y Plaza Bolívar bajo nubes dramáticas, Bogotá",
         "tone": "terracotta",
         "tourLabel": { "es": "Tour 01", "en": "Tour 01" },
         "region": { "es": "Cundinamarca", "en": "Cundinamarca" },
@@ -116,8 +116,8 @@
       },
       {
         "id": "classic-colombia",
-        "imageSrc": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=1600&q=80&auto=format&fit=crop",
-        "imageAlt": "Classic Colombia",
+        "imageSrc": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-paisaje-editorial-flores.jpg",
+        "imageAlt": "Valle de Cocora al amanecer entre flores y palmas de cera, Eje Cafetero",
         "tone": "emerald",
         "tourLabel": { "es": "Tour 02", "en": "Tour 02" },
         "region": { "es": "Andes · Caribe", "en": "Andes · Caribbean" },
@@ -146,8 +146,8 @@
     "row2": [
       {
         "id": "macondo-realismo-magico",
-        "imageSrc": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1600&q=80&auto=format&fit=crop",
-        "imageAlt": "Macondo",
+        "imageSrc": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-cartagena-catedral-calle-colonial-balcones.jpg",
+        "imageAlt": "Calle colonial con balcones de colores frente a la catedral de Cartagena",
         "tone": "terracotta",
         "tourLabel": { "es": "Tour 04", "en": "Tour 04" },
         "region": { "es": "Aracataca · Cartagena", "en": "Aracataca · Cartagena" },
@@ -183,6 +183,10 @@
     "subline": {
       "es": "Lo que nos diferencia no es solo lo que mostramos, sino quién lo cuenta.",
       "en": "What sets us apart is not just what we show, but who tells the story."
+    },
+    "signature": {
+      "es": "Meridiana · Curaduría cultural",
+      "en": "Meridiana · Cultural Curation"
     }
   },
   "howItWorks": {
@@ -236,9 +240,9 @@
       "en": "Five itineraries. From three days in Bogotá to three weeks across jungle, páramo, and coastline. All built around an idea, not a list of attractions."
     },
     "buttonText": {
-      "es": "Explorar viajes",
-      "en": "Explore Journeys"
+      "es": "Escribirnos por WhatsApp",
+      "en": "Write us on WhatsApp"
     },
-    "buttonHref": "/viajes"
+    "buttonHref": "https://wa.me/573107561974?text=Hola%2C+estoy+interesado%2Fa+en+conocer+m%C3%A1s+sobre+los+viajes+de+Meridiana."
   }
 }

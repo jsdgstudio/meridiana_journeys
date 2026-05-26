@@ -14,6 +14,10 @@
     "note": {
       "es": "Cada itinerario se cotiza a medida. Escríbenos y construimos el tuyo.",
       "en": "Each itinerary is quoted bespoke. Write to us and we'll build yours."
+    },
+    "contextPhrase": {
+      "es": "Tres días que cambiarán la manera en que entiendes una ciudad.",
+      "en": "Three days that will change how you understand a city."
     }
   },
   "location": {
@@ -24,14 +28,87 @@
   },
   "difficulty": "easy",
   "hero": {
-    "image": "/images/tours/bogota-hero.jpg",
+    "video": "/video/tour-hero_classic_bogota.mp4",
+    "image": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-catedral-primada-plaza-bolivar-nubes.jpg",
+    "objectPosition": "center 35%",
     "alt": {
-      "es": "Los tejados de terracota de La Candelaria contra los cerros orientales de Bogotá al atardecer",
-      "en": "The terracotta rooftops of La Candelaria against Bogotá's Eastern Hills at golden hour"
+      "es": "Catedral Primada y Plaza Bolívar bajo nubes dramáticas, Bogotá",
+      "en": "Catedral Primada and Plaza Bolívar under dramatic clouds, Bogotá"
     },
-    "credit": "TODO"
+    "credit": "Meridiana"
   },
-  "gallery": ["/images/tours/bogota-01.jpg", "/images/tours/bogota-02.jpg", "/images/tours/bogota-03.jpg"],
+  "gallery": [
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-catedral-primada-plaza-bolivar-nubes.jpg",
+      "place": { "es": "Catedral Primada", "en": "Catedral Primada" },
+      "tag": { "es": "nubes · plaza Bolívar", "en": "clouds · Plaza Bolívar" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-museo-oro-mascara-precolombina-muisca.jpg",
+      "place": { "es": "máscara muisca", "en": "Muisca mask" },
+      "tag": { "es": "Museo del Oro", "en": "Gold Museum" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-capitolio-nacional-arquitectura-patio.jpg",
+      "place": { "es": "Capitolio Nacional", "en": "National Capitol" },
+      "tag": { "es": "patio interior", "en": "inner courtyard" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-candelaria-fachada-chicha-sumerce.jpg",
+      "place": { "es": "el vernáculo", "en": "vernacular façade" },
+      "tag": { "es": "La Candelaria", "en": "La Candelaria" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-santuario-monserrate-cerros-orientales.jpg",
+      "place": { "es": "Monserrate", "en": "Monserrate" },
+      "tag": { "es": "cerros orientales", "en": "eastern hills" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-candelaria-calle-iglesia-carmen.jpg",
+      "place": { "es": "iglesia del Carmen", "en": "Carmen Church" },
+      "tag": { "es": "La Candelaria", "en": "La Candelaria" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-candelaria-calle-cerro-monserrate.jpg",
+      "place": { "es": "La Candelaria", "en": "La Candelaria" },
+      "tag": { "es": "cerro al fondo", "en": "hilltop backdrop" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-catedral-primada-plaza-bolivar.jpg",
+      "place": { "es": "Catedral Primada", "en": "Catedral Primada" },
+      "tag": { "es": "plaza Bolívar", "en": "Plaza Bolívar" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-museo-arte-colonial-pinturas.jpg",
+      "place": { "es": "arte colonial", "en": "colonial art" },
+      "tag": { "es": "Museo Colonial", "en": "Colonial Museum" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-museo-oro-orfebreria-detalle.jpg",
+      "place": { "es": "detalle en tumbaga", "en": "tumbaga detail" },
+      "tag": { "es": "Museo del Oro", "en": "Gold Museum" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-plaza-santamaria-torres-del-parque.jpg",
+      "place": { "es": "Torres del Parque", "en": "Torres del Parque" },
+      "tag": { "es": "plaza Santamaría", "en": "Santamaría plaza" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-museo-oro-orfebreria-precolombina.jpg",
+      "place": { "es": "orfebrería precolombina", "en": "pre-Columbian goldwork" },
+      "tag": { "es": "Museo del Oro", "en": "Gold Museum" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-candelaria-calle-torre-catedral.jpg",
+      "place": { "es": "torre · catedral", "en": "cathedral tower" },
+      "tag": { "es": "centro histórico", "en": "historic centre" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-bogota/classic-bogota-transmilenio-avenida-transito-urbano.jpg",
+      "place": { "es": "Transmilenio", "en": "Transmilenio" },
+      "tag": { "es": "movilidad urbana", "en": "urban mobility" }
+    }
+  ],
   "narrative": {
     "short": {
       "es": "Tres días para leer Bogotá como lo que es: cinco siglos superpuestos en la misma cuadra. De la Laguna Sagrada del Dorado al Museo del Oro, de Monserrate a la Catedral de Sal, una ciudad que se ha incendiado y reinventado varias veces.",

@@ -33,7 +33,38 @@
     },
     "credit": "TODO"
   },
-  "gallery": ["/images/tours/wild-01.jpg", "/images/tours/wild-02.jpg", "/images/tours/wild-03.jpg"],
+  "gallery": [
+    {
+      "gradient": "linear-gradient(135deg, #0A1A0F 0%, #162A1A 50%, #1A3522 100%)",
+      "place": { "es": "Amazonía colombiana", "en": "Colombian Amazon" },
+      "tag": { "es": "selva ecuatorial", "en": "equatorial rainforest" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #0A1520 0%, #112033 50%, #152845 100%)",
+      "place": { "es": "Pacífico colombiano", "en": "Colombian Pacific" },
+      "tag": { "es": "manglar · marea", "en": "mangrove · tide" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #0F1A15 0%, #1A2E25 50%, #1E3828 100%)",
+      "place": { "es": "Sierra Nevada de Santa Marta", "en": "Sierra Nevada de Santa Marta" },
+      "tag": { "es": "cumbre nevada", "en": "snow peak" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #1A1505 0%, #2A220A 50%, #353012 100%)",
+      "place": { "es": "Orinoquía", "en": "Orinoquia" },
+      "tag": { "es": "sabana · fauna", "en": "savanna · wildlife" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #150F1A 0%, #221730 50%, #2A1C3D 100%)",
+      "place": { "es": "Serranía de Chiribiquete", "en": "Serranía de Chiribiquete" },
+      "tag": { "es": "tepuy · rupestre", "en": "tepui · rock art" }
+    },
+    {
+      "gradient": "linear-gradient(135deg, #050F0A 0%, #0A1A10 50%, #0F2015 100%)",
+      "place": { "es": "Chocó biogeográfico", "en": "Biogeographic Chocó" },
+      "tag": { "es": "biodiversidad", "en": "biodiversity" }
+    }
+  ],
   "narrative": {
     "short": {
       "es": "21 días por los cinco ecosistemas del segundo país más biodiverso del planeta. De los páramos de Chingaza al Pacífico chocoano, de la Amazonía a la Sierra Nevada. Un encuentro con la vida en todas sus formas.",

@@ -1,0 +1,363 @@
+Tengo cambios mayores en el sistema , necesito modificar información en el sistema de los viajes del sitio 
+
+1- tengo una nueva sección de viajes con tarjetas especiales que integraré en otra etapa para esta sección y para home, esta alineado a esta nueva información.
+
+---
+
+Necesito que hagas una evaluación de todos los lugares del sitio donde se deba modificar esta información para que lo tengas presente en el futuro de tu desempeño en el resto de tareas, identifica los archivos existentes, su importancia además del rotulado y haz los cambios pertinentes. Es Crítico que implementes la información exactamente como esta escrita en este ejemplo , ya que los textos han sido redactados especialmente. 
+
+Si bien existían 7 viajes , son 5 oficialmente | cada uno de ellos debe también implementar su versión en ingles del sistema 
+
+---
+
+Son 5 viajes definitivos : 
+
+- Classic Bogotá 
+- Classic Colombia 
+- En Búsqueda del Dorado 
+- Macondo y el realismo Mágico 
+- Wild Colombia 
+
+---
+
+Debes modificar la información de cada viaje en la sección Journeys , tanto la card como la pagina de cada viaje 
+
+Es importante que actualices los precios y el sistema que envuelve eso ya que en una etapa futura se implementará el backend y una pasarela de pagos, ya esta previsto en el sistema , probablemente ya lo comprendes.
+
+
+---
+
+la lista final de cada Journey  : 
+
+
+1- Classic Bogotá
+
+Bogotá tiene cinco siglos encima y los lleva todos al mismo tiempo. En una misma cuadra de La Candelaria conviven el barroco colonial, la arquitectura republicana y un mural pintado después del 9 de abril de 1948, el día en que asesinaron a Gaitán y la ciudad se incendió y de alguna manera se volvió a hacer. Esa superposición de tiempos es lo que hace a Bogotá tan difícil de entender para quien llega de afuera, y tan apasionante para quien se toma tres días de verdad. 
+
+##
+
+Qué incluye
+
+-Guía experto dedicado durante todo el recorrido
+-Todas las entradas a museos e instituciones culturales
+-Experiencia gastronómica privada con chef (Día 1)
+-Transporte privado en todos los trayectos
+-Hospedaje (2 noches, hoteles boutique patrimoniales en Chapinero)
+-Seguros de viaje completos
+-Visita a la Laguna Sagrada del Dorado y la Catedral de Sal de Zipaquirá 
+
+No incluye:
+- Transporte aéreo
+- almuerzos y cenas los días 2 y 3
+- bebidas adicionales
+- compras personales.
+
+##
+
+ Itinerario Resumido 
+
+-Día 1 — Llegada y Cena de Bienvenida Visita a Monserrate al atardecer (si las condiciones lo permiten). Cena de bienvenida y conversación privada con el chef.
+
+-Día 2 — Más Allá de la Ciudad La sabana que formó a Bogotá. Mañana en la Laguna Sagrada del Dorado, donde se cree que nació la leyenda de El Dorado. Tarde en la Catedral de Sal de -Zipaquirá, tallada en el interior de una montaña.
+
+-Día 3 — El Corazón de La Candelaria Museo del Oro, iglesias coloniales, comerciantes de esmeraldas, Museo Botero, Fragmentos, Teatro Colón, Claustro de San Agustín, Escuela de Artes y Oficios. La ciudad como biografía arquitectónica.
+
+##
+
+Experiencia 
+
+-Duración: 2 noches / 3 días
+-Tamaño: Máximo 12 personas
+-Ritmo: Moderado — caminatas, traslados en vehículo privado
+-Idioma: Español, inglés o francés
+-Punto de inicio: Bogotá (El Dorado, BOG)
+-Temporada: Todo el año
+-Nivel físico: Bajo — sin actividades de alta exigencia
+
+Ideal para: Viajeros con curiosidad intelectual. Amantes del arte, la historia y la gastronomía. Parejas, amigos cercanos o viajeros solos que quieren entender una ciudad, no solo verla.
+
+##
+
+Precio
+Por confirmar
+📩 Cada itinerario se cotiza a medida. 
+Escríbenos y construimos el tuyo.
+
+///
+
+2-Classic Colombia
+
+Colombia se comprende en actos: una diagonal cultural que atraviesa el país desde la Bogotá andina, donde 2.600 metros de altura custodian el oro precolombino y cinco siglos de historia en La Candelaria, hasta la transformación de Medellín. En la capital antioqueña, la resiliencia ha convertido la violencia en innovación social y arte urbano, permitiendo que lugares como la Comuna 13 narren la fuerza de una comunidad que abraza su pasado para rediseñar su futuro.
+
+La ruta desciende hacia el Eje Cafetero, motor de la economía local, para culminar en el Caribe afrodescendiente y su herencia ancestral. En Cartagena, el poderío de la España colonial grabado en el Castillo de San Felipe se funde con la vibrante resistencia de Getsemaní. Allí, entre murallas y tambores, la experiencia se sella con la gastronomía de matronas locales, cuyas recetas no solo alimentan, sino que transmiten la dignidad de una cultura extraordinaria que ha resistido el paso del tiempo.
+
+##
+
+Qué incluye 
+
+-Hospedaje boutique en cada ciudad y hacienda cafetera en el Eje Cafetero
+-Guías especializados y guías comunitarios por región
+-Todas las entradas a museos e instituciones culturales
+-Inmersión cafetera completa en Hacienda Venecia
+-Almuerzo privado con matrona caribeña en Cartagena
+-Almuerzo con chef comunitaria en Medellín
+-Cenas curadas en espacios únicos en cada ciudad
+-Acceso privado a creadores y espacios que no abren para turismo convencional
+-Transporte privado en todos los trayectos
+-Vuelos domésticos
+-Seguros de viaje completos
+
+No incluye
+vuelos internacionales, propinas y artículos de uso personal.
+
+##
+
+Itinerario Resumido 
+
+Día 1 a 3 — Bogotá Museo del Oro, La Candelaria, Fragmentos, Museo Botero, Monserrate. Gastronomía andina contemporánea.
+Día 4 y 5 — Medellín Museo de Antioquia, Comuna 13 con guías comunitarios. Jardín Botánico, gastronomía botánica.
+Día 6 — Guatapé y Carmen de Viboral La Piedra del Peñol, tour en bote, talleres de cerámica.
+Día 7 a 10 — Eje Cafetero Hacienda Venecia, inmersión cafetera y catas. Valle del Cocora. Salento.
+Día 11 a 13 — Cartagena Castillo de San Felipe, museos, casas patrimoniales. Almuerzo con una matrona caribeña. Getsemaní.
+
+##
+
+Experiencia   
+
+-Duración: 13 días
+-Salidas: 1 al año, agosto
+-Tamaño: Máximo 8 personas
+-Ritmo: Moderado, variado por región
+-Idioma: Español o inglés
+-Punto de inicio: Bogotá (BOG)
+-Punto de cierre: Cartagena (CTG)
+-Nivel físico: Bajo a medio
+
+La experiencia fundacional de Meridiana. Ideal para viajeros que visitan Colombia por primera vez y quieren entenderla de verdad, y para quienes ya la conocen en partes y quieren verla entera.
+Acceso privado a creadores y espacios que no abren para turismo convencional.
+
+##
+
+Precio
+Desde USD 6.800 por persona (grupo de 4) Desde USD 8.200 por persona (grupo de 2)
+Incluye hospedaje boutique y hacienda cafetera, vuelos domésticos, transporte privado, guías especializados, todas las experiencias de los tres itinerarios Classic, cenas curadas y acceso privado a creadores. No incluye vuelos internacionales.
+
+Cada itinerario se cotiza a medida. Escríbenos y construimos el tuyo.
+NOTA: En caso de querer un tour más corto se puede reemplazar un destino por otro o se puede agregar Parque Tayrona al finalizar el tour.
+
+
+///
+
+3- En Búsqueda del Dorado
+
+Del mito muisca al oro que construyó imperios
+
+Este es un viaje que sigue el eco de una obsesión, la promesa de oro que sedujo imperios y transformó territorios. La ruta comienza a revelar cómo en su búsqueda, los españoles construyeron caminos, fundaron ciudades, mezclaron pueblos y forjaron un nuevo mundo sobre las ruinas del anterior. De Bogotá a Falan, de Mompox a Cartagena de Indias, el viaje se hilvana a través de ríos, caminos y ciudades donde la ambición quedó inscrita en la memoria del territorio. Su legado persiste como un mestizaje profundo y deslumbrante, tejido de encuentros, tensiones y creaciones que aún definen la identidad del país. Cada parada es un capítulo de la misma historia, y el oro, de una forma u otra, sigue ahí.
+
+##
+
+Qué incluye
+
+-Hospedaje boutique en casonas coloniales en cada destino
+-Vuelos domésticos entre Bogotá, Honda o Mompox, y Cartagena
+-Guías especializados en historia colonial y culturas precolombinas
+-Acceso a colección privada de orfebrería colonial en Bogotá
+-Encuentro con comunidad Muisca contemporánea
+-Navegación histórica del río Magdalena con historiador especializado en rutas del oro
+-Visita a mina activa de Falan con historiador
+-Taller con maestros orfebres en Mompox
+-Acceso a casas coloniales privadas en Cartagena
+-Cenas curadas en espacios históricos
+-Transporte privado en todos los trayectos terrestres
+-Seguros de viaje completos
+
+Kit pre-viaje: réplica en miniatura de tunjo Muisca, mapa ilustrado de rutas del oro y bibliografía sobre culturas precolombinas y colonia
+
+Evento virtual pre-viaje con historiador colonial contextualizando la conquista y la economía del oro
+
+No incluye 
+
+-vuelos internacionales, propinas y artículos de uso personal.
+
+##
+
+Itinerario Resumido 
+
+Días 1 y 2 — Bogotá, El Metal Sagrado Museo del Oro con guía especializado en culturas precolombinas. Laguna de Guatavita, donde ocurrió el ritual del hombre dorado. Acceso a colección privada de orfebrería colonial. Encuentro con comunidad Muisca contemporánea.
+Días 3- 5 — El Río Magdalena, La Arteria del Imperio Navegación histórica desde Honda con historiador especializado en rutas del oro. Day trip a mina activa de Falan, extracción hoy para entender cómo era en época colonial. Geología del oro colombiano y sistemas de explotación colonial.
+Día 6-7 — Mompox, El Tiempo Detenido La ciudad que el río abandonó y el tiempo conservó. Taller con maestros orfebres de filigrana, técnicas transmitidas generacionalmente desde el siglo XVII. Almuerzo en casa patrimonial. Arquitectura colonial como cápsula del tiempo.
+Día 8-9 — Cartagena, El Puerto del Oro Las murallas que defendían la ciudad más rica del Nuevo Mundo. Casas coloniales privadas de familias que controlaron el comercio del metal. Gastronomía afrocaribeña nacida del encuentro violento entre tres continentes. Cierre histórico y cultural.
+
+##
+
+Experiencia 
+
+-Duración: 8 a 9 días
+-Tamaño: Máximo 12 personas
+-Ritmo: Moderado, caminatas, navegación fluvial y traslados en vehículo privado
+-Idioma: Español o inglés
+-Punto de inicio: Bogotá (BOG)
+-Punto de cierre: Cartagena (CTG)
+-Temporada: Todo el año
+-Nivel físico: Bajo a medio, sin actividades de alta exigencia
+
+Ideal para mentes curiosas y viajeros culturales exigentes que buscan comprender cómo una obsesión europea reconfiguró un continente. Personas que entienden que el oro en Colombia nunca contó una sola historia sino dos al mismo tiempo, la del despojo y la del mestizaje que forjó el país.
+
+Pre-viaje: Evento virtual con historiador colonial contextualizando la conquista y la economía del oro. 
+
+Kit físico con réplica de tunjo Muisca, mapa ilustrado de rutas del oro y bibliografía especializada.
+
+##
+
+Precio:
+
+Desde USD 4.200 por persona (grupo de 2) Desde USD 3.400 por persona (grupo de 4)
+
+Incluye hospedaje en casonas coloniales, vuelos domésticos, transporte privado, guías especializados, todas las experiencias y accesos del itinerario, cenas curadas, kit pre-viaje y evento virtual. No incluye vuelos internacionales.
+
+Cada itinerario se cotiza a medida. Escríbenos y construimos el tuyo.
+
+---
+
+///
+
+4- Macondo y Realismo Mágico
+
+En el Caribe colombiano García Márquez no inventó el realismo mágico, lo transcribió. Aracataca, el Macondo real, donde su abuela le enseñó que los muertos conversan con los vivos y eso no sorprende a nadie. Ciénaga, uno de los 17 pueblos patrimonio de Colombia, donde ocurrió la masacre bananera de 1928 que se convirtió en capítulo central de Cien años de soledad. Valledupar, donde el vallenato guarda la misma memoria oral que Gabo llevó a la prosa. Cartagena, donde Florentino Ariza esperó cincuenta y tres años, siete meses y once días. Guías que conocieron a la familia García, almuerzos en casas donde aún se cuentan las mismas historias que escuchó el Nobel, encuentros con juglares que guardan la memoria oral del Caribe. Una inmersión en el universo narrativo que dio forma a Cien años de soledad, El amor en los tiempos del cólera y Crónica de una muerte anunciada.
+
+##
+
+Qué incluye
+
+-Hospedaje en cada destino
+-Guías locales especializados en historia y literatura del Caribe colombiano
+-Almuerzo en casa de familia en Aracataca
+-Encuentro con juglar vallenato en Valledupar
+-Caminata literaria por los lugares de El amor en los tiempos del cólera en Cartagena
+-Visita histórica a Ciénaga con historiador especializado en la masacre bananera
+-Acceso a espacios culturales relacionados con la Fundación Gabo
+-Encuentro con comunidad indígena de la Sierra Nevada
+-Cenas curadas en espacios históricos y cocinas contemporáneas
+-Fotógrafo profesional documentando momentos clave del viaje
+-Transporte privado en todos los trayectos
+-Seguros de viaje completos
+
+-Kit pre-viaje: journal de cuero, mapa ilustrado de la ruta y bibliografía recomendada
+
+-Evento virtual pre-viaje con historiador y crítico literario
+
+-Add-on opcional: Taller de escritura creativa y taller de narrativa vallenata.
+
+##
+
+Itinerario Resumido
+
+-Día 1- 3 — Llegada a Santa Marta. Traslado a Aracataca, El Macondo Real La casa natal, las calles que Úrsula Iguarán recorrió mil veces, guías que conocieron a la familia García. Almuerzo en casa de familia con historias que nunca llegaron a los libros.
+
+-Día 4 — Ciénaga, La Herida Histórica La plaza de la masacre bananera de 1928, la estación del tren amarillo, las plantaciones aún activas. Lectura del pasaje de Cien años de soledad en el lugar exacto donde ocurrió.
+
+-Día 5- 6 — Valledupar, La Narrativa Cantada Encuentro con juglar que conecta a Escalona con García Márquez. Taller opcional de narrativa vallenata.
+
+-Día 7 a 10 — Cartagena, La Ciudad de Florentino Ariza Caminata literaria por El amor en los tiempos del cólera. Casas patrimoniales, Getsemaní, acceso a espacios de la Fundación Gabo. Gastronomía afrocaribeña con matrona.
+
+##
+
+Experiencia:
+
+-Duración: 7 a 10 días
+-Tamaño: Máximo 12 personas
+-Ritmo: Pausado, caminatas literarias e históricas, conversaciones largas
+-Idioma: Español o inglés
+-Punto de inicio: Santa Marta 
+-Punto de cierre: Cartagena (CTG)
+-Temporada: Todo el año
+-Nivel físico: Bajo, sin actividades de alta exigencia
+
+Ideal para lectores exigentes, profesores de literatura, hispanistas y escritores. Personas que entienden que para leer bien a García Márquez primero hay que entender el territorio que lo escribió.
+
+Experiencias signatura
+Almuerzo en casa de familia en Aracataca con guías que conocieron a la familia García. Lectura de la masacre bananera en el lugar exacto donde ocurrió. Encuentro con juglar vallenato. Acceso a espacios de la Fundación Gabo. Fotógrafo profesional durante todo el recorrido.
+
+Pre-viaje Evento virtual con historiador y crítico literario. 
+
+Kit físico con journal de cuero, mapa ilustrado de la ruta y bibliografía recomendada. 
+
+##
+
+Precio:
+
+Desde USD 3.800 por persona (grupo de 2) Desde USD 2.900 por persona (grupo de 4 a 6)
+
+Incluye hospedaje boutique, transporte privado, guías especializados, todas las experiencias del itinerario, fotógrafo profesional, cenas curadas, kit pre-viaje y evento virtual. No incluye vuelos.
+
+Cada itinerario se cotiza a medida. Escríbenos y construimos el tuyo.
+
+///
+
+5- Wild Colombia
+
+
+##
+
+Qué incluye
+
+Guía naturalista experto durante todo el recorrido y guías locales especializados por ecosistema
+Vuelos domésticos entre ecosistemas
+Transporte privado en todos los trayectos terrestres y fluviales
+Hospedaje en eco-lodges y alojamientos boutique seleccionados en cada destino
+Todas las comidas durante el recorrido, incluyendo experiencias gastronómicas regionales
+Todas las entradas, permisos y licencias de acceso a parques nacionales y territorios indígenas
+Seguros de viaje completos con cobertura de evacuación médica
+Visitas y conversaciones con comunidades indígenas y afrocolombianas con protocolos de acceso responsable
+Fotógrafo profesional de naturaleza durante el recorrido
+Kit pre-viaje: guía de aves ilustrada, mapa de ecosistemas y bibliografía conservacionista
+Evento virtual pre-viaje con biólogo especializado en biodiversidad colombiana
+No incluye vuelos internacionales, propinas y artículos de uso personal.
+Extensión opcional: Sobrevuelo en helicóptero privado por Chiribiquete y los Cerros de Mavecure, solo accesible por aire.
+
+##
+
+Itinerario Resumido
+Acto I — Los Andes 3 días Chingaza. Páramo, frailejones, lagunas glaciales a cuatro mil metros. Más de veinte especies de colibríes al amanecer. El techo de Colombia y la fuente de agua de millones.
+Acto II — La Orinoquía 4 días Caño Cristales, el río de los cinco colores, solo entre julio y noviembre. Hato La Aurora, safari a caballo entre anacondas, caimanes y chigüiros. Joropo al atardecer con llaneros que narran el territorio desde la música.
+Acto III — La Amazonía 4 días Canaloa Lodge. Navegación del río Amazonas, delfines rosados, farmacopea viva con comunidades Tikuna, canopy nocturno.
+Acto IV — El Pacífico 3 días Nuquí. Ballenas jorobadas y sus crías, biodiversidad del Chocó, cocina afrocolombiana con matrona.
+Acto V — El Caribe 4 días Sierra Nevada de Santa Marta. Encuentro con comunidades Kogui y Arhuaco. Cierre en Cartagena.
+
+##
+
+Experiencia
+
+-Duración: 18 a 21 días
+-Tamaño: Máximo 6 personas
+-Ritmo: Activo, caminatas, navegaciones, madrugadas
+-Idioma: Español o inglés
+-Punto de inicio: Bogotá (BOG)
+-Punto de cierre: Cartagena (CTG)
+-Temporada: Agosto 
+-Nivel físico: Medio, requiere disposición para caminar y condiciones de campo
+
+Ideal para naturalistas exigentes, fotógrafos de vida silvestre, biólogos, ornitólogos y viajeros que buscan una experiencia que dure más allá del viaje.
+
+Experiencia signatura: Sobrevuelo en helicóptero privado por Chiribiquete, el parque nacional más grande de Colombia con pinturas rupestres de veinte mil años y estatus de Patrimonio UNESCO, y los Cerros de Mavecure, formaciones rocosas sagradas de la Orinoquía. Solo accesible por aire.
+
+Pre-viaje: Evento virtual con biólogo especializado en biodiversidad colombiana. 
+
+Kit físico con guía de aves ilustrada, mapa de ecosistemas y bibliografía conservacionista.
+
+##
+
+Precio
+
+Desde USD 9.500 por persona (grupo de 4, itinerario de 17 días) Desde USD 12.000 por persona (grupo de 2, itinerario completo de 21 días)
+
+Incluye vuelos domésticos, hospedaje completo, todas las comidas, guías especializados, fotógrafo profesional, permisos, entradas y seguros. No incluye vuelos internacionales ni el sobrevuelo en helicóptero.
+
+Wild Colombia se construye alrededor de cada viajero, la temporada, el ritmo, la profundidad. Escríbenos y trazamos el recorrido.
+
+---
+
+haz un .MD para generar estos cambios por sección y que el sistema use /GSD para ordenar todo 
+
+ al acabar con una task inscribes los cambios y esperas la confirmación de la tarea para ejecutar la siguiente
+Necesito 

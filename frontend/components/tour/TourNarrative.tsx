@@ -12,12 +12,15 @@ interface TourNarrativeProps {
   locale: Locale;
 }
 
+const EASE: [number, number, number, number] = [0.65, 0, 0.35, 1];
+
 export function TourNarrative({ tour, locale }: TourNarrativeProps) {
   const { narrative } = tour;
 
   return (
     <SectionWrapper theme="page">
       <Container size="narrow">
+        {/* Long narrative with drop cap */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -26,31 +29,32 @@ export function TourNarrative({ tour, locale }: TourNarrativeProps) {
         >
           <RichText
             html={narrative.long[locale]}
-            className="prose-p:text-negro/80 prose-headings:text-negro"
+            className="tour-narrative prose-p:text-negro/80 prose-headings:text-negro"
           />
         </motion.div>
 
+        {/* Pull quote — momento de respiración */}
         {narrative.pullQuote && (
-          <motion.blockquote
-            initial="hidden"
-            whileInView="visible"
-            viewport={viewport}
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] },
-              },
-            }}
-            className="mt-12 pt-10 border-t border-negro/10"
+          <motion.div
+            className="w-full my-16 md:my-24 pl-8 md:pl-12"
+            style={{ borderLeft: "2px solid var(--tumbaga)" }}
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.0, ease: EASE }}
           >
-            <div className="w-8 h-px bg-tumbaga mb-6" />
-            <p className="font-display text-2xl font-light italic text-negro leading-snug">
+            <p
+              className="font-display font-light italic text-negro leading-[1.25]"
+              style={{
+                fontSize: "clamp(1.4rem, 3vw, 2.5rem)",
+                letterSpacing: "-0.01em",
+              }}
+            >
               &ldquo;{narrative.pullQuote[locale]}&rdquo;
             </p>
-          </motion.blockquote>
+          </motion.div>
         )}
+
       </Container>
     </SectionWrapper>
   );

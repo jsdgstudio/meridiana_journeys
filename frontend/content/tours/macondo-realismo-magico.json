@@ -17,6 +17,10 @@
     "note": {
       "es": "Incluye hospedaje boutique, transporte privado, guías especializados, todas las experiencias del itinerario, fotógrafo profesional, cenas curadas, kit pre-viaje y evento virtual. No incluye vuelos.",
       "en": "Includes boutique lodging, private transportation, specialized guides, all itinerary experiences, professional photographer, curated dinners, pre-trip kit, and virtual event. Does not include flights."
+    },
+    "contextPhrase": {
+      "es": "Un viaje que transcribe el territorio que escribió García Márquez.",
+      "en": "A journey that transcribes the territory García Márquez wrote into existence."
     }
   },
   "location": {
@@ -26,14 +30,57 @@
   },
   "difficulty": "easy",
   "hero": {
-    "image": "/images/tours/macondo-hero.jpg",
+    "image": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-cartagena-catedral-calle-colonial-balcones.jpg",
+    "video": "/video/tour-hero_macondo.mp4",
+    "objectPosition": "center 50%",
     "alt": {
-      "es": "Casa colonial con patio interior en Aracataca, luz tropical filtrada entre hojas de plátano",
-      "en": "Colonial house with interior courtyard in Aracataca, tropical light filtered through banana leaves"
+      "es": "Calle colonial con balcones de colores frente a la catedral de Cartagena",
+      "en": "Colonial street with colorful balconies facing Cartagena's cathedral"
     },
-    "credit": "TODO"
+    "credit": "Meridiana"
   },
-  "gallery": ["/images/tours/macondo-01.jpg", "/images/tours/macondo-02.jpg"],
+  "gallery": [
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-cartagena-iglesia-san-pedro-claver-atardecer.jpg",
+      "place": { "es": "San Pedro Claver", "en": "San Pedro Claver" },
+      "tag": { "es": "atardecer · Cartagena", "en": "sunset · Cartagena" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-cartagena-catedral-balcones-de-colores.jpg",
+      "place": { "es": "balcones de colores", "en": "coloured balconies" },
+      "tag": { "es": "Ciudad Amurallada", "en": "Walled City" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-cartagena-getsemani-mural-gastronomia.jpg",
+      "place": { "es": "Getsemaní", "en": "Getsemaní" },
+      "tag": { "es": "murales · gastronomía", "en": "murals · gastronomy" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-cartagena-iglesia-san-pedro-claver-baluarte.jpg",
+      "place": { "es": "baluartes coloniales", "en": "colonial bastions" },
+      "tag": { "es": "Cartagena", "en": "Cartagena" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-colombia-cocina-tradicional-fogon-lena.jpg",
+      "place": { "es": "fogón de leña", "en": "wood-fire stove" },
+      "tag": { "es": "cocina tradicional", "en": "traditional cuisine" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-cartagena-catedral-calle-colonial-balcones.jpg",
+      "place": { "es": "calle colonial", "en": "colonial street" },
+      "tag": { "es": "Cartagena · centro", "en": "Cartagena · centre" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-cartagena-teatro-adolfo-mejia-hay-festival-carlos-vives.jpg",
+      "place": { "es": "Teatro Adolfo Mejía", "en": "Teatro Adolfo Mejía" },
+      "tag": { "es": "Hay Festival", "en": "Hay Festival" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/ruta-macondo/ruta-macondo-cartagena-iglesia-san-pedro-claver-muralla.jpg",
+      "place": { "es": "muralla colonial", "en": "colonial wall" },
+      "tag": { "es": "Cartagena", "en": "Cartagena" }
+    }
+  ],
   "narrative": {
     "short": {
       "es": "García Márquez no inventó el realismo mágico, lo transcribió. Aracataca, Ciénaga, Valledupar y Cartagena: el universo narrativo que dio forma a Cien años de soledad, El amor en los tiempos del cólera y Crónica de una muerte anunciada.",

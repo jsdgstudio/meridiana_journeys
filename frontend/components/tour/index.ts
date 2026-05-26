@@ -1,8 +1,10 @@
 export { TourCard } from "./TourCard";
 export { TourExperience } from "./TourExperience";
+export { TourGallery } from "./TourGallery";
 export { TourHero } from "./TourHero";
 export { TourIncludes } from "./TourIncludes";
 export { TourItinerary } from "./TourItinerary";
 export { TourNarrative } from "./TourNarrative";
+export { TourPreTrip } from "./TourPreTrip";
 export { TourPricing } from "./TourPricing";
 export { ToursGrid } from "./ToursGrid";

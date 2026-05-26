@@ -273,15 +273,35 @@ a:hover {
 /* @tailwind utilities; */
 
 /* ============================================================
+   TOUR NARRATIVE — Drop cap
+   ============================================================ */
+
+.tour-narrative > p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 0.82;
+  float: left;
+  margin-right: 0.08em;
+  margin-top: 0.04em;
+  color: var(--tumbaga);
+}
+
+/* ============================================================
    TRAVEL CARDS — Accordion expand section (.tc-*)
    ============================================================ */
 
 /* Row: hovered card grows, siblings shrink */
+/* overflow:hidden en la fila elimina artefactos sub-pixel entre cards */
+.tc-row { overflow: hidden; }
+
 .tc-row .tc-card {
-  transition: flex-grow 520ms cubic-bezier(0.65, 0, 0.35, 1),
-              flex-shrink 520ms cubic-bezier(0.65, 0, 0.35, 1),
-              flex-basis 520ms cubic-bezier(0.65, 0, 0.35, 1);
+  transition: flex-grow 580ms cubic-bezier(0.65, 0, 0.35, 1),
+              flex-shrink 580ms cubic-bezier(0.65, 0, 0.35, 1),
+              flex-basis 580ms cubic-bezier(0.65, 0, 0.35, 1);
   flex: 1 1 0;
+  /* min-width:0 previene desbordamiento en flex fraccionario */
+  min-width: 0;
 }
 .tc-row:hover .tc-card       { flex: 0.75 1 0; }
 .tc-row .tc-card:hover       { flex: 3.2 1 0; }
@@ -297,12 +317,16 @@ a:hover {
 /* Top gradient — always visible for meta row legibility */
 .tc-card .tc-scrim-top {
   position: absolute; inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 28%, transparent 50%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.10) 28%, transparent 38%);
   pointer-events: none;
 }
 
+/* Per-card accent glow */
+.tc-accent-glow { transition: opacity 580ms cubic-bezier(0.65, 0, 0.35, 1); opacity: 0; }
+.tc-card:hover .tc-accent-glow { opacity: 1; }
+
 /* Hover reveal scrim */
-.tc-card .tc-scrim-hover       { transition: opacity 520ms cubic-bezier(0.65, 0, 0.35, 1); opacity: 0; }
+.tc-card .tc-scrim-hover       { transition: opacity 580ms cubic-bezier(0.65, 0, 0.35, 1); opacity: 0; }
 .tc-card:hover .tc-scrim-hover { opacity: 1; }
 
 /* Meta row */
@@ -313,16 +337,25 @@ a:hover {
 .tc-card .tc-title       { transition: transform 520ms cubic-bezier(0.65, 0, 0.35, 1); }
 .tc-card:hover .tc-title { transform: translateY(-4px); }
 
-/* Reveal elements */
+/* Reveal elements — stagger: meta 80ms → descripción 160ms → CTAs 260ms */
 .tc-card .tc-reveal {
   opacity: 0;
   transform: translateY(14px);
-  transition: opacity 520ms cubic-bezier(0.65, 0, 0.35, 1),
-              transform 520ms cubic-bezier(0.65, 0, 0.35, 1);
+  transition: opacity 580ms cubic-bezier(0.65, 0, 0.35, 1),
+              transform 580ms cubic-bezier(0.65, 0, 0.35, 1);
+  transition-delay: 80ms;
 }
 .tc-card:hover .tc-reveal        { opacity: 1; transform: translateY(0); }
-.tc-card .tc-reveal-d1           { transition-delay: 80ms; }
-.tc-card .tc-reveal-d2           { transition-delay: 140ms; }
+.tc-card .tc-reveal-d1           { transition-delay: 160ms; }
+.tc-card .tc-reveal-d2           { transition-delay: 260ms; }
+
+/* Meta tick — línea accent horizontal */
+.tc-meta-tick {
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  flex-shrink: 0;
+}
 
 /* Body content fades out in compressed siblings */
 .tc-card .tc-collapse       { transition: opacity 320ms cubic-bezier(0.65, 0, 0.35, 1); }
@@ -368,7 +401,7 @@ a:hover {
 .tc-card:hover .tc-isotipo {
   opacity: 0.85;
   color: var(--marfil);
-  transform: translateY(-2px);
+  transform: translateY(-2px) rotate(0deg) scale(1.08);
 }
 .tc-row:hover .tc-card:not(:hover) .tc-isotipo { opacity: 0.25; }
 
@@ -437,7 +470,84 @@ a:hover {
   .tc-row .tc-card,
   .tc-row:hover .tc-card,
   .tc-row .tc-card:hover { flex: 1 1 auto !important; min-height: 320px; }
-  .tc-card .tc-reveal     { opacity: 1 !important; transform: none !important; }
-  .tc-card .tc-scrim-base { opacity: 0.55 !important; }
-  .tc-card .tc-collapse   { opacity: 1 !important; }
+  .tc-card .tc-reveal              { opacity: 1 !important; transform: none !important; transition-delay: 0ms !important; }
+  .tc-card .tc-scrim-base          { opacity: 0.55 !important; }
+  .tc-card .tc-scrim-hover         { opacity: 1 !important; }
+  .tc-card .tc-accent-glow         { opacity: 1 !important; }
+  .tc-card .tc-collapse            { opacity: 1 !important; }
+}
+
+/* ── Tour Gallery Masonry ─────────────────────────────── */
+.tg-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 72px;
+  gap: 6px;
+}
+.tg-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--verde);
+  margin: 0;
+  cursor: default;
+}
+.tg-frame__cap {
+  position: absolute;
+  left: 18px; bottom: 16px; right: 18px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+}
+/* Pattern A */
+.tga-1 { grid-column: 1 / span 7;  grid-row: span 6; }
+.tga-2 { grid-column: 8 / span 5;  grid-row: span 6; }
+.tga-3 { grid-column: 1 / span 4;  grid-row: span 5; }
+.tga-4 { grid-column: 5 / span 4;  grid-row: span 5; }
+.tga-5 { grid-column: 9 / span 4;  grid-row: span 5; }
+.tga-6 { grid-column: 1 / span 12; grid-row: span 6; }
+/* Pattern B */
+.tgb-1 { grid-column: 1 / span 5;  grid-row: span 6; }
+.tgb-2 { grid-column: 6 / span 7;  grid-row: span 6; }
+.tgb-3 { grid-column: 1 / span 4;  grid-row: span 5; }
+.tgb-4 { grid-column: 5 / span 4;  grid-row: span 5; }
+.tgb-5 { grid-column: 9 / span 4;  grid-row: span 5; }
+.tgb-6 { grid-column: 1 / span 12; grid-row: span 5; }
+/* Remainder: 1 */
+.tgr-1  { grid-column: 1 / span 12; grid-row: span 5; }
+/* Remainder: 2 */
+.tgr-2a { grid-column: 1 / span 6;  grid-row: span 5; }
+.tgr-2b { grid-column: 7 / span 6;  grid-row: span 5; }
+/* Remainder: 3 */
+.tgr-3a { grid-column: 1 / span 4;  grid-row: span 5; }
+.tgr-3b { grid-column: 5 / span 4;  grid-row: span 5; }
+.tgr-3c { grid-column: 9 / span 4;  grid-row: span 5; }
+/* Remainder: 4 */
+.tgr-4a { grid-column: 1 / span 7;  grid-row: span 5; }
+.tgr-4b { grid-column: 8 / span 5;  grid-row: span 5; }
+.tgr-4c { grid-column: 1 / span 6;  grid-row: span 5; }
+.tgr-4d { grid-column: 7 / span 6;  grid-row: span 5; }
+/* Remainder: 5 */
+.tgr-5a { grid-column: 1 / span 7;  grid-row: span 5; }
+.tgr-5b { grid-column: 8 / span 5;  grid-row: span 5; }
+.tgr-5c { grid-column: 1 / span 4;  grid-row: span 5; }
+.tgr-5d { grid-column: 5 / span 4;  grid-row: span 5; }
+.tgr-5e { grid-column: 9 / span 4;  grid-row: span 5; }
+
+@media (max-width: 960px) {
+  .tg-grid { grid-auto-rows: 60px; gap: 5px; }
+  .tga-1, .tgb-1 { grid-column: 1 / span 12; grid-row: span 5; }
+  .tga-2 { grid-column: 1 / span 6; grid-row: span 5; }
+  .tgb-2 { grid-column: 7 / span 6; grid-row: span 5; }
+  .tga-3, .tgb-3 { grid-column: 1 / span 6; grid-row: span 5; }
+  .tga-4, .tgb-4 { grid-column: 7 / span 6; grid-row: span 5; }
+  .tga-5, .tgb-5 { grid-column: 1 / span 6; grid-row: span 5; }
+  .tga-6, .tgb-6 { grid-column: 1 / span 12; grid-row: span 4; }
+  .tgr-2a, .tgr-3a, .tgr-4a, .tgr-5a { grid-column: 1 / span 6; grid-row: span 5; }
+  .tgr-2b, .tgr-3b, .tgr-4b, .tgr-5b { grid-column: 7 / span 6; grid-row: span 5; }
+  .tgr-3c, .tgr-5c { grid-column: 1 / span 6; grid-row: span 5; }
+  .tgr-4c, .tgr-5d { grid-column: 7 / span 6; grid-row: span 5; }
+  .tgr-4d, .tgr-5e { grid-column: 1 / span 6; grid-row: span 5; }
+  .tgr-1  { grid-column: 1 / span 12; grid-row: span 5; }
 }

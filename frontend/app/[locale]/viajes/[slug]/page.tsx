@@ -4,9 +4,11 @@ import type { Locale } from "@/types/tour";
 import { getTourBySlug, getAllTours } from "@/hooks/useTours";
 import { TourHero } from "@/components/tour/TourHero";
 import { TourNarrative } from "@/components/tour/TourNarrative";
+import { TourGallery } from "@/components/tour/TourGallery";
 import { TourIncludes } from "@/components/tour/TourIncludes";
 import { TourItinerary } from "@/components/tour/TourItinerary";
 import { TourExperience } from "@/components/tour/TourExperience";
+import { TourPreTrip } from "@/components/tour/TourPreTrip";
 import { TourPricing } from "@/components/tour/TourPricing";
 
 interface TourDetailPageProps {
@@ -51,7 +53,10 @@ export default function TourDetailPage({ params }: TourDetailPageProps) {
     "@type": "Product",
     name: tour!.title[locale],
     description: tour!.narrative.short[locale],
-    image: tour!.hero.image,
+    image: [
+      tour!.hero.image,
+      ...(tour!.gallery ?? []).flatMap((g) => (g.src ? [g.src] : [])),
+    ],
     offers: {
       "@type": "Offer",
       priceCurrency: "USD",
@@ -69,9 +74,11 @@ export default function TourDetailPage({ params }: TourDetailPageProps) {
       />
       <TourHero tour={tour!} locale={locale} />
       <TourNarrative tour={tour!} locale={locale} />
+      <TourGallery tour={tour!} locale={locale} />
       <TourIncludes tour={tour!} locale={locale} />
       <TourItinerary tour={tour!} locale={locale} />
       <TourExperience tour={tour!} locale={locale} />
+      <TourPreTrip tour={tour!} locale={locale} />
       <TourPricing tour={tour!} locale={locale} />
     </>
   );
