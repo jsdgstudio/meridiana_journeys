@@ -62,8 +62,14 @@
   },
   "journal": {
     "pageTitle": "Journal",
-    "comingSoon": "Próximamente",
-    "comingSoonText": "Estamos preparando historias que merecen ser contadas con la profundidad que exigen."
+    "nav": "Journal",
+    "headline": "El territorio que estamos leyendo.",
+    "subtitle": "Cinco ensayos. Cinco maneras de entender Colombia antes de recorrerla.",
+    "readMore": "Leer ensayo →",
+    "backToJournal": "← Journal",
+    "relatedTour": "Ver el viaje",
+    "visualNotebook": "Cuaderno visual completo",
+    "minutesRead": "min de lectura"
   },
   "about": {
     "pageTitle": "Nosotros"

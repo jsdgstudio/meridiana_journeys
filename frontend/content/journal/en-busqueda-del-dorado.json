@@ -1,0 +1,134 @@
+{
+  "slug": "en-busqueda-del-dorado",
+  "tourSlug": "en-busqueda-del-dorado",
+  "category": {
+    "es": "Arqueología · Historia colonial",
+    "en": "Archaeology · Colonial History"
+  },
+  "title": {
+    "es": "En Búsqueda del Dorado",
+    "en": "In Search of El Dorado"
+  },
+  "subtitle": {
+    "es": "Del mito muisca al oro que construyó imperios",
+    "en": "From the Muisca myth to the gold that built empires"
+  },
+  "pullQuote": {
+    "es": "El Dorado nunca existió como los españoles lo imaginaron. Pero la obsesión que generó sí existe.",
+    "en": "El Dorado never existed the way the Spanish imagined it. But the obsession it generated does."
+  },
+  "heroImage": {
+    "src": "https://images.unsplash.com/photo-1539020140153-e479b8c22e70",
+    "alt": {
+      "es": "Laguna de Guatavita, origen del mito de El Dorado",
+      "en": "Laguna de Guatavita, birthplace of the El Dorado myth"
+    }
+  },
+  "body": [
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "Los españoles llegaron buscando El Dorado y nunca lo encontraron. Pero el oro que sí encontraron financió un imperio, construyó ciudades que aún custodian esa historia y reconfiguró un continente de una manera de la que todavía no se ha terminado de hablar. Esta ruta traza el camino del metal sagrado desde la cosmogonía Muisca hasta los galeones que zarpaban desde Cartagena hacia la Corona española.",
+        "en": "The Spanish arrived seeking El Dorado and never found it. But the gold they did find financed an empire, built cities that still guard that history, and reconfigured a continent in ways that have yet to be fully reckoned with. This route traces the path of the sacred metal from Muisca cosmogony to the galleons that departed from Cartagena toward the Spanish Crown."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "El ritual mal leído",
+        "en": "The misread ritual"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "Para los Muiscas, el oro no era riqueza. Era ofrenda, vínculo entre mundos, material sagrado que pertenecía al agua y a los dioses, no a los hombres. El ritual del hombre dorado — el cacique que se cubría de polvo de oro y se sumergía en la Laguna de Guatavita como acto de comunión con lo sagrado — fue malinterpretado por los conquistadores como la señal de una ciudad entera construida en metal. Esa malinterpretación movió ejércitos, destruyó civilizaciones y fundó las ciudades que hoy visitamos.",
+        "en": "For the Muisca, gold was not wealth. It was offering, a bridge between worlds, sacred material that belonged to the water and the gods, not to men. The ritual of the golden man — the chieftain who covered himself in gold dust and submerged into Laguna de Guatavita as an act of communion with the sacred — was misread by the conquistadors as evidence of a city built entirely in metal. That misreading moved armies, destroyed civilizations, and founded the cities we visit today."
+      }
+    },
+    {
+      "type": "pullquote",
+      "content": {
+        "es": "El Dorado nunca existió como los españoles lo imaginaron. Pero la obsesión que generó sí existe, está escrita en cada piedra de cada ciudad colonial.",
+        "en": "El Dorado never existed the way the Spanish imagined it. But the obsession it generated does — written into every stone of every colonial city this route crosses."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "Bogotá y Guatavita: donde nació la leyenda",
+        "en": "Bogotá and Guatavita: where the legend was born"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "El viaje empieza en Bogotá, en el Museo del Oro, donde guías especializados en culturas precolombinas explican la cosmogonía Muisca y por qué ese pueblo lanzaba el metal al agua mientras España lo arrancaba de las montañas. Luego Guatavita, la laguna donde ocurrió el ritual que alimentó la fiebre europea durante dos siglos. Y una visita a una colección privada de orfebrería colonial que no está abierta al público, donde el metal cuenta las dos historias simultáneas que siempre ha contado: la del despojo y la del mestizaje que forjó Colombia.",
+        "en": "The journey begins in Bogotá, at the Museo del Oro, where guides specializing in pre-Columbian cultures explain the Muisca cosmogony and why that people cast the metal into water while Spain tore it from the mountains. Then Guatavita, the lagoon where the ritual that fed the European fever for two centuries took place. And a visit to a private colonial goldwork collection not open to the public, where the metal tells the two simultaneous stories it has always told: the one of dispossession, and the one of the mestizaje that forged Colombia."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "El río Magdalena: la arteria del oro",
+        "en": "The Magdalena River: the gold artery"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "El río Magdalena es el segundo capítulo. Fue durante tres siglos la arteria que conectó los Andes con el Caribe, el camino por donde el oro iniciaba su viaje hacia España. La navegación desde Honda, el puerto donde las mulas descargaban el metal que venía de las minas, tiene una densidad histórica que ningún museo puede replicar. Un day trip a una mina activa en Falan pone en perspectiva lo que fue la extracción colonial, con un ingeniero minero explicando la geología del oro colombiano y un historiador narrando los sistemas de explotación y la resistencia indígena que los libros de texto suelen omitir.",
+        "en": "The Magdalena River is the second chapter. For three centuries it was the artery connecting the Andes to the Caribbean, the road along which gold began its journey toward Spain. Navigating from Honda, the port where mules unloaded the metal from the mines, carries a historical density that no museum can replicate. A day trip to an active mine in Falan puts colonial extraction in perspective, with a mining engineer explaining the geology of Colombian gold and a historian narrating the systems of exploitation and indigenous resistance that textbooks tend to omit."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "Mompox: la cápsula del tiempo",
+        "en": "Mompox: the time capsule"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "Mompox es el tercer capítulo y el más extraño. El río cambió de curso y la dejó aislada, y ese aislamiento la conservó como una cápsula del tiempo colonial. Aquí la orfebrería en filigrana se transmite generacionalmente desde el siglo XVII, de maestro a aprendiz, con técnicas que sobrevivieron cuatro siglos sin interrumpirse. Un taller con los maestros orfebres de Mompox no es una demostración turística sino un acceso a una tradición que muy pocos han visto de cerca.",
+        "en": "Mompox is the third chapter, and the strangest. The river changed course and left it isolated, and that isolation preserved it as a colonial time capsule. Here, filigree goldwork has passed from master to apprentice since the seventeenth century, with techniques that survived four centuries uninterrupted. A workshop with Mompox's master goldsmiths is not a tourist demonstration but access to a tradition that very few have witnessed up close."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "Cartagena: el puerto donde terminó el oro",
+        "en": "Cartagena: the port where the gold ended"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "Cartagena cierra la ruta donde siempre terminó el oro. Desde este puerto fortificado partían los galeones cargados hacia la Corona, y las murallas que hoy parecen decorativas fueron durante siglos la defensa de la ciudad más rica del Nuevo Mundo. La gastronomía afrocaribeña que nació aquí cuenta otra historia del mismo metal: la de las personas que fueron traídas a la fuerza para extraerlo y que construyeron una cultura extraordinaria en los márgenes de esa violencia.",
+        "en": "Cartagena closes the route where the gold always ended. From this fortified port the loaded galleons departed for the Crown, and the walls that now seem decorative were for centuries the defense of the richest city in the New World. The Afro-Caribbean gastronomy born here tells another story of the same metal: that of the people brought by force to extract it, who built an extraordinary culture at the margins of that violence."
+      }
+    }
+  ],
+  "visualNotebook": [
+    {
+      "src": "https://images.unsplash.com/photo-1539020140153-e479b8c22e70",
+      "alt": { "es": "Laguna de Guatavita Colombia", "en": "Laguna de Guatavita Colombia" },
+      "caption": { "es": "Laguna de Guatavita · origen del mito", "en": "Laguna de Guatavita · birthplace of the myth" }
+    }
+  ],
+  "seo": {
+    "title": {
+      "es": "En Búsqueda del Dorado — Del Mito Muisca al Oro Colonial | Journal Meridiana",
+      "en": "In Search of El Dorado — From the Muisca Myth to Colonial Gold | Meridiana Journal"
+    },
+    "description": {
+      "es": "El ensayo del Dorado: Guatavita, el río Magdalena, Mompox y Cartagena como capítulos de una obsesión que reconfiguró un continente.",
+      "en": "The El Dorado essay: Guatavita, the Magdalena River, Mompox, and Cartagena as chapters of an obsession that reconfigured a continent."
+    },
+    "keywords": {
+      "es": "el dorado colombia, laguna guatavita muisca, mompox filigrana, historia colonial colombia, museo del oro",
+      "en": "el dorado colombia, laguna guatavita muisca, mompox filigree, colonial history colombia, museo del oro"
+    }
+  }
+}

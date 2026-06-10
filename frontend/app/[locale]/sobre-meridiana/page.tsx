@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/types/tour";
 import { getAboutContent } from "@/hooks/useContent";
-import { Hero } from "@/components/sections/Hero";
+import { AboutHero } from "@/components/sections/AboutHero";
 import { AboutStory } from "@/components/sections/AboutStory";
 import { TeamCards } from "@/components/sections/TeamCards";
 import { CallToAction } from "@/components/sections/CallToAction";
@@ -32,7 +32,7 @@ export default function AboutPage({ params }: AboutPageProps) {
 
   return (
     <>
-      <Hero content={content.hero} locale={locale} leadVariant="body" />
+      <AboutHero content={content.hero} locale={locale} />
       <AboutStory content={content.story} locale={locale} />
       <TeamCards content={content.team} locale={locale} />
       <CallToAction content={content.cta} locale={locale} />

@@ -62,8 +62,14 @@
   },
   "journal": {
     "pageTitle": "Journal",
-    "comingSoon": "Coming soon",
-    "comingSoonText": "We're preparing stories that deserve to be told with the depth they demand."
+    "nav": "Journal",
+    "headline": "The territory we are reading.",
+    "subtitle": "Five essays. Five ways to understand Colombia before travelling through it.",
+    "readMore": "Read essay →",
+    "backToJournal": "← Journal",
+    "relatedTour": "See the journey",
+    "visualNotebook": "Full visual notebook",
+    "minutesRead": "min read"
   },
   "about": {
     "pageTitle": "About"

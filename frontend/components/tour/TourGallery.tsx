@@ -93,7 +93,7 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
 
   if (!tour.gallery || tour.gallery.length === 0) return null;
 
-  const items = tour.gallery;
+  const items = tour.gallery.slice(0, 5);
   const copy = GALLERY_COPY[tour.id] ?? {
     label: { es: "cuaderno visual", en: "visual notebook" },
     headlinePre: { es: "El territorio que estamos ", en: "The territory we are " },

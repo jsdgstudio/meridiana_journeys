@@ -1,5 +1,6 @@
 import type { Locale } from "@/types/tour";
 import { TravelCards } from "@/components/sections/TravelCards";
+import { JourneysHero } from "@/components/sections/JourneysHero";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { getHomepageContent } from "@/hooks/useContent";
@@ -43,62 +44,17 @@ export default function JourneysPage({ params }: JourneysPageProps) {
         className="relative"
         style={{
           background: [
-            /* destello: burst lumínico desde arriba-centro */
-            "radial-gradient(ellipse 78% 38% at 52% 2%, oklch(80% 0.076 64 / 0.94) 0%, oklch(65% 0.072 66 / 0.65) 26%, oklch(56% 0.066 68 / 0) 54%)",
-            /* glint: núcleo marfil en el epicentro */
-            "radial-gradient(ellipse 28% 16% at 54% 0%, oklch(91% 0.014 52 / 0.44) 0%, oklch(91% 0.014 52 / 0) 100%)",
-            /* base tumbaga más cálida y presente — oscurece tarde */
-            "linear-gradient(180deg, oklch(38% 0.058 67) 0%, oklch(32% 0.052 68) 20%, oklch(22% 0.038 70) 42%, oklch(13% 0.020 74) 68%, oklch(8% 0.010 76) 100%)",
+            /* burst: croma bajada, glint ampliado amortigua el dorado */
+            "radial-gradient(ellipse 80% 44% at 52% 1%, oklch(80% 0.10 63 / 0.82) 0%, oklch(66% 0.09 65 / 0.45) 32%, oklch(56% 0.06 67 / 0) 56%)",
+            /* glint: más grande y más opaco — lava el epicentro con luz */
+            "radial-gradient(ellipse 52% 30% at 54% 0%, oklch(93% 0.03 58 / 0.62) 0%, oklch(90% 0.03 58 / 0.18) 55%, oklch(90% 0.03 58 / 0) 100%)",
+            /* base — tumbaga apagado, oscurece con gracia */
+            "linear-gradient(180deg, oklch(45% 0.09 67) 0%, oklch(38% 0.075 68) 20%, oklch(26% 0.055 69) 42%, oklch(14% 0.024 72) 66%, oklch(9% 0.010 74) 100%)",
           ].join(", "),
         }}
       >
-        {/* Encabezado de página */}
-        <section className="relative w-full pt-36 pb-10" aria-label={ui.tours.pageTitle}>
-          <Container>
-            <div className="flex items-center gap-3 mb-6">
-              <span
-                aria-hidden="true"
-                style={{
-                  display: "inline-block",
-                  width: "28px",
-                  height: "1px",
-                  background: "rgba(231,213,188,0.50)",
-                  flexShrink: 0,
-                }}
-              />
-              <p
-                style={{
-                  fontSize: "11px",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.28em",
-                  color: "rgba(231,213,188,0.60)",
-                  fontFamily: "var(--font-sans)",
-                }}
-              >
-                MERIDIANA · COLOMBIA
-              </p>
-            </div>
-
-            <h1
-              className="font-display font-light mb-6 max-w-xl"
-              style={{
-                fontSize: "clamp(3rem, 7vw, 5rem)",
-                lineHeight: 0.92,
-                letterSpacing: "-0.02em",
-                color: "var(--marfil)",
-              }}
-            >
-              {ui.tours.pageTitle}
-            </h1>
-
-            <p
-              className="font-sans text-base leading-relaxed max-w-lg"
-              style={{ color: "rgba(231,213,188,0.55)" }}
-            >
-              {pageIntro[locale]}
-            </p>
-          </Container>
-        </section>
+        {/* Hero cinematográfico con línea animada en marfil */}
+        <JourneysHero locale={locale} pageIntro={pageIntro} />
 
         {/* Cards en modo seamless: fondo transparente, sin header interno */}
         <TravelCards content={travelCards} locale={locale} theme="dark" seamless />

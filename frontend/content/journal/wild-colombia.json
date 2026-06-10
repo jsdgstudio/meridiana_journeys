@@ -1,0 +1,134 @@
+{
+  "slug": "wild-colombia",
+  "tourSlug": "wild-colombia",
+  "category": {
+    "es": "Naturaleza · Expedición",
+    "en": "Nature · Expedition"
+  },
+  "title": {
+    "es": "Wild Colombia",
+    "en": "Wild Colombia"
+  },
+  "subtitle": {
+    "es": "Cinco ecosistemas del segundo país más biodiverso del planeta",
+    "en": "Five ecosystems of the world's second most biodiverse country"
+  },
+  "pullQuote": {
+    "es": "Colombia es el único país del planeta donde en dos semanas se puede caminar entre nieve, páramo, bosque de niebla, sabana, selva tropical y playa.",
+    "en": "Colombia is the only country on the planet where in two weeks you can walk through snow, páramo, cloud forest, savannah, rainforest, and beach."
+  },
+  "heroImage": {
+    "src": "https://images.unsplash.com/photo-1578895101408-1a36b834405b",
+    "alt": {
+      "es": "Selva tropical colombiana, biodiversidad extraordinaria",
+      "en": "Colombian tropical forest, extraordinary biodiversity"
+    }
+  },
+  "body": [
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "Colombia es el único país del planeta donde en dos semanas se puede caminar entre nieve, páramo, bosque de niebla, sabana, selva tropical y playa. Eso no es una descripción turística. Es una anomalía geográfica que tiene una explicación: tres cordilleras que dividen el territorio en ecosistemas radicalmente distintos, dos océanos que lo bordean, y una posición en el trópico que convierte cada gradiente de altitud en un mundo nuevo. Y cada ecosistema tiene su propia gente, con su propio idioma, su propia memoria y su propia manera de entender el territorio que habita.",
+        "en": "Colombia is the only country on the planet where in two weeks you can walk through snow, páramo, cloud forest, savannah, rainforest, and beach. That is not a tourist description. It is a geographical anomaly with an explanation: three mountain ranges that divide the territory into radically different ecosystems, two oceans bordering it, and a position in the tropics that turns every gradient of altitude into a new world. And every ecosystem has its own people, with their own language, their own memory, and their own way of understanding the territory they inhabit."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "Los Andes: Chingaza y los frailejones",
+        "en": "The Andes: Chingaza and the frailejones"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "El viaje empieza en los Andes, en Chingaza, el páramo donde los frailejones milenarios florecen en agosto y las lagunas glaciales a cuatro mil metros alimentan los ríos de millones de personas. Guías naturalistas explican por qué Colombia tiene más especies de aves que Europa y Norteamérica juntas. Ciento cincuenta y siete especies de colibríes viven en reservas privadas de esta región. Al amanecer, con la niebla todavía entre los árboles, eso se convierte en algo difícil de procesar.",
+        "en": "The journey begins in the Andes, in Chingaza, the páramo where millenary frailejones bloom in August and the glacial lagoons at four thousand metres feed the rivers of millions of people. Naturalist guides explain why Colombia has more bird species than Europe and North America combined. One hundred and fifty-seven species of hummingbirds live in private reserves in this region. At dawn, with the mist still between the trees, that becomes something difficult to process."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "La Orinoquía: Caño Cristales y el joropo",
+        "en": "The Orinoquía: Caño Cristales and the joropo"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "La Orinoquía es otro mundo. Caño Cristales florece entre julio y noviembre cuando la macarenia clavigera tiñe el lecho del río de rojo, amarillo, verde, azul y negro al mismo tiempo, un fenómeno que no ocurre en ningún otro lugar del planeta. En Hato La Aurora los safaris se hacen a caballo entre anacondas, caimanes y chigüiros, con trescientas especies de aves sobre la cabeza y un llanero que narra el territorio desde la música, porque el joropo no es folclor sino geografía cantada.",
+        "en": "The Orinoquía is another world. Caño Cristales blooms between July and November when the macarenia clavigera tints the riverbed red, yellow, green, blue, and black simultaneously, a phenomenon that occurs nowhere else on the planet. At Hato La Aurora, safaris are conducted on horseback among anacondas, caimans, and capybaras, with three hundred species of birds overhead and a llanero who narrates the territory through music, because the joropo is not folklore but sung geography."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "La Amazonía: ríos de aguas negras y los Tikuna",
+        "en": "The Amazon: black-water rivers and the Tikuna"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "En la Amazonía, desde Canaloa, la expedición navega ríos de aguas negras donde los delfines rosados emergen sin aviso. Las comunidades indígenas Tikuna enseñan una farmacopea viva, plantas medicinales que la ciencia apenas empieza a estudiar y que ese conocimiento lleva siglos sistematizando con una precisión que ningún laboratorio ha logrado replicar. El canopy nocturno revela una selva completamente distinta a la del día, con sonidos que no tienen nombre en ningún idioma distinto al de quienes siempre vivieron ahí.",
+        "en": "In the Amazon, from Canaloa, the expedition navigates black-water rivers where pink dolphins surface without warning. The Tikuna indigenous communities teach a living pharmacopoeia — medicinal plants that science is only beginning to study, which that knowledge has been systematizing for centuries with a precision no laboratory has managed to replicate. The nocturnal canopy reveals a forest completely different from the daytime one, with sounds that have no name in any language other than that of those who always lived there."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "El Pacífico: ballenas y comunidades afro",
+        "en": "The Pacific: whales and Afro-Colombian communities"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "El Pacífico colombiano es la costa más biodiversa y menos visitada del país. En Nuquí, entre julio y octubre, las ballenas jorobadas llegan desde la Antártida a parir en aguas tibias, y encontrarse con una madre y su cría desde una embarcación pequeña es de esas experiencias que reordenan las prioridades de manera permanente. En tierra, las comunidades afrocolombianas del Chocó llevan siglos viviendo donde la selva húmeda se encuentra con el océano, construyendo una cultura de música, espiritualidad y gastronomía que es tan extraordinaria como los animales que las rodean.",
+        "en": "The Colombian Pacific is the most biodiverse and least visited coast in the country. In Nuquí, between July and October, humpback whales arrive from Antarctica to give birth in warm waters, and encountering a mother and her calf from a small boat is one of those experiences that permanently reorders priorities. On land, the Afro-Colombian communities of Chocó have spent centuries living where the rainforest meets the ocean, building a culture of music, spirituality, and gastronomy as extraordinary as the animals that surround them."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "La Sierra Nevada: los guardianes del mundo",
+        "en": "The Sierra Nevada: guardians of the world"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "El viaje cierra en la Sierra Nevada de Santa Marta, la cordillera costera más alta del mundo, que sube del mar a más de cinco mil setecientos metros en cuarenta y dos kilómetros. Allí las comunidades Kogui y Arhuaco custodian una cosmovisión que lleva más de dos mil años sin interrumpirse, donde la salud de la montaña y la salud del mundo son la misma cosa.",
+        "en": "The journey closes at the Sierra Nevada de Santa Marta, the tallest coastal mountain range in the world, rising from sea level to over five thousand seven hundred metres in forty-two kilometres. There the Kogui and Arhuaco communities guard a worldview that has continued uninterrupted for more than two thousand years, where the health of the mountain and the health of the world are the same thing."
+      }
+    },
+    {
+      "type": "pullquote",
+      "content": {
+        "es": "Una conversación con un mamo Arhuaco no es una actividad del itinerario. Es un acceso a una manera de entender la relación entre los seres humanos y el territorio que la modernidad lleva siglos intentando recuperar.",
+        "en": "A conversation with an Arhuaco mamo is not an itinerary activity. It is access to a way of understanding the relationship between human beings and the territory that modernity has spent centuries trying to recover."
+      }
+    }
+  ],
+  "visualNotebook": [
+    {
+      "src": "https://images.unsplash.com/photo-1578895101408-1a36b834405b",
+      "alt": { "es": "Selva tropical Colombia biodiversidad", "en": "Colombian tropical forest biodiversity" },
+      "caption": { "es": "selva tropical · Colombia", "en": "tropical forest · Colombia" }
+    }
+  ],
+  "seo": {
+    "title": {
+      "es": "Wild Colombia — Cinco Ecosistemas del País Más Biodiverso | Journal Meridiana",
+      "en": "Wild Colombia — Five Ecosystems of the Most Biodiverse Country | Meridiana Journal"
+    },
+    "description": {
+      "es": "El ensayo de la Colombia natural: Chingaza, Caño Cristales, la Amazonía Tikuna, el Pacífico afrocolombiano y la Sierra Nevada Arhuaca como cinco civilizaciones vivas.",
+      "en": "The essay of wild Colombia: Chingaza, Caño Cristales, the Tikuna Amazon, the Afro-Colombian Pacific, and the Arhuaco Sierra Nevada as five living civilizations."
+    },
+    "keywords": {
+      "es": "wild colombia naturaleza, caño cristales orinoquía, ballenas nuquí pacífico, arhuaco sierra nevada, biodiversidad colombia",
+      "en": "wild colombia nature, caño cristales orinoquia, humpback whales nuquí pacific, arhuaco sierra nevada, colombia biodiversity"
+    }
+  }
+}

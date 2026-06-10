@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/types/tour";
 import { getContactContent } from "@/hooks/useContent";
+import { ContactHero } from "@/components/sections/ContactHero";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Container } from "@/components/ui/Container";
-import { Heading } from "@/components/ui/Heading";
 import { ContactForm } from "@/components/sections/ContactForm";
 
 interface ContactPageProps {
@@ -32,23 +32,11 @@ export default function ContactPage({ params }: ContactPageProps) {
 
   return (
     <>
-      {/* Page header */}
-      <SectionWrapper theme="dark" className="pt-36 pb-20">
-        <Container size="narrow">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-6 h-px bg-tumbaga" />
-            <span className="label text-xs tracking-widest uppercase text-tumbaga">
-              Meridiana
-            </span>
-          </div>
-          <Heading as="h1" className="text-marfil mb-6">
-            {content.headline[locale]}
-          </Heading>
-          <p className="font-sans text-base leading-relaxed text-marfil/55 max-w-md">
-            {content.description[locale]}
-          </p>
-        </Container>
-      </SectionWrapper>
+      <ContactHero
+        headline={content.headline}
+        description={content.description}
+        locale={locale}
+      />
 
       {/* Form + contact info */}
       <SectionWrapper theme="page">

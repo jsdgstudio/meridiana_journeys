@@ -1,0 +1,195 @@
+{
+  "slug": "classic-colombia",
+  "tourSlug": "classic-colombia",
+  "category": {
+    "es": "Historia · Andes · Caribe",
+    "en": "History · Andes · Caribbean"
+  },
+  "title": {
+    "es": "Classic Colombia",
+    "en": "Classic Colombia"
+  },
+  "subtitle": {
+    "es": "De los Andes al Caribe en diez días",
+    "en": "From the Andes to the Caribbean in ten days"
+  },
+  "pullQuote": {
+    "es": "Colombia se comprende en actos.",
+    "en": "Colombia is understood in acts."
+  },
+  "heroImage": {
+    "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-paisaje-editorial-flores.jpg",
+    "alt": {
+      "es": "Valle del Cocora, paisaje editorial con flores y palmas de cera",
+      "en": "Valle del Cocora editorial landscape with flowers and wax palms"
+    }
+  },
+  "body": [
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "Colombia tiene una diagonal cultural que va de los Andes al Caribe y que en diez días se puede recorrer entera. Empieza en Bogotá, a dos mil seiscientos metros de altitud, en una ciudad que lleva cinco siglos acumulando capas de historia. Termina en Cartagena, al nivel del mar, en un puerto que durante tres siglos fue la puerta de entrada y salida de todo lo que España quería de este continente, incluyendo las personas que trajo a la fuerza desde África y que construyeron aquí una cultura extraordinaria con los materiales que les dejaron.",
+        "en": "Colombia has a cultural diagonal running from the Andes to the Caribbean, coverable in ten days. It begins in Bogotá, at two thousand six hundred metres of altitude, in a city that has spent five centuries accumulating layers of history. It ends in Cartagena, at sea level, in a port that for three centuries was the gateway for everything Spain wanted from this continent — including the people it brought by force from Africa, who built here an extraordinary culture from whatever was left to them."
+      }
+    },
+    {
+      "type": "imagebreak",
+      "imageIndex": 0,
+      "imageCaption": {
+        "es": "Valle del Cocora, Eje Cafetero.",
+        "en": "Valle del Cocora, Eje Cafetero."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "Bogotá: el archivo andino",
+        "en": "Bogotá: the Andean archive"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "Bogotá abre el itinerario con el Museo del Oro y La Candelaria, Fragmentos, el Museo Botero, el Teatro Colón y Monserrate al atardecer. La gastronomía andina cuenta historias de mestizaje en espacios que son parte de la ciudad.",
+        "en": "Bogotá opens the itinerary with the Museo del Oro and La Candelaria, Fragmentos, the Museo Botero, the Teatro Colón, and Monserrate at dusk. The Andean gastronomy tells stories of mestizaje in spaces that are the city itself."
+      }
+    },
+    {
+      "type": "imagebreak",
+      "imageIndex": 1,
+      "imageCaption": {
+        "es": "Salento, corazón del Eje Cafetero.",
+        "en": "Salento, heart of the Eje Cafetero."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "Medellín: la ciudad que se reescribió",
+        "en": "Medellín: the city that rewrote itself"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "Medellín es el capítulo más sorprendente. La Comuna 13, narrada por guías comunitarios que vivieron desde adentro el paso de la violencia al arte urbano, es una de esas experiencias que reordenan la manera de entender qué puede hacer una ciudad con su propia historia cuando decide no ignorarla. El Museo de Antioquia, la Plaza de Botero y el almuerzo con una chef local en su espacio comunitario completan una ciudad que tiene mucho más que decir de lo que su fama previa sugería.",
+        "en": "Medellín is the most surprising chapter. La Comuna 13, narrated by community guides who lived from the inside the passage from violence to urban art, is one of those experiences that reorders the way you understand what a city can do with its own history when it decides not to ignore it. The Museo de Antioquia, the Plaza de Botero, and lunch with a local chef in her community space complete a city that has far more to say than its prior reputation suggested."
+      }
+    },
+    {
+      "type": "pullquote",
+      "content": {
+        "es": "La Comuna 13, narrada por guías comunitarios que vivieron desde adentro el paso de la violencia al arte urbano.",
+        "en": "La Comuna 13, narrated by community guides who lived from the inside the passage from violence to urban art."
+      }
+    },
+    {
+      "type": "imagebreak",
+      "imageIndex": 2,
+      "imageCaption": {
+        "es": "Esculturas de Botero, plaza de Medellín.",
+        "en": "Botero sculptures, Medellín plaza."
+      }
+    },
+    {
+      "type": "heading",
+      "content": {
+        "es": "Cartagena: el cierre caribeño",
+        "en": "Cartagena: the Caribbean closing"
+      }
+    },
+    {
+      "type": "paragraph",
+      "content": {
+        "es": "Cartagena cierra el viaje con cinco siglos de historia visible en cada piedra. El Castillo de San Felipe, el Museo de la Inquisición, el Museo de Arte Moderno. Las catedrales barrocas y las casas patrimoniales del centro amurallado. Y Getsemaní, el barrio que resistió la gentrificación con champeta y murales y que sigue siendo el lugar más vivo y más honesto de la ciudad. Un almuerzo privado con matrona caribeña que comparte recetas de herencia afrodescendiente es una de esas experiencias que no están en ningún restaurante, porque lo que se transmite ahí no es solo una receta sino una manera de entender de dónde viene lo que uno come.",
+        "en": "Cartagena closes the journey with five centuries of history visible in every stone. Castillo de San Felipe, the Museo de la Inquisición, the Museo de Arte Moderno. The baroque cathedrals and heritage houses of the walled center. And Getsemaní, the neighborhood that resisted gentrification with champeta and murals and remains the most alive and honest place in the city. A private lunch with a Caribbean matrona sharing recipes of Afro-descendant heritage is one of those experiences that exist in no restaurant, because what is transmitted there is not only a recipe but a way of understanding where what we eat comes from."
+      }
+    }
+  ],
+  "visualNotebook": [
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-paisaje-editorial-flores.jpg",
+      "alt": { "es": "Valle Cocora paisaje editorial flores", "en": "Valle Cocora editorial landscape flowers" },
+      "caption": { "es": "Valle del Cocora · Eje Cafetero", "en": "Valle del Cocora · Eje Cafetero" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-salento-mirador-calle-real-eje-cafetero.jpg",
+      "alt": { "es": "Salento mirador calle real Eje Cafetero", "en": "Salento viewpoint Calle Real Eje Cafetero" },
+      "caption": { "es": "calle real · Salento", "en": "Calle Real · Salento" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-plaza-botero-esculturas.jpg",
+      "alt": { "es": "Plaza Botero esculturas Medellín", "en": "Plaza Botero sculptures Medellín" },
+      "caption": { "es": "Plaza Botero · Medellín", "en": "Plaza Botero · Medellín" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-comuna-13-graffiti-murales-motos.jpg",
+      "alt": { "es": "Comuna 13 graffiti murales Medellín", "en": "Comuna 13 graffiti murals Medellín" },
+      "caption": { "es": "murales · Comuna 13 · Medellín", "en": "murals · Comuna 13 · Medellín" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-comuna-13-calle-vida-urbana.jpg",
+      "alt": { "es": "Comuna 13 calle vida urbana Medellín", "en": "Comuna 13 street urban life Medellín" },
+      "caption": { "es": "vida urbana · Comuna 13", "en": "urban life · Comuna 13" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-comuna-13-casas-laderas.jpg",
+      "alt": { "es": "Casas laderas Comuna 13 Medellín", "en": "Hillside houses Comuna 13 Medellín" },
+      "caption": { "es": "las laderas · Comuna 13", "en": "the hillside · Comuna 13" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-jardin-botanico-orquideorama.jpg",
+      "alt": { "es": "Jardín Botánico orquideorama Medellín", "en": "Botanical Garden orchid dome Medellín" },
+      "caption": { "es": "Orquideorama · Jardín Botánico", "en": "Orchid dome · Botanical Garden" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-palacio-cultura-arquitectura-gotica.jpg",
+      "alt": { "es": "Palacio de la Cultura arquitectura gótica Medellín", "en": "Palacio de la Cultura gothic architecture Medellín" },
+      "caption": { "es": "Palacio de la Cultura · Medellín", "en": "Palacio de la Cultura · Medellín" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-salento-arquitectura-colonias-balcones.jpg",
+      "alt": { "es": "Salento arquitectura colonial balcones", "en": "Salento colonial architecture balconies" },
+      "caption": { "es": "arquitectura colonial · Salento", "en": "colonial architecture · Salento" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-quindio-valle-cocora-palmas-de-cera.jpg",
+      "alt": { "es": "Valle Cocora Quindío palmas de cera", "en": "Valle Cocora Quindío wax palms" },
+      "caption": { "es": "palmas de cera · Valle del Cocora", "en": "wax palms · Valle del Cocora" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-colina-palmeras-cera.jpg",
+      "alt": { "es": "Colina palmas de cera Valle del Cocora", "en": "Wax palm hill Valle del Cocora" },
+      "caption": { "es": "colina de palmas · Valle del Cocora", "en": "palm hill · Valle del Cocora" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-paisaje-montanas-neblina.jpg",
+      "alt": { "es": "Valle Cocora paisaje montañas neblina", "en": "Valle Cocora mountain mist landscape" },
+      "caption": { "es": "neblina · Valle del Cocora", "en": "mountain mist · Valle del Cocora" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-valle-cocora-sendero-caminata.jpg",
+      "alt": { "es": "Sendero caminata Valle del Cocora", "en": "Hiking trail Valle del Cocora" },
+      "caption": { "es": "el sendero · Valle del Cocora", "en": "the trail · Valle del Cocora" }
+    },
+    {
+      "src": "/images/FOTOS_CARDS_VIAJES/classic-colombia/classic-colombia-medellin-comuna-13-cancha-deportes.jpg",
+      "alt": { "es": "Cancha deportes Comuna 13 Medellín", "en": "Sports court Comuna 13 Medellín" },
+      "caption": { "es": "la cancha · Comuna 13", "en": "the court · Comuna 13" }
+    }
+  ],
+  "seo": {
+    "title": {
+      "es": "Classic Colombia — De los Andes al Caribe | Journal Meridiana",
+      "en": "Classic Colombia — From the Andes to the Caribbean | Meridiana Journal"
+    },
+    "description": {
+      "es": "El ensayo literario de Colombia: Bogotá, Medellín y Cartagena como tres capítulos de una diagonal cultural que va de los Andes al Caribe.",
+      "en": "The literary essay of Colombia: Bogotá, Medellín, and Cartagena as three chapters of a cultural diagonal running from the Andes to the Caribbean."
+    },
+    "keywords": {
+      "es": "viaje cultural colombia, bogotá medellín cartagena, comuna 13, valle del cocora, eje cafetero",
+      "en": "cultural travel colombia, bogotá medellín cartagena, comuna 13, valle del cocora, coffee region"
+    }
+  }
+}
