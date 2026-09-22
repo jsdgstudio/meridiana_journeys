@@ -6,6 +6,12 @@
     "about": "Sobre Meridiana",
     "contact": "Contacto"
   },
+  "notFound": {
+    "title": "Esta página no existe",
+    "description": "La dirección que buscas no corresponde a ningún contenido de Meridiana. Puede que haya cambiado o que nunca haya existido.",
+    "home": "Volver al inicio",
+    "journeys": "Ver viajes"
+  },
   "hero": {
     "scrollIndicator": "Descubre más"
   },

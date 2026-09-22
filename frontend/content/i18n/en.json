@@ -6,6 +6,12 @@
     "about": "About Meridiana",
     "contact": "Contact"
   },
+  "notFound": {
+    "title": "This page does not exist",
+    "description": "The address you entered does not lead to any Meridiana content. It may have moved, or it may never have existed.",
+    "home": "Back to home",
+    "journeys": "View journeys"
+  },
   "hero": {
     "scrollIndicator": "Discover more"
   },
