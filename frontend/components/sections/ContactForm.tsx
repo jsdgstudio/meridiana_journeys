@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import type { ContactContent } from "@/types/content";
 import type { Locale } from "@/types/tour";
+import esStrings from "@/content/i18n/es.json";
+import enStrings from "@/content/i18n/en.json";
 
 interface ContactFormProps {
   content: ContactContent;
@@ -32,13 +34,6 @@ const labels = {
   messagePlaceholder: {
     es: "Cuéntanos lo que estás buscando, cuántas personas viajan, cualquier contexto que nos ayude a entender tu visión.",
     en: "Tell us what you're looking for, how many people are travelling, any context that helps us understand your vision.",
-  },
-  submit:      { es: "Enviar consulta", en: "Send inquiry" },
-  submitting:  { es: "Enviando…",       en: "Sending…"     },
-  successTitle:{ es: "Mensaje recibido", en: "Message received" },
-  successBody: {
-    es: "Nos pondremos en contacto contigo en menos de 48 horas. Mientras tanto, si quieres explorar más, los itinerarios están esperando.",
-    en: "We'll be in touch within 48 hours. In the meantime, the itineraries are waiting if you'd like to keep exploring.",
   },
   errors: {
     nameRequired:    { es: "El nombre es obligatorio",  en: "Name is required"    },
@@ -92,13 +87,25 @@ export function ContactForm({ content, locale }: ContactFormProps) {
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
-  const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [draftReady, setDraftReady] = useState(false);
+  const copy = locale === "en" ? enStrings.contact : esStrings.contact;
+  const emailBody = [
+    copy.mailIntro,
+    "",
+    `${labels.name[locale]}: ${data.name.trim()}`,
+    `${labels.country[locale]}: ${data.country.trim()}`,
+    `${labels.email[locale]}: ${data.email.trim()}`,
+    "",
+    `${labels.message[locale]}:\n${data.message.trim()}`,
+  ].join("\n");
+  const emailHref = `mailto:${content.email}?subject=${encodeURIComponent(copy.mailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
     const { name, value } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
+    setDraftReady(false);
     if (touched[name as keyof FormData]) {
       const newErrors = validate({ ...data, [name]: value }, locale);
       setErrors((prev) => ({ ...prev, [name]: newErrors[name as keyof FormErrors] }));
@@ -120,39 +127,19 @@ export function ContactForm({ content, locale }: ContactFormProps) {
       setErrors(newErrors);
       return;
     }
-    setStatus("submitting");
-    // TODO: Connect to Resend API
-    setTimeout(() => setStatus("success"), 800);
+    setErrors({});
+    setDraftReady(true);
   }
 
   return (
-    <AnimatePresence mode="wait">
-      {status === "success" ? (
-        <motion.div
-          key="success"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-          className="py-12 space-y-6"
-        >
-          <div className="w-8 h-px bg-tumbaga" />
-          <h3 className="font-display text-2xl font-light text-negro">
-            {labels.successTitle[locale]}
-          </h3>
-          <p className="font-sans text-sm leading-relaxed text-negro/60 max-w-md">
-            {labels.successBody[locale]}
-          </p>
-        </motion.div>
-      ) : (
-        <motion.form
-          key="form"
-          onSubmit={handleSubmit}
-          noValidate
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="space-y-7"
-        >
+    <motion.form
+      onSubmit={handleSubmit}
+      noValidate
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="space-y-7"
+    >
           {/* Name + Country row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <Field id="field-name" label={labels.name[locale]} error={errors.name}>
@@ -214,26 +201,47 @@ export function ContactForm({ content, locale }: ContactFormProps) {
             />
           </Field>
 
-          {/* Submit */}
+          <p className="font-sans text-xs text-negro/60 leading-relaxed" id="contact-delivery-note">
+            {copy.deliveryNotice}
+          </p>
+
+          {/* Prepare an email draft; the visitor sends it in their own email app. */}
           <div className="pt-2">
             <Button
               type="submit"
               variant="primary"
               size="lg"
-              disabled={status === "submitting"}
             >
-              {status === "submitting"
-                ? labels.submitting[locale]
-                : labels.submit[locale]}
+              {copy.prepareEmail}
             </Button>
           </div>
+
+          {draftReady && (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="border-l border-tumbaga pl-5 space-y-4"
+              role="status"
+            >
+              <p className="font-sans text-sm text-negro/70 leading-relaxed">
+                {copy.readyNotice}
+              </p>
+              <a
+                href={emailHref}
+                className="inline-flex items-center border border-tumbaga px-6 py-3 font-sans text-sm uppercase tracking-widest text-negro hover:bg-tumbaga hover:text-marfil focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tumbaga"
+              >
+                {copy.openEmail}
+              </a>
+              <p className="font-sans text-xs text-negro/60 leading-relaxed">
+                {copy.manualEmail} {content.email}
+              </p>
+            </motion.div>
+          )}
 
           {/* Response time note */}
           <p className="font-sans text-xs text-negro/35 tracking-wide">
             {content.responseTime[locale]}
           </p>
-        </motion.form>
-      )}
-    </AnimatePresence>
+    </motion.form>
   );
 }

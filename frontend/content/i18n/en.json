@@ -62,8 +62,13 @@
     "message": "Message",
     "selectJourney": "Select a journey",
     "customJourney": "Custom journey",
-    "successTitle": "Message sent",
-    "successMessage": "We'll get back to you within 48 hours.",
+    "prepareEmail": "Prepare email",
+    "openEmail": "Open email to send",
+    "deliveryNotice": "This form only prepares a draft. It does not send data from the website: you will need to review and send the message from your email app.",
+    "readyNotice": "Your draft is ready. Open it, review it, and send it from your email app so it reaches Meridiana.",
+    "manualEmail": "If your email app does not open, write directly to",
+    "mailSubject": "Journey inquiry — Meridiana",
+    "mailIntro": "Hello, Meridiana. I would like to discuss a cultural journey.",
     "responseTime": "We respond within 48 hours"
   },
   "journal": {

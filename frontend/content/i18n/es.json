@@ -62,8 +62,13 @@
     "message": "Mensaje",
     "selectJourney": "Selecciona un viaje",
     "customJourney": "Viaje personalizado",
-    "successTitle": "Mensaje enviado",
-    "successMessage": "Te responderemos en un plazo de 48 horas.",
+    "prepareEmail": "Preparar correo",
+    "openEmail": "Abrir correo para enviar",
+    "deliveryNotice": "Este formulario solo prepara un borrador. No envía datos desde la web: tendrás que revisar y enviar el mensaje desde tu aplicación de correo.",
+    "readyNotice": "El borrador está listo. Ábrelo, revísalo y envíalo desde tu correo para que llegue a Meridiana.",
+    "manualEmail": "Si no se abre tu correo, escribe directamente a",
+    "mailSubject": "Consulta de viaje — Meridiana",
+    "mailIntro": "Hola, Meridiana. Quisiera conversar sobre un viaje cultural.",
     "responseTime": "Respondemos en menos de 48 horas"
   },
   "journal": {
