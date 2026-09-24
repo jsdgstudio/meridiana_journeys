@@ -198,30 +198,30 @@
           "en": "Discover"
         },
         "description": {
-          "es": "Navega el catálogo de viajes. Cada uno está documentado con la profundidad que merece: la historia detrás del destino, las experiencias que lo definen, el tipo de viajero para quien fue diseñado.",
-          "en": "Browse the journey catalog. Each one is documented with the depth it deserves: the story behind the destination, the experiences that define it, the type of traveler it was designed for."
+          "es": "Nuestros viajes nacen de una propuesta curatorial responsable y auténtica. Explora nuestro catálogo de viajes y conoce los detalles detrás de la historia de cada destino.",
+          "en": "Our journeys are born from a responsible and authentic curatorial approach. Explore our catalog of journeys and learn the details behind each destination's story."
         }
       },
       {
         "number": 2,
         "title": {
-          "es": "Elige",
-          "en": "Choose"
+          "es": "Decide",
+          "en": "Decide"
         },
         "description": {
-          "es": "Elige el viaje que más te interese y cuéntanos qué buscas. Conversaremos contigo para pensar una ruta a tu medida.",
-          "en": "Choose the journey that interests you most and tell us what you are looking for. We will talk with you about shaping a route around you."
+          "es": "Escoge cual de los itinerarios resuena contigo o escríbenos para desarrollar una experiencia curada a tu medida.",
+          "en": "Choose the itinerary that resonates with you, or write to us to develop a curated experience tailored to you."
         }
       },
       {
         "number": 3,
         "title": {
-          "es": "Vive",
-          "en": "Experience"
+          "es": "Viaja",
+          "en": "Travel"
         },
         "description": {
-          "es": "El día del viaje, todo está listo. Lo que no está en el itinerario es la conversación que tendrás con el ceramista que lleva cuarenta años estudiando los patrones precolombinos, o el silencio exacto de las seis de la mañana en la laguna.",
-          "en": "On the day of travel, everything is ready. What's not on the itinerary is the conversation you'll have with the ceramist who's spent forty years studying pre-Columbian patterns, or the exact silence of six in the morning at the lagoon."
+          "es": "Construye tu propio relato de Colombia a partir de una interacción real con las comunidades, sus expresiones culturales, sus saberes ancestrales y su diversidad de sabores.",
+          "en": "Build your own story of Colombia through real interaction with its communities, their cultural expressions, ancestral knowledge, and diversity of flavors."
         }
       }
     ]

@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-24T19:30:00-05:00",
+  "updatedAt": "2026-09-24T19:55:00-05:00",
   "milestone": "Correcciones del feedback del cliente (documento 08/09/2026)",
   "current": {
-    "id": "MER-026",
-    "title": "Textos de Descubre / Decide / Viaja en la Home",
-    "detail": "Aplicando los tres textos literales del documento de feedback en español y preparando la versión en inglés para su revisión."
+    "id": "MER-027",
+    "title": "Convertir los pasos en cajas animadas",
+    "detail": "Diseñando las tres cajas de Descubre, Decide y Viaja con animación y tipografía más grande, respetando reduced motion."
   },
   "tasks": [
     { "id": "MER-001", "area": "General", "title": "Página 404 visible en español e inglés", "status": "done", "date": "2026-09-22" },
@@ -16,8 +16,8 @@
     { "id": "MER-021", "area": "Navegación", "title": "Menú de escritorio más legible (14 px)", "status": "done", "date": "2026-09-24" },
     { "id": "MER-024", "area": "Home", "title": "Nuevo texto de introducción con mayor escala y botón destacado", "status": "done", "date": "2026-09-24" },
     { "id": "MER-025", "area": "Home", "title": "Retirar «Meridiana · Curaduría cultural» y el «Meridiana» con punto", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-026", "area": "Home", "title": "Textos literales de Descubre / Decide / Viaja", "status": "in_progress" },
-    { "id": "MER-027", "area": "Home", "title": "Los tres pasos como cajas animadas con texto más grande", "status": "todo" },
+    { "id": "MER-026", "area": "Home", "title": "Textos literales de Descubre / Decide / Viaja", "status": "done", "date": "2026-09-24" },
+    { "id": "MER-027", "area": "Home", "title": "Los tres pasos como cajas animadas con texto más grande", "status": "in_progress" },
     { "id": "MER-028", "area": "Home", "title": "Cierre de la Home: seis recorridos y «Escríbenos por WhatsApp»", "status": "todo" },
     { "id": "MER-029", "area": "Footer", "title": "Frase «Redefinimos…», tamaño mayor y botón Contacto terracota", "status": "todo" },
     { "id": "MER-023", "area": "Navegación", "title": "Botón terracota permanente hacia Contacto", "status": "todo" },
