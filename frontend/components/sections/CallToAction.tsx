@@ -11,8 +11,6 @@ interface CallToActionProps {
   locale: Locale;
 }
 
-const WHATSAPP_NUMBER_DISPLAY = "+57 310 756 1974";
-
 function WhatsAppIcon() {
   return (
     <svg
@@ -41,18 +39,6 @@ export function CallToAction({ content, locale }: CallToActionProps) {
           transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-center"
         >
-          {/* Section label */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.05, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-sans text-xs tracking-[0.18em] uppercase mb-10"
-            style={{ color: "var(--tumbaga)" }}
-          >
-            {locale === "es" ? "Contacto directo" : "Direct contact"}
-          </motion.p>
-
           {/* Top rule */}
           <motion.div
             initial={{ scaleX: 0 }}
@@ -79,25 +65,13 @@ export function CallToAction({ content, locale }: CallToActionProps) {
             {content.description[locale]}
           </p>
 
-          {/* Phone number — typographic accent */}
-          <motion.p
-            initial={{ opacity: 0, y: 8 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-sans font-light mb-10 tracking-wide"
-            style={{ color: "var(--marfil)", fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)" }}
-          >
-            {WHATSAPP_NUMBER_DISPLAY}
-          </motion.p>
-
           {/* WhatsApp CTA button */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.28, ease: [0.25, 0.1, 0.25, 1] }}
-            className="inline-block mb-10"
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            className="inline-block"
           >
             <motion.a
               href={content.buttonHref}
@@ -119,20 +93,6 @@ export function CallToAction({ content, locale }: CallToActionProps) {
               {content.buttonText[locale]}
             </motion.a>
           </motion.div>
-
-          {/* Reassurance */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.38, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-sans text-xs tracking-wide"
-            style={{ color: "var(--marfil)", opacity: 0.35 }}
-          >
-            {locale === "es"
-              ? "Respondemos en menos de 48 horas"
-              : "We respond within 48 hours"}
-          </motion.p>
         </motion.div>
       </Container>
     </SectionWrapper>
