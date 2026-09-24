@@ -28,8 +28,9 @@ export function Navbar({ locale, ui }: NavbarProps) {
     { label: ui.nav.journeys, href: `/${locale}/viajes` },
     { label: ui.nav.about, href: `/${locale}/sobre-meridiana` },
     { label: ui.nav.journal, href: `/${locale}/journal` },
-    { label: ui.nav.contact, href: `/${locale}/contacto` },
   ];
+
+  const contactHref = `/${locale}/contacto`;
 
   const otherLocale = locale === "es" ? "en" : "es";
   const localePath = pathname.replace(`/${locale}`, `/${otherLocale}`);
@@ -124,32 +125,49 @@ export function Navbar({ locale, ui }: NavbarProps) {
               >
                 {ui.lang.switch}
               </Link>
+
+              {/* Persistent contact CTA */}
+              <Link
+                href={contactHref}
+                className="inline-flex items-center bg-terracota px-5 py-2.5 font-sans text-xs font-bold uppercase tracking-widest text-marfil transition-opacity duration-200 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tumbaga"
+              >
+                {ui.nav.contact}
+              </Link>
             </nav>
 
-            {/* Mobile hamburger */}
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-expanded={menuOpen}
-              aria-controls="mobile-menu"
-              className={[
-                "lg:hidden flex flex-col justify-center gap-1.5 w-10 h-10 -mr-2 transition-opacity duration-200 hover:opacity-70",
-                scrolled ? "text-negro" : "text-marfil",
-              ].join(" ")}
-              aria-label="Toggle menu"
-            >
-              <motion.span
-                animate={menuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-                className="block h-px w-6 bg-current origin-center transition-all"
-              />
-              <motion.span
-                animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
-                className="block h-px w-6 bg-current"
-              />
-              <motion.span
-                animate={menuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-                className="block h-px w-6 bg-current origin-center transition-all"
-              />
-            </button>
+            {/* Mobile: contact CTA + hamburger */}
+            <div className="flex lg:hidden items-center gap-3">
+              <Link
+                href={contactHref}
+                className="inline-flex items-center bg-terracota px-3.5 py-2 font-sans text-[11px] font-bold uppercase tracking-wider text-marfil transition-opacity duration-200 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tumbaga"
+              >
+                {ui.nav.contact}
+              </Link>
+
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-expanded={menuOpen}
+                aria-controls="mobile-menu"
+                className={[
+                  "flex flex-col justify-center gap-1.5 w-10 h-10 -mr-2 transition-opacity duration-200 hover:opacity-70",
+                  scrolled ? "text-negro" : "text-marfil",
+                ].join(" ")}
+                aria-label="Toggle menu"
+              >
+                <motion.span
+                  animate={menuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+                  className="block h-px w-6 bg-current origin-center transition-all"
+                />
+                <motion.span
+                  animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+                  className="block h-px w-6 bg-current"
+                />
+                <motion.span
+                  animate={menuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                  className="block h-px w-6 bg-current origin-center transition-all"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </motion.header>
@@ -194,10 +212,24 @@ export function Navbar({ locale, ui }: NavbarProps) {
               ))}
 
               <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + navLinks.length * 0.06, duration: 0.4 }}
+              >
+                <Link
+                  href={contactHref}
+                  onClick={() => setMenuOpen(false)}
+                  className="inline-flex items-center bg-terracota px-6 py-3 font-sans text-sm font-bold uppercase tracking-widest text-marfil transition-opacity duration-200 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marfil"
+                >
+                  {ui.nav.contact}
+                </Link>
+              </motion.div>
+
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.4 }}
-                className="mt-6 border-t border-marfil-20 pt-6"
+                className="mt-2 border-t border-marfil-20 pt-6"
               >
                 <Link
                   href={localePath}
