@@ -17,7 +17,6 @@ export function Footer({ locale, ui }: FooterProps) {
     { label: ui.nav.journeys, href: `/${locale}/viajes` },
     { label: ui.nav.journal, href: `/${locale}/journal` },
     { label: ui.nav.about, href: `/${locale}/sobre-meridiana` },
-    { label: ui.nav.contact, href: `/${locale}/contacto` },
   ];
 
   return (
@@ -39,11 +38,8 @@ export function Footer({ locale, ui }: FooterProps) {
                 className="h-9 w-auto"
               />
             </Link>
-            <p className="font-sans text-sm leading-relaxed opacity-60 max-w-xs">
+            <p className="font-display font-light text-lg lg:text-xl leading-snug opacity-80 max-w-sm">
               {ui.footer.tagline}
-            </p>
-            <p className="font-sans text-xs leading-relaxed opacity-40 max-w-xs">
-              Colombia &amp; América Latina
             </p>
           </div>
 
@@ -92,6 +88,12 @@ export function Footer({ locale, ui }: FooterProps) {
             <p className="label text-xs tracking-widest uppercase opacity-40">
               {ui.footer.contact}
             </p>
+            <Link
+              href={`/${locale}/contacto`}
+              className="inline-flex items-center bg-terracota px-6 py-3 font-sans text-xs font-bold uppercase tracking-widest text-marfil hover:opacity-90 transition-opacity duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tumbaga"
+            >
+              {ui.footer.contactCta}
+            </Link>
             <div className="space-y-4">
               <a
                 href="mailto:info@meridianajourneys.com"
