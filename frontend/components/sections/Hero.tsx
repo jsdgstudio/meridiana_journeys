@@ -55,7 +55,7 @@ export function Hero({ content, locale, leadVariant = "editorial" }: HeroProps) 
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 65, damping: 20, delay: 0.15 }}
-          className="font-display text-4xl lg:text-5xl xl:text-6xl font-light text-marfil leading-tight tracking-tight mb-6"
+          className="font-display !text-[length:var(--text-2xl)] lg:!text-[length:var(--text-3xl)] font-light text-marfil leading-tight tracking-tight mb-6"
         >
           {headline}
         </motion.h1>
@@ -67,7 +67,7 @@ export function Hero({ content, locale, leadVariant = "editorial" }: HeroProps) 
           className={
             leadVariant === "body"
               ? "font-sans text-sm leading-relaxed text-marfil/60 max-w-[52ch]"
-              : "font-display italic text-xl lg:text-2xl font-light text-marfil/80 max-w-[28ch]"
+              : "font-display italic !text-[length:var(--text-lg)] lg:!text-[length:var(--text-xl)] font-light text-marfil/80 max-w-[28ch]"
           }
         >
           {subheadline}

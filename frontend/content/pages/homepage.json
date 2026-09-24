@@ -2,12 +2,12 @@
   "id": "homepage",
   "hero": {
     "headline": {
-      "es": "Cada territorio cuenta una historia.",
-      "en": "Every territory tells a story."
+      "es": "Cada territorio colombiano lleva siglos contando su historia.",
+      "en": "Every Colombian territory has been telling its story for centuries."
     },
     "subheadline": {
-      "es": "Nosotros la traducimos.",
-      "en": "We translate it."
+      "es": "Nosotros traducimos sus voces.",
+      "en": "We translate its voices."
     },
     "media": {
       "type": "image",
@@ -209,19 +209,19 @@
       {
         "number": 2,
         "title": {
-          "es": "Decide",
-          "en": "Decide"
+          "es": "Elige",
+          "en": "Choose"
         },
         "description": {
-          "es": "Escríbenos. No hay formularios automatizados ni respuestas predefinidas. Una persona de Meridiana responde en menos de 48 horas para entender lo que buscas y cómo podemos construirlo juntos.",
-          "en": "Write to us. No automated forms or pre-set answers. A person from Meridiana responds within 48 hours to understand what you're looking for and how we can build it together."
+          "es": "Elige el viaje que más te interese y cuéntanos qué buscas. Conversaremos contigo para pensar una ruta a tu medida.",
+          "en": "Choose the journey that interests you most and tell us what you are looking for. We will talk with you about shaping a route around you."
         }
       },
       {
         "number": 3,
         "title": {
-          "es": "Viaja",
-          "en": "Travel"
+          "es": "Vive",
+          "en": "Experience"
         },
         "description": {
           "es": "El día del viaje, todo está listo. Lo que no está en el itinerario es la conversación que tendrás con el ceramista que lleva cuarenta años estudiando los patrones precolombinos, o el silencio exacto de las seis de la mañana en la laguna.",
