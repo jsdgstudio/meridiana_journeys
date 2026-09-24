@@ -79,7 +79,8 @@ function WordReveal({ text, delay = 0 }: { text: string; delay?: number }) {
 
 // ── Componente principal ─────────────────────────────────────
 export function AboutPreview({ content, locale }: AboutPreviewProps) {
-  const ctaHref = locale === "es" ? "/es/sobre-meridiana" : "/en/sobre-meridiana";
+  const aboutHref = `/${locale}/sobre-meridiana`;
+  const ctaHref = `/${locale}${content.cta.href}`;
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef   = useRef<HTMLVideoElement>(null);
 
@@ -167,11 +168,20 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
             {/* Texto editorial */}
             <div className="flex flex-col gap-5" style={{ maxWidth: "560px" }}>
               <motion.p
-                className="text-[15px] md:text-[16px] leading-[1.85] text-marfil/85"
+                className="text-xl md:text-2xl font-semibold leading-relaxed text-marfil"
                 {...fadeUp(1.0)}
               >
                 {content.lead[locale]}
               </motion.p>
+              <motion.div {...fadeUp(1.15)}>
+                <Link
+                  href={aboutHref}
+                  className="inline-flex min-h-12 items-center gap-3 bg-terracota px-7 py-3 font-sans text-sm font-semibold uppercase tracking-wider text-negro hover:bg-marfil focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marfil"
+                >
+                  {content.label[locale]}
+                  <span aria-hidden="true">→</span>
+                </Link>
+              </motion.div>
             </div>
           </div>
 

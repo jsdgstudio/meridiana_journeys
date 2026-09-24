@@ -25,8 +25,8 @@
       "line2": { "es": "contada por quien la habita.", "en": "told by those who live it." }
     },
     "lead": {
-      "es": "Somos una agencia de viajes culturales hechos a la medida, que conecta a viajeros conscientes con la esencia de una Colombia auténtica, biodiversa y excepcionalmente creativa.",
-      "en": "We are a bespoke cultural travel agency, connecting conscious travelers with the essence of an authentic, biodiverse, and exceptionally creative Colombia."
+      "es": "Somos una agencia de turismo cultural que organiza viajes a la medida y conecta a viajeros conscientes con la esencia de la Colombia auténtica, biodiversa y excepcionalmente creativa.",
+      "en": "We are a cultural travel agency that creates tailor-made journeys and connects conscious travelers with the essence of an authentic, biodiverse, and exceptionally creative Colombia."
     },
     "editorial": {
       "methodLabel": { "es": "Método · 01", "en": "Method · 01" },
@@ -81,7 +81,7 @@
     },
     "cta": {
       "text": { "es": "comenzar el viaje", "en": "begin the journey" },
-      "href": "/sobre-meridiana"
+      "href": "/contacto"
     },
     "isotipo": "/images/meridiana_isotipo.svg",
     "logo": "/images/Logo_meridiana_vertical_marfil.png"
