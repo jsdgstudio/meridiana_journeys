@@ -140,7 +140,7 @@ function Profile({
                     className="font-sans font-light leading-relaxed"
                     style={{
                       fontSize: "clamp(0.875rem, 1.05vw, 0.9375rem)",
-                      color: "rgba(231,213,188,0.52)",
+                      color: "var(--marfil-80)",
                       maxWidth: "60ch",
                     }}
                   >
@@ -156,12 +156,12 @@ function Profile({
         {bioLines.length > 1 && (
           <motion.button
             onClick={() => setExpanded((v) => !v)}
-            className="font-sans text-left"
-            whileHover={{ color: "rgba(154,122,58,0.90)" }}
+            className="font-sans text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marfil"
+            whileHover={{ color: "var(--marfil)" }}
             style={{
               fontSize: "10px",
               letterSpacing: "0.12em",
-              color: "rgba(154,122,58,0.50)",
+              color: "var(--marfil-80)",
               background: "none",
               border: "none",
               cursor: "pointer",
