@@ -36,6 +36,7 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/fonts") ||
     pathname.startsWith("/images") ||
     pathname.startsWith("/video") ||
+    pathname === "/status" ||
     pathname.includes(".")
   ) {
     return NextResponse.next();

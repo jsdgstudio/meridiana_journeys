@@ -1,0 +1,39 @@
+{
+  "updatedAt": "2026-09-24T19:30:00-05:00",
+  "milestone": "Correcciones del feedback del cliente (documento 08/09/2026)",
+  "current": {
+    "id": "MER-026",
+    "title": "Textos de Descubre / Decide / Viaja en la Home",
+    "detail": "Aplicando los tres textos literales del documento de feedback en español y preparando la versión en inglés para su revisión."
+  },
+  "tasks": [
+    { "id": "MER-001", "area": "General", "title": "Página 404 visible en español e inglés", "status": "done", "date": "2026-09-22" },
+    { "id": "MER-002A", "area": "Contacto", "title": "El formulario ya no simula un envío: prepara un correo real", "status": "done", "date": "2026-09-23" },
+    { "id": "MER-005", "area": "Home", "title": "Frase del Hero y pasos Descubre / Elige / Vive (versión anterior)", "status": "done", "date": "2026-09-24" },
+    { "id": "MER-007", "area": "Navegación", "title": "Viajes antes de Sobre Meridiana en el menú", "status": "done", "date": "2026-09-24" },
+    { "id": "MER-006", "area": "Sobre", "title": "Biografías ampliadas de Laura y Fabrizio", "status": "done", "date": "2026-09-24" },
+    { "id": "MER-020", "area": "Home", "title": "Hero con las dos frases literales del feedback", "status": "done", "date": "2026-09-24" },
+    { "id": "MER-021", "area": "Navegación", "title": "Menú de escritorio más legible (14 px)", "status": "done", "date": "2026-09-24" },
+    { "id": "MER-024", "area": "Home", "title": "Nuevo texto de introducción con mayor escala y botón destacado", "status": "done", "date": "2026-09-24" },
+    { "id": "MER-025", "area": "Home", "title": "Retirar «Meridiana · Curaduría cultural» y el «Meridiana» con punto", "status": "done", "date": "2026-09-24" },
+    { "id": "MER-026", "area": "Home", "title": "Textos literales de Descubre / Decide / Viaja", "status": "in_progress" },
+    { "id": "MER-027", "area": "Home", "title": "Los tres pasos como cajas animadas con texto más grande", "status": "todo" },
+    { "id": "MER-028", "area": "Home", "title": "Cierre de la Home: seis recorridos y «Escríbenos por WhatsApp»", "status": "todo" },
+    { "id": "MER-029", "area": "Footer", "title": "Frase «Redefinimos…», tamaño mayor y botón Contacto terracota", "status": "todo" },
+    { "id": "MER-023", "area": "Navegación", "title": "Botón terracota permanente hacia Contacto", "status": "todo" },
+    { "id": "MER-030", "area": "Sobre", "title": "«Sobre Meridiana» como título y texto introductorio bajo la foto", "status": "todo" },
+    { "id": "MER-031", "area": "Sobre", "title": "Biografías literales según el documento del cliente", "status": "todo" },
+    { "id": "MER-032", "area": "Sobre", "title": "Perfiles justificados donde se lean bien", "status": "todo" },
+    { "id": "MER-033", "area": "Sobre", "title": "Cierre «Planifiquemos algo juntos» con botón a Contacto", "status": "todo" },
+    { "id": "MER-037", "area": "Contacto", "title": "Nuevo título, WhatsApp en verde y textos simplificados", "status": "todo" },
+    { "id": "MER-034", "area": "Viajes", "title": "Retirar entradilla y rótulos de ubicación en las fotos", "status": "todo" },
+    { "id": "MER-022", "area": "Navegación", "title": "Logo con más peso visual", "status": "waiting", "waitingFor": "Archivo maestro del logo en su variante más gruesa" },
+    { "id": "MER-036", "area": "Viajes", "title": "Classic Bogotá con el texto definitivo", "status": "waiting", "waitingFor": "Confirmar texto final de rutas (Google Doc como DOCX/PDF)" },
+    { "id": "MER-038", "area": "Viajes", "title": "Classic Medellín como sexto recorrido", "status": "waiting", "waitingFor": "Ficha completa ES/EN, imágenes y datos aprobados" },
+    { "id": "MER-039", "area": "Home", "title": "Descripciones de los recorridos en la Home", "status": "waiting", "waitingFor": "Documento definitivo de rutas" },
+    { "id": "MER-040", "area": "General", "title": "Nuevas fotografías en Home, Sobre, Journal, Contacto y fichas", "status": "waiting", "waitingFor": "Archivos originales, créditos y licencias (iStock)" },
+    { "id": "MER-041", "area": "Viajes", "title": "Classic Colombia: Medellín, Zona Cafetera y Tayrona", "status": "waiting", "waitingFor": "Versión final del texto de rutas" },
+    { "id": "MER-042", "area": "Viajes", "title": "Ajustes de Dorado, Macondo y Wild", "status": "waiting", "waitingFor": "Texto final, datos y derechos de imágenes" },
+    { "id": "MER-002B", "area": "Contacto", "title": "Formulario conectado a un buzón real", "status": "later" }
+  ]
+}
