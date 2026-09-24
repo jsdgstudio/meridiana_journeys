@@ -134,25 +134,6 @@ export function HowItWorks({ content, locale }: HowItWorksProps) {
           </motion.div>
         ))}
 
-        {/* Bottom accent — terracota dot */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-          className="mt-10 flex items-center gap-3"
-        >
-          <span
-            className="inline-block w-2 h-2 rounded-full"
-            style={{ background: "var(--terracota)" }}
-          />
-          <span
-            className="font-sans text-xs tracking-widest uppercase"
-            style={{ color: "var(--tumbaga)", opacity: 0.7 }}
-          >
-            Meridiana
-          </span>
-        </motion.div>
       </Container>
     </SectionWrapper>
   );

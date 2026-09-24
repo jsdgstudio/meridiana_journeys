@@ -42,7 +42,6 @@ export interface TravelCardsContent {
 export interface InfoBarContent {
   headline: LocaleString;
   subline: LocaleString;
-  signature?: LocaleString;
 }
 
 export interface HomepageContent {

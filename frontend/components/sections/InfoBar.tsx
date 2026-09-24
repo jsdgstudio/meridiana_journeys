@@ -46,30 +46,10 @@ export function InfoBar({ content, locale }: InfoBarProps) {
             fontStyle: "italic",
             lineHeight: 1.4,
             color: "var(--marfil)",
-            marginBottom: "var(--space-8)",
-          }}
-        >
-          {content.headline[locale]}
-        </motion.p>
-
-        {/* Atribución — small caps marfil */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.38 }}
-          style={{
-            fontFamily: "var(--font-body)",
-            fontSize: "var(--text-xs)",
-            fontWeight: 500,
-            letterSpacing: "0.18em",
-            textTransform: "uppercase",
-            color: "var(--marfil)",
-            opacity: 0.65,
             marginBottom: "var(--space-10)",
           }}
         >
-          {content.signature?.[locale] ?? (locale === "es" ? "Meridiana · Curaduría cultural" : "Meridiana · Cultural Curation")}
+          {content.headline[locale]}
         </motion.p>
 
         {/* Línea vertical decorativa — abajo */}
