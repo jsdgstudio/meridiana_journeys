@@ -2,12 +2,12 @@
   "id": "homepage",
   "hero": {
     "headline": {
-      "es": "Cada territorio colombiano lleva siglos contando su historia.",
-      "en": "Every Colombian territory has been telling its story for centuries."
+      "es": "Cada territorio cuenta una historia.",
+      "en": "Every territory tells a story."
     },
     "subheadline": {
-      "es": "Nosotros traducimos sus voces.",
-      "en": "We translate its voices."
+      "es": "Nosotros te acercamos a quienes la mantienen viva.",
+      "en": "We bring you close to those who keep it alive."
     },
     "media": {
       "type": "image",
