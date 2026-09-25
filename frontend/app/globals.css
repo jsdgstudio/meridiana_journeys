@@ -445,13 +445,9 @@ a:hover {
   .tc-card .tc-scrim-hover { opacity: 1 !important; }
   .tc-card .tc-accent-glow { opacity: 1 !important; }
   .tc-card .tc-hover-panel p { display: none; }
-  .tc-row .tc-card.tc-card-full-description,
-  .tc-row:hover .tc-card.tc-card-full-description,
-  .tc-row .tc-card.tc-card-full-description:hover {
-    min-height: 640px;
-  }
-  .tc-card.tc-card-full-description .tc-content { min-height: 640px; }
-  .tc-card.tc-card-full-description .tc-hover-panel p { display: block; }
+  /* Collapsed by default; a tap toggles .tc-expanded to reveal the copy. */
+  .tc-card { cursor: pointer; }
+  .tc-card.tc-expanded .tc-hover-panel p { display: block; }
   .tc-cta-secondary { display: none !important; }
   .tc-card .tc-title {
     font-size: clamp(1.65rem, 5.5vw, 1.9rem) !important;

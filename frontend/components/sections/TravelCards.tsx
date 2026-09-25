@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { useState } from "react";
+import { useId, useState } from "react";
 import type { TravelCardsContent, TravelCardItem } from "@/types/content";
 import type { Locale } from "@/types/tour";
 
@@ -87,8 +87,11 @@ function TravelCard({
   const tourHref = `/${locale}/viajes/${card.id}`;
   const contactHref = `/${locale}/contacto`;
   const theme = CARD_THEMES[card.id] ?? DEFAULT_THEME;
-  const hasFullDescription = ["classic-bogota", "en-busqueda-del-dorado", "wild-colombia"].includes(card.id);
   const [active, setActive] = useState(false);
+  // Touch/narrow layouts: cards start collapsed (title + CTA); a tap outside
+  // the links toggles the description. Desktop keeps the hover behaviour.
+  const [expanded, setExpanded] = useState(false);
+  const descriptionId = useId();
   const shouldReduceMotion = useReducedMotion();
 
   const titleText = card.title[locale];
@@ -107,8 +110,12 @@ function TravelCard({
 
   return (
     <article
-      className={`tc-card group relative overflow-hidden min-w-[80px]${hasFullDescription ? " tc-card-full-description" : ""}${card.id === "wild-colombia" ? " tc-card-wild" : ""}`}
+      className={`tc-card group relative overflow-hidden min-w-[80px]${expanded ? " tc-expanded" : ""}${card.id === "wild-colombia" ? " tc-card-wild" : ""}`}
       style={{ color: "var(--marfil)", textShadow: "0 1px 14px rgba(0,0,0,0.35)", backgroundColor: "oklch(12% 0.018 75)" }}
+      onClick={(event) => {
+        if ((event.target as HTMLElement).closest("a")) return;
+        setExpanded((isOpen) => !isOpen);
+      }}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
       onFocusCapture={() => setActive(true)}
@@ -200,8 +207,17 @@ function TravelCard({
               {card.meta[locale]}
             </span>
           </div>
-          <h3 className="tc-title font-display font-light mb-3">{titleNode}</h3>
-          <p className="text-sm md:text-[15px] leading-[1.6] mb-5 max-w-[68ch] text-marfil/90">
+          <h3 className="tc-title font-display font-light mb-3">
+            <button
+              type="button"
+              className="tc-toggle text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tumbaga"
+              aria-expanded={expanded}
+              aria-controls={descriptionId}
+            >
+              {titleNode}
+            </button>
+          </h3>
+          <p id={descriptionId} className="text-sm md:text-[15px] leading-[1.6] mb-5 max-w-[68ch] text-marfil/90">
             {card.description[locale]}
           </p>
           <div className="flex items-center gap-3 flex-wrap">
