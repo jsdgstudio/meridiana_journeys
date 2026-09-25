@@ -26,12 +26,13 @@
   },
   "difficulty": "moderate",
   "hero": {
-    "image": "/images/tours/dorado-hero.jpg",
+    "image": "/images/tours/dorado-iron-bridge-pexels-13735650.jpg",
+    "video": null,
     "alt": {
-      "es": "Pieza de orfebrería muisca reflejada en aguas oscuras de laguna",
-      "en": "Muisca goldwork reflected in the dark waters of a lagoon"
+      "es": "Puente de madera e hierro bajo un cielo azul",
+      "en": "Wood and iron bridge beneath a blue sky"
     },
-    "credit": "TODO"
+    "credit": "Pexels · foto 13735650"
   },
   "gallery": [
     {
@@ -50,9 +51,9 @@
       "tag": { "es": "Zipaquirá", "en": "Zipaquirá" }
     },
     {
-      "gradient": "linear-gradient(135deg, #1A1500 0%, #2E2500 50%, #3A3005 100%)",
-      "place": { "es": "Alto Magdalena", "en": "Alto Magdalena" },
-      "tag": { "es": "huella del Dorado", "en": "El Dorado trail" }
+      "src": "/images/tours/dorado-honda-market-pexels-16550182.jpg",
+      "place": { "es": "Plaza de mercado en Honda", "en": "Market hall in Honda" },
+      "tag": { "es": "Honda", "en": "Honda" }
     },
     {
       "gradient": "linear-gradient(135deg, #1A0A00 0%, #2E1500 50%, #3A1800 100%)",
