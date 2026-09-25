@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { VisualImage } from "@/types/journal";
 import type { Locale } from "@/types/tour";
+import { useDialogFocus } from "@/hooks/useDialogFocus";
 
 interface JournalLightboxProps {
   images: VisualImage[];
@@ -29,55 +30,18 @@ export function JournalLightbox({
   const isOpen = activeIndex !== null;
   const img = activeIndex !== null ? images[activeIndex] : null;
 
-  // Keyboard navigation
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent) => {
-      if (!isOpen) return;
-      if (e.key === "Escape") onClose();
+  useDialogFocus({ isOpen, containerRef, initialFocusRef: closeRef, onClose });
+
+  // Arrow keys browse the notebook; Escape and Tab are handled by useDialogFocus.
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") onPrev();
       if (e.key === "ArrowRight") onNext();
-    },
-    [isOpen, onClose, onPrev, onNext]
-  );
-
-  useEffect(() => {
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleKeyDown]);
-
-  // Focus trap: move focus to close button when opened
-  useEffect(() => {
-    if (isOpen) {
-      closeRef.current?.focus();
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
     };
-  }, [isOpen]);
-
-  // Trap focus inside dialog
-  const handleTabKey = (e: React.KeyboardEvent) => {
-    if (e.key !== "Tab" || !containerRef.current) return;
-    const focusable = containerRef.current.querySelectorAll<HTMLElement>(
-      'button, [tabindex]:not([tabindex="-1"])'
-    );
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    if (e.shiftKey) {
-      if (document.activeElement === first) {
-        last.focus();
-        e.preventDefault();
-      }
-    } else {
-      if (document.activeElement === last) {
-        first.focus();
-        e.preventDefault();
-      }
-    }
-  };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isOpen, onPrev, onNext]);
 
   return (
     <AnimatePresence>
@@ -95,7 +59,6 @@ export function JournalLightbox({
           aria-modal="true"
           aria-label={img.alt[locale]}
           ref={containerRef}
-          onKeyDown={handleTabKey}
         >
           {/* Close */}
           <button

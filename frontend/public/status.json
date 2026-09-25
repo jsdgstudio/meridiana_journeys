@@ -40,6 +40,7 @@
     { "id": "MER-043B", "area": "Home", "title": "Suavizar tipografía de «Somos una agencia…» y mantener CTA terracota/marfil", "status": "review_local", "waitingFor": "Confirmación visual de Jaime en localhost", "model": "gpt-6-luna" },
     { "id": "MER-044A", "area": "Wild Colombia", "title": "Caño Cristales como hero y card del Home, con atribución CC BY 3.0", "status": "in_progress", "model": "gpt-6-sol" },
     { "id": "MER-044B", "area": "Dorado", "title": "Pieza de oro original del DOCX como hero y card del Home", "status": "todo", "model": "gpt-6-luna" },
+    { "id": "MER-015B", "area": "Journal", "title": "Lightbox del cuaderno visual: foco atrapado, Escape y retorno del foco", "status": "review_local", "waitingFor": "Publicar junto con el siguiente lote aprobado", "model": "claude-opus-5-5" },
     { "id": "MER-002B", "area": "Contacto", "title": "Formulario conectado a un buzón real", "status": "later" }
   ]
 }
