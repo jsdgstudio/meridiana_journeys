@@ -27,6 +27,7 @@ function Profile({
   const [expanded, setExpanded] = useState(false);
   const bioLines = member.bio[locale].split("\n\n");
   const photoRight = index % 2 === 1;
+  const bioAlignment = locale === "es" ? "text-left lg:text-justify lg:hyphens-auto" : "text-left";
 
   const expandLabel = locale === "es" ? "Ver trayectoria completa" : "Read full background";
   const collapseLabel = locale === "es" ? "Cerrar" : "Close";
@@ -108,7 +109,7 @@ function Profile({
 
         {/* Primer párrafo — siempre visible */}
         <p
-          className="font-sans font-light leading-relaxed mb-5"
+          className={`font-sans font-light leading-relaxed mb-5 ${bioAlignment}`}
           style={{
             fontSize: "clamp(0.875rem, 1.05vw, 0.9375rem)",
             color: "rgba(231,213,188,0.72)",
@@ -137,7 +138,7 @@ function Profile({
                 {bioLines.slice(1).map((p, i) => (
                   <p
                     key={i}
-                    className="font-sans font-light leading-relaxed"
+                    className={`font-sans font-light leading-relaxed ${bioAlignment}`}
                     style={{
                       fontSize: "clamp(0.875rem, 1.05vw, 0.9375rem)",
                       color: "var(--marfil-80)",

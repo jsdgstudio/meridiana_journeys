@@ -47,6 +47,7 @@
   li { display: grid; grid-template-columns: 90px 1fr auto; gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--line); }
   .area { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--tumbaga); }
   .title { color: var(--blanco); }
+  .task-id { display: inline-block; margin-right: 10px; color: var(--tumbaga); font-size: 11px; letter-spacing: .08em; }
   .note { display: block; font-size: 13px; color: var(--muted); margin-top: 4px; }
   .state { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; color: var(--muted); }
   .state.done { color: var(--marfil); }
@@ -124,7 +125,9 @@
   function renderTask(task, group) {
     var li = el("li", task.status);
     li.appendChild(el("span", "area", task.area));
-    var title = el("span", "title", task.title);
+    var title = el("span", "title");
+    title.appendChild(el("span", "task-id", task.id));
+    title.appendChild(document.createTextNode(task.title));
     if (task.waitingFor) title.appendChild(el("span", "note", "Necesitamos: " + task.waitingFor));
     li.appendChild(title);
     var stateText = task.status === "done" && task.date ? task.date.split("-").reverse().join("/") : group.stateText;
@@ -145,9 +148,9 @@
     var nowBox = document.getElementById("nowBox");
     if (data.current && data.current.title) {
       var currentTask = tasks.find(function (task) { return task.id === data.current.id; });
-      document.getElementById("nowLabel").textContent = currentTask && currentTask.status === "in_progress"
+      document.getElementById("nowLabel").textContent = (currentTask && currentTask.status === "in_progress"
         ? "Trabajando ahora"
-        : "Próxima corrección";
+        : "Próxima corrección") + " · " + data.current.id;
       document.getElementById("nowTitle").textContent = data.current.title;
       document.getElementById("nowDetail").textContent = data.current.detail || "";
       nowBox.hidden = false;

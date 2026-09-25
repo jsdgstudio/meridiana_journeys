@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-24T21:25:27-03:00",
+  "updatedAt": "2026-09-24T21:41:12-03:00",
   "milestone": "Correcciones del feedback del cliente (documento 08/09/2026)",
   "current": {
-    "id": "MER-032",
-    "title": "Lectura de los perfiles en móvil y escritorio",
-    "detail": "Siguiente: revisar la justificación de los perfiles sin perjudicar su legibilidad."
+    "id": "MER-033",
+    "title": "Cierre de Sobre Meridiana",
+    "detail": "Siguiente: ajustar el llamado final y su botón hacia Contacto."
   },
   "tasks": [
     { "id": "MER-001", "area": "General", "title": "Página 404 visible en español e inglés", "status": "done", "date": "2026-09-22" },
@@ -23,7 +23,7 @@
     { "id": "MER-023", "area": "Navegación", "title": "Botón terracota permanente hacia Contacto", "status": "done", "date": "2026-09-24" },
     { "id": "MER-030", "area": "Sobre", "title": "«Sobre Meridiana» como título y texto introductorio bajo la foto", "status": "done", "date": "2026-09-24" },
     { "id": "MER-031", "area": "Sobre", "title": "Biografías literales según el documento del cliente", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-032", "area": "Sobre", "title": "Perfiles justificados donde se lean bien", "status": "todo" },
+    { "id": "MER-032", "area": "Sobre", "title": "Perfiles justificados donde se lean bien", "status": "done", "date": "2026-09-24" },
     { "id": "MER-033", "area": "Sobre", "title": "Cierre «Planifiquemos algo juntos» con botón a Contacto", "status": "todo" },
     { "id": "MER-037", "area": "Contacto", "title": "Nuevo título, WhatsApp en verde y textos simplificados", "status": "todo" },
     { "id": "MER-034", "area": "Viajes", "title": "Retirar entradilla y rótulos de ubicación en las fotos", "status": "todo" },
