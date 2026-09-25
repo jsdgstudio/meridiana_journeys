@@ -24,7 +24,6 @@ const categoryLabel: Record<string, { es: string; en: string }> = {
 export function TourHero({ tour, locale }: TourHeroProps) {
   const identity = TOUR_IDENTITY[tour.id] ?? DEFAULT_IDENTITY;
   const backLabel = locale === "es" ? "← Viajes" : "← Journeys";
-  const scrollLabel = locale === "es" ? "Desplazar" : "Scroll";
 
   return (
     <section className="relative w-full h-screen min-h-[600px] flex flex-col justify-end overflow-hidden">
@@ -175,12 +174,6 @@ export function TourHero({ tour, locale }: TourHeroProps) {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.8, duration: 0.8 }}
       >
-        <span
-          className="font-sans uppercase"
-          style={{ fontSize: "9px", letterSpacing: "0.32em", color: "rgba(231,213,188,0.35)" }}
-        >
-          {scrollLabel}
-        </span>
         <div className="relative w-px h-10 overflow-hidden">
           <div className="absolute inset-0 bg-marfil/15" />
           <motion.div

@@ -6,7 +6,7 @@
   "tier": "entry",
   "status": "published",
   "duration": { "es": "2 noches / 3 días", "en": "2 nights / 3 days" },
-  "groupSize": { "es": "Máximo 12 personas", "en": "Maximum 12 people" },
+  "groupSize": { "es": "12 personas", "en": "12 people" },
   "route": ["Bogotá", "Guatavita", "Zipaquirá"],
   "price": {
     "currency": "USD",
@@ -186,7 +186,7 @@
   ],
   "experience": {
     "duration": { "es": "2 noches / 3 días", "en": "2 nights / 3 days" },
-    "groupSize": { "es": "Máximo 12 personas", "en": "Maximum 12 people" },
+    "groupSize": { "es": "12 personas", "en": "12 people" },
     "pace": { "es": "Moderado — caminatas, traslados en vehículo privado", "en": "Moderate — walking, transfers in private vehicle" },
     "language": { "es": "Español, inglés o francés", "en": "Spanish, English, or French" },
     "startPoint": { "es": "Bogotá (El Dorado, BOG)", "en": "Bogotá (El Dorado, BOG)" },
