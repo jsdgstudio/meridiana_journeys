@@ -9,7 +9,7 @@
 // image/video/icon or internal link on a page does not load, or when an unknown route does
 // not return a real 404 page. No dependencies beyond Node 18+.
 
-import { spawn } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 
 const args = process.argv.slice(2);
 const shouldServe = args.includes("--serve");
@@ -25,7 +25,17 @@ const NOT_FOUND_PATHS = ["/es/ruta-que-no-existe", "/en/route-that-does-not-exis
 const SERVER_TIMEOUT_MS = 60_000;
 const CONCURRENCY = 8;
 
+// Links that are knowingly broken while waiting on the client. Reported, not failed.
+// MER-013A: legal pages stay linked in the footer until the approved texts arrive.
+const KNOWN_BROKEN_LINKS = new Set([
+  "/es/privacidad",
+  "/es/terminos",
+  "/en/privacidad",
+  "/en/terminos",
+]);
+
 const failures = [];
+const warnings = [];
 const fail = (message) => failures.push(message);
 
 async function fetchStatus(url, init) {
@@ -132,7 +142,10 @@ async function checkAsset(src, foundOn) {
 
 async function checkLink(href, foundOn) {
   const { status, error } = await fetchStatus(new URL(href, `${BASE_URL}/`).toString());
-  if (status !== 200) fail(`LINK ${href} (on ${foundOn}) → ${status || error}`);
+  if (status === 200) return;
+  const message = `LINK ${href} (on ${foundOn}) → ${status || error}`;
+  if (KNOWN_BROKEN_LINKS.has(href)) warnings.push(`${message} [known, MER-013A]`);
+  else fail(message);
 }
 
 async function runPool(items, worker) {
@@ -159,7 +172,8 @@ function startServer() {
   const stop = () => {
     if (server.exitCode !== null) return;
     if (process.platform === "win32") {
-      spawn("taskkill", ["/PID", String(server.pid), "/T", "/F"], { stdio: "ignore" });
+      // Synchronous so the server tree is gone before process.exit() below.
+      spawnSync("taskkill", ["/PID", String(server.pid), "/T", "/F"], { stdio: "ignore" });
     } else {
       server.kill("SIGTERM");
     }
@@ -191,6 +205,7 @@ async function main() {
     stopServer?.();
   }
 
+  for (const w of warnings) console.warn(`  ! ${w}`);
   if (failures.length > 0) {
     console.error(`smoke: ${failures.length} failure(s)`);
     for (const f of failures) console.error(`  ✗ ${f}`);

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { Tour, GalleryItem, Locale } from "@/types/tour";
+import { useDialogFocus } from "@/hooks/useDialogFocus";
 
 interface TourGalleryProps {
   tour: Tour;
@@ -78,18 +79,18 @@ const GALLERY_COPY: Record<string, {
 export function TourGallery({ tour, locale }: TourGalleryProps) {
   const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
 
+  const shouldReduce = useReducedMotion();
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
   const closeLightbox = useCallback(() => setLightbox(null), []);
 
-  useEffect(() => {
-    if (!lightbox) return;
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") closeLightbox(); };
-    document.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [lightbox, closeLightbox]);
+  useDialogFocus({
+    isOpen: !!lightbox?.src,
+    containerRef: dialogRef,
+    initialFocusRef: closeRef,
+    onClose: closeLightbox,
+  });
 
   if (!tour.gallery || tour.gallery.length === 0) return null;
 
@@ -186,6 +187,10 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
         {lightbox && lightbox.src && (
           <motion.div
             key="lightbox"
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label={lightbox.place[locale]}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -202,9 +207,9 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
           >
             {/* Image */}
             <motion.div
-              initial={{ scale: 0.88, opacity: 0 }}
+              initial={shouldReduce ? { opacity: 0 } : { scale: 0.88, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.92, opacity: 0 }}
+              exit={shouldReduce ? { opacity: 0 } : { scale: 0.92, opacity: 0 }}
               transition={{ duration: 0.45, ease: EASE }}
               style={{
                 position: "relative",
@@ -256,21 +261,25 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
               </span>
             </motion.div>
 
-            {/* Close hint */}
-            <motion.span
+            {/* Close */}
+            <motion.button
+              ref={closeRef}
+              type="button"
+              aria-label={locale === "es" ? "Cerrar" : "Close"}
+              className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-tumbaga"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: shouldReduce ? 0 : 0.5 }}
               style={{
                 position: "absolute", top: 28, right: 36,
                 fontSize: 9, fontWeight: 600, letterSpacing: "0.2em",
-                textTransform: "uppercase", color: "rgba(231,213,188,0.30)",
-                cursor: "pointer",
+                textTransform: "uppercase", color: "rgba(231,213,188,0.55)",
+                cursor: "pointer", background: "none", border: 0, padding: 0,
               }}
-              onClick={closeLightbox}
+              onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             >
-              ESC · cerrar
-            </motion.span>
+              {locale === "es" ? "ESC · cerrar" : "ESC · close"}
+            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
@@ -288,11 +297,23 @@ function GalleryFrame({
   onOpen: () => void;
 }) {
   const clickable = !!item.src;
+  const openLabel = locale === "es"
+    ? `Ampliar imagen: ${item.place[locale]}`
+    : `Enlarge image: ${item.place[locale]}`;
 
   return (
     <motion.figure
-      className={`tg-frame ${className}`}
+      className={`tg-frame ${className} focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tumbaga`}
       style={{ cursor: clickable ? "zoom-in" : "default" }}
+      role={clickable ? "button" : undefined}
+      tabIndex={clickable ? 0 : undefined}
+      aria-label={clickable ? openLabel : undefined}
+      onKeyDown={clickable ? (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onOpen();
+        }
+      } : undefined}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-40px" }}
