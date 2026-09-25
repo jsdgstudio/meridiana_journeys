@@ -313,6 +313,11 @@ a:hover {
 }
 .tc-card:is(:hover, :focus-within) .tc-hover-panel { pointer-events: auto; }
 
+/* Wild's approved long copy needs its own scroll area below the tour badge. */
+.tc-card.tc-card-wild .tc-hover-panel {
+  max-height: calc(100% - var(--space-8) - var(--space-8) - 3.5rem);
+}
+
 /* CTA arrow nudge */
 .tc-card .tc-arrow       { transition: transform 380ms cubic-bezier(0.65, 0, 0.35, 1); }
 .tc-card:hover .tc-arrow { transform: translateX(4px); }
@@ -435,6 +440,7 @@ a:hover {
   .tc-card .tc-meta-row { margin-bottom: var(--space-16); transform: none !important; }
   .tc-card .tc-rest-title { display: none; }
   .tc-card .tc-hover-panel { position: static; max-height: none; overflow: visible; opacity: 1 !important; transform: none !important; pointer-events: auto; }
+  .tc-card.tc-card-wild .tc-hover-panel { max-height: none; }
   .tc-card .tc-scrim-base  { opacity: 0.25 !important; }
   .tc-card .tc-scrim-hover { opacity: 1 !important; }
   .tc-card .tc-accent-glow { opacity: 1 !important; }

@@ -107,7 +107,7 @@ function TravelCard({
 
   return (
     <article
-      className={`tc-card group relative overflow-hidden min-w-[80px]${hasFullDescription ? " tc-card-full-description" : ""}`}
+      className={`tc-card group relative overflow-hidden min-w-[80px]${hasFullDescription ? " tc-card-full-description" : ""}${card.id === "wild-colombia" ? " tc-card-wild" : ""}`}
       style={{ color: "var(--marfil)", textShadow: "0 1px 14px rgba(0,0,0,0.35)", backgroundColor: "oklch(12% 0.018 75)" }}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
