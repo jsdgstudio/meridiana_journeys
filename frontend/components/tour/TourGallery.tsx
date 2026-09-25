@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import type { Tour, GalleryItem, Locale } from "@/types/tour";
 import { useDialogFocus } from "@/hooks/useDialogFocus";
+import styles from "./TourGallery.module.css";
 
 interface TourGalleryProps {
   tour: Tour;
@@ -92,9 +93,10 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
     onClose: closeLightbox,
   });
 
-  if (!tour.gallery || tour.gallery.length === 0) return null;
-
-  const items = tour.gallery.slice(0, 5);
+  // Only real photos: gradient placeholders would render as empty blocks
+  // now that captions no longer sit on top of the frames (DOCX párr. 159).
+  const items = (tour.gallery ?? []).filter((item) => item.src).slice(0, 5);
+  if (items.length === 0) return null;
   const copy = GALLERY_COPY[tour.id] ?? {
     label: { es: "cuaderno visual", en: "visual notebook" },
     headlinePre: { es: "El territorio que estamos ", en: "The territory we are " },
@@ -110,11 +112,17 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
 
   return (
     <>
-      <section style={{ background: "var(--negro)", padding: "clamp(56px, 8vw, 112px) clamp(20px, 4vw, 40px) clamp(48px, 7vw, 96px)" }}>
+      {/* Full-bleed: only the header keeps side padding; photos run edge to edge. */}
+      <section style={{ background: "var(--negro)", paddingTop: "clamp(56px, 8vw, 112px)" }}>
         {/* Header */}
         <motion.div
           className="tg-header"
-          style={{ maxWidth: 1280, margin: "0 auto", marginBottom: "clamp(40px, 5vw, 64px)" }}
+          style={{
+            maxWidth: 1280,
+            margin: "0 auto",
+            marginBottom: "clamp(40px, 5vw, 64px)",
+            paddingInline: "clamp(20px, 4vw, 40px)",
+          }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
@@ -146,11 +154,11 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
         </motion.div>
 
         {/* Masonry grids */}
-        <div style={{ maxWidth: 1280, margin: "0 auto", display: "flex", flexDirection: "column", gap: 0 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
           {fullGroups.map((group, groupIdx) => {
             const classes = groupIdx % 2 === 0 ? PATTERN_A_CLASSES : PATTERN_B_CLASSES;
             return (
-              <div key={groupIdx} className="tg-grid">
+              <div key={groupIdx} className={`tg-grid ${styles.bleed}`}>
                 {group.map((item, itemIdx) => (
                   <GalleryFrame
                     key={itemIdx}
@@ -166,7 +174,7 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
           })}
 
           {remainder.length > 0 && remainder.length <= 5 && (
-            <div className="tg-grid">
+            <div className={`tg-grid ${styles.bleed}`}>
               {remainder.map((item, itemIdx) => (
                 <GalleryFrame
                   key={itemIdx}
@@ -334,36 +342,13 @@ function GalleryFrame({
             style={{
               transition: "filter 500ms",
             }}
-            sizes="(max-width: 960px) 50vw, 38vw"
+            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 60vw"
           />
         </motion.div>
       ) : item.gradient ? (
         <div style={{ position: "absolute", inset: 0, background: item.gradient }} />
       ) : null}
 
-      {/* Overlay */}
-      <div style={{
-        position: "absolute", inset: 0,
-        background: "linear-gradient(180deg, transparent 50%, rgba(15,19,14,0.72) 100%)",
-        pointerEvents: "none", zIndex: 1,
-      }} />
-
-      {/* Caption */}
-      <figcaption className="tg-frame__cap">
-        <span style={{
-          fontFamily: "var(--font-display)", fontSize: "clamp(14px, 2vw, 19px)",
-          fontWeight: 400, fontStyle: "italic",
-          color: "var(--marfil)", lineHeight: 1.1,
-        }}>
-          {item.place[locale]}
-        </span>
-        <span style={{
-          fontSize: 9, fontWeight: 600, letterSpacing: "0.18em",
-          textTransform: "uppercase", color: "rgba(231,213,188,0.7)", flexShrink: 0,
-        }}>
-          {item.tag[locale]}
-        </span>
-      </figcaption>
     </motion.figure>
   );
 }

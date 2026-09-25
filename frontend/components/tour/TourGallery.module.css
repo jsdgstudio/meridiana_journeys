@@ -1,0 +1,14 @@
+/* Full-bleed gallery (DOCX párr. 159: no black margins on the photos).
+   Overrides the shared .tg-grid spacing without touching the global sheet. */
+
+.bleed:global(.tg-grid) {
+  gap: 0;
+}
+
+/* Desktop: rows scale with the viewport so the masonry keeps the aspect
+   ratios it was designed with at 1280px (80px rows) on wider screens. */
+@media (min-width: 1024px) {
+  .bleed:global(.tg-grid) {
+    grid-auto-rows: 6.25vw;
+  }
+}
