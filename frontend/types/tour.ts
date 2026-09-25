@@ -30,6 +30,7 @@ export interface Tour {
   narrative: TourNarrative;
 
   includes: LocaleString[];
+  optional?: LocaleString[];
   excludes: LocaleString[];
   itinerary: ItineraryDay[];
   experience: ExperienceData;
@@ -59,6 +60,7 @@ export interface TourPrice {
   note?: LocaleString;
   customQuote?: boolean;      // true when price is "Por confirmar"
   contextPhrase?: LocaleString;
+  customizationNote?: LocaleString;
 }
 
 export interface TourLocation {
@@ -121,6 +123,7 @@ export interface PreTripInfo {
   packing?: LocaleString[];
   reading?: string[];
   preparation?: LocaleString;
+  recommendations?: LocaleString;
 }
 
 export interface TourSEOMeta {

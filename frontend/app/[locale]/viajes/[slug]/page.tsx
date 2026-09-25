@@ -78,7 +78,7 @@ export default function TourDetailPage({ params }: TourDetailPageProps) {
       <TourGallery tour={tour!} locale={locale} />
       <TourIncludes tour={tour!} locale={locale} />
       <TourItinerary tour={tour!} locale={locale} />
-      <TourExperience tour={tour!} locale={locale} />
+      {tour!.id !== "classic-bogota" && <TourExperience tour={tour!} locale={locale} />}
       <TourPreTrip tour={tour!} locale={locale} />
       <TourPricing tour={tour!} locale={locale} />
     </>

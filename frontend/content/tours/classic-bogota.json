@@ -1,7 +1,7 @@
 {
   "id": "classic-bogota",
   "title": { "es": "Classic Bogotá", "en": "Classic Bogotá" },
-  "subtitle": { "es": "Cinco siglos en tres días", "en": "Five Centuries in Three Days" },
+  "subtitle": { "es": "El mundo precolombino, la ciudad colonial, la era republicana y la Bogotá contemporánea.", "en": "The pre-Columbian world, the colonial city, the republican era, and contemporary Bogotá." },
   "category": "cultural",
   "tier": "entry",
   "status": "published",
@@ -16,8 +16,12 @@
       "en": "Each itinerary is quoted bespoke. Write to us and we'll build yours."
     },
     "contextPhrase": {
-      "es": "Tres días que cambiarán la manera en que entiendes una ciudad.",
-      "en": "Three days that will change how you understand a city."
+      "es": "Tres días que cambiarán la manera en que entendemos Colombia.",
+      "en": "Three days that will change the way we understand Colombia."
+    },
+    "customizationNote": {
+      "es": "Si quieres agregar o modificar algo, podemos trabajar juntos en un itinerario que se adapte a tus intereses y a tu disponibilidad.",
+      "en": "If you would like to add or change anything, we can work together on an itinerary that suits your interests and your availability."
     }
   },
   "location": {
@@ -111,76 +115,63 @@
   ],
   "narrative": {
     "short": {
-      "es": "Tres días para leer Bogotá como lo que es: cinco siglos superpuestos en la misma cuadra. De la Laguna Sagrada del Dorado al Museo del Oro, de Monserrate a la Catedral de Sal, una ciudad que se ha incendiado y reinventado varias veces.",
-      "en": "Three days to read Bogotá for what it is: five centuries layered on the same block. From the Sacred Lagoon of El Dorado to the Museo del Oro, from Monserrate to the Salt Cathedral—a city that has burned and reinvented itself many times."
+      "es": "El mundo precolombino, la ciudad colonial, la era republicana y la Bogotá contemporánea.",
+      "en": "The pre-Columbian world, the colonial city, the republican era, and contemporary Bogotá."
     },
     "long": {
-      "es": "<p>Bogotá tiene cinco siglos encima y los lleva todos al mismo tiempo. En una misma cuadra de La Candelaria conviven el barroco colonial, la arquitectura republicana y un mural pintado después del 9 de abril de 1948, el día en que asesinaron a Gaitán y la ciudad se incendió y de alguna manera se volvió a hacer.</p><p>Esa superposición de tiempos es lo que hace a Bogotá tan difícil de entender para quien llega de afuera, y tan apasionante para quien se toma tres días de verdad.</p>",
-      "en": "<p>Bogotá carries five centuries on its shoulders and wears them all at once. On the same block of La Candelaria you'll find colonial Baroque, Republican architecture, and a mural painted after April 9, 1948—the day Gaitán was assassinated and the city burned and somehow remade itself.</p><p>That layering of times is what makes Bogotá so hard to grasp for the outsider, and so compelling for anyone who takes three real days with it.</p>"
-    },
-    "pullQuote": {
-      "es": "Cinco siglos encima y los lleva todos al mismo tiempo.",
-      "en": "Five centuries on its shoulders, worn all at once."
+      "es": "<p>Bogotá tiene cinco siglos encima y los lleva todos al mismo tiempo. En una misma cuadra de La Candelaria conviven el barroco colonial, la arquitectura republicana y un mural pintado después del 9 de abril de 1948, el día en que asesinaron a Gaitán y la ciudad se incendió y de alguna manera se volvió a hacer. Esa superposición de tiempos es lo que hace a Bogotá tan difícil de entender para quien llega de afuera, y tan apasionante para quien se toma tres días de verdad.</p><p>El primer día daremos apertura a esta narrativa visitando el santuario de Monserrate para tener una primera mirada a 3.100m de altura a las distintas capas históricas, culturales y sociales de la ciudad. Finalizamos con una cena de bienvenida y una conversación con un chef sobre los ingredientes ancestrales que sobreviven en cocinas contemporáneas, mientras hablamos de la Bogotá de ayer, de hoy, y de hacia dónde va.</p><p>El segundo día empieza con los Muiscas, un pueblo que vivía a orillas de los lagos de la sabana, con su propia astronomía, sus propios rituales y una economía construida sobre las esmeraldas más codiciadas del continente. Cuando los españoles llegaron buscando El Dorado encontraron algo más extraño y más rico, una civilización que ya sabía quién era. Visitaremos la Laguna Sagrada del Dorado, donde nació la leyenda que movió imperios, el cacique que se cubría de oro y se sumergía en el agua como ofrenda. Y la Catedral de Sal de Zipaquirá, tallada a 180 metros de profundidad en el interior de una montaña de sal.</p><p>El tercer día, traza la ciudad colonial y republicana. El recorrido nos cuenta la historia del corazón histórico, cultural y político, La Candelaria. Recorreremos sus calles, sus edificios, iglesias y museos más emblemáticos, incluyendo el Museo del Oro, el Museo Botero y Fragmentos, un espacio donde el arte canaliza las heridas del pasado en Colombia.</p><p>Tres días en Bogotá con la sensación, al final, de haber entendido algo que la ciudad lleva cinco siglos tratando de explicar.</p>",
+      "en": "<p>Bogotá carries five centuries and wears them all at once. On a single block in La Candelaria, colonial Baroque, republican architecture, and a mural painted after April 9, 1948 coexist. That was the day Gaitán was assassinated and the city burned, then somehow remade itself. This layering of eras makes Bogotá difficult to understand for someone arriving from elsewhere, and compelling for anyone who gives it three real days.</p><p>On the first day, we open this story at the sanctuary of Monserrate, taking a first look from 3,100 meters at the city's historical, cultural, and social layers. We finish with a welcome dinner and a conversation with a chef about ancestral ingredients that survive in contemporary kitchens, while we talk about Bogotá's past, present, and future.</p><p>The second day begins with the Muisca, a people who lived beside the lakes of the savanna, with their own astronomy, rituals, and an economy built on the continent's most coveted emeralds. When the Spanish arrived in search of El Dorado, they found something stranger and richer: a civilization that already knew who it was. We visit the Sacred Lagoon of El Dorado, where the legend that moved empires was born: the chief who covered himself in gold and submerged himself in the water as an offering. Then we visit the Salt Cathedral of Zipaquirá, carved 180 meters deep inside a mountain of salt.</p><p>The third day traces the colonial and republican city. We explore the historical, cultural, and political heart of La Candelaria: its streets, buildings, churches, and most emblematic museums, including the Gold Museum, the Botero Museum, and Fragmentos, a space where art channels the wounds of Colombia's past.</p><p>Three days in Bogotá, ending with the feeling that you have understood something the city has spent five centuries trying to explain.</p>"
     }
   },
   "includes": [
-    { "es": "Guía experto dedicado durante todo el recorrido", "en": "Dedicated expert guide throughout the entire journey" },
-    { "es": "Todas las entradas a museos e instituciones culturales", "en": "All entrance fees to museums and cultural institutions" },
-    { "es": "Experiencia gastronómica privada con chef (Día 1)", "en": "Private gastronomic experience with chef (Day 1)" },
-    { "es": "Transporte privado en todos los trayectos", "en": "Private transportation for all transfers" },
-    { "es": "Hospedaje (2 noches, hoteles boutique patrimoniales en Chapinero)", "en": "Lodging (2 nights, heritage boutique hotels in Chapinero)" },
-    { "es": "Seguros de viaje completos", "en": "Comprehensive travel insurance" },
-    { "es": "Visita a la Laguna Sagrada del Dorado y la Catedral de Sal de Zipaquirá", "en": "Visit to the Sacred Lagoon of El Dorado and the Salt Cathedral of Zipaquirá" }
+    { "es": "Acompañamiento guiado por historiador(a)", "en": "Guided accompaniment by a historian" },
+    { "es": "Entradas a todos los museos e instituciones culturales del itinerario", "en": "Admission to all museums and cultural institutions on the itinerary" },
+    { "es": "Almuerzos, bebidas no alcohólicas y refrigerios los días 2 y 3.", "en": "Lunches, non-alcoholic drinks, and snacks on days 2 and 3." },
+    { "es": "Transporte privado", "en": "Private transportation" },
+    { "es": "Seguro de responsabilidad civil", "en": "Liability insurance" }
+  ],
+  "optional": [
+    { "es": "Alojamiento", "en": "Accommodation" },
+    { "es": "Cata de cafe", "en": "Coffee tasting" },
+    { "es": "Experiencia gastronomica Signature.", "en": "Signature gastronomic experience." }
   ],
   "excludes": [
-    { "es": "Transporte aéreo", "en": "Air transportation" },
-    { "es": "Almuerzos y cenas los días 2 y 3", "en": "Lunches and dinners on days 2 and 3" },
-    { "es": "Bebidas adicionales", "en": "Additional beverages" },
-    { "es": "Compras personales", "en": "Personal purchases" }
+    { "es": "Tiquetes y vuelos nacionales o internacionales", "en": "Domestic or international tickets and flights" },
+    { "es": "Consumo de bebidas no incluidas en el menú", "en": "Drinks not included in the menu" },
+    { "es": "Propinas", "en": "Tips" }
   ],
   "itinerary": [
     {
       "day": 1,
       "title": { "es": "Llegada y Cena de Bienvenida", "en": "Arrival & Welcome Dinner" },
       "description": {
-        "es": "Recepción y traslado al hotel. Visita a Monserrate al atardecer, si las condiciones lo permiten, para situar la ciudad desde su altura. Cena de bienvenida y conversación privada con el chef.",
-        "en": "Reception and transfer to hotel. Visit to Monserrate at sunset, weather permitting, to situate the city from its highest point. Welcome dinner and private conversation with the chef."
+        "es": "Visita a Monserrate al atardecer (si las condiciones meteorológicas lo permiten). Cena de bienvenida a puerta cerrada.",
+        "en": "Visit to Monserrate at sunset (weather permitting). Private welcome dinner."
       },
-      "highlights": [
-        { "es": "Monserrate al atardecer", "en": "Monserrate at sunset" },
-        { "es": "Cena de bienvenida con chef", "en": "Welcome dinner with chef" }
-      ],
+      "highlights": [],
       "meals": ["dinner"],
-      "accommodation": { "es": "Hotel boutique patrimonial, Chapinero", "en": "Heritage boutique hotel, Chapinero" }
+      "accommodation": null
     },
     {
       "day": 2,
-      "title": { "es": "Más Allá de la Ciudad", "en": "Beyond the City" },
+      "title": { "es": "En búsqueda del Dorado.", "en": "In search of El Dorado." },
       "description": {
-        "es": "La sabana que formó a Bogotá. Mañana en la Laguna Sagrada del Dorado, donde se cree que nació la leyenda. Tarde en la Catedral de Sal de Zipaquirá, tallada en el interior de una montaña.",
-        "en": "The savanna that shaped Bogotá. Morning at the Sacred Lagoon of El Dorado, where the legend is believed to have been born. Afternoon at the Salt Cathedral of Zipaquirá, carved inside a mountain."
+        "es": "Mañana en la Laguna Sagrada en Guatavita, donde se cree que nació la leyenda de El Dorado. Almuerzo y luego por la tarde visita a la Catedral de Sal de Zipaquirá.",
+        "en": "Morning at the Sacred Lagoon in Guatavita, where the legend of El Dorado is believed to have begun. Lunch, followed by an afternoon visit to the Salt Cathedral of Zipaquirá."
       },
-      "highlights": [
-        { "es": "Laguna Sagrada del Dorado", "en": "Sacred Lagoon of El Dorado" },
-        { "es": "Catedral de Sal de Zipaquirá", "en": "Salt Cathedral of Zipaquirá" }
-      ],
-      "meals": ["breakfast"],
-      "accommodation": { "es": "Hotel boutique patrimonial, Chapinero", "en": "Heritage boutique hotel, Chapinero" }
+      "highlights": [],
+      "meals": ["lunch"],
+      "accommodation": null
     },
     {
       "day": 3,
       "title": { "es": "El Corazón de La Candelaria", "en": "The Heart of La Candelaria" },
       "description": {
-        "es": "Museo del Oro, iglesias coloniales, comerciantes de esmeraldas, Museo Botero, Fragmentos, Teatro Colón, Claustro de San Agustín, Escuela de Artes y Oficios. La ciudad como biografía arquitectónica.",
-        "en": "Museo del Oro, colonial churches, emerald merchants, Museo Botero, Fragmentos, Teatro Colón, Claustro de San Agustín, School of Arts and Crafts. The city as architectural biography."
+        "es": "Recorrido a pie (Walking tour) para entender el trazado de la ciudad colonial y republicana. Recorreremos sus calles, iglesias y museos más emblemáticos como el Museo del Oro, el Museo Botero, entre otros.",
+        "en": "Walking tour to understand the layout of the colonial and republican city. We will walk its streets and visit its most emblematic churches and museums, including the Gold Museum and the Botero Museum, among others."
       },
-      "highlights": [
-        { "es": "Museo del Oro", "en": "Museo del Oro" },
-        { "es": "Museo Botero", "en": "Museo Botero" },
-        { "es": "Fragmentos · Teatro Colón", "en": "Fragmentos · Teatro Colón" },
-        { "es": "Claustro de San Agustín", "en": "Claustro de San Agustín" }
-      ],
-      "meals": ["breakfast"],
+      "highlights": [],
+      "meals": ["lunch"],
       "accommodation": null
     }
   ],
@@ -210,14 +201,9 @@
   ],
   "relatedTours": ["classic-colombia", "en-busqueda-del-dorado"],
   "preTrip": {
-    "packing": [
-      { "es": "Capas — Bogotá está a 2.640m y el clima cambia rápido", "en": "Layers — Bogotá sits at 2,640m and weather shifts quickly" },
-      { "es": "Zapatos cómodos para caminar sobre empedrado", "en": "Comfortable shoes for cobblestone walking" },
-      { "es": "Chaqueta impermeable ligera", "en": "Light waterproof jacket" }
-    ],
-    "preparation": {
-      "es": "Bogotá está a 2.640 metros sobre el nivel del mar. Si es posible, llegue un día antes para aclimatarse. La altitud afecta los niveles de energía y la tolerancia al alcohol.",
-      "en": "Bogotá sits at 2,640 meters above sea level. Arrive a day early if possible to acclimate. Altitude affects energy levels and alcohol tolerance."
+    "recommendations": {
+      "es": "Bogotá está a 2.600 metros sobre el nivel del mar, una altitud que moldea el paisaje y el ritmo del día. La ciudad nos puede sorprender con un hermoso día de sol y pasar a una lluvia cinematográfica. Por eso sugerimos vestir en capas, llevar algo impermeable a mano y optar por calzado cerrado y cómodo.",
+      "en": "Bogotá sits 2,600 meters above sea level, an altitude that shapes the landscape and the rhythm of the day. The city may surprise us with a beautiful sunny day and then turn to cinematic rain. We therefore suggest dressing in layers, keeping something waterproof close at hand, and choosing comfortable closed shoes."
     }
   },
   "seo": {

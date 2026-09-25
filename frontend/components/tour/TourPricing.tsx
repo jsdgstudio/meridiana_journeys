@@ -154,6 +154,11 @@ export function TourPricing({ tour, locale }: TourPricingProps) {
               <p className="font-sans text-xs" style={{ color: "rgba(231,213,188,0.30)" }}>
                 {labels.sub[locale]}
               </p>
+              {price.customizationNote && (
+                <p className="font-sans text-sm leading-relaxed max-w-lg mx-auto" style={{ color: "rgba(231,213,188,0.72)" }}>
+                  {price.customizationNote[locale]}
+                </p>
+              )}
             </motion.div>
           </motion.div>
         </Container>

@@ -33,8 +33,8 @@ const GALLERY_COPY: Record<string, {
     headlinePre: { es: "El territorio que estamos ", en: "The territory we are " },
     headlineEm: { es: "leyendo.", en: "reading." },
     sub: {
-      es: "Bogotá es también un archivo: capas de tiempo, materia y memoria acumuladas sobre la sabana. Cinco siglos en el mismo plano.",
-      en: "Bogotá is also an archive: layers of time, matter and memory accumulated over the savanna. Five centuries on the same plane.",
+      es: "",
+      en: "",
     },
   },
   "classic-colombia": {

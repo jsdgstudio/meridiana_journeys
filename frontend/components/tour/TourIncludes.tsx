@@ -13,6 +13,7 @@ interface TourIncludesProps {
 
 const labels = {
   includes: { es: "Incluye", en: "Includes" },
+  optional: { es: "Opcional", en: "Optional" },
   excludes: { es: "No incluye", en: "Not included" },
 };
 
@@ -59,6 +60,21 @@ export function TourIncludes({ tour, locale }: TourIncludesProps) {
                 </motion.li>
               ))}
             </motion.ul>
+            {tour.optional && tour.optional.length > 0 && (
+              <div className="mt-10">
+                <h3 className="font-display font-light mb-6" style={{ fontSize: "1.1rem", color: "var(--marfil)" }}>
+                  {labels.optional[locale]}
+                </h3>
+                <ul className="space-y-4">
+                  {tour.optional.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="mt-1 flex-shrink-0" style={{ color: "var(--tumbaga)", fontSize: "11px" }}>·</span>
+                      <span className="font-sans text-sm leading-relaxed" style={{ color: "rgba(231,213,188,0.75)" }}>{item[locale]}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </motion.div>
 
           {/* Vertical separator — desktop only */}

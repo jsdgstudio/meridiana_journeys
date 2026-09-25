@@ -15,6 +15,7 @@ const labels = {
   eyebrow:     { es: "Antes de partir",  en: "Before you go"    },
   packing:     { es: "Qué llevar",       en: "What to pack"     },
   preparation: { es: "Preparación",      en: "Preparation"      },
+  recommendations: { es: "Recomendaciones", en: "Recommendations" },
 };
 
 const EASE: [number, number, number, number] = [0.65, 0, 0.35, 1];
@@ -22,6 +23,22 @@ const EASE: [number, number, number, number] = [0.65, 0, 0.35, 1];
 export function TourPreTrip({ tour, locale }: TourPreTripProps) {
   const { preTrip } = tour;
   if (!preTrip) return null;
+  if (preTrip.recommendations) {
+    return (
+      <SectionWrapper theme="light">
+        <Container size="narrow">
+          <motion.div initial="hidden" whileInView="visible" viewport={viewport} variants={fadeInUp}>
+            <h2 className="font-display font-light mb-7" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "var(--negro)" }}>
+              {labels.recommendations[locale]}
+            </h2>
+            <p className="font-sans leading-relaxed" style={{ color: "rgba(15,19,14,0.75)", fontSize: "1rem" }}>
+              {preTrip.recommendations[locale]}
+            </p>
+          </motion.div>
+        </Container>
+      </SectionWrapper>
+    );
+  }
   if (!preTrip.packing?.length && !preTrip.preparation) return null;
 
   return (
