@@ -32,8 +32,12 @@ const GALLERY_COPY: Record<string, {
 }> = {
   "classic-bogota": {
     label: { es: "bogotá · cuaderno visual", en: "bogotá · visual notebook" },
-    headlinePre: { es: "El territorio que estamos ", en: "The territory we are " },
-    headlineEm: { es: "leyendo.", en: "reading." },
+    // DOCX párr. 151 — literal ES; EN working translation.
+    headlinePre: {
+      es: "El mundo precolombino, la ciudad colonial, la era republicana y la Bogotá contemporánea.",
+      en: "The pre-Columbian world, the colonial city, the republican era and contemporary Bogotá.",
+    },
+    headlineEm: { es: "", en: "" },
     sub: {
       es: "",
       en: "",
@@ -95,7 +99,7 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
 
   // Only real photos: gradient placeholders would render as empty blocks
   // now that captions no longer sit on top of the frames (DOCX párr. 159).
-  const items = (tour.gallery ?? []).filter((item) => item.src).slice(0, 5);
+  const items = (tour.gallery ?? []).filter((item) => item.src);
   if (items.length === 0) return null;
   const copy = GALLERY_COPY[tour.id] ?? {
     label: { es: "cuaderno visual", en: "visual notebook" },
@@ -141,9 +145,11 @@ export function TourGallery({ tour, locale }: TourGalleryProps) {
               letterSpacing: "-0.015em", color: "var(--marfil)", maxWidth: 600,
             }}>
               {copy.headlinePre[locale]}
-              <em style={{ fontStyle: "italic", color: "var(--tumbaga-lt)" }}>
-                {copy.headlineEm[locale]}
-              </em>
+              {copy.headlineEm[locale] && (
+                <em style={{ fontStyle: "italic", color: "var(--tumbaga-lt)" }}>
+                  {copy.headlineEm[locale]}
+                </em>
+              )}
             </h2>
           </div>
           {copy.sub[locale] && (
