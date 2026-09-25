@@ -68,8 +68,7 @@
     "readyNotice": "El borrador está listo. Ábrelo, revísalo y envíalo desde tu correo para que llegue a Meridiana.",
     "manualEmail": "Si no se abre tu correo, escribe directamente a",
     "mailSubject": "Consulta de viaje — Meridiana",
-    "mailIntro": "Hola, Meridiana. Quisiera conversar sobre un viaje cultural.",
-    "responseTime": "Respondemos en menos de 48 horas"
+    "mailIntro": "Hola, Meridiana. Quisiera conversar sobre un viaje cultural."
   },
   "journal": {
     "pageTitle": "Journal",

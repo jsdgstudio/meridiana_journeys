@@ -68,8 +68,7 @@
     "readyNotice": "Your draft is ready. Open it, review it, and send it from your email app so it reaches Meridiana.",
     "manualEmail": "If your email app does not open, write directly to",
     "mailSubject": "Journey inquiry — Meridiana",
-    "mailIntro": "Hello, Meridiana. I would like to discuss a cultural journey.",
-    "responseTime": "We respond within 48 hours"
+    "mailIntro": "Hello, Meridiana. I would like to discuss a cultural journey."
   },
   "journal": {
     "pageTitle": "Journal",

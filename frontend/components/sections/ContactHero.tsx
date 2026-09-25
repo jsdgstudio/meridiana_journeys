@@ -5,8 +5,7 @@ import { motion, useAnimation, useReducedMotion } from "framer-motion";
 import type { Locale } from "@/types/tour";
 
 interface ContactHeroProps {
-  headline: { es: string; en: string };
-  description: { es: string; en: string };
+  headline: { es: [string, string]; en: [string, string] };
   locale: Locale;
 }
 
@@ -18,24 +17,18 @@ const LINE_STYLE = {
   transformOrigin: "center",
 } as const;
 
-// Headline split: first word dominant, rest as qualifier
-const HEADLINE: Record<Locale, [string, string]> = {
-  es: ["Comencemos", "una conversación."],
-  en: ["Let's begin", "a conversation."],
-};
-
 const EYEBROW: Record<Locale, string> = {
   es: "Meridiana · Contacto",
   en: "Meridiana · Contact",
 };
 
-export function ContactHero({ headline: _headline, description, locale }: ContactHeroProps) {
+export function ContactHero({ headline, locale }: ContactHeroProps) {
   const shouldReduce = useReducedMotion();
   const lineControls = useAnimation();
   const [lineReady, setLineReady] = useState(false);
   const cancelRef = useRef(false);
 
-  const [line1, line2] = HEADLINE[locale];
+  const [line1, line2] = headline[locale];
 
   useEffect(() => {
     cancelRef.current = false;
@@ -99,56 +92,32 @@ export function ContactHero({ headline: _headline, description, locale }: Contac
           style={LINE_STYLE}
         />
 
-        {/* Two-column grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-8 lg:gap-x-20 lg:items-end">
-
-          {/* Left — eyebrow + headline */}
-          <div className="lg:col-span-3">
-            <motion.span
-              initial={shouldReduce ? false : { opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3, ease }}
-              className="block font-sans uppercase mb-5"
-              style={{ fontSize: "11px", letterSpacing: "0.15em", color: "var(--tumbaga)" }}
-            >
-              {EYEBROW[locale]}
-            </motion.span>
-
-            <motion.h1
-              initial={shouldReduce ? false : { opacity: 0, y: 44 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.1, delay: 0.42, ease }}
-              className="font-display font-light leading-[0.92] tracking-tight"
-              style={{ fontSize: "clamp(4rem, 9vw, 8.5rem)" }}
-            >
-              <span className="block" style={{ color: "var(--marfil)" }}>{line1}</span>
-              <span
-                className="block"
-                style={{ color: "var(--marfil)", opacity: 0.42, paddingLeft: "0.1em" }}
-              >
-                {line2}
-              </span>
-            </motion.h1>
-          </div>
-
-          {/* Right — description */}
-          <motion.div
-            className="lg:col-span-2 lg:pb-1"
-            initial={shouldReduce ? false : { opacity: 0, y: 22 }}
+        <div>
+          <motion.span
+            initial={shouldReduce ? false : { opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.72, ease }}
+            transition={{ duration: 0.5, delay: 0.3, ease }}
+            className="block font-sans uppercase mb-5"
+            style={{ fontSize: "11px", letterSpacing: "0.15em", color: "var(--tumbaga)" }}
           >
-            <p
-              className="font-sans font-light leading-relaxed"
-              style={{
-                fontSize: "clamp(0.875rem, 1.1vw, 1rem)",
-                color: "rgba(231, 213, 188, 0.68)",
-                maxWidth: "46ch",
-              }}
+            {EYEBROW[locale]}
+          </motion.span>
+
+          <motion.h1
+            initial={shouldReduce ? false : { opacity: 0, y: 44 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.1, delay: 0.42, ease }}
+            className="font-display font-light leading-[0.92] tracking-tight"
+            style={{ fontSize: "clamp(4rem, 9vw, 8.5rem)" }}
+          >
+            <span className="block" style={{ color: "var(--marfil)" }}>{line1}</span>
+            <span
+              className="block"
+              style={{ color: "var(--marfil)", opacity: 0.42, paddingLeft: "0.1em" }}
             >
-              {description[locale]}
-            </p>
-          </motion.div>
+              {line2}
+            </span>
+          </motion.h1>
         </div>
       </div>
 

@@ -151,16 +151,13 @@ export interface AboutContent {
 
 export interface ContactContent {
   id: "contact";
-  headline: LocaleString;
-  description: LocaleString;
+  headline: { es: [string, string]; en: [string, string] };
   email: string;
   whatsapp: {
     number: string;
     label: LocaleString;
     href: string;
   };
-  responseTime: LocaleString;
-  reassurance: LocaleString;
 }
 
 // --- i18n UI Strings ---

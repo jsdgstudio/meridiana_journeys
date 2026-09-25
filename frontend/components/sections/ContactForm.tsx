@@ -238,10 +238,6 @@ export function ContactForm({ content, locale }: ContactFormProps) {
             </motion.div>
           )}
 
-          {/* Response time note */}
-          <p className="font-sans text-xs text-negro/35 tracking-wide">
-            {content.responseTime[locale]}
-          </p>
     </motion.form>
   );
 }
