@@ -72,7 +72,7 @@ export function TourItinerary({ tour, locale }: TourItineraryProps) {
                 <button
                   onClick={() => setOpenDay(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between gap-6 py-6 text-left group"
+                  className="w-full flex items-center justify-between gap-3 md:gap-6 py-6 text-left group"
                   style={{ position: "relative" }}
                 >
                   {/* Ghost day number — decorative background */}
@@ -89,11 +89,11 @@ export function TourItinerary({ tour, locale }: TourItineraryProps) {
                     {String(day.day).padStart(2, "0")}
                   </span>
 
-                  <div className="flex items-center gap-6 relative z-10">
-                    <span className="font-display text-3xl font-light leading-none select-none w-10 text-right flex-shrink-0" style={{ color: "rgba(15,19,14,0.15)" }}>
+                  <div className="flex min-w-0 items-center gap-3 md:gap-6 relative z-10">
+                    <span className="font-display text-3xl font-light leading-none select-none w-8 md:w-10 text-right flex-shrink-0" style={{ color: "rgba(15,19,14,0.15)" }}>
                       {String(day.day).padStart(2, "0")}
                     </span>
-                    <div>
+                    <div className="min-w-0">
                       <p
                         className="font-sans uppercase mb-1"
                         style={{ fontSize: "10px", letterSpacing: "0.28em", color: "rgba(15,19,14,0.35)" }}

@@ -79,7 +79,7 @@ export interface GalleryItem {
 
 export interface TourHero {
   image: string;
-  video?: string;
+  video?: string | null;
   alt: LocaleString;
   credit?: string;
   objectPosition?: string;

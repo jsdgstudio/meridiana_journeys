@@ -27,11 +27,12 @@
   "difficulty": "challenging",
   "hero": {
     "image": "/images/tours/wild-hero.jpg",
+    "video": null,
     "alt": {
-      "es": "Caño Cristales—el río de los cinco colores entre rocas cubiertas de macarenia clavigera",
-      "en": "Caño Cristales—the river of five colors flowing over rocks covered in macarenia clavigera"
+      "es": "Frailejones entre la neblina de un páramo andino",
+      "en": "Frailejones in the mist of an Andean páramo"
     },
-    "credit": "TODO"
+    "credit": "Pexels · foto 26664311"
   },
   "gallery": [
     {
@@ -67,16 +68,12 @@
   ],
   "narrative": {
     "short": {
-      "es": "21 días por los cinco ecosistemas del segundo país más biodiverso del planeta. De los páramos de Chingaza al Pacífico chocoano, de la Amazonía a la Sierra Nevada. Un encuentro con la vida en todas sus formas.",
-      "en": "21 days across the five ecosystems of the world's second most biodiverse country. From the páramos of Chingaza to the Chocó Pacific, from the Amazon to the Sierra Nevada. An encounter with life in all its forms."
+      "es": "Súmate a una expedición que redefine lo que es viajar, 21 días por los cinco ecosistemas del segundo país más biodiverso del planeta.",
+      "en": "Join an expedition that redefines travel: 21 days through the five ecosystems of the world's second most biodiverse country."
     },
     "long": {
-      "es": "<p>Súmate a una expedición que redefine lo que es viajar. 21 días por los cinco ecosistemas del segundo país más biodiverso del planeta. De los páramos de Chingaza y sus más de veinte especies de colibríes a los llanos infinitos de la Orinoquía donde el joropo suena al atardecer.</p><p>De los ríos negros del Amazonas y sus delfines rosados a las ballenas jorobadas del Pacífico chocoano. Hasta la Sierra Nevada de Santa Marta, la cordillera costera más alta del mundo, donde los Arhuacos custodian una cosmovisión que lleva milenios leyendo el territorio.</p><p>Wild Colombia no es un tour de naturaleza, es un encuentro con la vida en todas sus formas, la de los bosques, la de los ríos y la de los pueblos que los habitan.</p>",
-      "en": "<p>Join an expedition that redefines what it means to travel. 21 days across the five ecosystems of the world's second most biodiverse country. From the páramos of Chingaza and its more than twenty species of hummingbirds to the infinite plains of the Orinoquía, where joropo plays at sunset.</p><p>From the black rivers of the Amazon and its pink dolphins to the humpback whales of the Chocó Pacific. To the Sierra Nevada de Santa Marta, the world's highest coastal mountain range, where the Arhuaco safeguard a worldview that has been reading the territory for millennia.</p><p>Wild Colombia is not a nature tour—it is an encounter with life in all its forms: the forests, the rivers, and the peoples who inhabit them.</p>"
-    },
-    "pullQuote": {
-      "es": "No es un tour de naturaleza, es un encuentro con la vida en todas sus formas.",
-      "en": "Not a nature tour—an encounter with life in all its forms."
+      "es": "<p>Súmate a una expedición que redefine lo que es viajar, 21 días por los cinco ecosistemas del segundo país más biodiverso del planeta. De los páramos de Chingaza y sus más de veinte especies de colibríes a los llanos infinitos de la Orinoquía donde el joropo suena al atardecer. De los ríos negros del Amazonas y sus delfines rosados a las ballenas jorobadas del Pacífico chocoano. Hasta la Sierra Nevada de Santa Marta, la cordillera costera más alta del mundo, donde los Arhuacos custodian una cosmovisión que lleva milenios leyendo el territorio. Wild Colombia es un encuentro con la vida en todas sus formas, la de los bosques, la de los ríos y la de los pueblos que los habitan.</p>",
+      "en": "<p>Join an expedition that redefines travel: 21 days through the five ecosystems of the world's second most biodiverse country. From the páramos of Chingaza and their more than twenty species of hummingbirds to the endless Orinoquía plains, where joropo sounds at sunset. From the blackwater rivers of the Amazon and their pink dolphins to the humpback whales of the Pacific coast of Chocó. Then on to the Sierra Nevada de Santa Marta, the world's highest coastal mountain range, where the Arhuacos safeguard a worldview that has read the land for millennia. Wild Colombia is an encounter with life in all its forms: the forests, the rivers, and the peoples who inhabit them.</p>"
     }
   },
   "includes": [

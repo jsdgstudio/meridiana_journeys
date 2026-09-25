@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-25T09:38:41Z",
+  "updatedAt": "2026-09-25T12:18:55Z",
   "milestone": "Correcciones del feedback del cliente (documento 08/09/2026)",
   "current": {
     "id": "hecho",
-    "title": "MER-041: avance editorial de Classic Colombia",
-    "detail": "Publicados literalmente los párrafos 259, 260, 264 y 267 del DOCX; retirado «Máximo» sin cambiar el cupo. Falta texto de Zona Cafetera y PNN Tayrona. Cliente debe resolver «diez días» en el DOCX frente a «13 días» en la ficha, y confirmar la versión 264 de Medellín. Inglés de trabajo pendiente de ratificación."
+    "title": "MER-042: Wild Colombia actualizado según el DOCX",
+    "detail": "Descripción española literal del párrafo 350, traducción inglesa y hero de páramo tomados de la referencia Pexels del párrafo 357. Quedan pendientes las fotografías de Dorado y Macondo que requieren archivos o licencias iStock; la duración de 21 días del texto no coincide con todas las variantes comerciales de la ficha."
   },
   "tasks": [
     { "id": "MER-001", "area": "General", "title": "Página 404 visible en español e inglés", "status": "done", "date": "2026-09-22" },
@@ -34,8 +34,8 @@
     { "id": "MER-038", "area": "Viajes", "title": "Classic Medellín como sexto recorrido", "status": "waiting", "waitingFor": "Ficha completa ES/EN, imágenes y datos aprobados" },
     { "id": "MER-039", "area": "Home", "title": "Descripciones literales de Classic Bogotá, Dorado y Wild Colombia en la Home", "status": "done", "date": "2026-09-25" },
     { "id": "MER-040", "area": "General", "title": "Nuevas fotografías en Home, Sobre, Journal, Contacto y fichas", "status": "waiting", "waitingFor": "Archivos originales, créditos y licencias (iStock)" },
-    { "id": "MER-041", "area": "Viajes", "title": "Classic Colombia: párrafos literales publicados; faltan Zona Cafetera y Tayrona", "status": "waiting", "waitingFor": "Textos de Zona Cafetera y PNN Tayrona; confirmar 10 vs. 13 días y versión 264 de Medellín" },
-    { "id": "MER-042", "area": "Viajes", "title": "Ajustes de Dorado, Macondo y Wild", "status": "waiting", "waitingFor": "Texto final, datos y derechos de imágenes" },
+    { "id": "MER-041", "area": "Viajes", "title": "Classic Colombia: párrafos literales publicados; faltan Zona Cafetera y Tayrona", "status": "waiting", "waitingFor": "Textos de Zona Cafetera y PNN Tayrona; resolver 10 días del DOCX frente a 13 días de la ficha" },
+    { "id": "MER-042", "area": "Viajes", "title": "Wild Colombia: texto literal y nuevo hero; Dorado y Macondo pendientes de imágenes", "status": "waiting", "waitingFor": "Archivos originales o licencias iStock para Dorado y Macondo; validar variantes de duración de Wild" },
     { "id": "MER-002B", "area": "Contacto", "title": "Formulario conectado a un buzón real", "status": "later" }
   ]
 }

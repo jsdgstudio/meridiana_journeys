@@ -38,15 +38,17 @@ export function TourHero({ tour, locale }: TourHeroProps) {
           priority
           sizes="100vw"
         />
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={tour.hero.video ?? "/video/tour-hero.mp4"} type="video/mp4" />
-        </video>
+        {tour.hero.video !== null && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={tour.hero.video ?? "/video/tour-hero.mp4"} type="video/mp4" />
+          </video>
+        )}
       </div>
 
       {/* Per-tour overlay gradient */}
