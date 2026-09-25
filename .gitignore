@@ -45,12 +45,11 @@ skills-lock.json
 *.sln
 *.sw?
 
-# Remotion video project dependencies (MER-017)
-video/node_modules/
+# Remotion video project and loose video renders: kept local (MER-017)
+/video/
+/meridiana-social-preview.mp4
+/frontend/public/video/sobre_meridiana_BG_hero2.mp4
 
-# Empty directory tree left by an unexpanded `mkdir -p {…}` (MER-017).
-# Ignored so git stops failing to open it; removal pending approval.
-/{docs,tasks,frontend/
 
 # Internal notes and client source material: the repository is public, so
 # these stay local until explicitly approved for publication (docs/HANDOFF.md).
