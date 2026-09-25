@@ -86,6 +86,7 @@ function TravelCard({
   const tourHref = `/${locale}/viajes/${card.id}`;
   const contactHref = `/${locale}/contacto`;
   const theme = CARD_THEMES[card.id] ?? DEFAULT_THEME;
+  const hasFullDescription = ["classic-bogota", "en-busqueda-del-dorado", "wild-colombia"].includes(card.id);
 
   const titleText = card.title[locale];
   const emphasis = card.titleEmphasis?.[locale];
@@ -103,7 +104,7 @@ function TravelCard({
 
   return (
     <article
-      className="tc-card group relative overflow-hidden cursor-pointer min-w-[80px]"
+      className={`tc-card group relative overflow-hidden cursor-pointer min-w-[80px]${hasFullDescription ? " tc-card-full-description" : ""}`}
       style={{ color: "var(--marfil)", textShadow: "0 1px 14px rgba(0,0,0,0.35)", backgroundColor: "oklch(12% 0.018 75)" }}
     >
       {/* Background image */}

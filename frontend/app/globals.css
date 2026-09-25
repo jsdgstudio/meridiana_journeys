@@ -422,6 +422,15 @@ a:hover {
   /* Hide description paragraph — poster mode, no body copy */
   .tc-card .tc-reveal-d1 { display: none !important; }
 
+  /* The client-provided long descriptions remain readable in these three cards. */
+  .tc-row .tc-card.tc-card-full-description,
+  .tc-row:hover .tc-card.tc-card-full-description,
+  .tc-row .tc-card.tc-card-full-description:hover {
+    min-height: 640px;
+    max-height: none;
+  }
+  .tc-card.tc-card-full-description .tc-reveal-d1 { display: block !important; }
+
   /* Hide secondary CTA — one action per card on mobile */
   .tc-cta-secondary { display: none !important; }
 
