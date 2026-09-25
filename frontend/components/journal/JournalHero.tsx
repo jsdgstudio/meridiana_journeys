@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useReducedMotion } from "framer-motion";
 import type { Locale } from "@/types/tour";
@@ -9,6 +10,10 @@ interface JournalHeroProps {
   ui: {
     headline: string;
     subtitle: string;
+  };
+  image: {
+    src: string;
+    alt: string;
   };
 }
 
@@ -25,7 +30,7 @@ const DATELINE: Record<Locale, string> = {
   en: "Colombia, Latin America",
 };
 
-export function JournalHero({ locale, ui }: JournalHeroProps) {
+export function JournalHero({ locale, ui, image }: JournalHeroProps) {
   const shouldReduce = useReducedMotion();
   const lineControls = useAnimation();
   const [lineReady, setLineReady] = useState(false);
@@ -89,41 +94,59 @@ export function JournalHero({ locale, ui }: JournalHeroProps) {
           style={LINE_STYLE}
         />
 
-        {/* Headline */}
-        <motion.h1
-          initial={shouldReduce ? false : { opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.1, ease }}
-          className="font-display font-light text-marfil leading-none tracking-tight mb-8 whitespace-pre-line"
-          style={{ fontSize: "clamp(3rem, 8vw, 6rem)" }}
-        >
-          {ui.headline}
-        </motion.h1>
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
+          <div>
+            <motion.h1
+              initial={shouldReduce ? false : { opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.1, ease }}
+              className="font-display font-light text-marfil leading-none tracking-tight mb-8 whitespace-pre-line text-5xl md:text-6xl xl:text-7xl"
+            >
+              {ui.headline}
+            </motion.h1>
 
-        {/* Subtitle */}
-        <motion.p
-          initial={shouldReduce ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.25, ease }}
-          className="font-sans font-light text-marfil/70 text-lg max-w-xl mb-12"
-        >
-          {ui.subtitle}
-        </motion.p>
+            <motion.p
+              initial={shouldReduce ? false : { opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.25, ease }}
+              className="font-sans font-light text-marfil/70 text-lg max-w-xl mb-12"
+            >
+              {ui.subtitle}
+            </motion.p>
 
-        {/* Dateline — geographic provenance, literary device */}
-        <motion.div
-          initial={shouldReduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.55, ease }}
-          className="flex justify-end"
-        >
-          <span
-            className="font-sans uppercase"
-            style={{ fontSize: "9px", letterSpacing: "0.18em", color: "rgba(231,213,188,0.2)" }}
+            <motion.div
+              initial={shouldReduce ? false : { opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.55, ease }}
+              className="flex justify-end"
+            >
+              <span
+                className="font-sans uppercase"
+                style={{ fontSize: "9px", letterSpacing: "0.18em", color: "rgba(231,213,188,0.2)" }}
+              >
+                {DATELINE[locale]}
+              </span>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={shouldReduce ? false : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.2, ease }}
+            className="w-full max-w-md lg:ml-auto"
           >
-            {DATELINE[locale]}
-          </span>
-        </motion.div>
+            <div className="relative aspect-[4/5] overflow-hidden">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                priority
+                sizes="(min-width: 1024px) 448px, (min-width: 640px) 448px, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

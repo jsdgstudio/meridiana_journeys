@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "headline": {
+      "es": "El territorio\nque estamos leyendo.",
+      "en": "The territory\nwe are reading."
+    },
+    "subtitle": {
+      "es": "Cinco ensayos. Cinco maneras de entender Colombia antes de recorrerla.",
+      "en": "Five essays. Five ways to understand Colombia before travelling through it."
+    },
+    "image": {
+      "src": "/images/journal/colonial-street-pexels-31649387.jpg",
+      "alt": {
+        "es": "Calle empedrada entre tejados coloniales que conduce a una iglesia",
+        "en": "Cobblestone street between colonial rooftops leading to a church"
+      },
+      "source": {
+        "label": "Pexels",
+        "url": "https://www.pexels.com/es-es/foto/calle-historica-escenica-que-conduce-a-la-iglesia-colonial-31649387/"
+      }
+    }
+  }
+}
