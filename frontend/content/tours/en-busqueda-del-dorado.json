@@ -26,13 +26,13 @@
   },
   "difficulty": "moderate",
   "hero": {
-    "image": "/images/tours/dorado-iron-bridge-pexels-13735650.jpg",
+    "image": "/images/tours/dorado-gold-docx-image27.jpg",
     "video": null,
     "alt": {
-      "es": "Puente de madera e hierro bajo un cielo azul",
-      "en": "Wood and iron bridge beneath a blue sky"
+      "es": "Detalle de una pieza de orfebrería precolombina sobre fondo oscuro",
+      "en": "Detail of a pre-Columbian goldwork artifact against a dark background"
     },
-    "credit": "Pexels · foto 13735650"
+    "credit": "Imagen original incluida en el feedback del cliente, párrafo 50"
   },
   "gallery": [
     {
@@ -56,9 +56,9 @@
       "tag": { "es": "Honda", "en": "Honda" }
     },
     {
-      "gradient": "linear-gradient(135deg, #1A0A00 0%, #2E1500 50%, #3A1800 100%)",
-      "place": { "es": "Villa de Leyva", "en": "Villa de Leyva" },
-      "tag": { "es": "tiempo detenido", "en": "time frozen" }
+      "src": "/images/tours/dorado-iron-bridge-pexels-13735650.jpg",
+      "place": { "es": "Puente de madera e hierro", "en": "Wood and iron bridge" },
+      "tag": { "es": "en ruta", "en": "on the route" }
     },
     {
       "gradient": "linear-gradient(135deg, #1A1200 0%, #302209 50%, #3E2C0A 100%)",

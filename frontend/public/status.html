@@ -151,11 +151,13 @@
     var nowBox = document.getElementById("nowBox");
     if (data.current && data.current.title) {
       var currentTask = tasks.find(function (task) { return task.id === data.current.id; });
-      document.getElementById("nowLabel").textContent = (currentTask && currentTask.status === "review_local"
-        ? "Listo para revisar en localhost"
-        : currentTask && currentTask.status === "in_progress"
-          ? "Trabajando ahora"
-          : "Próxima corrección") + " · " + data.current.id;
+      document.getElementById("nowLabel").textContent = (currentTask && currentTask.status === "done"
+        ? "Último avance"
+        : currentTask && currentTask.status === "review_local"
+          ? "Listo para revisar en localhost"
+          : currentTask && currentTask.status === "in_progress"
+            ? "Trabajando ahora"
+            : "Próxima corrección") + " · " + data.current.id;
       document.getElementById("nowTitle").textContent = data.current.title;
       document.getElementById("nowDetail").textContent = data.current.detail || "";
       nowBox.hidden = false;
