@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-24T22:00:00-05:00",
+  "updatedAt": "2026-09-24T21:08:54-03:00",
   "milestone": "Correcciones del feedback del cliente (documento 08/09/2026)",
   "current": {
-    "id": "MER-030",
-    "title": "Título e intro de Sobre Meridiana",
-    "detail": "Poniendo «Sobre Meridiana» como título principal y el texto introductorio literal bajo la foto."
+    "id": "MER-031",
+    "title": "Biografías literales de Laura y Fabrizio",
+    "detail": "Siguiente: cotejar los perfiles con el texto entregado por el cliente."
   },
   "tasks": [
     { "id": "MER-001", "area": "General", "title": "Página 404 visible en español e inglés", "status": "done", "date": "2026-09-22" },
@@ -21,7 +21,7 @@
     { "id": "MER-028", "area": "Home", "title": "Cierre de la Home: seis recorridos y «Escríbenos por WhatsApp»", "status": "done", "date": "2026-09-24" },
     { "id": "MER-029", "area": "Footer", "title": "Frase «Redefinimos…», tamaño mayor y botón Contacto terracota", "status": "done", "date": "2026-09-24" },
     { "id": "MER-023", "area": "Navegación", "title": "Botón terracota permanente hacia Contacto", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-030", "area": "Sobre", "title": "«Sobre Meridiana» como título y texto introductorio bajo la foto", "status": "in_progress" },
+    { "id": "MER-030", "area": "Sobre", "title": "«Sobre Meridiana» como título y texto introductorio bajo la foto", "status": "done", "date": "2026-09-24" },
     { "id": "MER-031", "area": "Sobre", "title": "Biografías literales según el documento del cliente", "status": "todo" },
     { "id": "MER-032", "area": "Sobre", "title": "Perfiles justificados donde se lean bien", "status": "todo" },
     { "id": "MER-033", "area": "Sobre", "title": "Cierre «Planifiquemos algo juntos» con botón a Contacto", "status": "todo" },
