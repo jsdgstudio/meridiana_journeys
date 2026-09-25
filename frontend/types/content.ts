@@ -119,7 +119,7 @@ export interface HowItWorksContent {
 
 export interface CTAContent {
   headline: LocaleString;
-  description: LocaleString;
+  description?: LocaleString;
   buttonText: LocaleString;
   buttonHref: string;
 }

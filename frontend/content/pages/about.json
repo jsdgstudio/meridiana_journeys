@@ -58,12 +58,8 @@
   },
   "cta": {
     "headline": {
-      "es": "Planifiquemos algo juntos",
-      "en": "Let's plan something together"
-    },
-    "description": {
-      "es": "No hay itinerario estándar. Hay una conversación, una serie de preguntas, y luego un viaje diseñado para quien tú eres.",
-      "en": "There is no standard itinerary. There is a conversation, a series of questions, and then a journey designed for who you are."
+      "es": "Planifiquemos Algo Juntos",
+      "en": "Let's Plan Something Together"
     },
     "buttonText": {
       "es": "Comenzar esa conversación",

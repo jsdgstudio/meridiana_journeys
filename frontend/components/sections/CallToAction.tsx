@@ -28,6 +28,8 @@ function WhatsAppIcon() {
 
 export function CallToAction({ content, locale }: CallToActionProps) {
   const isExternal = content.buttonHref.startsWith("http");
+  const isWhatsApp = content.buttonHref.startsWith("https://wa.me/");
+  const buttonHref = isExternal ? content.buttonHref : `/${locale}${content.buttonHref}`;
 
   return (
     <SectionWrapper theme="dark">
@@ -51,21 +53,23 @@ export function CallToAction({ content, locale }: CallToActionProps) {
 
           {/* Headline */}
           <h2
-            className="font-display font-light text-marfil mb-7"
+            className={`font-display font-light text-marfil ${content.description ? "mb-7" : "mb-12"}`}
             style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)", lineHeight: 1.1, letterSpacing: "-0.02em" }}
           >
             {content.headline[locale]}
           </h2>
 
           {/* Description */}
-          <p
-            className="font-sans leading-relaxed mb-12 mx-auto"
-            style={{ color: "var(--marfil)", opacity: 0.55, fontSize: "0.9375rem", maxWidth: "48ch" }}
-          >
-            {content.description[locale]}
-          </p>
+          {content.description && (
+            <p
+              className="font-sans leading-relaxed mb-12 mx-auto"
+              style={{ color: "var(--marfil)", opacity: 0.55, fontSize: "0.9375rem", maxWidth: "48ch" }}
+            >
+              {content.description[locale]}
+            </p>
+          )}
 
-          {/* WhatsApp CTA button */}
+          {/* CTA button */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -74,7 +78,7 @@ export function CallToAction({ content, locale }: CallToActionProps) {
             className="inline-block"
           >
             <motion.a
-              href={content.buttonHref}
+              href={buttonHref}
               target={isExternal ? "_blank" : undefined}
               rel={isExternal ? "noopener noreferrer" : undefined}
               whileHover={{ scale: 1.025 }}
@@ -89,7 +93,7 @@ export function CallToAction({ content, locale }: CallToActionProps) {
                 letterSpacing: "0.14em",
               }}
             >
-              <WhatsAppIcon />
+              {isWhatsApp && <WhatsAppIcon />}
               {content.buttonText[locale]}
             </motion.a>
           </motion.div>
