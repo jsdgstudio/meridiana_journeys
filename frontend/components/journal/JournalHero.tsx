@@ -75,11 +75,29 @@ export function JournalHero({ locale, ui, image }: JournalHeroProps) {
 
   return (
     <section
-      className="bg-negro pt-32 pb-16 px-6 lg:px-12"
+      className="relative flex min-h-[100dvh] w-full flex-col overflow-hidden bg-negro"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="max-w-screen-xl mx-auto">
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background: [
+            "linear-gradient(to top, var(--negro) 0%, rgba(15,19,14,0.70) 26%, rgba(15,19,14,0.10) 72%)",
+            "linear-gradient(to right, rgba(15,19,14,0.35) 0%, transparent 70%)",
+          ].join(", "),
+        }}
+      />
+
+      <div className="relative z-10 flex flex-1 flex-col justify-end px-6 pb-16 pt-32 md:px-10 lg:px-16 lg:pb-24">
         {/* Mobile — static contracted line */}
         <div
           className="lg:hidden w-full mb-8"
@@ -94,57 +112,37 @@ export function JournalHero({ locale, ui, image }: JournalHeroProps) {
           style={LINE_STYLE}
         />
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
-          <div>
-            <motion.h1
-              initial={shouldReduce ? false : { opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.1, ease }}
-              className="font-display font-light text-marfil leading-none tracking-tight mb-8 whitespace-pre-line text-5xl md:text-6xl xl:text-7xl"
-            >
-              {ui.headline}
-            </motion.h1>
+        <div className="max-w-screen-xl">
+          <motion.h1
+            initial={shouldReduce ? false : { opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.1, ease }}
+            className="mb-8 whitespace-pre-line font-display text-5xl font-light leading-none tracking-tight text-marfil md:text-6xl xl:text-7xl"
+          >
+            {ui.headline}
+          </motion.h1>
 
-            <motion.p
-              initial={shouldReduce ? false : { opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.25, ease }}
-              className="font-sans font-light text-marfil/70 text-lg max-w-xl mb-12"
-            >
-              {ui.subtitle}
-            </motion.p>
-
-            <motion.div
-              initial={shouldReduce ? false : { opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.55, ease }}
-              className="flex justify-end"
-            >
-              <span
-                className="font-sans uppercase"
-                style={{ fontSize: "9px", letterSpacing: "0.18em", color: "rgba(231,213,188,0.2)" }}
-              >
-                {DATELINE[locale]}
-              </span>
-            </motion.div>
-          </div>
-
-          <motion.div
+          <motion.p
             initial={shouldReduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2, ease }}
-            className="w-full max-w-md lg:ml-auto"
+            transition={{ duration: 0.7, delay: 0.25, ease }}
+            className="mb-8 max-w-xl font-sans text-lg font-light text-marfil/90"
           >
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                priority
-                sizes="(min-width: 1024px) 448px, (min-width: 640px) 448px, 100vw"
-                className="object-cover"
-              />
-            </div>
+            {ui.subtitle}
+          </motion.p>
+
+          <motion.div
+            initial={shouldReduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.55, ease }}
+            className="flex max-w-xl justify-end"
+          >
+            <span
+              className="font-sans uppercase"
+              style={{ fontSize: "9px", letterSpacing: "0.18em", color: "rgba(231,213,188,0.2)" }}
+            >
+              {DATELINE[locale]}
+            </span>
           </motion.div>
         </div>
       </div>
