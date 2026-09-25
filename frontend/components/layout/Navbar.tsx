@@ -86,7 +86,7 @@ export function Navbar({ locale, ui }: NavbarProps) {
                       }
                     : undefined
                 }
-                className="h-7 lg:h-8 w-auto"
+                className="h-7 sm:h-[33px] lg:h-[37.5px] w-auto"
               />
             </Link>
 

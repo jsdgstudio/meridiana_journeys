@@ -29,7 +29,7 @@
     { "id": "MER-034", "area": "Viajes", "title": "Retirar entradilla y rótulos de ubicación en las fotos", "status": "done", "date": "2026-09-24" },
     { "id": "MER-035", "area": "Viajes", "title": "Ajustes de la ficha de Classic Bogotá", "status": "done", "date": "2026-09-24" },
     { "id": "MER-014A", "area": "General", "title": "Títulos duplicados y sitemap del Journal", "status": "done", "date": "2026-09-25" },
-    { "id": "MER-022", "area": "Navegación", "title": "Logo con más peso visual", "status": "waiting", "waitingFor": "Archivo maestro del logo en su variante más gruesa" },
+    { "id": "MER-022", "area": "Navegación", "title": "Logo un 17 % más grande en tablet y escritorio (móvil sin espacio)", "status": "review_local", "waitingFor": "Confirmación de Jaime; en móvil requiere compactar el botón Contacto", "model": "claude-opus-5-5" },
     { "id": "MER-036", "area": "Viajes", "title": "Classic Bogotá: texto y módulos definidos en el DOCX", "status": "done", "date": "2026-09-25" },
     { "id": "MER-038", "area": "Viajes", "title": "Classic Medellín como sexto recorrido", "status": "waiting", "waitingFor": "Ficha completa ES/EN, imágenes y datos aprobados" },
     { "id": "MER-039", "area": "Home", "title": "Descripciones literales de Classic Bogotá, Dorado y Wild Colombia en la Home", "status": "done", "date": "2026-09-25" },
