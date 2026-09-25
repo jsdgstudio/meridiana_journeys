@@ -85,7 +85,7 @@
   </div>
 
   <div class="now" id="nowBox" hidden>
-    <div class="label">Trabajando ahora</div>
+    <div class="label" id="nowLabel">Trabajando ahora</div>
     <h2 id="nowTitle"></h2>
     <p id="nowDetail"></p>
   </div>
@@ -144,6 +144,10 @@
 
     var nowBox = document.getElementById("nowBox");
     if (data.current && data.current.title) {
+      var currentTask = tasks.find(function (task) { return task.id === data.current.id; });
+      document.getElementById("nowLabel").textContent = currentTask && currentTask.status === "in_progress"
+        ? "Trabajando ahora"
+        : "Próxima corrección";
       document.getElementById("nowTitle").textContent = data.current.title;
       document.getElementById("nowDetail").textContent = data.current.detail || "";
       nowBox.hidden = false;
