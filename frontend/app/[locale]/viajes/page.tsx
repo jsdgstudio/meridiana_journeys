@@ -13,11 +13,6 @@ interface JourneysPageProps {
 
 const uiStrings = { es: esStrings, en: enStrings };
 
-const pageIntro = {
-  es: "Cinco itinerarios. Cada uno construido alrededor de una idea, no de una lista de atracciones. Desde tres días en Bogotá hasta tres semanas entre selva, páramo y litoral.",
-  en: "Five itineraries. Each one built around an idea, not a list of attractions. From three days in Bogotá to three weeks across jungle, páramo, and coastline.",
-};
-
 const customJourneyHeading = {
   es: "¿Tienes en mente algo diferente?",
   en: "Have something different in mind?",
@@ -54,7 +49,7 @@ export default function JourneysPage({ params }: JourneysPageProps) {
         }}
       >
         {/* Hero cinematográfico con línea animada en marfil */}
-        <JourneysHero locale={locale} pageIntro={pageIntro} />
+        <JourneysHero locale={locale} />
 
         {/* Cards en modo seamless: fondo transparente, sin header interno */}
         <TravelCards content={travelCards} locale={locale} theme="dark" seamless />

@@ -6,7 +6,6 @@ import type { Locale } from "@/types/tour";
 
 interface JourneysHeroProps {
   locale: Locale;
-  pageIntro: { es: string; en: string };
 }
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -24,12 +23,7 @@ const HEADLINE: Record<Locale, string> = {
   en: "Journeys",
 };
 
-const EYEBROW: Record<Locale, string> = {
-  es: "Meridiana · Colombia",
-  en: "Meridiana · Colombia",
-};
-
-export function JourneysHero({ locale, pageIntro }: JourneysHeroProps) {
+export function JourneysHero({ locale }: JourneysHeroProps) {
   const shouldReduce = useReducedMotion();
   const lineControls = useAnimation();
   const [lineReady, setLineReady] = useState(false);
@@ -98,51 +92,16 @@ export function JourneysHero({ locale, pageIntro }: JourneysHeroProps) {
           style={LINE_STYLE}
         />
 
-        {/* Two-column grid: headline (3fr) | description (2fr) */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-8 lg:gap-x-20 lg:items-end">
-
-          {/* Left — eyebrow + headline */}
-          <div className="lg:col-span-3">
-            <motion.span
-              initial={shouldReduce ? false : { opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3, ease }}
-              className="block font-sans uppercase mb-5"
-              style={{ fontSize: "11px", letterSpacing: "0.15em", color: "var(--tumbaga)" }}
-            >
-              {EYEBROW[locale]}
-            </motion.span>
-
-            <motion.h1
-              initial={shouldReduce ? false : { opacity: 0, y: 44 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.1, delay: 0.42, ease }}
-              className="font-display font-light leading-[0.88] tracking-tight"
-              style={{ fontSize: "clamp(5.5rem, 13vw, 11.5rem)", color: "var(--marfil)" }}
-            >
-              {title}
-            </motion.h1>
-          </div>
-
-          {/* Right — description */}
-          <motion.div
-            className="lg:col-span-2 lg:pb-1"
-            initial={shouldReduce ? false : { opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.72, ease }}
-          >
-            <p
-              className="font-sans font-light leading-relaxed"
-              style={{
-                fontSize: "clamp(0.875rem, 1.1vw, 1rem)",
-                color: "rgba(231, 213, 188, 0.68)",
-                maxWidth: "46ch",
-              }}
-            >
-              {pageIntro[locale]}
-            </p>
-          </motion.div>
-        </div>
+        {/* Headline — full width, no eyebrow or intro paragraph */}
+        <motion.h1
+          initial={shouldReduce ? false : { opacity: 0, y: 44 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, delay: 0.42, ease }}
+          className="font-display font-light leading-[0.88] tracking-tight"
+          style={{ fontSize: "clamp(5.5rem, 13vw, 11.5rem)", color: "var(--marfil)" }}
+        >
+          {title}
+        </motion.h1>
       </div>
 
       {/* Scroll indicator */}

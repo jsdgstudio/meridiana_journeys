@@ -152,7 +152,7 @@ function TravelCard({
       {/* Card content */}
       <div className="tc-content absolute inset-0 p-4 md:p-8 flex flex-col justify-between">
         {/* Meta row */}
-        <div className="tc-meta-row flex items-center justify-between">
+        <div className="tc-meta-row flex items-center">
           <span
             className="tc-tag inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] uppercase tracking-[0.18em] backdrop-blur"
           >
@@ -163,9 +163,6 @@ function TravelCard({
               />
             )}
             {card.tourLabel[locale]}
-          </span>
-          <span className="tc-region text-[11px] uppercase">
-            {card.region[locale]}
           </span>
         </div>
 
