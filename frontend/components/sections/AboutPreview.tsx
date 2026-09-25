@@ -168,7 +168,7 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
             {/* Texto editorial */}
             <div className="flex flex-col gap-5" style={{ maxWidth: "560px" }}>
               <motion.p
-                className="text-xl md:text-2xl font-semibold leading-relaxed text-marfil"
+                className="text-[16px] md:text-[17px] font-medium leading-[1.85] text-marfil/95"
                 {...fadeUp(1.0)}
               >
                 {content.lead[locale]}
@@ -176,7 +176,7 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
               <motion.div {...fadeUp(1.15)}>
                 <Link
                   href={aboutHref}
-                  className="inline-flex min-h-12 items-center gap-3 bg-terracota px-7 py-3 font-sans text-sm font-semibold uppercase tracking-wider text-negro hover:bg-marfil focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marfil"
+                  className="inline-flex min-h-12 items-center gap-3 bg-terracota px-6 py-3 font-sans text-sm font-medium tracking-wide text-marfil hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marfil"
                 >
                   {content.label[locale]}
                   <span aria-hidden="true">→</span>
