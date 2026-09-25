@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-25T13:10:06Z",
+  "updatedAt": "2026-09-25T15:10:37Z",
   "milestone": "Correcciones del feedback del cliente (documento 08/09/2026)",
   "current": {
-    "id": "hecho",
-    "title": "MER-042B: Dorado muestra fotografías del DOCX",
-    "detail": "La referencia Pexels del párrafo 334 reemplaza provisionalmente el hero roto de Dorado; la plaza de mercado de Honda del párrafo 332 aparece en su galería. Ambas tienen textos alternativos ES/EN sin atribuir al puente una ubicación no confirmada. La foto preferida de Guatavita y las de Macondo siguen pendientes de archivos iStock licenciados."
+    "id": "MER-043A",
+    "title": "Cards del Home listas para revisar en localhost",
+    "detail": "Títulos centrados antes del hover, disolvencia breve y Tour 03 con el puente de Dorado. Type-check y build aprobados; sin publicar hasta confirmación de Jaime."
   },
   "tasks": [
     { "id": "MER-001", "area": "General", "title": "Página 404 visible en español e inglés", "status": "done", "date": "2026-09-22" },
@@ -36,6 +36,8 @@
     { "id": "MER-040", "area": "General", "title": "Nuevas fotografías en Home, Sobre, Journal, Contacto y fichas", "status": "waiting", "waitingFor": "Archivos originales, créditos y licencias (iStock)" },
     { "id": "MER-041", "area": "Viajes", "title": "Classic Colombia: párrafos literales publicados; faltan Zona Cafetera y Tayrona", "status": "waiting", "waitingFor": "Textos de Zona Cafetera y PNN Tayrona; resolver 10 días del DOCX frente a 13 días de la ficha" },
     { "id": "MER-042", "area": "Viajes", "title": "Wild y Dorado actualizados; pendientes Guatavita y fotos Macondo", "status": "waiting", "waitingFor": "Archivos licenciados de iStock para reemplazar el hero provisional de Dorado por Guatavita y añadir las fotos de Macondo; validar variantes de duración de Wild" },
+    { "id": "MER-043A", "area": "Home", "title": "Centrar títulos de cards en reposo, disolver al hover y usar el puente en Tour 03", "status": "review_local", "waitingFor": "Confirmación visual de Jaime en localhost", "model": "gpt-6-sol" },
+    { "id": "MER-043B", "area": "Home", "title": "Suavizar tipografía de «Somos una agencia…» y mantener CTA terracota/marfil", "status": "todo", "model": "gpt-6-luna" },
     { "id": "MER-002B", "area": "Contacto", "title": "Formulario conectado a un buzón real", "status": "later" }
   ]
 }

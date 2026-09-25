@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { useState } from "react";
 import type { TravelCardsContent, TravelCardItem } from "@/types/content";
 import type { Locale } from "@/types/tour";
 
@@ -87,6 +88,8 @@ function TravelCard({
   const contactHref = `/${locale}/contacto`;
   const theme = CARD_THEMES[card.id] ?? DEFAULT_THEME;
   const hasFullDescription = ["classic-bogota", "en-busqueda-del-dorado", "wild-colombia"].includes(card.id);
+  const [active, setActive] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   const titleText = card.title[locale];
   const emphasis = card.titleEmphasis?.[locale];
@@ -104,8 +107,14 @@ function TravelCard({
 
   return (
     <article
-      className={`tc-card group relative overflow-hidden cursor-pointer min-w-[80px]${hasFullDescription ? " tc-card-full-description" : ""}`}
+      className={`tc-card group relative overflow-hidden min-w-[80px]${hasFullDescription ? " tc-card-full-description" : ""}`}
       style={{ color: "var(--marfil)", textShadow: "0 1px 14px rgba(0,0,0,0.35)", backgroundColor: "oklch(12% 0.018 75)" }}
+      onMouseEnter={() => setActive(true)}
+      onMouseLeave={() => setActive(false)}
+      onFocusCapture={() => setActive(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setActive(false);
+      }}
     >
       {/* Background image */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -151,7 +160,7 @@ function TravelCard({
       </svg>
 
       {/* Card content */}
-      <div className="tc-content absolute inset-0 p-4 md:p-8 flex flex-col justify-between">
+      <div className="tc-content absolute inset-0 p-4 md:p-8">
         {/* Meta row */}
         <div className="tc-meta-row flex items-center">
           <span
@@ -167,64 +176,50 @@ function TravelCard({
           </span>
         </div>
 
-        {/* Bottom content */}
-        <div>
-          <div className="tc-collapse">
-            {/* Meta tick — acento por tour */}
-            <div className="tc-reveal flex items-center gap-2.5 mb-4">
-              <span
-                className="tc-meta-tick flex-shrink-0"
-                style={{ background: theme.accentColor }}
-              />
-              <span
-                className="text-[11px] uppercase tracking-[0.2em]"
-                style={{ color: "rgba(231,213,188,0.7)" }}
-              >
-                {card.meta[locale]}
-              </span>
-            </div>
+        {/* El título en reposo ocupa el centro real de la imagen. */}
+        <motion.div
+          aria-hidden="true"
+          className="tc-rest-title font-display font-light"
+          initial={false}
+          animate={{ opacity: active ? 0 : 1, y: active ? -12 : 0 }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.35, ease: MERIDIANA_EASE }}
+        >
+          {titleNode}
+        </motion.div>
+
+        {/* Información completa: anclada abajo y desplazable solo si la ventana es baja. */}
+        <motion.div
+          className="tc-hover-panel"
+          initial={false}
+          animate={{ opacity: active ? 1 : 0, y: active ? 0 : 16 }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.4, ease: MERIDIANA_EASE }}
+        >
+          <div className="flex items-center gap-2.5 mb-3">
+            <span className="tc-meta-tick flex-shrink-0" style={{ background: theme.accentColor }} />
+            <span className="text-[11px] uppercase tracking-[0.2em] text-marfil/80">
+              {card.meta[locale]}
+            </span>
           </div>
-
-          <h3
-            className="tc-title font-display font-light mb-4"
-            style={{
-              color: "var(--marfil)",
-              fontSize: "clamp(2rem, 3.5vw, 3.2rem)",
-              lineHeight: 0.92,
-              letterSpacing: "-0.02em",
-              fontWeight: 300,
-            }}
-          >
-            {titleNode}
-          </h3>
-
-          <div className="tc-collapse">
-            <p
-              className="tc-reveal tc-reveal-d1 text-sm md:text-[15px] leading-relaxed mb-6 max-w-xl"
-              style={{ color: "rgba(231,213,188,0.82)" }}
+          <h3 className="tc-title font-display font-light mb-3">{titleNode}</h3>
+          <p className="text-sm md:text-[15px] leading-[1.6] mb-5 max-w-[68ch] text-marfil/90">
+            {card.description[locale]}
+          </p>
+          <div className="flex items-center gap-3 flex-wrap">
+            <Link
+              href={tourHref}
+              className="tc-cta-primary inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium"
             >
-              {card.description[locale]}
-            </p>
-
-            <div className="tc-reveal tc-reveal-d2 flex items-center gap-3 flex-wrap">
-              <Link
-                href={tourHref}
-                className="tc-cta-primary inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium"
-              >
-                {ctaLearnMore}
-                <span className="tc-arrow">
-                  <ArrowIcon size={14} />
-                </span>
-              </Link>
-              <Link
-                href={contactHref}
-                className="tc-cta-secondary inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm"
-              >
-                {ctaBook}
-              </Link>
-            </div>
+              {ctaLearnMore}
+              <span className="tc-arrow"><ArrowIcon size={14} /></span>
+            </Link>
+            <Link
+              href={contactHref}
+              className="tc-cta-secondary inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm"
+            >
+              {ctaBook}
+            </Link>
           </div>
-        </div>
+        </motion.div>
       </div>
     </article>
   );
@@ -338,7 +333,7 @@ export function TravelCards({ content, locale, theme = "dark", seamless = false 
         <motion.div
           variants={rowVariants}
           className="tc-row flex w-full"
-          style={{ height: "64vh", minHeight: "480px" }}
+          style={{ height: "64vh", minHeight: "560px" }}
         >
           {content.row1.map((card) => (
             <TravelCard

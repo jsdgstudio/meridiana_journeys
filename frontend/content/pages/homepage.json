@@ -130,8 +130,8 @@
       },
       {
         "id": "en-busqueda-del-dorado",
-        "imageSrc": "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&q=80&auto=format&fit=crop",
-        "imageAlt": "En Búsqueda del Dorado",
+        "imageSrc": "/images/tours/dorado-iron-bridge-pexels-13735650.jpg",
+        "imageAlt": "Puente de madera e hierro bajo un cielo azul",
         "tone": "gold",
         "tourLabel": { "es": "Tour 03", "en": "Tour 03" },
         "region": { "es": "Bogotá · Mompox · Cartagena", "en": "Bogotá · Mompox · Cartagena" },

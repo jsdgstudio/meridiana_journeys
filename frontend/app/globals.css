@@ -238,6 +238,7 @@ a:hover {
    ============================================================ */
 
 /* Row: hovered card grows, siblings shrink */
+.tc-row { overflow: hidden; }
 .tc-row .tc-card {
   transition: flex-grow 520ms cubic-bezier(0.65, 0, 0.35, 1),
               flex-shrink 520ms cubic-bezier(0.65, 0, 0.35, 1),
@@ -246,6 +247,8 @@ a:hover {
 }
 .tc-row:hover .tc-card       { flex: 0.75 1 0; }
 .tc-row .tc-card:hover       { flex: 3.2 1 0; }
+.tc-row:focus-within .tc-card { flex: 0.75 1 0; }
+.tc-row .tc-card:focus-within { flex: 3.2 1 0; }
 
 /* Media image */
 .tc-card .tc-media       { transition: transform 900ms cubic-bezier(0.65, 0, 0.35, 1), filter 520ms cubic-bezier(0.65, 0, 0.35, 1); }
@@ -265,29 +268,50 @@ a:hover {
 /* Hover reveal scrim */
 .tc-card .tc-scrim-hover       { transition: opacity 520ms cubic-bezier(0.65, 0, 0.35, 1); opacity: 0; }
 .tc-card:hover .tc-scrim-hover { opacity: 1; }
+.tc-card:focus-within .tc-scrim-hover { opacity: 1; }
+
+/* Tour-specific tint is subtle until the card is opened. */
+.tc-accent-glow { opacity: 0; }
+.tc-card:is(:hover, :focus-within) .tc-accent-glow { opacity: 1; }
 
 /* Meta row */
 .tc-card .tc-meta-row       { transition: transform 520ms cubic-bezier(0.65, 0, 0.35, 1), opacity 520ms cubic-bezier(0.65, 0, 0.35, 1); }
 .tc-card:hover .tc-meta-row { transform: translateY(-2px); opacity: 1; }
 
-/* Title */
-.tc-card .tc-title       { transition: transform 520ms cubic-bezier(0.65, 0, 0.35, 1); }
-.tc-card:hover .tc-title { transform: translateY(-4px); }
-
-/* Reveal elements */
-.tc-card .tc-reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 520ms cubic-bezier(0.65, 0, 0.35, 1),
-              transform 520ms cubic-bezier(0.65, 0, 0.35, 1);
+/* The resting title is independent from the expanded details, so hidden copy
+   cannot push the title away from the card's actual center. */
+.tc-card .tc-rest-title,
+.tc-card .tc-title {
+  color: var(--marfil);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  overflow-wrap: break-word;
 }
-.tc-card:hover .tc-reveal        { opacity: 1; transform: translateY(0); }
-.tc-card .tc-reveal-d1           { transition-delay: 80ms; }
-.tc-card .tc-reveal-d2           { transition-delay: 140ms; }
-
-/* Body content fades out in compressed siblings */
-.tc-card .tc-collapse       { transition: opacity 320ms cubic-bezier(0.65, 0, 0.35, 1); }
-.tc-row:hover .tc-card:not(:hover) .tc-collapse { opacity: 0; }
+.tc-card .tc-rest-title {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  text-align: center;
+  pointer-events: none;
+}
+.tc-card .tc-hover-panel {
+  position: absolute;
+  right: var(--space-8);
+  bottom: var(--space-8);
+  left: var(--space-8);
+  z-index: 2;
+  max-height: calc(100% - 6rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--tumbaga) transparent;
+  pointer-events: none;
+}
+.tc-card:is(:hover, :focus-within) .tc-hover-panel { pointer-events: auto; }
 
 /* CTA arrow nudge */
 .tc-card .tc-arrow       { transition: transform 380ms cubic-bezier(0.65, 0, 0.35, 1); }
@@ -327,7 +351,7 @@ a:hover {
   z-index: 3;
 }
 .tc-card:hover .tc-isotipo {
-  opacity: 0.85;
+  opacity: 0;
   color: var(--marfil);
   transform: translateY(-2px);
 }
@@ -397,60 +421,37 @@ a:hover {
   );
 }
 
-/* ── Mobile: compact poster cards ─────────────────────────── */
-@media (max-width: 820px) {
-  /* Stack vertically */
+/* ── Touch and narrow layouts: readable cards without hover ── */
+@media (max-width: 1023px), (hover: none) {
   .tc-row { flex-direction: column !important; height: auto !important; }
   .tc-row .tc-card,
   .tc-row:hover .tc-card,
-  .tc-row .tc-card:hover {
+  .tc-row .tc-card:hover,
+  .tc-row .tc-card:focus-within {
     flex: 1 1 auto !important;
-    min-height: 240px;
-    max-height: 280px;
+    min-height: 280px;
   }
-
-  /* Force all reveal/collapse elements visible */
-  .tc-card .tc-reveal   { opacity: 1 !important; transform: none !important; }
-  .tc-card .tc-collapse { opacity: 1 !important; }
-
-  /* Reduce flat scrim — gradient does the work */
+  .tc-card .tc-content { position: relative !important; inset: auto !important; min-height: 280px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .tc-card .tc-meta-row { margin-bottom: var(--space-16); transform: none !important; }
+  .tc-card .tc-rest-title { display: none; }
+  .tc-card .tc-hover-panel { position: static; max-height: none; overflow: visible; opacity: 1 !important; transform: none !important; pointer-events: auto; }
   .tc-card .tc-scrim-base  { opacity: 0.25 !important; }
-
-  /* Activate bottom gradient scrim — critical for legibility without hover */
   .tc-card .tc-scrim-hover { opacity: 1 !important; }
-
-  /* Hide description paragraph — poster mode, no body copy */
-  .tc-card .tc-reveal-d1 { display: none !important; }
-
-  /* The client-provided long descriptions remain readable in these three cards. */
+  .tc-card .tc-accent-glow { opacity: 1 !important; }
+  .tc-card .tc-hover-panel p { display: none; }
   .tc-row .tc-card.tc-card-full-description,
   .tc-row:hover .tc-card.tc-card-full-description,
   .tc-row .tc-card.tc-card-full-description:hover {
     min-height: 640px;
-    max-height: none;
   }
-  .tc-card.tc-card-full-description .tc-reveal-d1 { display: block !important; }
-
-  /* Hide secondary CTA — one action per card on mobile */
+  .tc-card.tc-card-full-description .tc-content { min-height: 640px; }
+  .tc-card.tc-card-full-description .tc-hover-panel p { display: block; }
   .tc-cta-secondary { display: none !important; }
-
-  /* Tighten meta row spacing */
-  .tc-card .tc-meta-row { transform: none !important; }
-
-  /* More dominant title on compact poster — editorial weight */
   .tc-card .tc-title {
     font-size: clamp(1.65rem, 5.5vw, 1.9rem) !important;
     margin-bottom: 0.75rem !important;
   }
-
-  /* Reduce isotipo — subtle brand mark, not competing with CTA */
-  .tc-card .tc-isotipo {
-    opacity: 0.3 !important;
-    width: 26px !important;
-    height: 26px !important;
-    bottom: 1rem !important;
-    right: 1rem !important;
-  }
+  .tc-card .tc-isotipo { display: none; }
 }
 
 /* ── Tour Gallery Masonry ─────────────────────────────── */

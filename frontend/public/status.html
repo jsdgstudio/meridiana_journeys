@@ -53,6 +53,7 @@
   .state.done { color: var(--marfil); }
   .state.done::before { content: "✓ "; color: var(--terracota); }
   .state.in_progress { color: var(--terracota); }
+  .state.review_local { color: var(--terracota); }
   li.done .title { color: var(--marfil); }
   footer { margin-top: 72px; font-size: 12px; color: var(--muted); }
   .error { color: var(--terracota); margin-top: 24px; font-size: 13px; }
@@ -94,7 +95,7 @@
   <div id="groups"></div>
   <p class="error" id="error" hidden>No se pudo actualizar. Se reintentará automáticamente.</p>
 
-  <footer>Esta página se actualiza sola cada minuto. Cada cambio se prueba antes de publicarse en el sitio.</footer>
+  <footer>Esta página se actualiza sola cada minuto. Los cambios en revisión local no se publican hasta la confirmación de Jaime.</footer>
 </div>
 
 <script>
@@ -103,6 +104,7 @@
   var REFRESH_MS = 60000;
   var GROUPS = [
     { key: "in_progress", label: "En curso", stateText: "En curso" },
+    { key: "review_local", label: "Para revisar en localhost", stateText: "Revisión local" },
     { key: "todo", label: "Siguientes", stateText: "Pendiente" },
     { key: "waiting", label: "Esperando material de Meridiana", stateText: "Esperando" },
     { key: "done", label: "Publicado", stateText: "Publicado" },
@@ -129,6 +131,7 @@
     title.appendChild(el("span", "task-id", task.id));
     title.appendChild(document.createTextNode(task.title));
     if (task.waitingFor) title.appendChild(el("span", "note", "Necesitamos: " + task.waitingFor));
+    if (task.model) title.appendChild(el("span", "note", "Modelo sugerido: " + task.model));
     li.appendChild(title);
     var stateText = task.status === "done" && task.date ? task.date.split("-").reverse().join("/") : group.stateText;
     li.appendChild(el("span", "state " + task.status, stateText));
@@ -148,9 +151,11 @@
     var nowBox = document.getElementById("nowBox");
     if (data.current && data.current.title) {
       var currentTask = tasks.find(function (task) { return task.id === data.current.id; });
-      document.getElementById("nowLabel").textContent = (currentTask && currentTask.status === "in_progress"
-        ? "Trabajando ahora"
-        : "Próxima corrección") + " · " + data.current.id;
+      document.getElementById("nowLabel").textContent = (currentTask && currentTask.status === "review_local"
+        ? "Listo para revisar en localhost"
+        : currentTask && currentTask.status === "in_progress"
+          ? "Trabajando ahora"
+          : "Próxima corrección") + " · " + data.current.id;
       document.getElementById("nowTitle").textContent = data.current.title;
       document.getElementById("nowDetail").textContent = data.current.detail || "";
       nowBox.hidden = false;
