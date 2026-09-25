@@ -135,9 +135,9 @@ export interface TeamMember {
 
 export interface AboutContent {
   id: "about";
-  hero: HeroContent;
+  hero: Omit<HeroContent, "subheadline">;
   story: {
-    pullQuote: LocaleString;
+    intro: LocaleString;
     body: LocaleString; // HTML
   };
   team: {

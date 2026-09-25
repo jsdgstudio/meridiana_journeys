@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useAnimation, useReducedMotion } from "framer-motion";
-import type { HeroContent } from "@/types/content";
+import type { AboutContent } from "@/types/content";
 import type { Locale } from "@/types/tour";
 
 interface AboutHeroProps {
-  content: HeroContent;
+  content: AboutContent["hero"];
   locale: Locale;
 }
 
@@ -28,8 +28,6 @@ export function AboutHero({ content, locale }: AboutHeroProps) {
   const words = content.headline[locale].split(" ");
   const line1 = words[0];
   const line2 = words.slice(1).join(" ");
-  const subheadline = content.subheadline[locale];
-  const eyebrow = locale === "es" ? "Sobre Meridiana" : "About Meridiana";
 
   // Entry sequence: appear full → contract slowly toward center
   useEffect(() => {
@@ -131,56 +129,23 @@ export function AboutHero({ content, locale }: AboutHeroProps) {
           style={LINE_STYLE}
         />
 
-        {/* Two-column grid: headline (3fr) | body (2fr) */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-8 lg:gap-x-20 lg:items-end">
-
-          {/* Left — eyebrow + headline */}
-          <div className="lg:col-span-3">
-            <motion.span
-              initial={shouldReduce ? false : { opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3, ease }}
-              className="block font-sans uppercase mb-5"
-              style={{ fontSize: "11px", letterSpacing: "0.15em", color: "var(--tumbaga)" }}
-            >
-              {eyebrow}
-            </motion.span>
-
-            <motion.h1
+        {/* Main title remains over the image; the editorial text begins below it. */}
+        <div>
+          <motion.h1
               initial={shouldReduce ? false : { opacity: 0, y: 44 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.1, delay: 0.42, ease }}
               className="font-display font-light leading-[0.92] tracking-tight"
-              style={{ fontSize: "clamp(4.5rem, 9.5vw, 9rem)" }}
+              style={{ fontSize: "clamp(3.5rem, 9.5vw, 9rem)" }}
             >
               <span className="block" style={{ color: "var(--marfil)" }}>{line1}</span>
               <span
                 className="block"
-                style={{ color: "var(--marfil)", opacity: 0.42, paddingLeft: "0.1em" }}
+                style={{ color: "var(--marfil)", paddingLeft: "0.1em" }}
               >
-                {line2}.
+                {line2}
               </span>
-            </motion.h1>
-          </div>
-
-          {/* Right — body paragraph */}
-          <motion.div
-            className="lg:col-span-2 lg:pb-1"
-            initial={shouldReduce ? false : { opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.72, ease }}
-          >
-            <p
-              className="font-sans font-light leading-relaxed"
-              style={{
-                fontSize: "clamp(0.875rem, 1.1vw, 1rem)",
-                color: "rgba(231, 213, 188, 0.68)",
-                maxWidth: "46ch",
-              }}
-            >
-              {subheadline}
-            </p>
-          </motion.div>
+          </motion.h1>
         </div>
       </div>
 

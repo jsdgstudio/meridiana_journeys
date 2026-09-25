@@ -17,8 +17,8 @@ export function AboutStory({ content, locale }: AboutStoryProps) {
   return (
     <SectionWrapper theme="page">
       <Container size="narrow">
-        {/* Pull quote */}
-        <motion.blockquote
+        {/* Opening statement, immediately below the hero image */}
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
@@ -26,17 +26,17 @@ export function AboutStory({ content, locale }: AboutStoryProps) {
           className="mb-12"
         >
           <div className="w-6 h-px bg-tumbaga mb-8" />
-          <p
-            className="font-display font-light italic leading-snug tracking-tight"
+          <h2
+            className="font-display font-light leading-snug tracking-tight"
             style={{
               fontSize: "var(--text-xl)",
               color: "var(--negro)",
               lineHeight: "var(--leading-snug)",
             }}
           >
-            &ldquo;{content.pullQuote[locale]}&rdquo;
-          </p>
-        </motion.blockquote>
+            {content.intro[locale]}
+          </h2>
+        </motion.div>
 
         {/* Body */}
         <motion.div
@@ -54,7 +54,7 @@ export function AboutStory({ content, locale }: AboutStoryProps) {
         >
           <RichText
             html={content.body[locale]}
-            className="prose-p:text-negro/65 prose-p:text-base"
+            className="prose-p:text-negro/85 prose-p:text-base"
           />
         </motion.div>
       </Container>
