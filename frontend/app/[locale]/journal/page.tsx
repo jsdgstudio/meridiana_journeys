@@ -16,8 +16,8 @@ export async function generateMetadata({
   return {
     title:
       locale === "es"
-        ? "Journal — El territorio que estamos leyendo | Meridiana"
-        : "Journal — The territory we are reading | Meridiana",
+        ? "Journal — El territorio que estamos leyendo"
+        : "Journal — The territory we are reading",
     description:
       locale === "es"
         ? "Cinco ensayos literarios sobre Colombia: historia, naturaleza, literatura y gastronomía antes del viaje."

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import type { Locale } from "@/types/tour";
 import { getTourBySlug, getAllTours } from "@/hooks/useTours";
+import { stripBrandSuffix } from "@/lib/seo";
 import { TourHero } from "@/components/tour/TourHero";
 import { TourNarrative } from "@/components/tour/TourNarrative";
 import { TourGallery } from "@/components/tour/TourGallery";
@@ -31,7 +32,7 @@ export async function generateMetadata({
 
   const seo = tour.seo[params.locale];
   return {
-    title: seo.metaTitle,
+    title: stripBrandSuffix(seo.metaTitle),
     description: seo.metaDescription,
     keywords: seo.keywords,
     openGraph: {

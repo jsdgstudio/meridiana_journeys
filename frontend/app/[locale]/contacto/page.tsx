@@ -17,8 +17,8 @@ export async function generateMetadata({
   return {
     title:
       locale === "es"
-        ? "Contacto — Meridiana"
-        : "Contact — Meridiana",
+        ? "Contacto"
+        : "Contact",
   };
 }
 

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import type { Locale } from "@/types/tour";
 import { getJournalEntries, getJournalEntry } from "@/lib/journal/entries";
 import { JournalArticle } from "@/components/journal/JournalArticle";
+import { stripBrandSuffix } from "@/lib/seo";
 
 interface JournalArticlePageProps {
   params: { locale: Locale; slug: string };
@@ -24,7 +25,7 @@ export async function generateMetadata({
   const { locale } = params;
 
   return {
-    title: entry.seo.title[locale],
+    title: stripBrandSuffix(entry.seo.title[locale]),
     description: entry.seo.description[locale],
     keywords: entry.seo.keywords[locale],
     openGraph: {

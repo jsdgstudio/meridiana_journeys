@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import type { Locale } from "@/types/tour";
 import { TravelCards } from "@/components/sections/TravelCards";
 import { JourneysHero } from "@/components/sections/JourneysHero";
@@ -17,6 +18,19 @@ const customJourneyHeading = {
   es: "¿Tienes en mente algo diferente?",
   en: "Have something different in mind?",
 };
+
+export async function generateMetadata({
+  params,
+}: JourneysPageProps): Promise<Metadata> {
+  const { locale } = params;
+  return {
+    title: locale === "es" ? "Viajes" : "Journeys",
+    description:
+      locale === "es"
+        ? "Cinco itinerarios culturales por Colombia, de tres días en Bogotá a tres semanas entre selva, páramo y litoral."
+        : "Five cultural itineraries across Colombia, from three days in Bogotá to three weeks across jungle, páramo, and coastline.",
+  };
+}
 
 const customJourneyBody = {
   es: "Cada viaje Meridiana nace de una conversación. Cuéntanos qué te mueve y construimos algo que no existe todavía.",

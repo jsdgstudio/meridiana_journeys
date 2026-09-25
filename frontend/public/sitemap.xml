@@ -118,4 +118,56 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Journal articles -->
+  <url>
+    <loc>https://meridianajourneys.com/es/journal/classic-bogota</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/journal/classic-bogota</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/journal/classic-colombia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/journal/classic-colombia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/journal/en-busqueda-del-dorado</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/journal/en-busqueda-del-dorado</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/journal/macondo-realismo-magico</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/journal/macondo-realismo-magico</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/es/journal/wild-colombia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://meridianajourneys.com/en/journal/wild-colombia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
 </urlset>

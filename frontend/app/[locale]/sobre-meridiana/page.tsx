@@ -17,8 +17,8 @@ export async function generateMetadata({
   return {
     title:
       locale === "es"
-        ? "Sobre Meridiana — Meridiana"
-        : "About Meridiana — Meridiana",
+        ? "Sobre Meridiana"
+        : "About Meridiana",
     description:
       locale === "es"
         ? "Somos una agencia de viajes culturales hechos a la medida que conecta a viajeros conscientes con la esencia de una Colombia auténtica, biodiversa y excepcionalmente creativa."
