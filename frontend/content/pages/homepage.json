@@ -161,8 +161,20 @@
       },
       {
         "id": "wild-colombia",
-        "imageSrc": "https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=1600&q=80&auto=format&fit=crop",
-        "imageAlt": "Wild Colombia",
+        "imageSrc": "/images/tours/wild-cano-cristales-mario-carvajal-card.jpg",
+        "imageAlt": {
+          "es": "Caño Cristales y sus aguas de colores en La Macarena, Meta",
+          "en": "The colorful waters of Caño Cristales in La Macarena, Meta"
+        },
+        "attribution": {
+          "credit": { "es": "Foto: Mario Carvajal · Caño Cristales", "en": "Photo: Mario Carvajal · Caño Cristales" },
+          "creditUrl": "https://www.cano-cristales.com/",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:CA%C3%91O_CRISTALES,_EL_R%C3%8DO_DE_COLORES.jpg",
+          "sourceLabel": "Wikimedia Commons",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+          "changes": { "es": "encuadre adaptable en web", "en": "responsive crop on website" }
+        },
         "tone": "emerald",
         "tourLabel": { "es": "Tour 05 · Expedición", "en": "Tour 05 · Expedition" },
         "region": { "es": "5 ecosistemas", "en": "5 ecosystems" },

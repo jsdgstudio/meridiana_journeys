@@ -3,6 +3,16 @@
 export type Locale = "es" | "en";
 export type LocaleString = { es: string; en: string };
 
+export interface PhotoAttribution {
+  credit: LocaleString;
+  creditUrl: string;
+  sourceUrl: string;
+  sourceLabel: string;
+  license: string;
+  licenseUrl: string;
+  changes: LocaleString;
+}
+
 export type TourCategory = "cultural" | "nature" | "culinary" | "historical" | "expedition";
 export type TourTier = "entry" | "core" | "premium";
 export type TourStatus = "published" | "draft";
@@ -82,6 +92,7 @@ export interface TourHero {
   video?: string | null;
   alt: LocaleString;
   credit?: string;
+  attribution?: PhotoAttribution;
   objectPosition?: string;
 }
 

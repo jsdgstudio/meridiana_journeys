@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-25T15:27:40Z",
+  "updatedAt": "2026-09-25T15:48:10Z",
   "milestone": "Correcciones del feedback del cliente (documento 08/09/2026)",
   "current": {
-    "id": "MER-043B",
-    "title": "Introducción del Home lista para revisar en localhost",
-    "detail": "El párrafo «Somos una agencia…» pasa a peso intermedio y mantiene el CTA terracota con texto marfil. Type-check y build aprobados; sigue pendiente la revisión de Jaime antes del despliegue."
+    "id": "MER-044A",
+    "title": "Caño Cristales para Wild Colombia",
+    "detail": "Original de Wikimedia para la ficha y versión 1280 px para el Home, con crédito y licencia CC BY 3.0 visibles. En preparación local; Jaime autorizó publicar el avance al completar el mapeo de imágenes."
   },
   "tasks": [
     { "id": "MER-001", "area": "General", "title": "Página 404 visible en español e inglés", "status": "done", "date": "2026-09-22" },
@@ -38,6 +38,8 @@
     { "id": "MER-042", "area": "Viajes", "title": "Wild y Dorado actualizados; pendientes Guatavita y fotos Macondo", "status": "waiting", "waitingFor": "Archivos licenciados de iStock para reemplazar el hero provisional de Dorado por Guatavita y añadir las fotos de Macondo; validar variantes de duración de Wild" },
     { "id": "MER-043A", "area": "Home", "title": "Centrar títulos de cards en reposo, disolver al hover y usar el puente en Tour 03", "status": "review_local", "waitingFor": "Confirmación visual de Jaime en localhost", "model": "gpt-6-sol" },
     { "id": "MER-043B", "area": "Home", "title": "Suavizar tipografía de «Somos una agencia…» y mantener CTA terracota/marfil", "status": "review_local", "waitingFor": "Confirmación visual de Jaime en localhost", "model": "gpt-6-luna" },
+    { "id": "MER-044A", "area": "Wild Colombia", "title": "Caño Cristales como hero y card del Home, con atribución CC BY 3.0", "status": "in_progress", "model": "gpt-6-sol" },
+    { "id": "MER-044B", "area": "Dorado", "title": "Pieza de oro original del DOCX como hero y card del Home", "status": "todo", "model": "gpt-6-luna" },
     { "id": "MER-002B", "area": "Contacto", "title": "Formulario conectado a un buzón real", "status": "later" }
   ]
 }

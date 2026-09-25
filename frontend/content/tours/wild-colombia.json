@@ -26,13 +26,22 @@
   },
   "difficulty": "challenging",
   "hero": {
-    "image": "/images/tours/wild-hero.jpg",
+    "image": "/images/tours/wild-cano-cristales-mario-carvajal-original.jpg",
     "video": null,
     "alt": {
-      "es": "Frailejones entre la neblina de un páramo andino",
-      "en": "Frailejones in the mist of an Andean páramo"
+      "es": "Caño Cristales y sus aguas de colores en La Macarena, Meta",
+      "en": "The colorful waters of Caño Cristales in La Macarena, Meta"
     },
-    "credit": "Pexels · foto 26664311"
+    "credit": "Mario Carvajal · Caño Cristales · CC BY 3.0",
+    "attribution": {
+      "credit": { "es": "Foto: Mario Carvajal · Caño Cristales", "en": "Photo: Mario Carvajal · Caño Cristales" },
+      "creditUrl": "https://www.cano-cristales.com/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:CA%C3%91O_CRISTALES,_EL_R%C3%8DO_DE_COLORES.jpg",
+      "sourceLabel": "Wikimedia Commons",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": { "es": "encuadre adaptable en web", "en": "responsive crop on website" }
+    }
   },
   "gallery": [
     {

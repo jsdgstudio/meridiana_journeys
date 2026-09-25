@@ -1,6 +1,6 @@
 // types/content.ts — Bilingual page content models
 
-import type { LocaleString } from "./tour";
+import type { LocaleString, PhotoAttribution } from "./tour";
 
 export type SectionType =
   | "hero"
@@ -19,7 +19,8 @@ export type SectionTheme = "light" | "dark" | "alt";
 export interface TravelCardItem {
   id: string;
   imageSrc: string;
-  imageAlt: string;
+  imageAlt: string | LocaleString;
+  attribution?: PhotoAttribution;
   tone: "terracotta" | "gold" | "emerald";
   tourLabel: LocaleString;
   region: LocaleString;

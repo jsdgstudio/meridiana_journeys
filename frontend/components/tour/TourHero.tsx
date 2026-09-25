@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { PhotoAttribution } from "@/components/ui/PhotoAttribution";
 import type { Tour, Locale } from "@/types/tour";
 import { TOUR_IDENTITY, DEFAULT_IDENTITY } from "@/lib/tour-identity";
 
@@ -26,6 +27,7 @@ export function TourHero({ tour, locale }: TourHeroProps) {
   const backLabel = locale === "es" ? "← Viajes" : "← Journeys";
 
   return (
+    <>
     <section className="relative w-full h-screen min-h-[600px] flex flex-col justify-end overflow-hidden">
       {/* Background: static image fallback → video loop */}
       <div className="absolute inset-0 z-0">
@@ -189,6 +191,13 @@ export function TourHero({ tour, locale }: TourHeroProps) {
           />
         </div>
       </motion.div>
+
     </section>
+    {tour.hero.attribution && (
+      <div className="bg-negro px-6 py-3 text-right md:px-10 lg:px-16">
+        <PhotoAttribution attribution={tour.hero.attribution} locale={locale} />
+      </div>
+    )}
+    </>
   );
 }
