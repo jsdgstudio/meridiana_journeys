@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-25T18:01:20Z",
+  "updatedAt": "2026-09-25T18:09:38Z",
   "milestone": "Correcciones del feedback del cliente (documento 08/09/2026)",
   "current": {
     "id": "MER-046B",
-    "title": "Wild Colombia: descripción sin superposición en las cards",
-    "detail": "El panel de Wild respeta el espacio de la etiqueta en Home y Journeys y permite desplazar el texto literal si la pantalla es baja. Las barras de créditos se retiraron y la atribución permanece en metadatos. Aprobado por Jaime para publicar; type-check, lint, build y rutas locales correctos."
+    "title": "Avance publicado: Journal, créditos y cards de Wild",
+    "detail": "MER-045J, MER-046A y MER-046B publicados y verificados en producción. Wild separa su texto de la etiqueta en Home y Journeys; no hay barras visibles de créditos y la atribución queda en metadatos. Jaime aprobó el diseño. Type-check, build y rutas ES/EN correctos."
   },
   "tasks": [
     { "id": "MER-001", "area": "General", "title": "Página 404 visible en español e inglés", "status": "done", "date": "2026-09-22" },
