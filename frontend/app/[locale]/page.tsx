@@ -7,6 +7,7 @@ import { TravelCards } from "@/components/sections/TravelCards";
 import { InfoBar } from "@/components/sections/InfoBar";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { CallToAction } from "@/components/sections/CallToAction";
+import { photoAttributionMetadata } from "@/lib/photo-attribution-metadata";
 
 interface HomePageProps {
   params: { locale: Locale };
@@ -17,6 +18,7 @@ export async function generateMetadata({
 }: HomePageProps): Promise<Metadata> {
   const { locale } = params;
   const content = getHomepageContent();
+  const wildAttribution = content.travelCards.row2.find((card) => card.id === "wild-colombia")?.attribution;
   return {
     title:
       locale === "es"
@@ -29,6 +31,9 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://meridianajourneys.com/${locale}`,
     },
+    other: wildAttribution
+      ? photoAttributionMetadata(wildAttribution, locale, "wild-colombia-photo")
+      : undefined,
   };
 }
 

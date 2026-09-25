@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { PhotoAttribution } from "@/components/ui/PhotoAttribution";
 import type { Tour, Locale } from "@/types/tour";
 import { TOUR_IDENTITY, DEFAULT_IDENTITY } from "@/lib/tour-identity";
 
@@ -193,11 +192,6 @@ export function TourHero({ tour, locale }: TourHeroProps) {
       </motion.div>
 
     </section>
-    {tour.hero.attribution && (
-      <div className="bg-negro px-6 py-3 text-right md:px-10 lg:px-16">
-        <PhotoAttribution attribution={tour.hero.attribution} locale={locale} />
-      </div>
-    )}
     </>
   );
 }

@@ -11,6 +11,7 @@ import { TourItinerary } from "@/components/tour/TourItinerary";
 import { TourExperience } from "@/components/tour/TourExperience";
 import { TourPreTrip } from "@/components/tour/TourPreTrip";
 import { TourPricing } from "@/components/tour/TourPricing";
+import { photoAttributionMetadata } from "@/lib/photo-attribution-metadata";
 
 interface TourDetailPageProps {
   params: { locale: Locale; slug: string };
@@ -40,6 +41,9 @@ export async function generateMetadata({
       description: seo.metaDescription,
       images: [{ url: tour.hero.image }],
     },
+    other: tour.hero.attribution
+      ? photoAttributionMetadata(tour.hero.attribution, params.locale, "hero-photo")
+      : undefined,
   };
 }
 

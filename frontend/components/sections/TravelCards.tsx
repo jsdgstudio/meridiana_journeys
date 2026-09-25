@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { PhotoAttribution } from "@/components/ui/PhotoAttribution";
 import { useState } from "react";
 import type { TravelCardsContent, TravelCardItem } from "@/types/content";
 import type { Locale } from "@/types/tour";
@@ -364,15 +363,6 @@ export function TravelCards({ content, locale, theme = "dark", seamless = false 
           ))}
         </motion.div>
       </motion.div>
-
-      {[...content.row1, ...content.row2].map((card) => card.attribution && (
-        <p key={`credit-${card.id}`} className="px-6 py-3 text-right md:px-12">
-          <span className={`font-sans text-[11px] ${isLight ? "text-negro/70" : "text-marfil/75"}`}>
-            {card.title[locale]} · {" "}
-          </span>
-          <PhotoAttribution attribution={card.attribution} locale={locale} tone={theme} />
-        </p>
-      ))}
 
     </section>
   );

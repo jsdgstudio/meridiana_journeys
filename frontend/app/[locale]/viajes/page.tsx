@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { getHomepageContent } from "@/hooks/useContent";
 import esStrings from "@/content/i18n/es.json";
 import enStrings from "@/content/i18n/en.json";
+import { photoAttributionMetadata } from "@/lib/photo-attribution-metadata";
 
 interface JourneysPageProps {
   params: { locale: Locale };
@@ -23,12 +24,16 @@ export async function generateMetadata({
   params,
 }: JourneysPageProps): Promise<Metadata> {
   const { locale } = params;
+  const wildAttribution = getHomepageContent().travelCards.row2.find((card) => card.id === "wild-colombia")?.attribution;
   return {
     title: locale === "es" ? "Viajes" : "Journeys",
     description:
       locale === "es"
         ? "Cinco itinerarios culturales por Colombia, de tres días en Bogotá a tres semanas entre selva, páramo y litoral."
         : "Five cultural itineraries across Colombia, from three days in Bogotá to three weeks across jungle, páramo, and coastline.",
+    other: wildAttribution
+      ? photoAttributionMetadata(wildAttribution, locale, "wild-colombia-photo")
+      : undefined,
   };
 }
 
