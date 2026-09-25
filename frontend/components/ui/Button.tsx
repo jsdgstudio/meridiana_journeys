@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRef } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 
 type Variant = "primary" | "secondary" | "ghost";
 type Size = "sm" | "md" | "lg";
@@ -68,7 +68,8 @@ export function Button({
   type = "button",
   disabled = false,
 }: ButtonProps) {
-  const isMagnetic = variant === "primary" || variant === "secondary";
+  const shouldReduce = useReducedMotion();
+  const isMagnetic = !shouldReduce && (variant === "primary" || variant === "secondary");
   const magnetic = useMagnetic(isMagnetic);
   const classes = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 

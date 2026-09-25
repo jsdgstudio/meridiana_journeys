@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValueEvent, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 import type { AboutPreviewContent } from "@/types/content";
 import type { Locale } from "@/types/tour";
@@ -83,6 +83,7 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
   const ctaHref = `/${locale}${content.cta.href}`;
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef   = useRef<HTMLVideoElement>(null);
+  const shouldReduce = useReducedMotion();
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -213,17 +214,19 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
 
         {/* Video — textura sutil al mínimo */}
         <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: 0.45 }}
-          >
-            <source src="/fondo_redefinimos.mp4" type="video/mp4" />
-          </video>
+          {!shouldReduce && (
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ opacity: 0.45 }}
+            >
+              <source src="/fondo_redefinimos.mp4" type="video/mp4" />
+            </video>
+          )}
           {/* Backing sólido — garantía de contraste sobre el texto */}
           <div className="absolute inset-0" style={{ background: "rgba(15,19,14,0.78)" }} />
           {/* Transición a secciones adyacentes — capa separada, no toca el centro */}
@@ -250,7 +253,7 @@ export function AboutPreview({ content, locale }: AboutPreviewProps) {
 
         {/* Isotipo */}
         <div className="relative z-10 flex justify-center py-10 md:py-14">
-          <motion.div style={{ opacity: isotipoOpacity, scale: isotipoScale }}>
+          <motion.div style={{ opacity: isotipoOpacity, scale: shouldReduce ? 1 : isotipoScale }}>
             <Image
               src={content.isotipo}
               alt="Meridiana"

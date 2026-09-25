@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import type { HeroContent } from "@/types/content";
 import type { Locale } from "@/types/tour";
 
@@ -15,6 +15,7 @@ export function Hero({ content, locale, leadVariant = "editorial" }: HeroProps) 
   const headline = content.headline[locale];
   const subheadline = content.subheadline[locale];
   const alt = content.media.alt[locale];
+  const shouldReduce = useReducedMotion();
 
   return (
     <section className="relative w-full min-h-[100dvh] flex flex-col overflow-hidden">
@@ -29,16 +30,18 @@ export function Hero({ content, locale, leadVariant = "editorial" }: HeroProps) 
           priority
           sizes="100vw"
         />
-        {/* Video de fondo en loop */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/video/hero-home.mp4" type="video/mp4" />
-        </video>
+        {/* Video de fondo en loop — omitido con reduced motion; queda la imagen */}
+        {!shouldReduce && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/video/hero-home.mp4" type="video/mp4" />
+          </video>
+        )}
         {/* Gradient overlay — top-to-bottom darkening */}
         <div
           className="absolute inset-0"

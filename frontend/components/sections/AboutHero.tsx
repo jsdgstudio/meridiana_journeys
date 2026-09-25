@@ -89,15 +89,18 @@ export function AboutHero({ content, locale }: AboutHeroProps) {
           priority
           sizes="100vw"
         />
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/video/sobre_meridiana_BG_hero.mp4" type="video/mp4" />
-        </video>
+        {/* Omitido con reduced motion; queda la imagen de fondo */}
+        {!shouldReduce && (
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/video/sobre_meridiana_BG_hero.mp4" type="video/mp4" />
+          </video>
+        )}
         {/* Gradient — preserva proporciones del video */}
         <div
           className="absolute inset-0"
