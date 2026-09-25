@@ -44,3 +44,26 @@ skills-lock.json
 *.njsproj
 *.sln
 *.sw?
+
+# Remotion video project dependencies (MER-017)
+video/node_modules/
+
+# Empty directory tree left by an unexpanded `mkdir -p {…}` (MER-017).
+# Ignored so git stops failing to open it; removal pending approval.
+/{docs,tasks,frontend/
+
+# Internal notes and client source material: the repository is public, so
+# these stay local until explicitly approved for publication (docs/HANDOFF.md).
+/AGENTS.md
+/Estructura Sitio Web Meridiana Journeys.md
+/Journal-meridiana.md
+/docs/COLLABORATION.md
+/docs/CONTENT_AUDIT.md
+/docs/DECISIONS.md
+/docs/DOCX-FEEDBACK-08-09.txt
+/docs/HANDOFF.md
+/docs/PENDIENTES-DOCX.md
+/docs/PROJECT_CONTEXT.md
+/docs/TASKS.md
+/docs/extract-docx.py
+/tasks/files.zip
