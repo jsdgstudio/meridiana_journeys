@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs",
+    "verify": "npm run type-check && npm run lint && npm run build && npm run smoke -- --serve"
   },
   "dependencies": {
     "framer-motion": "^11.3.0",
