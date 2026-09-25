@@ -6,7 +6,7 @@
   "tier": "core",
   "status": "published",
   "duration": { "es": "13 días", "en": "13 days" },
-  "groupSize": { "es": "Máximo 8 personas", "en": "Maximum 8 people" },
+  "groupSize": { "es": "8 personas", "en": "8 people" },
   "route": ["Bogotá", "Medellín", "Guatapé", "Eje Cafetero", "Cartagena"],
   "price": {
     "currency": "USD",
@@ -113,16 +113,12 @@
   ],
   "narrative": {
     "short": {
-      "es": "Una diagonal cultural que atraviesa el país: de la Bogotá andina a la transformación de Medellín, del motor cafetero al Caribe afrodescendiente. Trece días para comprender Colombia en actos.",
-      "en": "A cultural diagonal that crosses the country: from Andean Bogotá to the transformation of Medellín, from the coffee engine to the Afro-descendant Caribbean. Thirteen days to understand Colombia in acts."
+      "es": "Colombia tiene una diagonal cultural que va de los Andes al Caribe y que en diez días se puede recorrer entera.",
+      "en": "Colombia has a cultural diagonal running from the Andes to the Caribbean, and it can be traveled in its entirety in ten days."
     },
     "long": {
-      "es": "<p>Colombia se comprende en actos: una diagonal cultural que atraviesa el país desde la Bogotá andina, donde 2.600 metros de altura custodian el oro precolombino y cinco siglos de historia en La Candelaria, hasta la transformación de Medellín. En la capital antioqueña, la resiliencia ha convertido la violencia en innovación social y arte urbano, permitiendo que lugares como la Comuna 13 narren la fuerza de una comunidad que abraza su pasado para rediseñar su futuro.</p><p>La ruta desciende hacia el Eje Cafetero, motor de la economía local, para culminar en el Caribe afrodescendiente y su herencia ancestral. En Cartagena, el poderío de la España colonial grabado en el Castillo de San Felipe se funde con la vibrante resistencia de Getsemaní. Allí, entre murallas y tambores, la experiencia se sella con la gastronomía de matronas locales, cuyas recetas no solo alimentan, sino que transmiten la dignidad de una cultura extraordinaria que ha resistido el paso del tiempo.</p>",
-      "en": "<p>Colombia is understood in acts: a cultural diagonal that crosses the country from Andean Bogotá, where 2,600 meters of altitude guard pre-Columbian gold and five centuries of history in La Candelaria, to the transformation of Medellín. In the Antioquian capital, resilience has turned violence into social innovation and urban art, allowing places like Comuna 13 to narrate the strength of a community that embraces its past to redesign its future.</p><p>The route descends to the Coffee Region, engine of the local economy, before culminating in the Afro-descendant Caribbean and its ancestral heritage. In Cartagena, the might of colonial Spain inscribed in the Castillo de San Felipe fuses with the vibrant resistance of Getsemaní. There, between walls and drums, the experience is sealed by the cooking of local matronas—recipes that not only nourish but transmit the dignity of an extraordinary culture that has withstood the passage of time.</p>"
-    },
-    "pullQuote": {
-      "es": "Colombia se comprende en actos.",
-      "en": "Colombia is understood in acts."
+      "es": "<p>Colombia tiene una diagonal cultural que va de los Andes al Caribe y que en diez días se puede recorrer entera. Empieza en Bogotá, a dos mil seiscientos metros de altitud, en una ciudad que lleva cinco siglos acumulando capas de historia. Termina en Cartagena, al nivel del mar, en un puerto que durante tres siglos fue la puerta de entrada y salida de todo lo que España quería de este continente, incluyendo las personas que trajo a la fuerza desde África y que construyeron aquí una cultura extraordinaria con los materiales que les dejaron.</p><p>Bogotá abre este viaje con el Museo del Oro y La Candelaria, el Museo Botero, el Teatro Colón y Monserrate al atardecer. La gastronomía andina cuenta historias de mestizaje en espacios que son parte de la ciudad.</p><p>Luego, iremos a Medellín. Una ciudad con una historia de resiliencia que sorprende desde que llegas. La Comuna 13, narrada por guías comunitarios que vivieron desde adentro el paso de la violencia al arte urbano, es una de esas experiencias que reordenan la manera de entender qué puede hacer una ciudad con su propia historia cuando decide no ignorarla. El Museo de Antioquia, la Plaza de Botero y el almuerzo con una chef local en su espacio comunitario completan una ciudad que tiene mucho más que decir de lo que su fama previa sugería.</p><p>Cartagena cierra el viaje con cinco siglos de historia visible en cada piedra. El Castillo de San Felipe, el Museo de la Inquisición, el Museo de Arte Moderno. Las catedrales barrocas y las casas patrimoniales del centro amurallado. Y Getsemaní, el barrio que resistió la gentrificación con champeta y murales y que sigue siendo el lugar más vivo y más honesto de la ciudad. Un almuerzo privado con matrona caribeña que comparte recetas de herencia afrodescendiente es una de esas experiencias que no están en ningún restaurante, porque lo que se transmite ahí no es solo una receta sino una manera de entender de dónde viene lo que uno come.</p>",
+      "en": "<p>Colombia has a cultural diagonal running from the Andes to the Caribbean, and it can be traveled in its entirety in ten days. It begins in Bogotá, 2,600 meters above sea level, in a city that has accumulated five centuries of history. It ends in Cartagena, at sea level, in a port that for three centuries was the gateway for everything Spain wanted from this continent, including the people brought by force from Africa who built an extraordinary culture here with the materials they were given.</p><p>Bogotá opens this journey with the Gold Museum and La Candelaria, the Botero Museum, Teatro Colón, and Monserrate at sunset. Andean cuisine tells stories of mestizaje in spaces that are part of the city.</p><p>Then we go to Medellín, a city whose history of resilience surprises you from the moment you arrive. Comuna 13, told by community guides who lived through the transition from violence to street art, changes the way one understands what a city can do with its own history when it chooses not to ignore it. The Museum of Antioquia, Plaza Botero, and lunch with a local chef in her community space complete a city with far more to say than its former reputation suggested.</p><p>Cartagena closes the journey with five centuries of history visible in every stone. Castillo de San Felipe, the Inquisition Museum, the Modern Art Museum, the Baroque cathedrals, and the heritage houses of the walled center. And Getsemaní, the neighborhood that resisted gentrification through champeta and murals and remains the city's most alive and honest place. A private lunch with a Caribbean matrona sharing recipes of Afro-descendant heritage is one of those experiences found in no restaurant, because what is passed on is not only a recipe but a way of understanding where our food comes from.</p>"
     }
   },
   "includes": [
@@ -316,7 +312,7 @@
   "experience": {
     "duration": { "es": "13 días", "en": "13 days" },
     "departures": { "es": "1 al año, agosto", "en": "Once a year, August" },
-    "groupSize": { "es": "Máximo 8 personas", "en": "Maximum 8 people" },
+    "groupSize": { "es": "8 personas", "en": "8 people" },
     "pace": { "es": "Moderado, variado por región", "en": "Moderate, varying by region" },
     "language": { "es": "Español o inglés", "en": "Spanish or English" },
     "startPoint": { "es": "Bogotá (BOG)", "en": "Bogotá (BOG)" },
