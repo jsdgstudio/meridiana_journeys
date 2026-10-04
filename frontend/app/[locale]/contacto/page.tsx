@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/types/tour";
 import { getContactContent } from "@/hooks/useContent";
-import { ContactHero } from "@/components/sections/ContactHero";
+import { ContactHero, type ContactHeroMedia } from "@/components/sections/ContactHero";
+import contactHero from "@/content/pages/contact-hero.json";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/sections/ContactForm";
@@ -31,6 +32,7 @@ export default function ContactPage({ params }: ContactPageProps) {
       <ContactHero
         headline={content.headline}
         locale={locale}
+        media={contactHero as ContactHeroMedia}
       />
 
       {/* Form + contact info */}

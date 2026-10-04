@@ -1,13 +1,23 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion, useAnimation, useReducedMotion } from "framer-motion";
-import type { Locale } from "@/types/tour";
+import type { Locale, LocaleString } from "@/types/tour";
+
+export interface ContactHeroMedia {
+  image: { src: string; alt: LocaleString };
+  /** Animated version (DOCX párr. 314). Until it exists the still gets a slow drift. */
+  video?: string | null;
+}
 
 interface ContactHeroProps {
   headline: { es: [string, string]; en: [string, string] };
   locale: Locale;
+  media?: ContactHeroMedia;
 }
+
+const DRIFT_SECONDS = 24;
 
 const ease = [0.16, 1, 0.3, 1] as const;
 const CONTRACT = 0.18;
@@ -22,7 +32,7 @@ const EYEBROW: Record<Locale, string> = {
   en: "Meridiana · Contact",
 };
 
-export function ContactHero({ headline, locale }: ContactHeroProps) {
+export function ContactHero({ headline, locale, media }: ContactHeroProps) {
   const shouldReduce = useReducedMotion();
   const lineControls = useAnimation();
   const [lineReady, setLineReady] = useState(false);
@@ -74,9 +84,51 @@ export function ContactHero({ headline, locale }: ContactHeroProps) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {media && (
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <motion.div
+            className="absolute inset-0"
+            initial={false}
+            animate={shouldReduce || media.video ? { scale: 1 } : { scale: [1, 1.08] }}
+            transition={{ duration: DRIFT_SECONDS, ease: "linear", repeat: Infinity, repeatType: "mirror" }}
+          >
+            <Image
+              src={media.image.src}
+              alt={media.image.alt[locale]}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          </motion.div>
+          {media.video && !shouldReduce && (
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover"
+            >
+              <source src={media.video} type="video/mp4" />
+            </video>
+          )}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: [
+                "linear-gradient(to top,    var(--negro) 0%, rgba(15,19,14,0.55) 22%, rgba(15,19,14,0.0) 50%)",
+                "linear-gradient(to bottom, rgba(15,19,14,0.65) 0%, rgba(15,19,14,0.0) 32%)",
+                "linear-gradient(to right,  rgba(15,19,14,0.35) 0%, rgba(15,19,14,0.0) 38%)",
+                "linear-gradient(rgba(15,19,14,0.22), rgba(15,19,14,0.22))",
+              ].join(", "),
+            }}
+          />
+        </div>
+      )}
+
 
       {/* Content — anchored to bottom */}
-      <div className="relative flex-1 flex flex-col justify-end px-6 md:px-10 lg:px-16 pb-20 lg:pb-28 pt-32">
+      <div className="relative z-10 flex-1 flex flex-col justify-end px-6 md:px-10 lg:px-16 pb-20 lg:pb-28 pt-32">
 
         {/* Mobile — static contracted */}
         <div
@@ -126,7 +178,7 @@ export function ContactHero({ headline, locale }: ContactHeroProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.9, duration: 0.8 }}
-        className="absolute bottom-7 left-1/2 -translate-x-1/2"
+        className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2"
       >
         <div className="relative w-px h-14 overflow-hidden">
           <div className="absolute inset-0 bg-marfil/12" />
