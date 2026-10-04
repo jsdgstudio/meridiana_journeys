@@ -91,8 +91,9 @@ export function JournalHero({ locale, ui, image }: JournalHeroProps) {
         className="absolute inset-0"
         style={{
           background: [
-            "linear-gradient(to top, var(--negro) 0%, rgba(15,19,14,0.70) 26%, rgba(15,19,14,0.10) 72%)",
-            "linear-gradient(to right, rgba(15,19,14,0.35) 0%, transparent 70%)",
+            "linear-gradient(to top, var(--negro) 0%, rgba(15,19,14,0.80) 30%, rgba(15,19,14,0.25) 75%)",
+            "linear-gradient(to bottom, rgba(15,19,14,0.55) 0%, rgba(15,19,14,0.0) 30%)",
+            "linear-gradient(to right, rgba(15,19,14,0.45) 0%, transparent 70%)",
           ].join(", "),
         }}
       />

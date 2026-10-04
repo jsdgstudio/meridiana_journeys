@@ -7,10 +7,10 @@
     },
     "media": {
       "type": "image",
-      "src": "/images/about-hero.jpg",
+      "src": "/images/about-hero-pexels-13784003.jpg",
       "alt": {
-        "es": "Vista de Cartagena al atardecer, donde el Caribe se convierte en historia viva",
-        "en": "Cartagena at dusk, where the Caribbean becomes living history"
+        "es": "Calle de una ciudad colombiana con un autobús de colores",
+        "en": "Street in a Colombian city with a colourful bus"
       }
     }
   },

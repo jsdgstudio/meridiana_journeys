@@ -85,7 +85,7 @@ export function AboutHero({ content, locale }: AboutHeroProps) {
           src={content.media.src}
           alt={content.media.alt[locale]}
           fill
-          className="object-cover object-center"
+          className="object-cover object-top"
           priority
           sizes="100vw"
         />
@@ -96,7 +96,8 @@ export function AboutHero({ content, locale }: AboutHeroProps) {
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover"
+            // Anchored to the top so the bus and the sky keep their air when cropped.
+            className="absolute inset-0 w-full h-full object-cover object-top"
           >
             <source src="/video/hero-sobre.mp4" type="video/mp4" />
           </video>
@@ -106,10 +107,12 @@ export function AboutHero({ content, locale }: AboutHeroProps) {
           className="absolute inset-0"
           style={{
             background: [
-              "linear-gradient(to top,    var(--negro) 0%, rgba(15,19,14,0.0) 38%)",
-              "linear-gradient(to bottom, rgba(15,19,14,0.55) 0%, rgba(15,19,14,0.0) 28%)",
-              "linear-gradient(to right,  rgba(15,19,14,0.30) 0%, rgba(15,19,14,0.0) 35%)",
-              "linear-gradient(to left,   rgba(15,19,14,0.20) 0%, rgba(15,19,14,0.0) 30%)",
+              "linear-gradient(to top,    var(--negro) 0%, rgba(15,19,14,0.55) 22%, rgba(15,19,14,0.0) 50%)",
+              "linear-gradient(to bottom, rgba(15,19,14,0.65) 0%, rgba(15,19,14,0.0) 32%)",
+              "linear-gradient(to right,  rgba(15,19,14,0.35) 0%, rgba(15,19,14,0.0) 38%)",
+              "linear-gradient(to left,   rgba(15,19,14,0.22) 0%, rgba(15,19,14,0.0) 30%)",
+              // Subtle overall dimming so the animated scene sits behind the type.
+              "linear-gradient(rgba(15,19,14,0.22), rgba(15,19,14,0.22))",
             ].join(", "),
           }}
         />
