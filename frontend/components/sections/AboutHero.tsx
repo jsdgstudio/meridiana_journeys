@@ -98,7 +98,7 @@ export function AboutHero({ content, locale }: AboutHeroProps) {
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/video/sobre_meridiana_BG_hero.mp4" type="video/mp4" />
+            <source src="/video/hero-sobre.mp4" type="video/mp4" />
           </video>
         )}
         {/* Gradient — preserva proporciones del video */}
