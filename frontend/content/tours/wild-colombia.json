@@ -6,7 +6,7 @@
   "tier": "premium",
   "status": "published",
   "duration": { "es": "18 a 21 días", "en": "18 to 21 days" },
-  "groupSize": { "es": "Máximo 6 personas", "en": "Maximum 6 people" },
+  "groupSize": { "es": "6 personas", "en": "6 people" },
   "route": ["Andes", "Orinoquía", "Amazonía", "Pacífico", "Caribe"],
   "price": {
     "currency": "USD",
@@ -319,7 +319,7 @@
   "experience": {
     "duration": { "es": "18 a 21 días", "en": "18 to 21 days" },
     "departures": { "es": "Agosto", "en": "August" },
-    "groupSize": { "es": "Máximo 6 personas", "en": "Maximum 6 people" },
+    "groupSize": { "es": "6 personas", "en": "6 people" },
     "pace": { "es": "Activo, caminatas, navegaciones, madrugadas", "en": "Active—hikes, navigations, early mornings" },
     "language": { "es": "Español o inglés", "en": "Spanish or English" },
     "startPoint": { "es": "Bogotá (BOG)", "en": "Bogotá (BOG)" },
