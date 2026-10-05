@@ -346,6 +346,10 @@
   ],
   "relatedTours": ["classic-colombia", "en-busqueda-del-dorado", "macondo-realismo-magico"],
   "preTrip": {
+    "recommendations": {
+      "es": "Wild Colombia exige disposición para condiciones de campo, madrugadas y caminatas. La extensión opcional en helicóptero por Chiribiquete y los Cerros de Mavecure es la única vía de acceso a esos territorios. Sugerimos ropa técnica para el clima de páramo (frío) y del trópico (calor y humedad), botas de campo resistentes al agua, binoculares y equipo fotográfico, repelente de insectos potente y linterna frontal.",
+      "en": "Wild Colombia requires a willingness for field conditions, early mornings and hikes. The optional helicopter extension to Chiribiquete and the Mavecure Hills is the only way to access those territories. We suggest technical clothing for the páramo (cold) and the tropics (heat and humidity), water-resistant field boots, binoculars and photographic equipment, strong insect repellent and a headlamp."
+    },
     "kit": {
       "es": "Kit pre-viaje con guía de aves ilustrada, mapa de ecosistemas y bibliografía conservacionista.",
       "en": "Pre-trip kit with illustrated bird guide, ecosystem map, and conservationist bibliography."

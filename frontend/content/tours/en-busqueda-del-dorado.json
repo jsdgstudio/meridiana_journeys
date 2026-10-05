@@ -245,6 +245,10 @@
   ],
   "relatedTours": ["classic-bogota", "classic-colombia", "macondo-realismo-magico"],
   "preTrip": {
+    "recommendations": {
+      "es": "Sugerimos ropa ligera para el clima tropical y capas para Bogotá, repelente de insectos para la zona ribereña y calzado resistente al agua.",
+      "en": "We suggest light clothing for the tropical climate and layers for Bogotá, insect repellent for the riverside stretch, and water-resistant footwear."
+    },
     "kit": {
       "es": "Kit pre-viaje con réplica en miniatura de tunjo Muisca, mapa ilustrado de rutas del oro y bibliografía sobre culturas precolombinas y la colonia.",
       "en": "Pre-trip kit with a miniature replica of a Muisca tunjo, an illustrated map of gold routes, and a bibliography on pre-Columbian and colonial cultures."

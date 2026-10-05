@@ -268,6 +268,10 @@
   ],
   "relatedTours": ["classic-colombia", "en-busqueda-del-dorado", "wild-colombia"],
   "preTrip": {
+    "recommendations": {
+      "es": "Sugerimos ropa ligera de algodón o lino para el clima tropical, repelente de insectos, sombrero y protección solar.",
+      "en": "We suggest light cotton or linen clothing for the tropical climate, insect repellent, a hat and sun protection."
+    },
     "kit": {
       "es": "Kit pre-viaje con journal de cuero, mapa ilustrado de la ruta y bibliografía recomendada.",
       "en": "Pre-trip kit with leather journal, illustrated route map, and recommended bibliography."
