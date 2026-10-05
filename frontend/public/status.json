@@ -46,6 +46,7 @@
     { "id": "MER-047J", "area": "Journal", "title": "Foto Pexels 31649387 como hero de pantalla completa", "status": "done", "date": "2026-09-25", "model": "gpt-6-sol" },
     { "id": "MER-048R", "area": "Coordinación", "title": "Ordenar acuerdos y pendientes de la reunión de seguimiento", "status": "done", "date": "2026-09-26" },
     { "id": "MER-015B", "area": "Journal", "title": "Lightbox del cuaderno visual: foco atrapado, Escape y retorno del foco", "status": "review_local", "waitingFor": "Publicado con este lote; pendiente confirmación visual de Jaime", "model": "claude-opus-5-5" },
+    { "id": "MER-054", "area": "General", "title": "Optimización de vídeos (WebM + MP4 ligero), imágenes, fuentes y carga", "status": "todo" },
     { "id": "MER-002B", "area": "Contacto", "title": "Formulario conectado a un buzón real", "status": "later" }
   ]
 }
