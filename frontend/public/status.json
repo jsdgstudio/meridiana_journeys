@@ -1,52 +1,505 @@
 {
-  "updatedAt": "2026-09-26T17:12:22Z",
-  "milestone": "Correcciones del feedback del cliente (documento 08/09/2026)",
+  "updatedAt": "2026-10-05T22:30:08Z",
+  "milestone": "Cierre visual y editorial posterior a la reunión de seguimiento",
   "current": {
-    "id": "MER-048R",
-    "title": "Reunión de seguimiento registrada",
-    "detail": "Se ordenaron acuerdos, materiales pendientes y próximos pasos en la documentación interna. El sitio no cambió."
+    "id": "MER-054",
+    "title": "Sitio más liviano",
+    "detail": "Videos ~41 MB → ~13 MB e imágenes de origen ~20 MB → ~5 MB, sin cambios visibles. Publicación agrupada en un solo deploy para cuidar la cuota de Vercel."
   },
   "tasks": [
-    { "id": "MER-001", "area": "General", "title": "Página 404 visible en español e inglés", "status": "done", "date": "2026-09-22" },
-    { "id": "MER-002A", "area": "Contacto", "title": "El formulario ya no simula un envío: prepara un correo real", "status": "done", "date": "2026-09-23" },
-    { "id": "MER-005", "area": "Home", "title": "Frase del Hero y pasos Descubre / Elige / Vive (versión anterior)", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-007", "area": "Navegación", "title": "Viajes antes de Sobre Meridiana en el menú", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-006", "area": "Sobre", "title": "Biografías ampliadas de Laura y Fabrizio", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-020", "area": "Home", "title": "Hero con las dos frases literales del feedback", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-021", "area": "Navegación", "title": "Menú de escritorio más legible (14 px)", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-024", "area": "Home", "title": "Nuevo texto de introducción con mayor escala y botón destacado", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-025", "area": "Home", "title": "Retirar «Meridiana · Curaduría cultural» y el «Meridiana» con punto", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-026", "area": "Home", "title": "Textos literales de Descubre / Decide / Viaja", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-027", "area": "Home", "title": "Los tres pasos como cajas animadas con texto más grande", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-028", "area": "Home", "title": "Cierre de la Home: seis recorridos y «Escríbenos por WhatsApp»", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-029", "area": "Footer", "title": "Frase «Redefinimos…», tamaño mayor y botón Contacto terracota", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-023", "area": "Navegación", "title": "Botón terracota permanente hacia Contacto", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-030", "area": "Sobre", "title": "«Sobre Meridiana» como título y texto introductorio bajo la foto", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-031", "area": "Sobre", "title": "Biografías literales según el documento del cliente", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-032", "area": "Sobre", "title": "Perfiles justificados donde se lean bien", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-033", "area": "Sobre", "title": "Cierre «Planifiquemos Algo Juntos» con botón a Contacto", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-037", "area": "Contacto", "title": "Nuevo título, WhatsApp en verde y textos simplificados", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-034", "area": "Viajes", "title": "Retirar entradilla y rótulos de ubicación en las fotos", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-035", "area": "Viajes", "title": "Ajustes de la ficha de Classic Bogotá", "status": "done", "date": "2026-09-24" },
-    { "id": "MER-014A", "area": "General", "title": "Títulos duplicados y sitemap del Journal", "status": "done", "date": "2026-09-25" },
-    { "id": "MER-022", "area": "Navegación", "title": "Logo un 17 % más grande en tablet y escritorio", "status": "done", "date": "2026-10-04", "model": "claude-opus-5-5" },
-    { "id": "MER-036", "area": "Viajes", "title": "Classic Bogotá: texto y módulos definidos en el DOCX", "status": "done", "date": "2026-09-25" },
-    { "id": "MER-038", "area": "Viajes", "title": "Classic Medellín como sexto recorrido", "status": "waiting", "waitingFor": "Ficha completa ES/EN, imágenes y datos aprobados" },
-    { "id": "MER-039", "area": "Home", "title": "Descripciones literales de Classic Bogotá, Dorado y Wild Colombia en la Home", "status": "done", "date": "2026-09-25" },
-    { "id": "MER-040", "area": "General", "title": "Nuevas fotografías en Home, Sobre, Journal, Contacto y fichas", "status": "waiting", "waitingFor": "Archivos originales, créditos y licencias (iStock)" },
-    { "id": "MER-041", "area": "Viajes", "title": "Classic Colombia: párrafos literales publicados; faltan Zona Cafetera y Tayrona", "status": "waiting", "waitingFor": "Textos de Zona Cafetera y PNN Tayrona; resolver 10 días del DOCX frente a 13 días de la ficha" },
-    { "id": "MER-042", "area": "Viajes", "title": "Wild y Dorado actualizados; fotos de Macondo pendientes", "status": "waiting", "waitingFor": "Archivos iStock licenciados para Macondo; validar variantes de duración de Wild" },
-    { "id": "MER-043A", "area": "Home", "title": "Títulos de cards centrados en reposo y disolvencia breve al hover", "status": "done", "date": "2026-09-25", "model": "gpt-6-sol" },
-    { "id": "MER-043B", "area": "Home", "title": "Tipografía sutil en «Somos una agencia…» y CTA terracota/marfil", "status": "done", "date": "2026-09-25", "model": "gpt-6-luna" },
-    { "id": "MER-044A", "area": "Wild Colombia", "title": "Caño Cristales como hero y card del Home, con atribución CC BY 3.0", "status": "done", "date": "2026-09-25", "model": "gpt-6-sol" },
-    { "id": "MER-044B", "area": "Dorado", "title": "Pieza de oro original del DOCX como hero y card del Home", "status": "done", "date": "2026-09-25", "model": "gpt-6-luna" },
-    { "id": "MER-045J", "area": "Journal", "title": "Foto Pexels del DOCX (párrafo 312) en encabezado editorial ES/EN", "status": "done", "date": "2026-09-25", "model": "gpt-6-sol" },
-    { "id": "MER-046A", "area": "Imágenes", "title": "Quitar barras de crédito visibles y conservar autor, fuente y licencia en metadatos", "status": "done", "date": "2026-09-25", "model": "gpt-6-sol" },
-    { "id": "MER-046B", "area": "Cards", "title": "Separar la descripción larga de Wild Colombia de la etiqueta superior en Home y Journeys", "status": "done", "date": "2026-09-25", "model": "gpt-6-luna" },
-    { "id": "MER-047J", "area": "Journal", "title": "Foto Pexels 31649387 como hero de pantalla completa", "status": "done", "date": "2026-09-25", "model": "gpt-6-sol" },
-    { "id": "MER-048R", "area": "Coordinación", "title": "Ordenar acuerdos y pendientes de la reunión de seguimiento", "status": "done", "date": "2026-09-26" },
-    { "id": "MER-015B", "area": "Journal", "title": "Lightbox del cuaderno visual: foco atrapado, Escape y retorno del foco", "status": "review_local", "waitingFor": "Publicado con este lote; pendiente confirmación visual de Jaime", "model": "claude-opus-5-5" },
-    { "id": "MER-054", "area": "General", "title": "Optimización de vídeos (WebM + MP4 ligero), imágenes, fuentes y carga", "status": "todo" },
-    { "id": "MER-002B", "area": "Contacto", "title": "Formulario conectado a un buzón real", "status": "later" }
+    {
+      "id": "MER-001",
+      "area": "General",
+      "title": "Página 404 visible en español e inglés",
+      "status": "done",
+      "date": "2026-09-22"
+    },
+    {
+      "id": "MER-002A",
+      "area": "Contacto",
+      "title": "El formulario ya no simula un envío: prepara un correo real",
+      "status": "done",
+      "date": "2026-09-23"
+    },
+    {
+      "id": "MER-005",
+      "area": "Home",
+      "title": "Frase del Hero y pasos Descubre / Elige / Vive (versión anterior)",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-007",
+      "area": "Navegación",
+      "title": "Viajes antes de Sobre Meridiana en el menú",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-006",
+      "area": "Sobre",
+      "title": "Biografías ampliadas de Laura y Fabrizio",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-020",
+      "area": "Home",
+      "title": "Hero con las dos frases literales del feedback",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-021",
+      "area": "Navegación",
+      "title": "Menú de escritorio más legible (14 px)",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-024",
+      "area": "Home",
+      "title": "Nuevo texto de introducción con mayor escala y botón destacado",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-025",
+      "area": "Home",
+      "title": "Retirar «Meridiana · Curaduría cultural» y el «Meridiana» con punto",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-026",
+      "area": "Home",
+      "title": "Textos literales de Descubre / Decide / Viaja",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-027",
+      "area": "Home",
+      "title": "Los tres pasos como cajas animadas con texto más grande",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-028",
+      "area": "Home",
+      "title": "Cierre de la Home: seis recorridos y «Escríbenos por WhatsApp»",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-029",
+      "area": "Footer",
+      "title": "Frase «Redefinimos…», tamaño mayor y botón Contacto terracota",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-023",
+      "area": "Navegación",
+      "title": "Botón terracota permanente hacia Contacto",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-030",
+      "area": "Sobre",
+      "title": "«Sobre Meridiana» como título y texto introductorio bajo la foto",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-031",
+      "area": "Sobre",
+      "title": "Biografías literales según el documento del cliente",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-032",
+      "area": "Sobre",
+      "title": "Perfiles justificados donde se lean bien",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-033",
+      "area": "Sobre",
+      "title": "Cierre «Planifiquemos Algo Juntos» con botón a Contacto",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-037",
+      "area": "Contacto",
+      "title": "Nuevo título, WhatsApp en verde y textos simplificados",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-034",
+      "area": "Viajes",
+      "title": "Retirar entradilla y rótulos de ubicación en las fotos",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-035",
+      "area": "Viajes",
+      "title": "Ajustes de la ficha de Classic Bogotá",
+      "status": "done",
+      "date": "2026-09-24"
+    },
+    {
+      "id": "MER-014A",
+      "area": "General",
+      "title": "Títulos duplicados y sitemap del Journal",
+      "status": "done",
+      "date": "2026-09-25"
+    },
+    {
+      "id": "MER-022",
+      "area": "Navegación",
+      "title": "Logo un 17 % más grande en tablet y escritorio",
+      "status": "done",
+      "date": "2026-10-04",
+      "model": "claude-opus-5-5"
+    },
+    {
+      "id": "MER-036",
+      "area": "Viajes",
+      "title": "Classic Bogotá: texto y módulos definidos en el DOCX",
+      "status": "done",
+      "date": "2026-09-25"
+    },
+    {
+      "id": "MER-038",
+      "area": "Viajes",
+      "title": "Classic Medellín como sexto recorrido",
+      "status": "waiting",
+      "waitingFor": "Ficha completa ES/EN, imágenes y datos aprobados"
+    },
+    {
+      "id": "MER-039",
+      "area": "Home",
+      "title": "Descripciones literales de Classic Bogotá, Dorado y Wild Colombia en la Home",
+      "status": "done",
+      "date": "2026-09-25"
+    },
+    {
+      "id": "MER-040",
+      "area": "General",
+      "title": "Nuevas fotografías en Home, Sobre, Journal, Contacto y fichas",
+      "status": "waiting",
+      "waitingFor": "Archivos originales, créditos y licencias (iStock)"
+    },
+    {
+      "id": "MER-041",
+      "area": "Viajes",
+      "title": "Classic Colombia: párrafos literales publicados; faltan Zona Cafetera y Tayrona",
+      "status": "waiting",
+      "waitingFor": "Textos de Zona Cafetera y PNN Tayrona; resolver 10 días del DOCX frente a 13 días de la ficha"
+    },
+    {
+      "id": "MER-042",
+      "area": "Viajes",
+      "title": "Wild y Dorado actualizados; fotos de Macondo pendientes",
+      "status": "waiting",
+      "waitingFor": "Archivos iStock licenciados para Macondo; validar variantes de duración de Wild"
+    },
+    {
+      "id": "MER-043A",
+      "area": "Home",
+      "title": "Títulos de cards centrados en reposo y disolvencia breve al hover",
+      "status": "done",
+      "date": "2026-09-25",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-043B",
+      "area": "Home",
+      "title": "Tipografía sutil en «Somos una agencia…» y CTA terracota/marfil",
+      "status": "done",
+      "date": "2026-09-25",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-044A",
+      "area": "Wild Colombia",
+      "title": "Caño Cristales como hero y card del Home, con atribución CC BY 3.0",
+      "status": "done",
+      "date": "2026-09-25",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-044B",
+      "area": "Dorado",
+      "title": "Pieza de oro original del DOCX como hero y card del Home",
+      "status": "done",
+      "date": "2026-09-25",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-045J",
+      "area": "Journal",
+      "title": "Foto Pexels del DOCX (párrafo 312) en encabezado editorial ES/EN",
+      "status": "done",
+      "date": "2026-09-25",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-046A",
+      "area": "Imágenes",
+      "title": "Quitar barras de crédito visibles y conservar autor, fuente y licencia en metadatos",
+      "status": "done",
+      "date": "2026-09-25",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-046B",
+      "area": "Cards",
+      "title": "Separar la descripción larga de Wild Colombia de la etiqueta superior en Home y Journeys",
+      "status": "done",
+      "date": "2026-09-25",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-047J",
+      "area": "Journal",
+      "title": "Foto Pexels 31649387 como hero de pantalla completa",
+      "status": "done",
+      "date": "2026-09-25",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-048R",
+      "area": "Coordinación",
+      "title": "Ordenar acuerdos y pendientes de la reunión de seguimiento",
+      "status": "done",
+      "date": "2026-09-26"
+    },
+    {
+      "id": "MER-049A",
+      "area": "Home",
+      "title": "Resúmenes breves ES/EN en las cinco cards y acceso a la ficha completa",
+      "status": "review_local",
+      "waitingFor": "Publicado con este lote; pendiente visto bueno de Jaime y revisión editorial de Laura",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-040A",
+      "area": "Imágenes",
+      "title": "Inventario de medios: referencias, archivos, destinos y responsables registrados",
+      "status": "review_local",
+      "waitingFor": "Visto bueno de Jaime sobre el inventario local; selección de medios se resuelve en las tareas de integración",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-050P1",
+      "area": "Home",
+      "title": "Preparar video y poster configurables, carga/error y movimiento reducido sin cambiar el fondo actual",
+      "status": "todo",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-050P2",
+      "area": "Sobre",
+      "title": "Preparar integración de video y poster manteniendo el hero actual",
+      "status": "done",
+      "model": "gpt-6-sol",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "MER-050P3",
+      "area": "Contacto",
+      "title": "Preparar fondo de imagen/video opcional sin alterar el formulario",
+      "status": "done",
+      "model": "gpt-6-sol",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "MER-049B1",
+      "area": "Textos",
+      "title": "Cotejar y alinear biografía de Laura EN al ES aprobado del DOCX",
+      "status": "done",
+      "model": "gpt-6-sol",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "MER-049B2",
+      "area": "Textos",
+      "title": "Cotejar y alinear biografía de Fabrizio EN al ES aprobado del DOCX",
+      "status": "done",
+      "model": "gpt-6-sol",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "MER-049B",
+      "area": "Textos",
+      "title": "Aplicar correcciones de Laura por sección ES/EN",
+      "status": "waiting",
+      "waitingFor": "Comentarios editoriales de Laura",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-040B",
+      "area": "Colombia",
+      "title": "Integrar una fotografía final de Classic Colombia por tarea",
+      "status": "waiting",
+      "waitingFor": "Selección, original y licencia",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-040C",
+      "area": "Macondo",
+      "title": "Integrar una fotografía final de Macondo por tarea",
+      "status": "waiting",
+      "waitingFor": "Selección, original y licencia",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-050A",
+      "area": "Home",
+      "title": "Video definitivo del Hero con poster y fallback",
+      "status": "waiting",
+      "waitingFor": "Confirmar archivo final y destino",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-050B",
+      "area": "Video",
+      "title": "Integrar segundo video en su sección definitiva",
+      "status": "waiting",
+      "waitingFor": "Archivo final y sección de destino",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-042D",
+      "area": "Dorado",
+      "title": "Revisar estructura y contenido de Dorado contra el feedback",
+      "status": "done",
+      "model": "gpt-6-sol",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "MER-042M",
+      "area": "Macondo",
+      "title": "Revisar estructura y contenido de Macondo contra el feedback",
+      "status": "done",
+      "model": "gpt-6-sol",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "MER-042W",
+      "area": "Wild",
+      "title": "Revisar estructura y contenido de Wild contra el feedback",
+      "status": "done",
+      "model": "gpt-6-sol",
+      "date": "2026-10-05"
+    },
+    {
+      "id": "MER-003",
+      "area": "Viajes",
+      "title": "Ratificar duración, cupo y precio de cada viaje",
+      "status": "waiting",
+      "waitingFor": "Matriz comercial aprobada por Laura y Fabrizio",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-051A",
+      "area": "Pago",
+      "title": "Definir requisitos y flujo de reserva/pago",
+      "status": "todo",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-013B1",
+      "area": "Legal",
+      "title": "Página de privacidad bilingüe",
+      "status": "waiting",
+      "waitingFor": "Texto legal y tratamiento de datos aprobados",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-013B2",
+      "area": "Legal",
+      "title": "Página de términos bilingüe",
+      "status": "waiting",
+      "waitingFor": "Texto legal y condiciones comerciales aprobados",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-051B",
+      "area": "Pago",
+      "title": "Implementar pasarela en entorno de prueba",
+      "status": "waiting",
+      "waitingFor": "Proveedor, flujo, precios, legales y acceso de prueba",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-051C",
+      "area": "Pago",
+      "title": "Validar pagos y errores antes de activar cobros",
+      "status": "waiting",
+      "waitingFor": "Integración de prueba operativa",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-052A",
+      "area": "Journal",
+      "title": "Definir publicación de entradas y newsletter",
+      "status": "todo",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-052B",
+      "area": "Newsletter",
+      "title": "Implementar integración y suscripción",
+      "status": "waiting",
+      "waitingFor": "Flujo, proveedor y privacidad aprobados",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-053A",
+      "area": "Lanzamiento",
+      "title": "Cerrar alcance y checklist del primer lanzamiento",
+      "status": "waiting",
+      "waitingFor": "Confirmar viajes visibles, condiciones y fecha",
+      "model": "gpt-6-luna"
+    },
+    {
+      "id": "MER-053B",
+      "area": "Dominio",
+      "title": "Conectar y verificar dominio propio",
+      "status": "waiting",
+      "waitingFor": "Acceso DNS, checklist y autorización del cambio",
+      "model": "gpt-6-sol"
+    },
+    {
+      "id": "MER-015B",
+      "area": "Journal",
+      "title": "Lightbox del cuaderno visual: foco atrapado, Escape y retorno del foco",
+      "status": "review_local",
+      "waitingFor": "Publicado con este lote; pendiente confirmación visual de Jaime",
+      "model": "claude-opus-5-5"
+    },
+    {
+      "id": "MER-054",
+      "area": "General",
+      "title": "Optimización de videos (MP4 liviano), imágenes y caché para cuidar la cuota de Vercel",
+      "status": "done",
+      "date": "2026-10-05",
+      "model": "claude-opus-5-5"
+    },
+    {
+      "id": "MER-002B",
+      "area": "Contacto",
+      "title": "Formulario conectado a un buzón real",
+      "status": "later"
+    }
   ]
 }

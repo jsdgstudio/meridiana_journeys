@@ -28,6 +28,8 @@ export interface TravelCardItem {
   title: LocaleString;
   titleEmphasis?: LocaleString;
   description: LocaleString;
+  /** Short Home preview; the approved full description remains separate. */
+  summary?: LocaleString;
 }
 
 export interface TravelCardsContent {

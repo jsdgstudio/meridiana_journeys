@@ -78,11 +78,13 @@ function TravelCard({
   locale,
   ctaLearnMore,
   ctaBook,
+  descriptionMode,
 }: {
   card: TravelCardItem;
   locale: Locale;
   ctaLearnMore: string;
   ctaBook: string;
+  descriptionMode: "full" | "summary";
 }) {
   const tourHref = `/${locale}/viajes/${card.id}`;
   const contactHref = `/${locale}/contacto`;
@@ -93,6 +95,9 @@ function TravelCard({
   const [expanded, setExpanded] = useState(false);
   const descriptionId = useId();
   const shouldReduceMotion = useReducedMotion();
+  const summary = descriptionMode === "summary" ? card.summary?.[locale] : undefined;
+  const showSummary = summary !== undefined;
+  const description = summary ?? card.description[locale];
 
   const titleText = card.title[locale];
   const emphasis = card.titleEmphasis?.[locale];
@@ -194,7 +199,7 @@ function TravelCard({
           {titleNode}
         </motion.div>
 
-        {/* Información completa: anclada abajo y desplazable solo si la ventana es baja. */}
+        {/* Editorial panel: Home preview or full Journeys description. */}
         <motion.div
           className="tc-hover-panel"
           initial={false}
@@ -217,8 +222,10 @@ function TravelCard({
               {titleNode}
             </button>
           </h3>
-          <p id={descriptionId} className="text-sm md:text-[15px] leading-[1.6] mb-5 max-w-[68ch] text-marfil/90">
-            {card.description[locale]}
+          <p id={descriptionId} data-description-mode={showSummary ? "summary" : "full"} className="text-sm md:text-[15px] leading-[1.6] mb-5 max-w-[68ch] text-marfil/90">
+            <span className={showSummary ? "line-clamp-4" : undefined}>
+              {description}
+            </span>
           </p>
           <div className="flex items-center gap-3 flex-wrap">
             <Link
@@ -264,9 +271,11 @@ interface TravelCardsProps {
   theme?: "dark" | "light";
   /** Transparent bg + no internal header — para uso en páginas con hero propio */
   seamless?: boolean;
+  /** Only the Home opts into short previews; Journeys keeps full copy. */
+  descriptionMode?: "full" | "summary";
 }
 
-export function TravelCards({ content, locale, theme = "dark", seamless = false }: TravelCardsProps) {
+export function TravelCards({ content, locale, theme = "dark", seamless = false, descriptionMode = "full" }: TravelCardsProps) {
   const toursHref = `/${locale}/viajes`;
   const isLight = theme === "light";
 
@@ -358,6 +367,7 @@ export function TravelCards({ content, locale, theme = "dark", seamless = false 
               locale={locale}
               ctaLearnMore={content.ctaLearnMore[locale]}
               ctaBook={content.ctaBook[locale]}
+              descriptionMode={descriptionMode}
             />
           ))}
         </motion.div>
@@ -375,6 +385,7 @@ export function TravelCards({ content, locale, theme = "dark", seamless = false 
               locale={locale}
               ctaLearnMore={content.ctaLearnMore[locale]}
               ctaBook={content.ctaBook[locale]}
+              descriptionMode={descriptionMode}
             />
           ))}
         </motion.div>

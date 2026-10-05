@@ -187,6 +187,7 @@ img{display:block;max-width:100%;}
   font-family:var(--font-s);font-size:11px;font-weight:600;
   letter-spacing:.16em;text-transform:uppercase;
   cursor:pointer;border:1px solid transparent;
+  border-radius:999px;
   transition:all 260ms var(--ease);
 }
 .btn--primary{background:var(--tumbaga);color:var(--blanco);border-color:var(--tumbaga);}
@@ -277,47 +278,48 @@ img{display:block;max-width:100%;}
 /* ── Contact ─────────────────────────────────────────── */
 .contact{
   background:var(--marfil);color:var(--negro);
-  padding:120px 24px;text-align:center;
+  padding:120px 24px;
 }
+.contact__top{max-width:600px;margin:0 auto 80px;text-align:center;}
 .contact h2{
   font-family:var(--font-d);font-weight:300;
   font-size:clamp(2.2rem,5vw,4rem);
   line-height:1.07;letter-spacing:-.015em;
-  color:var(--negro);margin-bottom:22px;
+  color:var(--negro);margin-bottom:24px;
 }
 .contact h2 em{font-style:italic;color:var(--tumbaga);}
 .contact__lede{
-  font-size:15px;line-height:1.8;color:rgba(15,19,14,.58);
-  max-width:520px;margin:0 auto 52px;
+  font-family:var(--font-d);font-style:italic;font-weight:300;
+  font-size:clamp(1.2rem,2.2vw,1.6rem);
+  line-height:1.55;color:rgba(15,19,14,.52);
 }
 .contact__channels{
-  max-width:880px;margin:0 auto;
-  display:grid;grid-template-columns:repeat(3,1fr);
-  border-top:1px solid rgba(15,19,14,.14);
+  max-width:720px;margin:0 auto;
+  border-top:1px solid rgba(15,19,14,.12);
 }
 .channel{
-  padding:32px 24px;border-bottom:1px solid rgba(15,19,14,.14);
-  border-right:1px solid rgba(15,19,14,.14);
-  text-align:left;display:flex;flex-direction:column;justify-content:space-between;
-  min-height:190px;transition:background 260ms var(--ease);
+  display:grid;grid-template-columns:110px 1fr auto;align-items:center;gap:32px;
+  padding:26px 0;border-bottom:1px solid rgba(15,19,14,.10);
   text-decoration:none;color:var(--negro);
+  transition:opacity 200ms var(--ease);
 }
-.channel:last-child{border-right:none;}
-.channel:hover{background:rgba(154,122,58,.07);opacity:1;}
+.channel:hover{opacity:1;}
+.channel:hover .channel__cta{color:var(--tumbaga);letter-spacing:.22em;}
 .channel__label{
   font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
-  color:rgba(15,19,14,.42);margin-bottom:14px;
+  color:rgba(15,19,14,.36);
 }
 .channel__value{
-  font-family:var(--font-d);font-size:22px;font-weight:300;line-height:1.2;
-  color:var(--negro);margin-bottom:16px;word-break:break-word;
+  font-family:var(--font-d);font-size:clamp(1.1rem,2vw,1.45rem);font-weight:300;
+  color:var(--negro);line-height:1.2;
 }
 .channel__cta{
-  display:inline-flex;align-items:center;gap:7px;
+  display:inline-flex;align-items:center;gap:8px;
   font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--tumbaga);
+  color:rgba(15,19,14,.30);white-space:nowrap;
+  transition:color 260ms var(--ease),letter-spacing 260ms var(--ease);
 }
-.channel__cta svg{width:11px;height:11px;}
+.channel__cta svg{width:11px;height:11px;flex-shrink:0;}
 
 /* ── Footer ──────────────────────────────────────────── */
 .footer{
@@ -361,9 +363,8 @@ img{display:block;max-width:100%;}
   .g-5{grid-column:1/span 6;grid-row:span 5;}
   .g-6{grid-column:7/span 6;grid-row:span 5;}
   .contact{padding:80px 20px;}
-  .contact__channels{grid-template-columns:1fr;}
-  .channel{border-right:none;min-height:auto;}
-  .channel:last-child{border-bottom:none;}
+  .channel{grid-template-columns:80px 1fr;gap:16px;}
+  .channel__cta{grid-column:2;padding-bottom:4px;}
   .manifest{padding:80px 20px;}
   .footer{padding:40px 20px 28px;}
   .footer__inner{flex-direction:column;align-items:flex-start;gap:14px;}
@@ -454,7 +455,7 @@ img{display:block;max-width:100%;}
 
     <div class="hero__cta">
       <a class="btn btn--primary"
-         href="https://wa.me/573000000000?text=Hola%2C%20quisiera%20saber%20m%C3%A1s%20sobre%20meridiana%20y%20sus%20pr%C3%B3ximas%20expediciones."
+         href="https://wa.me/573107561974?text=Hola%2C%20quisiera%20saber%20m%C3%A1s%20sobre%20meridiana%20y%20sus%20pr%C3%B3ximas%20expediciones."
          target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.3 5.1 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
@@ -485,7 +486,7 @@ img{display:block;max-width:100%;}
   <div class="manifest__inner fade-in">
     <span class="rule"></span>
     <blockquote class="manifest__quote">
-      Una meridiana es una línea de conexión entre mundos —<br/>
+      Una meridiana es una línea de conexión entre mundos:<br/>
       el pasado y el presente, el viajero y la comunidad,<br/>
       el conocimiento y la experiencia.
     </blockquote>
@@ -566,23 +567,20 @@ img{display:block;max-width:100%;}
 
 <!-- CONTACT ──────────────────────────────────────────── -->
 <section class="contact">
-  <div class="fade-in">
-    <p class="label label--gold" style="margin-bottom:24px;">conversemos mientras tanto</p>
+  <div class="contact__top fade-in">
+    <p class="label" style="margin-bottom:24px;color:rgba(15,19,14,.38);">conversemos mientras tanto</p>
     <h2>El sitio llega pronto.<br/><em>La conversación,</em> ya comenzó.</h2>
     <p class="contact__lede">
-      Si te interesa acompañarnos en una próxima salida o quieres recibir nuestro
-      cuaderno de territorios cuando esté listo, escríbenos por cualquier canal.
+      ¿te interesa acompañarnos en una próxima salida?
     </p>
   </div>
 
   <div class="contact__channels fade-in">
     <a class="channel"
-       href="https://wa.me/573000000000?text=Hola%20meridiana."
+       href="https://wa.me/573107561974?text=Hola%20meridiana."
        target="_blank" rel="noopener">
-      <div>
-        <p class="channel__label">whatsapp</p>
-        <p class="channel__value">Escríbenos<br/>directamente</p>
-      </div>
+      <p class="channel__label">whatsapp</p>
+      <p class="channel__value">+57 310 756 1974</p>
       <span class="channel__cta">
         abrir chat
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -592,21 +590,17 @@ img{display:block;max-width:100%;}
     <a class="channel"
        href="https://www.instagram.com/meridiana.journeys/"
        target="_blank" rel="noopener">
-      <div>
-        <p class="channel__label">instagram</p>
-        <p class="channel__value">@meridiana<br/>.journeys</p>
-      </div>
+      <p class="channel__label">instagram</p>
+      <p class="channel__value">@meridiana.journeys</p>
       <span class="channel__cta">
         ver el archivo
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </span>
     </a>
 
-    <a class="channel" href="mailto:hola@meridiana.co?subject=Pr%C3%B3ximas%20expediciones">
-      <div>
-        <p class="channel__label">correo</p>
-        <p class="channel__value">hola@<br/>meridiana.co</p>
-      </div>
+    <a class="channel" href="mailto:info@meridianajourneys.com?subject=Pr%C3%B3ximas%20expediciones%20meridiana">
+      <p class="channel__label">correo</p>
+      <p class="channel__value">info@meridianajourneys.com</p>
       <span class="channel__cta">
         enviar email
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -624,8 +618,8 @@ img{display:block;max-width:100%;}
     </div>
     <nav class="footer__social">
       <a href="https://www.instagram.com/meridiana.journeys/" target="_blank" rel="noopener">instagram</a>
-      <a href="https://wa.me/573000000000" target="_blank" rel="noopener">whatsapp</a>
-      <a href="mailto:hola@meridiana.co">correo</a>
+      <a href="https://wa.me/573107561974" target="_blank" rel="noopener">whatsapp</a>
+      <a href="mailto:info@meridianajourneys.com">correo</a>
     </nav>
     <p class="footer__copy">© 2026 meridiana · colombia</p>
   </div>

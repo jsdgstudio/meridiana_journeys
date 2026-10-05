@@ -45,7 +45,7 @@ export default function HomePage({ params }: HomePageProps) {
     <>
       <Hero content={content.hero} locale={locale} />
       <AboutPreview content={content.aboutPreview} locale={locale} />
-      <TravelCards content={content.travelCards} locale={locale} />
+      <TravelCards content={content.travelCards} locale={locale} descriptionMode="summary" />
       <InfoBar content={content.infoBar} locale={locale} />
       <HowItWorks content={content.howItWorks} locale={locale} />
       <CallToAction content={content.cta} locale={locale} />
