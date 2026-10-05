@@ -18,10 +18,10 @@
     "en": "Colombia is the only country on the planet where in two weeks you can walk through snow, páramo, cloud forest, savannah, rainforest, and beach."
   },
   "heroImage": {
-    "src": "https://images.unsplash.com/photo-1578895101408-1a36b834405b",
+    "src": "/images/tours/wild-hero.jpg",
     "alt": {
-      "es": "Selva tropical colombiana, biodiversidad extraordinaria",
-      "en": "Colombian tropical forest, extraordinary biodiversity"
+      "es": "Frailejones en un páramo andino entre la niebla",
+      "en": "Frailejones in an Andean páramo amid the mist"
     }
   },
   "body": [
@@ -112,9 +112,19 @@
   ],
   "visualNotebook": [
     {
-      "src": "https://images.unsplash.com/photo-1578895101408-1a36b834405b",
-      "alt": { "es": "Selva tropical Colombia biodiversidad", "en": "Colombian tropical forest biodiversity" },
-      "caption": { "es": "selva tropical · Colombia", "en": "tropical forest · Colombia" }
+      "src": "/images/tours/wild-hero.jpg",
+      "alt": { "es": "Frailejones en un páramo andino", "en": "Frailejones in an Andean páramo" },
+      "caption": { "es": "páramo · frailejones", "en": "páramo · frailejones" }
+    },
+    {
+      "src": "/images/tours/wild-pexels-13544671.jpg",
+      "alt": { "es": "Árboles entre la niebla sobre un campo de hierba", "en": "Trees in the mist over a grassy field" },
+      "caption": { "es": "bosque en la niebla", "en": "forest in the mist" }
+    },
+    {
+      "src": "/images/tours/wild-pexels-26938065.jpg",
+      "alt": { "es": "Ave en vuelo en la naturaleza", "en": "Bird in flight in the wild" },
+      "caption": { "es": "aves · biodiversidad", "en": "birds · biodiversity" }
     }
   ],
   "seo": {
