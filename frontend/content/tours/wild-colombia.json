@@ -27,7 +27,7 @@
   "difficulty": "challenging",
   "hero": {
     "image": "/images/tours/wild-cano-cristales-mario-carvajal-original.jpg",
-    "video": null,
+    "video": "/video/tour-hero_wild.mp4",
     "alt": {
       "es": "Caño Cristales y sus aguas de colores en La Macarena, Meta",
       "en": "The colorful waters of Caño Cristales in La Macarena, Meta"

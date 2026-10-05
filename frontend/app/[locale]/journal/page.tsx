@@ -47,6 +47,7 @@ export default function JournalPage({ params }: JournalPageProps) {
           src: journalContent.hero.image.src,
           alt: journalContent.hero.image.alt[locale],
         }}
+        video={journalContent.hero.video}
       />
       <section className="bg-negro pb-24">
         <JournalGrid entries={entries} locale={locale} />

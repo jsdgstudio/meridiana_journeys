@@ -15,6 +15,8 @@ interface JournalHeroProps {
     src: string;
     alt: string;
   };
+  /** Looping background; the image stays as poster and reduced-motion fallback. */
+  video?: string;
 }
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -30,7 +32,7 @@ const DATELINE: Record<Locale, string> = {
   en: "Colombia, Latin America",
 };
 
-export function JournalHero({ locale, ui, image }: JournalHeroProps) {
+export function JournalHero({ locale, ui, image, video }: JournalHeroProps) {
   const shouldReduce = useReducedMotion();
   const lineControls = useAnimation();
   const [lineReady, setLineReady] = useState(false);
@@ -87,6 +89,17 @@ export function JournalHero({ locale, ui, image }: JournalHeroProps) {
         sizes="100vw"
         className="object-cover object-center"
       />
+      {video && !shouldReduce && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src={video} type="video/mp4" />
+        </video>
+      )}
       <div
         className="absolute inset-0"
         style={{
