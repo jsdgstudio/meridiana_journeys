@@ -1,11 +1,11 @@
 {
   "image": {
-    "src": "/images/contact/contact-market-pexels-15644638.jpg",
+    "src": "/images/contact/contact-hero-poster.jpg",
     "alt": {
-      "es": "Puestos de frutas y verduras en una calle de mercado",
-      "en": "Fruit and vegetable stalls on a market street"
+      "es": "Puesto de mercado con racimos de chontaduro, bananos y canastas de fruta colgando",
+      "en": "Market stall with hanging bunches of peach palm fruit, bananas and baskets of fruit"
     },
-    "source": "https://www.pexels.com/es-es/foto/vegetales-verduras-calle-verano-15644638/"
+    "source": "Fotograma del video 1007.mp4 entregado por Jaime"
   },
-  "video": null
+  "video": "/video/hero-contacto.mp4"
 }
