@@ -11,10 +11,10 @@
     },
     "media": {
       "type": "image",
-      "src": "/images/hero-home.jpg",
+      "src": "/images/hero-home-tumbaga.jpg",
       "alt": {
-        "es": "La cordillera andina al amanecer, vista desde el Eje Cafetero",
-        "en": "The Andean cordillera at dawn, seen from the Coffee Region"
+        "es": "Una pieza de orfebrería en tumbaga gira frente a una calle con chiva, montañas entre nubes, una plaza colonial y un río rojo",
+        "en": "A tumbaga goldwork piece turns before a street with a painted chiva bus, cloud-wrapped mountains, a colonial plaza and a red river"
       }
     }
   },

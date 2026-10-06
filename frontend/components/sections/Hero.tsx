@@ -37,9 +37,10 @@ export function Hero({ content, locale, leadVariant = "editorial" }: HeroProps) 
             muted
             loop
             playsInline
+            poster={content.media.src}
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/video/hero-home.mp4" type="video/mp4" />
+            <source src="/video/hero-home-tumbaga.mp4" type="video/mp4" />
           </video>
         )}
         {/* Gradient overlay — top-to-bottom darkening */}
